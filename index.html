@@ -16,7 +16,7 @@
   --bg:#EEF2F7; --surf:#FFFFFF; --card:#FFFFFF; --card2:#F4F7FB; --bd:#E2E9F1; --bd2:#EDF1F6;
   --head:#16233A; --tx:#33445C; --tx2:#64768C; --tx3:#9AA9BB;
   --teal:#0E9A85; --alt:#2563EB; --oral:#15A34A; --warn:#B45309; --pi:#7C3AED; --dur:#64748B; --res:#E11D48;
-  --ok:#16A34A; --mid:#D97706; --bad:#E11D48; --off:#8496A9; --pji-ja:#0E9A85;
+  --ok:#16A34A; --mid:#D97706; --bad:#E11D48; --off:#8496A9; --pji-ja:#0E9A85; --on-tx:#FFFFFF;
   --sel:#EAF1FB; --mark:#0E9A85;
   --pi-bg:linear-gradient(165deg,#F6F1FE 0%,#EFE7FB 100%); --pi-bd:#DDCBF6; --pi-lead:#4C2889; --pi-src:#9B7BC8; --pi-tx:#3B2A55;
   --tl-track:#E9DEF8; --tl-bd:#D6C4EF;
@@ -31,7 +31,7 @@
   --bg:#070F1E; --surf:#0C1A30; --card:#0F2542; --card2:#0B1C34; --bd:#1E3E60; --bd2:#16304C;
   --head:#E4F0FF; --tx:#CBDCF0; --tx2:#8AA6C4; --tx3:#5A7A9C;
   --teal:#2DD4BF; --alt:#60A5FA; --oral:#4ADE80; --warn:#FBBF24; --pi:#C084FC; --dur:#94A3B8; --res:#FB7185;
-  --ok:#4ADE80; --mid:#FB9E3D; --bad:#FB7185; --off:#5A7590; --pji-ja:#7DE9D3;
+  --ok:#4ADE80; --mid:#FB9E3D; --bad:#FB7185; --off:#5A7590; --pji-ja:#7DE9D3; --on-tx:#052018;
   --sel:#173562; --mark:#2DD4BF;
   --pi-bg:linear-gradient(165deg,#1C1030 0%,#140A22 100%); --pi-bd:#3D1C5E; --pi-lead:#E8D5FC; --pi-src:#8B5CB8; --pi-tx:#E9DBF8;
   --tl-track:#241038; --tl-bd:#3A1855;
@@ -148,6 +148,18 @@ header{position:sticky;top:0;z-index:60;background:var(--surf);box-shadow:var(--
 .li{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:11px 13px;cursor:pointer;font-size:13px;color:var(--head);display:flex;justify-content:space-between;gap:9px;align-items:center;box-shadow:var(--cardshadow)}
 .li:hover{border-color:var(--teal)}
 .li .pj{font:800 9px var(--mono);white-space:nowrap}
+.fbar{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:10px 12px;margin-top:12px;box-shadow:var(--cardshadow)}
+.frow{display:flex;align-items:flex-start;gap:9px;padding:7px 0}
+.frow+.frow{border-top:1px solid var(--bd2)}
+.frow-lbl{flex:0 0 50px;font:800 9px var(--mono);letter-spacing:.5px;color:var(--tx3);padding-top:8px;text-transform:uppercase}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;flex:1;min-width:0}
+.fchip{background:var(--card2);border:1px solid var(--bd);color:var(--tx2);border-radius:99px;padding:5px 11px;font:600 12px var(--sans);cursor:pointer;transition:.12s}
+.fchip:hover{border-color:var(--teal);color:var(--head)}
+.fchip.on{background:var(--teal);border-color:var(--teal);color:var(--on-tx)}
+.fcount{display:flex;align-items:center;justify-content:space-between;margin:15px 3px 6px}
+.fcount span{font:800 14px var(--sans);color:var(--head)}
+.freset{background:none;border:0;color:var(--teal);font:700 12px var(--sans);cursor:pointer;padding:4px 6px}
+.gdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:9px;vertical-align:0;flex:0 0 auto}
 .empty{text-align:center;padding:52px 18px;color:var(--tx3);line-height:1.7}
 .empty .big{font-size:16px;color:var(--tx2);margin-bottom:8px;font-weight:600}
 .empty b{color:var(--teal);font-weight:700}
@@ -180,7 +192,7 @@ header{position:sticky;top:0;z-index:60;background:var(--surf);box-shadow:var(--
       <button class="clr" id="clr" hidden aria-label="Leeren">✕</button>
       <div id="ac" role="listbox"></div>
     </div>
-    <div class="tools"><button class="tbtn" id="bAll">Alle Erreger</button><button class="tbtn" id="bLogic">Therapie-Logik</button></div>
+    <div class="tools"><button class="tbtn" id="bAll">Filter</button><button class="tbtn" id="bLogic">Therapie-Logik</button></div>
   </div>
 </header>
 <div class="wrap"><main id="view"></main>
@@ -265,13 +277,54 @@ function detail(e,syn){CSYN=syn||'PJI';LAST=function(){detail(e,CSYN);};
   var v=document.getElementById('view');v.innerHTML=h;
   v.querySelectorAll('.stab').forEach(function(b){b.addEventListener('click',function(){detail(e,b.dataset.syn);});});
   window.scrollTo({top:0,behavior:'smooth'});}
-function listAll(){LAST=listAll;var h='';
-  GORDER.forEach(function(g){var items=DB.filter(function(e){return e.g===g;});if(!items.length)return;
-    h+='<div class="grp"><div class="grp-h" style="color:'+GC[g]+';border-color:'+GC[g]+'">'+esc(g)+' · '+items.length+'</div><div class="lst">';
-    items.forEach(function(e){var pc={'ja':'var(--pji-ja)','selten':'var(--mid)'}[e.impl.pji]||'var(--off)';h+='<div class="li" data-i="'+e._i+'"><span>'+esc(e.n)+'</span><span class="pj" style="color:'+pc+'">PJI '+esc(e.impl.pji)+'</span></div>';});
-    h+='</div></div>';});
+var GSHORT={'Gram-positiv':'Gram+','Gram-negativ':'Gram−','Anaerobier':'Anaerob','Atypisch':'Atypisch','Mykobakterien':'Myko','Pilze':'Pilze','Multiresistenz-Kategorien':'MRGN'};
+var FILT={g:null,pji:null,dair:null,rif:false,pif:false,wu:false};
+function hasPif(e){var g=e.pig||{};return !!((g.iv&&g.iv.length)||(g.oral&&g.oral.length)||(g.bio&&g.bio.length)||(g.surg&&g.surg.length)||(g.dur&&g.dur.length));}
+function passes(e){
+  if(FILT.g&&e.g!==FILT.g)return false;
+  if(FILT.pji&&e.impl.pji!==FILT.pji)return false;
+  if(FILT.dair){var dd=e.impl.dair||'';
+    if(FILT.dair==='moeglich'&&dd!=='möglich')return false;
+    if(FILT.dair==='dtt'&&dd.indexOf('DTT')<0)return false;
+    if(FILT.dair==='wechsel'&&dd.indexOf('Wechsel')<0)return false;}
+  if(FILT.rif&&e.impl.rif!=='ja')return false;
+  if(FILT.pif&&!hasPif(e))return false;
+  if(FILT.wu&&!e.wu)return false;
+  return true;
+}
+function fchip(active,label,dim,val){return '<button class="fchip'+(active?' on':'')+'" data-dim="'+dim+'" data-val="'+val+'">'+esc(label)+'</button>';}
+function browse(){LAST=browse;
+  var anyFilt=FILT.g||FILT.pji||FILT.dair||FILT.rif||FILT.pif||FILT.wu;
+  var h='<div class="fbar">';
+  h+='<div class="frow"><span class="frow-lbl">Gruppe</span><div class="fchips">'+fchip(!FILT.g,'Alle','g','');
+  GORDER.forEach(function(g){h+=fchip(FILT.g===g,GSHORT[g],'g',g);});
+  h+='</div></div>';
+  h+='<div class="frow"><span class="frow-lbl">PJI</span><div class="fchips">'+fchip(!FILT.pji,'Alle','pji','');
+  [['ja','relevant'],['selten','nur selten'],['nein','kein PJI']].forEach(function(o){h+=fchip(FILT.pji===o[0],o[1],'pji',o[0]);});
+  h+='</div></div>';
+  h+='<div class="frow"><span class="frow-lbl">DAIR</span><div class="fchips">'+fchip(!FILT.dair,'Alle','dair','');
+  [['moeglich','möglich'],['dtt','DTT'],['wechsel','Wechsel']].forEach(function(o){h+=fchip(FILT.dair===o[0],o[1],'dair',o[0]);});
+  h+='</div></div>';
+  h+='<div class="frow"><span class="frow-lbl">Weitere</span><div class="fchips">'
+    +fchip(FILT.rif,'Rifampicin','rif','t')+fchip(FILT.pif,'PIF-Protokoll','pif','t')+fchip(FILT.wu,'Abklärung','wu','t')+'</div></div>';
+  h+='</div>';
+  var items=DB.filter(passes);
+  items.sort(function(a,b){return (b.w||1)-(a.w||1)||GORDER.indexOf(a.g)-GORDER.indexOf(b.g)||a.n.localeCompare(b.n);});
+  h+='<div class="fcount"><span>'+items.length+' Erreger</span>'+(anyFilt?'<button class="freset" id="freset">Zurücksetzen</button>':'')+'</div>';
+  if(!items.length){h+='<div class="empty">Keine Erreger mit dieser Kombination.</div>';}
+  else{h+='<div class="lst">';
+    items.forEach(function(e){var pc={'ja':'var(--pji-ja)','selten':'var(--mid)'}[e.impl.pji]||'var(--off)';
+      h+='<div class="li" data-i="'+e._i+'"><span><span class="gdot" style="background:'+(GC[e.g]||'var(--tx2)')+'"></span>'+esc(e.n)+'</span><span class="pj" style="color:'+pc+'">PJI '+esc(e.impl.pji)+'</span></div>';});
+    h+='</div>';}
   var v=document.getElementById('view');v.innerHTML=h;
-  v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],'PJI');});});}
+  v.querySelectorAll('.fchip').forEach(function(b){b.addEventListener('click',function(){
+    var dim=b.dataset.dim,val=b.dataset.val;
+    if(dim==='rif'||dim==='pif'||dim==='wu'){FILT[dim]=!FILT[dim];}
+    else{FILT[dim]=(val===''?null:(FILT[dim]===val?null:val));}
+    browse();});});
+  var rst=document.getElementById('freset');if(rst)rst.addEventListener('click',function(){FILT={g:null,pji:null,dair:null,rif:false,pif:false,wu:false};browse();});
+  v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],'PJI');});});
+}
 function logic(){LAST=logic;
   document.getElementById('view').innerHTML='<div class="card"><div class="body"><div class="logic"><h3>Therapie-Logik</h3>'
    +'<div class="ln"><b style="color:var(--teal)">sensibel</b> → Beta-Laktam der 1. Wahl.</div>'
@@ -300,7 +353,7 @@ q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefaul
 q.addEventListener('focus',function(){if(cur.length)ac.className='on';});
 document.addEventListener('click',function(e){if(!ac.contains(e.target)&&e.target!==q)ac.className='';});
 clr.addEventListener('click',function(){q.value='';clr.hidden=true;cur=[];ac.className='';q.focus();home();});
-document.getElementById('bAll').addEventListener('click',listAll);
+document.getElementById('bAll').addEventListener('click',browse);
 document.getElementById('bLogic').addEventListener('click',logic);
 function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;
   document.querySelector('meta[name=theme-color]').setAttribute('content',t==='light'?'#EEF2F7':'#070F1E');LAST();}
