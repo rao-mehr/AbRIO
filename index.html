@@ -79,6 +79,8 @@ header{position:sticky;top:0;z-index:60;background:var(--surf);box-shadow:var(--
 .tools{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
 .tbtn{background:var(--card);border:1px solid var(--bd);color:var(--tx2);border-radius:10px;padding:8px 13px;font:600 12.5px var(--sans);cursor:pointer;box-shadow:var(--cardshadow)}
 .tbtn:hover{border-color:var(--teal);color:var(--teal)}
+.tbtn.on{background:var(--teal);border-color:var(--teal);color:var(--on-tx)}
+.fcount-sum{font-weight:600;color:var(--teal)}
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:20px;margin-top:14px;overflow:hidden;box-shadow:var(--cardshadow)}
 @media (prefers-reduced-motion:no-preference){.card{animation:in .2s ease-out}}
@@ -148,7 +150,7 @@ header{position:sticky;top:0;z-index:60;background:var(--surf);box-shadow:var(--
 .li{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:11px 13px;cursor:pointer;font-size:13px;color:var(--head);display:flex;justify-content:space-between;gap:9px;align-items:center;box-shadow:var(--cardshadow)}
 .li:hover{border-color:var(--teal)}
 .li .pj{font:800 9px var(--mono);white-space:nowrap}
-.fbar{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:10px 12px;margin-top:8px;box-shadow:var(--cardshadow)}
+.fbar{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:10px 12px;margin-top:12px;box-shadow:var(--cardshadow)}
 .frow{display:flex;align-items:flex-start;gap:9px;padding:7px 0}
 .frow+.frow{border-top:1px solid var(--bd2)}
 .frow-lbl{flex:0 0 50px;font:800 9px var(--mono);letter-spacing:.5px;color:var(--tx3);padding-top:8px;text-transform:uppercase}
@@ -266,7 +268,7 @@ function col(label,color,arr,olab){var h='<div class="col"><div class="col-h">'+
   arr.forEach(function(d){h+='<div class="drug"><div class="dn" style="color:'+color+'">'+fmtName(d[0])+'</div>'+(d[1]?'<div class="dd">'+esc(d[1])+'</div>':'')+'</div>';});
   if(olab)h+='<div class="olab">⚠ '+esc(olab)+'</div>';return h+'</div>';}
 var LAST=home,CSYN='PJI';
-function detail(e,syn){CSYN=syn||'PJI';LAST=function(){detail(e,CSYN);};
+function detail(e,syn){CSYN=syn||'PJI';LAST=function(){detail(e,CSYN);};var _t=document.getElementById('bAll');if(_t)_t.classList.remove('on');
   var gc=GC[e.g]||'var(--tx2)';
   var dc={'möglich':'var(--ok)','erschwert (DTT)':'var(--mid)','Wechsel bevorz.':'var(--bad)'}[e.impl.dair]||'var(--off)';
   var pc={'ja':'var(--pji-ja)','selten':'var(--mid)'}[e.impl.pji]||'var(--off)';
@@ -313,9 +315,7 @@ function browse(){LAST=browse;
   var anyFilt=FILT.g||FILT.pji||FILT.dair||FILT.rif||FILT.pif||FILT.wu;
   var items=DB.filter(passes);
   items.sort(function(a,b){return (b.w||1)-(a.w||1)||GORDER.indexOf(a.g)-GORDER.indexOf(b.g)||a.n.localeCompare(b.n);});
-  var h='<button class="fhead'+(FOPEN?' open':'')+'" id="fhead"><span class="fhead-l"><span class="chev">▸</span>Filter'
-    +(anyFilt&&!FOPEN?' <span class="fhead-sum">'+esc(filtSummary())+'</span>':'')
-    +'</span><span class="fhead-r">'+items.length+' Erreger</span></button>';
+  var h='';
   if(FOPEN){
     h+='<div class="fbar">';
     h+='<div class="frow"><span class="frow-lbl">Gruppe</span><div class="fchips">'+fchip(!FILT.g,'Alle','g','');
@@ -329,27 +329,29 @@ function browse(){LAST=browse;
     h+='</div></div>';
     h+='<div class="frow"><span class="frow-lbl">Weitere</span><div class="fchips">'
       +fchip(FILT.rif,'Rifampicin','rif','t')+fchip(FILT.pif,'PIF-Protokoll','pif','t')+fchip(FILT.wu,'Abklärung','wu','t')+'</div></div>';
-    h+='<div class="fbar-foot">'+(anyFilt?'<button class="freset" id="freset">Zurücksetzen</button>':'<span></span>')
+    h+='<div class="fbar-foot">'+(anyFilt?'<button class="freset">Zurücksetzen</button>':'<span></span>')
       +'<button class="fdone" id="fdone">Fertig</button></div>';
     h+='</div>';
   }
+  h+='<div class="fcount"><span>'+items.length+' Erreger'+(anyFilt?' <span class="fcount-sum">· '+esc(filtSummary())+'</span>':'')+'</span>'
+    +(anyFilt&&!FOPEN?'<button class="freset">Zurücksetzen</button>':'')+'</div>';
   if(!items.length){h+='<div class="empty">Keine Erreger mit dieser Kombination.</div>';}
   else{h+='<div class="lst">';
     items.forEach(function(e){var pc={'ja':'var(--pji-ja)','selten':'var(--mid)'}[e.impl.pji]||'var(--off)';
       h+='<div class="li" data-i="'+e._i+'"><span><span class="gdot" style="background:'+(GC[e.g]||'var(--tx2)')+'"></span>'+esc(e.n)+'</span><span class="pj" style="color:'+pc+'">PJI '+esc(e.impl.pji)+'</span></div>';});
     h+='</div>';}
   var v=document.getElementById('view');v.innerHTML=h;
-  document.getElementById('fhead').addEventListener('click',function(){FOPEN=!FOPEN;browse();});
-  var fd=document.getElementById('fdone');if(fd)fd.addEventListener('click',function(e){e.stopPropagation();FOPEN=false;browse();});
+  var tb=document.getElementById('bAll');if(tb)tb.classList.toggle('on',FOPEN);
+  var fd=document.getElementById('fdone');if(fd)fd.addEventListener('click',function(){FOPEN=false;browse();});
   v.querySelectorAll('.fchip').forEach(function(b){b.addEventListener('click',function(){
     var dim=b.dataset.dim,val=b.dataset.val;
     if(dim==='rif'||dim==='pif'||dim==='wu'){FILT[dim]=!FILT[dim];}
     else{FILT[dim]=(val===''?null:(FILT[dim]===val?null:val));}
     browse();});});
-  var rst=document.getElementById('freset');if(rst)rst.addEventListener('click',function(e){e.stopPropagation();FILT={g:null,pji:null,dair:null,rif:false,pif:false,wu:false};browse();});
+  v.querySelectorAll('.freset').forEach(function(rst){rst.addEventListener('click',function(){FILT={g:null,pji:null,dair:null,rif:false,pif:false,wu:false};browse();});});
   v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],'PJI');});});
 }
-function logic(){LAST=logic;
+function logic(){LAST=logic;var _t=document.getElementById('bAll');if(_t)_t.classList.remove('on');
   document.getElementById('view').innerHTML='<div class="card"><div class="body"><div class="logic"><h3>Therapie-Logik</h3>'
    +'<div class="ln"><b style="color:var(--teal)">sensibel</b> → Beta-Laktam der 1. Wahl.</div>'
    +'<div class="ln"><b style="color:var(--alt)">MRSA / MRSE</b> → Vancomycin (AUC 400–600 mg·h/L) oder Daptomycin.</div>'
@@ -365,7 +367,7 @@ function logic(){LAST=logic;
    +'<div class="ln"><b>Penicillin G → Ampicillin/Sulbactam</b> — bei fehlender Verfügbarkeit klinisch gleichwertig für Streptokokken, Cutibacterium und grampositive Anaerobier.</div>'
    +'<div class="ln"><b>Rifampicin-Timing</b> — das PIF-Dogma (Tag 2–7, trockene Wunde) bleibt Standard. Kohorte 2024 (n=103) fand keine Timing-Outcome-Korrelation; RCTs laufen.</div>'
    +'</div></div></div>';}
-function home(){LAST=home;document.getElementById('view').innerHTML='<div class="empty"><div class="big">Keim suchen.</div>Tippfehler, Kürzel und alte Namen sind egal — <b>mrsa</b>, <b>propionibacterium</b>, <b>pseudomonas</b> oder <b>staph epi</b> führen alle ans Ziel.</div>';}
+function home(){LAST=home;var _t=document.getElementById('bAll');if(_t)_t.classList.remove('on');document.getElementById('view').innerHTML='<div class="empty"><div class="big">Keim suchen.</div>Tippfehler, Kürzel und alte Namen sind egal — <b>mrsa</b>, <b>propionibacterium</b>, <b>pseudomonas</b> oder <b>staph epi</b> führen alle ans Ziel.</div>';}
 var q=document.getElementById('q'),ac=document.getElementById('ac'),clr=document.getElementById('clr'),sel=-1,cur=[];
 function hl(name,term){var plain=esc(name);if(!term)return plain;try{return plain.replace(new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','i'),'<mark>$1</mark>');}catch(e){return plain;}}
 function renderAC(){if(!cur.length){ac.innerHTML=q.value.trim()?'<div class="ac-empty">Kein Treffer. Anderer Name oder Kürzel?</div>':'';ac.className=q.value.trim()?'on':'';return;}
@@ -377,7 +379,7 @@ q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefaul
 q.addEventListener('focus',function(){if(cur.length)ac.className='on';});
 document.addEventListener('click',function(e){if(!ac.contains(e.target)&&e.target!==q)ac.className='';});
 clr.addEventListener('click',function(){q.value='';clr.hidden=true;cur=[];ac.className='';q.focus();home();});
-document.getElementById('bAll').addEventListener('click',function(){FOPEN=true;browse();});
+document.getElementById('bAll').addEventListener('click',function(){if(LAST===browse){FOPEN=!FOPEN;}else{FOPEN=true;}browse();});
 document.getElementById('bLogic').addEventListener('click',logic);
 function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;
   document.querySelector('meta[name=theme-color]').setAttribute('content',t==='light'?'#EEF2F7':'#070F1E');LAST();}
