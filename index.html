@@ -235,8 +235,22 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 .clschip{background:var(--fill);border:0;color:var(--tx);border-radius:99px;padding:6px 13px;font:500 13px var(--sans);cursor:pointer}
 .clschip:active{opacity:.6}
 .clschip.on{background:var(--teal);color:var(--on-tx);font-weight:600}
-.cls-list{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px}
-.cls-drug{background:var(--card);border:.5px solid var(--bd);border-radius:8px;padding:6px 11px;font:500 13px var(--sans);color:var(--tx)}
+.cls-search{width:100%;border:0;background:var(--fill);border-radius:11px;padding:11px 14px;font:400 15px var(--sans);color:var(--tx);margin-bottom:14px;-webkit-appearance:none}
+.cls-search::placeholder{color:var(--tx3)}
+.cls-list{display:flex;flex-direction:column;gap:6px;margin-bottom:6px}
+.cls-drug{background:var(--card);border:.5px solid var(--bd);border-radius:10px;padding:9px 12px;font:500 14px var(--sans);color:var(--tx)}
+.cls-drug.hit{cursor:pointer}
+.cls-drug.hit:active{background:var(--fill)}
+.cls-drug-n{display:inline-block;margin-left:7px;background:var(--teal);color:var(--on-tx);border-radius:99px;font:700 10px var(--sans);letter-spacing:.2px;padding:2px 8px;vertical-align:1px}
+.cls-match{margin-top:9px;padding-top:9px;border-top:.5px solid var(--bd2)}
+.cls-match-row{display:flex;align-items:center;gap:9px;padding:6px 2px;position:relative;cursor:pointer}
+.cls-match-row+.cls-match-row{border-top:.5px solid var(--bd2)}
+.cls-match-role{font:700 10px var(--sans);letter-spacing:.2px;padding:3px 8px;border-radius:6px;flex:0 0 auto;white-space:nowrap}
+.cls-match-n{font:500 13.5px var(--sans);color:var(--tx);flex:1;min-width:0}
+.cls-match-d{font:400 11px var(--mono);color:var(--tx2);text-align:right;flex:0 0 auto;max-width:38%}
+.cls-results{display:flex;flex-direction:column;gap:14px}
+.cls-result-cls{font:600 11px var(--sans);color:var(--tx3);text-transform:uppercase;letter-spacing:.3px;margin:0 2px 5px}
+.cls-empty{padding:24px 4px;color:var(--tx2);font-size:14px;text-align:center}
 
 /* ---------- INFO SHEET ---------- */
 .modal{position:fixed;inset:0;z-index:200;display:flex;align-items:flex-end;justify-content:center}
@@ -286,6 +300,7 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 <nav class="tabbar">
   <button class="tab on" id="tabSuche" aria-label="Suche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span>Suche</span></button>
   <button class="tab" id="tabFilter" aria-label="Filter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span>Filter</span></button>
+  <button class="tab" id="tabKlassen" aria-label="Wirkstoffklassen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Klassen</span></button>
   <button class="tab" id="tabLogik" aria-label="Therapie-Logik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4 4 4 0 0 0-1 7 3 3 0 0 0 5 2 3 3 0 0 0 5-2 4 4 0 0 0-1-7 4 4 0 0 0-4-4z"/></svg><span>Logik</span></button>
   <button class="tab" id="tabInfo" aria-label="Info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5"/><circle cx="12" cy="8" r=".6" fill="currentColor"/></svg><span>Info</span></button>
 </nav>
@@ -293,7 +308,17 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 <script>
 (function(){
 "use strict";
-var DB=JSON.parse(document.getElementById('DB').textContent);
+var DB;
+try{DB=JSON.parse(document.getElementById('DB').textContent);}
+catch(dbErr){
+  document.body.innerHTML='<div style="padding:28px;font:15px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;color:#B00020;max-width:520px;margin:0 auto">'
+    +'<div style="font-weight:700;font-size:17px;margin-bottom:8px">Datenbank konnte nicht geladen werden</div>'
+    +'<div>Beim letzten Bearbeiten ist wahrscheinlich ein Syntaxfehler in die eingebettete JSON-Datenbank (Zeile mit <code>id="DB"</code>) gerutscht — z. B. ein fehlendes Komma oder Anführungszeichen.</div>'
+    +'<div style="margin-top:14px;font-weight:600">Technische Meldung:</div>'
+    +'<code style="display:block;white-space:pre-wrap;background:#F2F2F7;padding:10px;border-radius:8px;margin-top:4px;font-size:13px">'+esc(dbErr&&dbErr.message||dbErr)+'</code>'
+    +'</div>';
+  return;
+}
 var GCSETS={"light": {"Gram-positiv": "#AF52DE", "Gram-negativ": "#0A84FF", "Anaerobier": "#8E8E93", "Atypisch": "#FF9500", "Mykobakterien": "#FF3B30", "Pilze": "#FF375F", "Multiresistenz-Kategorien": "#FF6B22"}, "dark": {"Gram-positiv": "#BF5AF2", "Gram-negativ": "#0A84FF", "Anaerobier": "#98989D", "Atypisch": "#FF9F0A", "Mykobakterien": "#FF453A", "Pilze": "#FF375F", "Multiresistenz-Kategorien": "#FF9F0A"}};
 var THEME='light';try{THEME=localStorage.getItem('ari_theme')||document.documentElement.dataset.theme||'light';}catch(e){THEME=document.documentElement.dataset.theme||'light';}
 var GC=GCSETS[THEME];
@@ -362,7 +387,7 @@ var AFCLASSES=[
  ['Allylamine',['Terbinafin']],
  ['Weitere',['Griseofulvin','Imidazole topisch: Clotrimazol / Miconazol / Ketoconazol']]
 ];
-var ABSEL=0,AFSEL=0,ABOPEN=false,AFOPEN=false;
+var ABSEL=0,AFSEL=0,ABOPEN=false,AFOPEN=false,CLSQ='',CLSEXP=null;
 var SYND={
   PJI:{label:'PJI',full:'Periprothetische Gelenkinfektion',src:'PIF Pocket Guide PJI v11 (2023)',ctx:'Gesamtdauer 12 Wochen, davon ~2 Wochen i.v. Akut &lt;4 Wochen postoperativ bzw. &lt;3 Wochen bei hämatogener Infektion.'},
   FRI:{label:'FRI',full:'Fraktur-assoziierte Infektion / Osteomyelitis',src:'PIF Pocket Guide FRI v4',ctx:'Klassifikation abweichend: früh &lt;6 Wochen, spät &gt;6 Wochen. Bei Staphylokokken ist Flucloxacillin die PIF-Primärwahl (nicht Cefazolin wie bei PJI).'},
@@ -377,6 +402,64 @@ function norm(s){return String(s||'').toLowerCase().replace(/ä/g,'ae').replace(
 function lev(a,b){if(a===b)return 0;var m=a.length,n=b.length;if(!m)return n;if(!n)return m;var prev=[],cur=[],i,j;
   for(j=0;j<=n;j++)prev[j]=j;for(i=1;i<=m;i++){cur[0]=i;for(j=1;j<=n;j++)cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=cur.slice();}return prev[n];}
 DB.forEach(function(e,i){e._i=i;e._n=norm(e.n);e._s=(e.syns||[]).map(norm);e._tok=e._n.split(' ').concat(e._s.join(' ').split(' ')).filter(function(t){return t.length>1;});});
+var DIDX={};
+DB.forEach(function(e){
+  function idx(arr,role){(arr||[]).forEach(function(p){var k=norm(p[0]);(DIDX[k]=DIDX[k]||[]).push({i:e._i,role:role,dose:p[1]||''});});}
+  idx(e.f,'f');idx(e.a,'a');idx(e.o,'o');
+});
+function classBase(n){return n.replace(/\s*\([^)]*\)\s*$/,'').trim();}
+function classMatches(substanceName){
+  var key=norm(classBase(substanceName));
+  if(DIDX[key])return DIDX[key];
+  var toks=key.split(' ').filter(Boolean);if(!toks.length)return null;
+  var first=toks[0],second=toks[1],found=null;
+  Object.keys(DIDX).some(function(k){
+    var kt=k.split(' '),kf=kt[0],ks=kt[1];
+    var m0=kf===first||(kf.length>=5&&first.length>=5&&(kf.indexOf(first)===0||first.indexOf(kf)===0));
+    if(!m0)return false;
+    if(second||ks){var m1=second&&ks&&(ks.indexOf(second)===0||second.indexOf(ks)===0);if(!m1)return false;}
+    found=DIDX[k];return true;
+  });
+  return found;
+}
+function validateDB(db){
+  var issues=[],seen={};
+  var PJI_OK={'ja':1,'nein':1,'selten':1},DAIR_OK={'-':1,'—':1,'möglich':1,'erschwert (DTT)':1,'Wechsel bevorz.':1},RIF_OK={'ja':1,'nein':1,'bedingt':1,'—':1};
+  function bad(label,msg){issues.push(label+': '+msg);}
+  function checkPairs(label,field,arr){if(arr===undefined)return;if(!Array.isArray(arr)){bad(label,'"'+field+'" ist kein Array');return;}
+    arr.forEach(function(p,i){if(!Array.isArray(p)||p.length!==2||typeof p[0]!=='string'||!p[0].trim()){bad(label,'"'+field+'"['+i+'] ist kein gültiges [Name, Dosis]-Paar');}});}
+  function checkStrArr(label,field,arr){if(arr===undefined)return;if(!Array.isArray(arr)||arr.some(function(x){return typeof x!=='string';})){bad(label,'"'+field+'" sollte ein Array von Texten sein');}}
+  db.forEach(function(e,i){
+    var label=(e&&typeof e.n==='string'&&e.n.trim())?e.n:'Eintrag #'+i;
+    if(!e||typeof e.n!=='string'||!e.n.trim()){bad('Eintrag #'+i,'Name ("n") fehlt oder ist leer');return;}
+    if(seen[e._n]){bad(label,'Name doppelt vergeben (Kollision mit vorhandenem Eintrag)');}seen[e._n]=1;
+    if(GORDER.indexOf(e.g)===-1)bad(label,'unbekannte Gruppe "'+e.g+'" (nicht in GORDER)');
+    if(!e.impl||typeof e.impl!=='object')bad(label,'"impl" fehlt');
+    else{
+      if(!PJI_OK[e.impl.pji])bad(label,'unerwarteter Wert impl.pji="'+e.impl.pji+'"');
+      if(!DAIR_OK[e.impl.dair])bad(label,'unerwarteter Wert impl.dair="'+e.impl.dair+'"');
+      if(!RIF_OK[e.impl.rif])bad(label,'unerwarteter Wert impl.rif="'+e.impl.rif+'"');
+    }
+    checkPairs(label,'f',e.f);checkPairs(label,'a',e.a);checkPairs(label,'o',e.o);
+    checkStrArr(label,'syns',e.syns);
+    if(e.w!==undefined&&typeof e.w!=='number')bad(label,'"w" sollte eine Zahl sein');
+    if(e.pig&&typeof e.pig==='object'){['iv','oral','bio','surg','dur','cave'].forEach(function(k){checkStrArr(label,'pig.'+k,e.pig[k]);});}
+    if(e.syn&&typeof e.syn==='object'){Object.keys(e.syn).forEach(function(k){if(['PJI','FRI','SA','SI'].indexOf(k)===-1)bad(label,'unbekannter Syndrom-Schlüssel in "syn": '+k);});}
+  });
+  return issues;
+}
+function showDataWarning(issues){
+  var bar=document.createElement('div');
+  bar.setAttribute('style','position:sticky;top:0;z-index:9999;background:#FFF3CD;color:#7A5200;border-bottom:1px solid #E8C468;padding:10px 14px;font:13px/1.4 -apple-system,BlinkMacSystemFont,sans-serif');
+  bar.innerHTML='<b>⚠ '+issues.length+' Datenproblem'+(issues.length===1?'':'e')+' in der eingebetteten Datenbank gefunden</b>'
+    +' <button id="dbWarnToggle" style="margin-left:8px;border:1px solid #E8C468;background:#fff;border-radius:6px;padding:2px 8px;cursor:pointer">Details</button>'
+    +' <button id="dbWarnClose" style="margin-left:4px;border:none;background:transparent;cursor:pointer;font-size:15px" aria-label="Schließen">✕</button>'
+    +'<ul id="dbWarnList" hidden style="margin:8px 0 0;padding-left:18px">'+issues.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';
+  document.body.insertBefore(bar,document.body.firstChild);
+  bar.querySelector('#dbWarnToggle').addEventListener('click',function(){var l=bar.querySelector('#dbWarnList');l.hidden=!l.hidden;});
+  bar.querySelector('#dbWarnClose').addEventListener('click',function(){bar.remove();});
+  issues.forEach(function(x){console.warn('[ARI Datenprüfung]',x);});
+}
 function search(raw){var q=norm(raw);if(!q)return[];var out=[];
   DB.forEach(function(e){var best=0,why='';
     if(e._n===q){best=1000;why='Name';}else if(e._n.indexOf(q)===0){best=900;why='Name';}
@@ -506,10 +589,6 @@ function browse(){LAST=browse;
   v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],'PJI');});});
 }
 function logic(){LAST=logic;setActiveTab('Logik');
-  function clsBlock(title,arr,sel,grp,open){
-    return '<button class="cls-head'+(open?' open':'')+'" data-h="'+grp+'"><span class="cls-head-l"><span class="chev">▸</span>'+title+'</span><span class="cls-cur">'+esc(arr[sel][0])+'</span></button>'
-      +(open?'<div class="cls-chips">'+arr.map(function(c,i){return '<button class="clschip'+(i===sel?' on':'')+'" data-g="'+grp+'" data-i="'+i+'">'+esc(c[0])+'</button>';}).join('')+'</div>':'')
-      +'<div class="cls-list">'+arr[sel][1].map(function(d){return '<span class="cls-drug">'+esc(d)+'</span>';}).join('')+'</div>';}
   document.getElementById('view').innerHTML='<div class="card"><div class="body"><div class="logic"><h3>Therapie-Logik</h3>'
    +'<div class="ln"><b style="color:var(--teal)">sensibel</b> → Beta-Laktam der 1. Wahl.</div>'
    +'<div class="ln"><b style="color:var(--alt)">MRSA / MRSE</b> → Vancomycin (AUC 400–600 mg·h/L) oder Daptomycin.</div>'
@@ -525,14 +604,51 @@ function logic(){LAST=logic;setActiveTab('Logik');
    +'<div class="ln"><b>Vancomycin</b> — hier AUC-Monitoring (400–600 mg·h/L, IDSA/ASHP 2020); die Pocket Guides nennen noch Talspiegel 15–20 µg/ml. Bewusste Modernisierung.</div>'
    +'<div class="ln"><b>Penicillin G → Ampicillin/Sulbactam</b> — bei fehlender Verfügbarkeit klinisch gleichwertig für Streptokokken, Cutibacterium und grampositive Anaerobier.</div>'
    +'<div class="ln"><b>Rifampicin-Timing</b> — das PIF-Dogma (Tag 2–7, trockene Wunde) bleibt Standard. Kohorte 2024 (n=103) fand keine Timing-Outcome-Korrelation; RCTs laufen.</div>'
-   +'<h4>Wirkstoffklassen nachschlagen</h4>'
-   +'<div class="clsbrowser">'+clsBlock('Antibiotika-Klasse',ABCLASSES,ABSEL,'ab',ABOPEN)+'</div>'
-   +'<div class="clsbrowser">'+clsBlock('Antimykotika-Klasse',AFCLASSES,AFSEL,'af',AFOPEN)+'</div>'
    +'</div></div></div>';
+}
+function classes(){LAST=classes;setActiveTab('Klassen');
+  var ROLE={f:['Erstlinie i.v.','var(--teal)'],a:['Alternative','var(--alt)'],o:['Oral','var(--oral)']};
+  function matchPanel(m){
+    return '<div class="cls-match">'+m.map(function(x){var e=DB[x.i],r=ROLE[x.role];
+      return '<div class="cls-match-row" data-i="'+x.i+'"><span class="cls-match-role" style="background:'+r[1]+';color:var(--on-tx)">'+r[0]+'</span><span class="cls-match-n">'+esc(e.n)+'</span><span class="cls-match-d">'+esc(x.dose||'')+'</span></div>';
+    }).join('')+'</div>';
+  }
+  function drugRow(d){
+    var m=classMatches(d),n=m?m.length:0;
+    return '<div class="cls-drug'+(n?' hit':'')+'" data-drug="'+esc(d)+'">'+fmtName(d)+(n?'<span class="cls-drug-n">'+n+' Erreger</span>':'')+(n&&CLSEXP===d?matchPanel(m):'')+'</div>';
+  }
+  function clsBlock(title,arr,sel,grp,open){
+    return '<button class="cls-head'+(open?' open':'')+'" data-h="'+grp+'"><span class="cls-head-l"><span class="chev">▸</span>'+title+'</span><span class="cls-cur">'+esc(arr[sel][0])+'</span></button>'
+      +(open?'<div class="cls-chips">'+arr.map(function(c,i){return '<button class="clschip'+(i===sel?' on':'')+'" data-g="'+grp+'" data-i="'+i+'">'+esc(c[0])+'</button>';}).join('')+'</div>':'')
+      +'<div class="cls-list">'+arr[sel][1].map(drugRow).join('')+'</div>';
+  }
+  var body,q=CLSQ.trim();
+  if(q){
+    var results=[];
+    [['Antibiotika',ABCLASSES],['Antimykotika',AFCLASSES]].forEach(function(sec){
+      sec[1].forEach(function(c){c[1].forEach(function(d){if(norm(d).indexOf(norm(q))>-1)results.push({d:d,cls:c[0],sec:sec[0]});});});
+    });
+    body=results.length?('<div class="cls-results">'+results.map(function(r){
+        return '<div class="cls-result"><div class="cls-result-cls">'+esc(r.sec)+' · '+esc(r.cls)+'</div>'+drugRow(r.d)+'</div>';
+      }).join('')+'</div>'):'<div class="cls-empty">Keine Substanz gefunden.</div>';
+  }else{
+    body='<div class="clsbrowser">'+clsBlock('Antibiotika-Klasse',ABCLASSES,ABSEL,'ab',ABOPEN)+'</div>'
+       +'<div class="clsbrowser">'+clsBlock('Antimykotika-Klasse',AFCLASSES,AFSEL,'af',AFOPEN)+'</div>';
+  }
+  document.getElementById('view').innerHTML='<div class="card"><div class="body"><div class="logic"><h3>Wirkstoffklassen</h3>'
+   +'<input class="cls-search" id="clsq" type="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Substanz oder Klasse suchen …" value="'+esc(CLSQ)+'">'
+   +body+'</div></div></div>';
+  var inp=document.getElementById('clsq');
+  inp.addEventListener('input',function(){CLSQ=inp.value;var pos=inp.selectionStart;classes();var el=document.getElementById('clsq');if(el){el.focus();el.selectionStart=el.selectionEnd=pos;}});
   document.querySelectorAll('.cls-head').forEach(function(b){b.addEventListener('click',function(){
-    if(b.dataset.h==='ab')ABOPEN=!ABOPEN;else AFOPEN=!AFOPEN;logic();});});
+    if(b.dataset.h==='ab')ABOPEN=!ABOPEN;else AFOPEN=!AFOPEN;CLSEXP=null;classes();});});
   document.querySelectorAll('.clschip').forEach(function(b){b.addEventListener('click',function(){
-    if(b.dataset.g==='ab'){ABSEL=+b.dataset.i;ABOPEN=false;}else{AFSEL=+b.dataset.i;AFOPEN=false;}logic();});});}
+    if(b.dataset.g==='ab'){ABSEL=+b.dataset.i;ABOPEN=false;}else{AFSEL=+b.dataset.i;AFOPEN=false;}CLSEXP=null;classes();});});
+  document.querySelectorAll('.cls-drug.hit').forEach(function(b){b.addEventListener('click',function(ev){
+    if(ev.target.closest('.cls-match-row'))return;var d=b.dataset.drug;CLSEXP=CLSEXP===d?null:d;classes();});});
+  document.querySelectorAll('.cls-match-row').forEach(function(b){b.addEventListener('click',function(ev){
+    ev.stopPropagation();detail(DB[+b.dataset.i],'PJI');});});
+}
 function shortName(n){var paren=(n.match(/\(([^)]{1,7})\)/)||[])[1];var base=n.replace(/\s*\(.*$/,'').replace(/\s*\/.*$/,'').trim();var parts=base.split(' ');if(parts.length>=2&&/^[A-Z][a-zäöü]+$/.test(parts[0]))base=parts[0][0]+'. '+parts.slice(1).join(' ');return base+(paren?' ('+paren+')':'');}
 function home(){LAST=home;setActiveTab('Suche');
   var rc='';
@@ -551,9 +667,10 @@ q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefaul
 q.addEventListener('focus',function(){if(cur.length)ac.className='on';});
 document.addEventListener('click',function(e){if(!ac.contains(e.target)&&e.target!==q)ac.className='';});
 clr.addEventListener('click',function(){q.value='';clr.hidden=true;cur=[];ac.className='';q.focus();home();});
-function setActiveTab(n){['Suche','Filter','Logik'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});}
+function setActiveTab(n){['Suche','Filter','Klassen','Logik'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});}
 document.getElementById('tabSuche').addEventListener('click',function(){home();window.scrollTo(0,0);});
 document.getElementById('tabFilter').addEventListener('click',function(){if(LAST===browse){FOPEN=!FOPEN;}else{FOPEN=true;}browse();window.scrollTo(0,0);});
+document.getElementById('tabKlassen').addEventListener('click',function(){classes();window.scrollTo(0,0);});
 document.getElementById('tabLogik').addEventListener('click',function(){logic();window.scrollTo(0,0);});
 document.getElementById('tabInfo').addEventListener('click',function(){showInfo();});
 function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;try{localStorage.setItem('ari_theme',t);}catch(e){}
@@ -566,6 +683,7 @@ document.getElementById('infoX').addEventListener('click',hideInfo);
 document.getElementById('infoClose').addEventListener('click',hideInfo);
 document.addEventListener('keydown',function(e){if(e.key==='Escape')hideInfo();});
 window.addEventListener('scroll',function(){var hd=document.getElementById('hdr');if(hd)hd.classList.toggle('collapsed',(window.scrollY||window.pageYOffset||0)>34);},{passive:true});
+var dbIssues=validateDB(DB);if(dbIssues.length)showDataWarning(dbIssues);
 setTheme(THEME);home();
 })();
 </script>
