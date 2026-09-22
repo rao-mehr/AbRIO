@@ -1,54 +1,45 @@
-// ABRI Service Worker - Stale-While-Revalidate
-// Zeigt sofort die gecachte Version, holt im Hintergrund die neue Version
-// (falls Internet verfügbar) für den nächsten Start. Offline: läuft mit
-// letzter gecachter Version weiter, kein Fehler.
+// AbRIO Service Worker – Stale-While-Revalidate
+// Liefert sofort die gecachte Version (offline-fest) und aktualisiert den Cache
+// im Hintergrund. Die Seite prüft selbst, ob eine neuere Version existiert,
+// und bietet dann "Aktualisieren" an.
+// Beim Release: CACHE_NAME ändern -> alte Caches werden beim Aktivieren gelöscht.
 
-const CACHE_NAME = 'abri-cache-v1';
-const ASSETS_TO_CACHE = [
-  './',
-  './index.html'
-];
+const CACHE_NAME = 'abrio-cache-2026-09-23-1';
+const ASSETS_TO_CACHE = ['./', './index.html'];
 
-// Beim Installieren: Assets cachen, sofort aktivieren (nicht auf alten SW warten)
 self.addEventListener('install', (event) => {
   self.skipWaiting();
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE)));
 });
 
-// Beim Aktivieren: alte Cache-Versionen aufräumen, sofort Kontrolle übernehmen
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys
-          .filter((key) => key !== CACHE_NAME)
-          .map((key) => caches.delete(key))
-      )
-    )
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// Bei jedem Request: Cache sofort liefern (schnell!), parallel im Hintergrund
-// die Netzwerk-Version holen und den Cache aktualisieren (für nächsten Start).
-// Kein Internet? -> fetch schlägt fehl -> gecachte Version bleibt die Antwort.
 self.addEventListener('fetch', (event) => {
+  const req = event.request;
+  if (req.method !== 'GET') return;
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+  // Versionsprüfung der Seite: immer direkt ans Netz, nie cachen
+  if (url.searchParams.has('fresh')) {
+    event.respondWith(fetch(req, { cache: 'no-store' }));
+    return;
+  }
   event.respondWith(
     caches.open(CACHE_NAME).then((cache) =>
-      cache.match(event.request).then((cachedResponse) => {
-        const networkFetch = fetch(event.request)
-          .then((networkResponse) => {
-            if (networkResponse && networkResponse.status === 200) {
-              cache.put(event.request, networkResponse.clone());
-            }
-            return networkResponse;
+      cache.match(req).then((cached) => {
+        const network = fetch(req)
+          .then((res) => {
+            if (res && res.status === 200) cache.put(req, res.clone());
+            return res;
           })
-          .catch(() => cachedResponse); // offline oder Fehler -> Cache-Fallback
-
-        // Sofort Cache liefern falls vorhanden, sonst auf Netzwerk warten
-        return cachedResponse || networkFetch;
+          .catch(() => cached);
+        return cached || network;
       })
     )
   );
