@@ -1,0 +1,43 @@
+{
+ "_quelle": "Siehe 'quellen'. Wirkstoffwahl richtet sich nach dem Antibiogramm; lokale Spiegel liegen weit über systemischen Breakpoints.",
+ "traeger": {
+  "pmma": {"t": "PMMA (Zement, Spacer)", "h": [
+    "Nur hitzestabile, wasserlösliche Antibiotika in Pulverform, ins Zementpulver mischen; flüssige Antibiotika senken die Festigkeit deutlich.",
+    "Ungeeignet: Rifampicin (hemmt die Aushärtung), Tetracycline, Flucytosin.",
+    "Fixierung: industriell vorgemischter Antibiotika-Zement; manuell ≤2 g Antibiotikum pro 40 g Zement.",
+    "Spacer (Hochdosis): üblich 6–8 g pro 40 g, höchstens empfohlen 8 g pro 40 g.",
+    "Vancomycin + Aminoglykosid ergänzen sich: das Aminoglykosid steigert die Vancomycin-Freisetzung, auch wenn der Erreger aminoglykosidresistent ist.",
+    "Hochdosis-Spacer: Kreatinin in der ersten postoperativen Woche kontrollieren (Aminoglykosid-Nephrotoxizität, v. a. bei vorbestehender Niereninsuffizienz)."]},
+  "stim": {"t": "STIMULAN (Calciumsulfat)", "h": [
+    "Vom Hersteller freigegeben zum Mischen mit Vancomycin, Gentamicin und Tobramycin; Art und Menge verantwortet der Arzt (Off-label-Gebrauch des Arzneimittels).",
+    "Herstellertests je 10 cc: Vancomycin 0,5–1 g Pulver, Gentamicin 240 mg flüssig, Tobramycin 240 mg.",
+    "Antibiotika verzögern die Aushärtung, flüssige stärker; Vancomycin + Tobramycin deutlich – Vormisch-Technik verkürzt.",
+    "Resorption in etwa 30–60 Tagen. Nebenwirkungen: Wundsekretion (~4–5 %), Hyperkalzämie (volumenabhängig), heterotope Ossifikation (~2 %).",
+    "Kontraindiziert bei Niereninsuffizienz und Hyperkalzämie."]},
+  "cer": {"t": "CERAMENT G / V (Calciumsulfat + Hydroxylapatit)", "h": [
+    "Fertigprodukt: G mit Gentamicin 17,5 mg/ml, V mit Vancomycin 66 mg/ml. Keine weiteren Zusätze erlaubt.",
+    "Zugelassen für Osteomyelitis und Knochendefekte (FRI); keine eigene PJI-Indikation.",
+    "G: ~95 % der Freisetzung in 24 h; lokal wirksam auch gegen Isolate, die systemisch gentamicinresistent sind (Ausnahme: sehr hohe MHK).",
+    "Stärkste klinische Daten: einzeitige Osteomyelitis-Therapie mit CERAMENT G, 94 % infektfrei nach 6 Jahren (McNally 2022)."]}
+ },
+ "kat": {
+  "staph": {"pmma": "Gentamicin-Zement; Spacer mit Vancomycin + Gentamicin", "stim": "Vancomycin ± Gentamicin", "cer": "G (bei Gentamicin-Sensibilität) oder V"},
+  "mrs": {"pmma": "Vancomycin + Aminoglykosid (Gentamicin/Tobramycin) – Aminoglykosid auch bei Resistenz als Freisetzungs-Verstärker", "stim": "Vancomycin (± Gentamicin/Tobramycin)", "cer": "V bevorzugt (KNS/MRSA oft gentamicinresistent); G nur bei Sensibilität"},
+  "strep": {"pmma": "Vancomycin oder Clindamycin (z. B. Gentamicin-Clindamycin-Zement); Aminoglykosid allein unzureichend", "stim": "Vancomycin", "cer": "V"},
+  "ente": {"pmma": "Vancomycin (+ Aminoglykosid als Freisetzungs-Verstärker)", "stim": "Vancomycin", "cer": "V"},
+  "vanr": {"pmma": "Vancomycin unwirksam. Daptomycin im Zement in vitro wirksam (Freisetzung mit Tobramycin besser) – nur nach Infektiologie", "stim": "kein geeigneter freigegebener Zusatz", "cer": "nicht geeignet"},
+  "gpos": {"pmma": "Vancomycin (nach Antibiogramm)", "stim": "Vancomycin", "cer": "V"},
+  "apos": {"pmma": "Vancomycin oder Clindamycin; Aminoglykoside gegen Anaerobier unwirksam", "stim": "Vancomycin", "cer": "V"},
+  "gn": {"pmma": "Aminoglykosid (Gentamicin/Tobramycin) bei Sensibilität; Spacer bei Resistenz: Meropenem (in vitro aktive Freisetzung 3–27 Tage) oder Cefotaxim", "stim": "Gentamicin oder Tobramycin", "cer": "G"},
+  "esbl": {"pmma": "Aminoglykosid bei Sensibilität; Spacer: Meropenem", "stim": "Gentamicin/Tobramycin nur bei Sensibilität", "cer": "G nur bei Sensibilität"},
+  "cre": {"pmma": "Nur nach Antibiogramm und Infektiologie – kein Standard", "stim": "Gentamicin/Tobramycin nur bei Sensibilität", "cer": "G nur bei Sensibilität"},
+  "pae": {"pmma": "Tobramycin oder Gentamicin; Spacer zusätzlich Meropenem", "stim": "Tobramycin oder Gentamicin", "cer": "G bei Sensibilität"},
+  "nf": {"pmma": "Nach Antibiogramm. S. maltophilia: Aminoglykoside und Carbapeneme intrinsisch unwirksam – kein verlässlicher lokaler Wirkstoff", "stim": "nur bei nachgewiesener Aminoglykosid-Sensibilität", "cer": "G nur bei Sensibilität"},
+  "aneg": {"pmma": "Clindamycin bei Sensibilität oder Meropenem; Aminoglykoside und Vancomycin unwirksam", "stim": "kein geeigneter freigegebener Zusatz", "cer": "nicht geeignet"},
+  "fungi": {"pmma": "Spacer mit Amphotericin B oder Voriconazol – keine Konsens-Dosis; Amphotericin-Desoxycholat wird schlecht freigesetzt", "stim": "keine Daten/Freigabe für Antimykotika", "cer": "nicht geeignet"},
+  "myko": {"pmma": "kein etabliertes lokales Konzept – systemische Therapie maßgeblich", "stim": "nicht etabliert", "cer": "nicht etabliert"},
+  "atyp": {"pmma": "Ohne Zellwand: Vancomycin und Beta-Laktame unwirksam – kein etabliertes lokales Konzept", "stim": "nicht etabliert", "cer": "nicht etabliert"},
+  "ab": {"pmma": "Nach Antibiogramm", "stim": "nach Antibiogramm (Vancomycin, Gentamicin, Tobramycin)", "cer": "G oder V je nach Sensibilität"}
+ },
+ "quellen": "Gramlich/Hinz, Biomedicines 2022 (doi 10.3390/biomedicines10081830) · Antimicrobial regimens in cement spacers, Antibiotics 2024 (doi 10.3390/antibiotics13080772) · Biocomposites (STIMULAN) Herstellerangaben, Setting times · Kallala, Bone Joint Res 2018 · Calciumsulfat-Review, J Clin Med 2026 · Colding-Rasmussen, JBJI 2018 · FDA De Novo DEN210044 (CERAMENT G) · Bezstarosti, CORR 2024 · McNally, Bone Joint J 2016 und 2022"
+}

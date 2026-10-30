@@ -108,7 +108,8 @@
    "s. aureus",
    "staphylococcus aureus"
   ],
-  "wu": "Bei Bakteriämie obligat: TEE (Endokarditis-Ausschluss, IE-Rate ~25%), Fokus-/Metastasensuche (Spondylodiszitis, Abszesse, septische Embolien), Kontroll-Blutkulturen alle 48–72 h bis Negativierung, Katheter entfernen, Infektiologie-Konsil. Persistenz >72 h → intensivierte Fokussuche."
+  "wu": "Bei Bakteriämie obligat: TEE (Endokarditis-Ausschluss, IE-Rate ~25%), Fokus-/Metastasensuche (Spondylodiszitis, Abszesse, septische Embolien), Kontroll-Blutkulturen alle 48–72 h bis Negativierung, Katheter entfernen, Infektiologie-Konsil. Persistenz >72 h → intensivierte Fokussuche.",
+  "lk": "staph"
  },
  {
   "n": "Staphylococcus aureus (MRSA)",
@@ -216,7 +217,8 @@
    "s. aureus",
    "staphylococcus aureus"
   ],
-  "wu": "Bei Bakteriämie obligat: TEE (Endokarditis-Ausschluss, IE-Rate ~25%), Fokus-/Metastasensuche (Spondylodiszitis, Abszesse, septische Embolien), Kontroll-Blutkulturen alle 48–72 h bis Negativierung, Katheter entfernen, Infektiologie-Konsil. Persistenz >72 h → intensivierte Fokussuche."
+  "wu": "Bei Bakteriämie obligat: TEE (Endokarditis-Ausschluss, IE-Rate ~25%), Fokus-/Metastasensuche (Spondylodiszitis, Abszesse, septische Embolien), Kontroll-Blutkulturen alle 48–72 h bis Negativierung, Katheter entfernen, Infektiologie-Konsil. Persistenz >72 h → intensivierte Fokussuche.",
+  "lk": "mrs"
  },
  {
   "n": "Staphylococcus lugdunensis",
@@ -319,7 +321,8 @@
    "s. lugdunensis",
    "staphylococcus lugdunensis"
   ],
-  "wu": "Verhält sich aggressiv wie S. aureus: bei Bakteriämie TEE (hohe Endokarditis-Rate), Fokussuche, Kontroll-Blutkulturen."
+  "wu": "Verhält sich aggressiv wie S. aureus: bei Bakteriämie TEE (hohe Endokarditis-Rate), Fokussuche, Kontroll-Blutkulturen.",
+  "lk": "staph"
  },
  {
   "n": "Staphylococcus epidermidis",
@@ -414,7 +417,8 @@
    "s. epidermidis",
    "staphylococcus epidermidis"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "mrs"
  },
  {
   "n": "Staphylococcus haemolyticus",
@@ -506,7 +510,8 @@
    "s. haemolyticus",
    "staphylococcus haemolyticus"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "mrs"
  },
  {
   "n": "Staphylococcus hominis",
@@ -594,7 +599,8 @@
    "s. hominis",
    "staphylococcus hominis"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "mrs"
  },
  {
   "n": "Staphylococcus capitis",
@@ -680,7 +686,8 @@
    "s. capitis",
    "staphylococcus capitis"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "mrs"
  },
  {
   "n": "Staphylococcus saprophyticus",
@@ -764,7 +771,8 @@
    "s. saprophyticus",
    "staphylococcus saprophyticus"
   ],
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "staph"
  },
  {
   "n": "Staphylococcus warneri",
@@ -857,7 +865,8 @@
    "s. warneri",
    "staphylococcus warneri"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "staph"
  },
  {
   "n": "Staphylococcus simulans",
@@ -946,7 +955,8 @@
    "s. simulans",
    "staphylococcus simulans"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "staph"
  },
  {
   "n": "Staphylococcus caprae",
@@ -1035,7 +1045,8 @@
    "s. caprae",
    "staphylococcus caprae"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "staph"
  },
  {
   "n": "Staphylococcus schleiferi",
@@ -1131,7 +1142,8 @@
    "s. schleiferi",
    "staphylococcus schleiferi"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "staph"
  },
  {
   "n": "Staphylococcus pseudintermedius / intermedius (SIG)",
@@ -1238,7 +1250,8 @@
    "s. pseudintermedius",
    "staphylococcus pseudintermedius / intermedius"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "staph"
  },
  {
   "n": "Koagulase-negative Staphylokokken - Übersicht (CoNS)",
@@ -1344,7 +1357,8 @@
    "mrcons",
    "mscons"
   ],
-  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei mehrfachem Nachweis + Klinik. Bei Kunstklappe/CIED oder persistierender Bakteriämie: TEE. Katheter als Quelle prüfen/entfernen.",
+  "lk": "mrs"
  },
  {
   "n": "Streptococcus pyogenes (GAS / Gruppe A)",
@@ -1437,7 +1451,8 @@
    "streptokokken der gruppe a"
   ],
   "wu": "Bei invasiver Infektion: nekrotisierende Fasziitis aktiv ausschließen (chirurgische Exploration!), Streptokokken-Toxic-Shock-Syndrom, Quellen-/Fokussuche.",
-  "ev": "PIF"
+  "ev": "PIF",
+  "lk": "strep"
  },
  {
   "n": "Streptococcus agalactiae (GBS / Gruppe B)",
@@ -1528,7 +1543,8 @@
    "streptokokken der gruppe b"
   ],
   "wu": "GBS-Bakteriämie beim Erwachsenen: Diabetes/Malignom/Immunsuppression abklären; bei Bakteriämie Endokarditis erwägen, Haut-/Weichteil-/Knochenfokus.",
-  "ev": "PIF"
+  "ev": "PIF",
+  "lk": "strep"
  },
  {
   "n": "Streptococcus dysgalactiae (Gruppe C / G)",
@@ -1621,7 +1637,8 @@
    "streptokokken der gruppe c",
    "streptokokken der gruppe g"
   ],
-  "wu": "Ähnlich invasiv wie GAS: nekrotisierende Weichteilinfektion und Endokarditis erwägen, Fokussuche."
+  "wu": "Ähnlich invasiv wie GAS: nekrotisierende Weichteilinfektion und Endokarditis erwägen, Fokussuche.",
+  "lk": "strep"
  },
  {
   "n": "Streptococcus pneumoniae",
@@ -1708,7 +1725,8 @@
    "streptococcus pneumoniae"
   ],
   "wu": "Bei invasiver Erkrankung: Asplenie? Immundefekt/Myelom (Serum-Elektrophorese)? Bei ZNS-Verdacht LP. Impfstatus prüfen.",
-  "ev": "PIF"
+  "ev": "PIF",
+  "lk": "strep"
  },
  {
   "n": "Streptococcus viridans-Gruppe (S. mitis, sanguis, oralis, mutans)",
@@ -1808,7 +1826,8 @@
    "streptococcus viridans-gruppe",
    "viridans"
   ],
-  "wu": "Bei Bakteriämie: TEE (klassischer Endokarditis-Erreger), Zahnstatus/dentaler Fokus."
+  "wu": "Bei Bakteriämie: TEE (klassischer Endokarditis-Erreger), Zahnstatus/dentaler Fokus.",
+  "lk": "strep"
  },
  {
   "n": "Streptococcus anginosus-Gruppe / Milleri (S. anginosus, constellatus, intermedius)",
@@ -1907,7 +1926,8 @@
    "streptococcus anginosus-gruppe / milleri",
    "streptococcus constellatus"
   ],
-  "wu": "Aktiv Abszesse suchen (Leber, Hirn, Lunge, tiefe Kompartimente) — ausgeprägte Abszedierungstendenz, Bildgebung großzügig. Bei Bakteriämie Endokarditis erwägen."
+  "wu": "Aktiv Abszesse suchen (Leber, Hirn, Lunge, tiefe Kompartimente) — ausgeprägte Abszedierungstendenz, Bildgebung großzügig. Bei Bakteriämie Endokarditis erwägen.",
+  "lk": "mrs"
  },
  {
   "n": "Streptococcus gallolyticus / bovis-Gruppe",
@@ -1992,7 +2012,8 @@
    "streptococcus bovis",
    "streptococcus gallolyticus / bovis-gruppe"
   ],
-  "wu": "ZWINGEND: Koloskopie (kolorektales Karzinom/Adenom in bis zu 60%!) + TEE (starke Endokarditis-Assoziation). Zusätzlich Leberabklärung (Zirrhose)."
+  "wu": "ZWINGEND: Koloskopie (kolorektales Karzinom/Adenom in bis zu 60%!) + TEE (starke Endokarditis-Assoziation). Zusätzlich Leberabklärung (Zirrhose).",
+  "lk": "strep"
  },
  {
   "n": "Enterococcus faecalis",
@@ -2079,7 +2100,8 @@
    "enterococcus faecalis"
   ],
   "wu": "Bei Bakteriämie unklarer Quelle: TEE (E. faecalis = häufigster Enterokokken-Endokarditis-Erreger), v.a. bei Klappenprothese/ambulant erworben. Kolorektale Quelle erwägen. Kontroll-Blutkulturen.",
-  "ev": "PIF"
+  "ev": "PIF",
+  "lk": "ente"
  },
  {
   "n": "Enterococcus faecium (VRE)",
@@ -2167,7 +2189,8 @@
    "vre"
   ],
   "wu": "Bei Bakteriämie: Endokarditis erwägen (seltener als E. faecalis), Quellen-/Fokussuche, Kontroll-Blutkulturen. Nosokomial/Immunsuppression häufig.",
-  "ev": "PIF"
+  "ev": "PIF",
+  "lk": "vanr"
  },
  {
   "n": "Granulicatella / Abiotrophia spp. (nutritionally variant Streptococci)",
@@ -2247,7 +2270,8 @@
    "granulicatella"
   ],
   "wu": "Häufig kulturnegative Endokarditis → TEE. Verlängerte Kulturbebrütung, Zahnfokus.",
-  "ev": "Fallserien"
+  "ev": "Fallserien",
+  "lk": "strep"
  },
  {
   "n": "Listeria monocytogenes",
@@ -2313,7 +2337,8 @@
    "l. monocytogenes",
    "listeria monocytogenes"
   ],
-  "wu": "ZNS-Beteiligung häufig (Rhombenzephalitis) → bei neurologischen Zeichen LP/MRT. Immunsuppression/Schwangerschaft abklären. Nahrungsquelle."
+  "wu": "ZNS-Beteiligung häufig (Rhombenzephalitis) → bei neurologischen Zeichen LP/MRT. Immunsuppression/Schwangerschaft abklären. Nahrungsquelle.",
+  "lk": "gpos"
  },
  {
   "n": "Bacillus anthracis (Milzbrand)",
@@ -2469,7 +2494,8 @@
    "b. cereus",
    "bacillus cereus"
   ],
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "gpos"
  },
  {
   "n": "Cutibacterium acnes (früher: Propionibacterium acnes)",
@@ -2575,7 +2601,8 @@
    "propionibacterium",
    "propionibacterium acnes"
   ],
-  "wu": "Bei Nachweis in Blut/Klappe: kardiale Devices/Kunstklappe als Fokus (Prothesenklappen-Endokarditis). Sonst v.a. Schulter. Meist Kontaminante — Wertung nach Probenzahl (≥2 tiefe Proben)."
+  "wu": "Bei Nachweis in Blut/Klappe: kardiale Devices/Kunstklappe als Fokus (Prothesenklappen-Endokarditis). Sonst v.a. Schulter. Meist Kontaminante — Wertung nach Probenzahl (≥2 tiefe Proben).",
+  "lk": "apos"
  },
  {
   "n": "Corynebacterium spp. (Diphtheroide)",
@@ -2672,7 +2699,8 @@
    "corynebacterium spp."
   ],
   "wu": "Meist Kontaminante — echte Infektion bei Fremdmaterial/mehrfachem Nachweis. Bei Klappenprothese + Bakteriämie Echo.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "gpos"
  },
  {
   "n": "Nocardia spp. (N. asteroides, farcinica, brasiliensis)",
@@ -2850,7 +2878,8 @@
    "erysipelothrix rhusiopathiae"
   ],
   "wu": "Endokarditis-Erreger (oft Nativklappe, aggressiver Verlauf) → TEE. Berufsanamnese (Fleisch-/Fischverarbeitung, Landwirtschaft).",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "vanr"
  },
  {
   "n": "Leuconostoc / Pediococcus / Lactobacillus (Van-R grampos.)",
@@ -2925,7 +2954,8 @@
   ],
   "w": 1,
   "det": [],
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "vanr"
  },
  {
   "n": "Escherichia coli (sensibel)",
@@ -3020,7 +3050,8 @@
    "e coli",
    "e. coli",
    "escherichia coli"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "E. coli / Klebsiella ESBL",
@@ -3117,7 +3148,8 @@
    "e. coli",
    "e. coli / klebsiella esbl",
    "esbl"
-  ]
+  ],
+  "lk": "esbl"
  },
  {
   "n": "Klebsiella pneumoniae (sensibel)",
@@ -3203,7 +3235,8 @@
    "k. pneumoniae",
    "klebsiella pneumoniae"
   ],
-  "wu": "Bei invasivem Syndrom (v.a. hypervirulente Stämme): Leberabszess suchen (Abdomen-Sono/CT), metastatische Herde (Endophthalmitis, Meningitis) ausschließen."
+  "wu": "Bei invasivem Syndrom (v.a. hypervirulente Stämme): Leberabszess suchen (Abdomen-Sono/CT), metastatische Herde (Endophthalmitis, Meningitis) ausschließen.",
+  "lk": "gn"
  },
  {
   "n": "Klebsiella pneumoniae (KPC / Carbapenem-R)",
@@ -3288,7 +3321,8 @@
    "kpc",
    "oxa-48"
   ],
-  "wu": "Bei invasivem Syndrom (v.a. hypervirulente Stämme): Leberabszess suchen (Abdomen-Sono/CT), metastatische Herde (Endophthalmitis, Meningitis) ausschließen."
+  "wu": "Bei invasivem Syndrom (v.a. hypervirulente Stämme): Leberabszess suchen (Abdomen-Sono/CT), metastatische Herde (Endophthalmitis, Meningitis) ausschließen.",
+  "lk": "cre"
  },
  {
   "n": "Klebsiella oxytoca",
@@ -3373,7 +3407,8 @@
    "k oxytoca",
    "k. oxytoca",
    "klebsiella oxytoca"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Enterobacter cloacae (Komplex)",
@@ -3469,7 +3504,8 @@
    "e cloacae",
    "e. cloacae",
    "enterobacter cloacae"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Serratia marcescens",
@@ -3562,7 +3598,8 @@
    "s marcescens",
    "s. marcescens",
    "serratia marcescens"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Proteus mirabilis",
@@ -3659,7 +3696,8 @@
    "p mirabilis",
    "p. mirabilis",
    "proteus mirabilis"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Proteus vulgaris / penneri / hauseri (indol-positiver Proteus)",
@@ -3745,7 +3783,8 @@
    "p vulgaris",
    "p. vulgaris",
    "proteus vulgaris / penneri / hauseri"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Morganella morganii",
@@ -3836,7 +3875,8 @@
    "m morganii",
    "m. morganii",
    "morganella morganii"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Citrobacter spp. (freundii / koseri)",
@@ -3927,7 +3967,8 @@
    "c spp.",
    "c. spp.",
    "citrobacter spp."
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Providencia spp. (rettgeri, stuartii, alcalifaciens)",
@@ -4017,7 +4058,8 @@
    "p spp.",
    "p. spp.",
    "providencia spp."
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Yersinia enterocolitica / pseudotuberculosis",
@@ -4086,7 +4128,8 @@
    "y enterocolitica",
    "y. enterocolitica",
    "yersinia enterocolitica / pseudotuberculosis"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Salmonella Typhi / Paratyphi",
@@ -4366,7 +4409,8 @@
    "p. aeruginosa",
    "pseudomonas aeruginosa"
   ],
-  "wu": "Bei Bakteriämie Quelle suchen (Katheter, Harnwege, Pneumonie, Weichteile). Bei i.v.-Drogenkonsum Rechtsherz-Endokarditis → Echo. Endovaskulär bei Persistenz."
+  "wu": "Bei Bakteriämie Quelle suchen (Katheter, Harnwege, Pneumonie, Weichteile). Bei i.v.-Drogenkonsum Rechtsherz-Endokarditis → Echo. Endovaskulär bei Persistenz.",
+  "lk": "pae"
  },
  {
   "n": "Stenotrophomonas maltophilia",
@@ -4464,7 +4508,8 @@
    "s. maltophilia",
    "stenotrophomonas maltophilia"
   ],
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "nf"
  },
  {
   "n": "Acinetobacter baumannii",
@@ -4552,7 +4597,8 @@
    "a baumannii",
    "a. baumannii",
    "acinetobacter baumannii"
-  ]
+  ],
+  "lk": "nf"
  },
  {
   "n": "Burkholderia cepacia complex (BCC - CF-Patienten)",
@@ -4794,7 +4840,8 @@
    "h influenzae",
    "h. influenzae",
    "haemophilus influenzae"
-  ]
+  ],
+  "lk": "gn"
  },
  {
   "n": "Haemophilus ducreyi (Ulcus molle / Chancroid)",
@@ -5021,7 +5068,8 @@
    "eikenella corrodens"
   ],
   "wu": "Endokarditis ist Hauptmanifestation → TEE obligat. Zahnstatus/dentaler Fokus, verlängerte Blutkulturbebrütung.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "gn"
  },
  {
   "n": "Kingella kingae (Kinder-Knochen-/Gelenkinfektionen)",
@@ -5112,7 +5160,8 @@
    "kingella kingae"
   ],
   "wu": "Bei Bakteriämie Echo (Endokarditis), osteoartikulären Fokus suchen (Kinder). Oft nach oberem Atemwegsinfekt.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "gn"
  },
  {
   "n": "Neisseria gonorrhoeae",
@@ -5827,7 +5876,8 @@
    "brucella spp."
   ],
   "wu": "TEE (Endokarditis — häufigste Todesursache), Wirbelsäulen-MRT (Spondylodiszitis/Sakroiliitis), Orchitis? Tierkontakt/Rohmilch-Anamnese.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "gn"
  },
  {
   "n": "Francisella tularensis (Tularämie)",
@@ -5991,7 +6041,8 @@
    "pasteurella multocida"
   ],
   "wu": "Biss-/Tierkontakt-Anamnese, Gelenk-/Knochenbeteiligung prüfen. Bei Bakteriämie Endokarditis erwägen.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "gn"
  },
  {
   "n": "Capnocytophaga canimorsus (Hunde-/Katzenbiss)",
@@ -6086,7 +6137,8 @@
    "capnocytophaga canimorsus"
   ],
   "wu": "Asplenie/Alkohol/Immunsuppression abklären (fulminante Sepsis-Gefahr!). Tier-/Bissanamnese. Bei Asplenie besonders aggressiv behandeln.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "gn"
  },
  {
   "n": "Streptobacillus moniliformis (Rattenbissfieber)",
@@ -6617,7 +6669,8 @@
   "w": 2,
   "det": [
    "peptostreptococcus"
-  ]
+  ],
+  "lk": "apos"
  },
  {
   "n": "Finegoldia magna",
@@ -6709,7 +6762,8 @@
    "f. magna",
    "finegoldia magna",
    "peptostreptococcus magnus"
-  ]
+  ],
+  "lk": "apos"
  },
  {
   "n": "Actinomyces israelii (Actinomykose)",
@@ -6798,7 +6852,8 @@
    "actinomyces israelii"
   ],
   "wu": "Chronisch-granulomatös, Fisteln/„Schwefelkörnchen\". Ausbreitung in Nachbarstrukturen bildgebend abklären (zervikofazial, thorakal, abdominopelvin — IUP als Risiko!). Lange Therapie.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "apos"
  },
  {
   "n": "Bacteroides fragilis / Anaerobier (gram-neg.)",
@@ -6892,7 +6947,8 @@
    "bacteroides fragilis",
    "bacteroides fragilis / anaerobier"
   ],
-  "wu": "Intraabdominelle/pelvine Quelle suchen (Bildgebung), Source-Control. Bei unklarer Quelle GI-Malignom erwägen."
+  "wu": "Intraabdominelle/pelvine Quelle suchen (Bildgebung), Source-Control. Bei unklarer Quelle GI-Malignom erwägen.",
+  "lk": "aneg"
  },
  {
   "n": "Fusobacterium nucleatum / necrophorum (Lemierre-Syndrom)",
@@ -6975,7 +7031,8 @@
    "f. nucleatum",
    "fusobacterium nucleatum / necrophorum"
   ],
-  "wu": "Lemierre-Syndrom: Hals-/Weichteil-Sono oder -CT (V.-jugularis-Thrombose), Thorax-CT (septische Lungenembolien)."
+  "wu": "Lemierre-Syndrom: Hals-/Weichteil-Sono oder -CT (V.-jugularis-Thrombose), Thorax-CT (septische Lungenembolien).",
+  "lk": "aneg"
  },
  {
   "n": "Prevotella spp. (oral/respiratorisch)",
@@ -7064,7 +7121,8 @@
    "p spp.",
    "p. spp.",
    "prevotella spp."
-  ]
+  ],
+  "lk": "aneg"
  },
  {
   "n": "Legionella pneumophila",
@@ -7290,7 +7348,8 @@
    "mycoplasma hominis / ureaplasma spp.",
    "ureaplasma"
   ],
-  "ev": "Fallbericht"
+  "ev": "Fallbericht",
+  "lk": "atyp"
  },
  {
   "n": "Chlamydia pneumoniae",
@@ -8109,7 +8168,8 @@
    "mtb",
    "mycobacterium tuberculosis",
    "tuberkulose"
-  ]
+  ],
+  "lk": "myko"
  },
  {
   "n": "Mycobacterium avium complex (MAC)",
@@ -8270,7 +8330,8 @@
    "mycobacterium abscessus complex"
   ],
   "wu": "Quelle abklären (Injektionen, OP, kosmetische Eingriffe, Wasserexposition). Immunstatus. Bei Fremdmaterial Explantation erwägen. Disseminierung ausschließen.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "myko"
  },
  {
   "n": "Mycobacterium kansasii",
@@ -8518,7 +8579,8 @@
    "mycobacterium fortuitum / chelonae complex"
   ],
   "wu": "Quelle abklären (Injektionen, OP, kosmetische Eingriffe, Wasserexposition). Immunstatus. Bei Fremdmaterial Explantation erwägen. Disseminierung ausschließen.",
-  "ev": "Leitlinie"
+  "ev": "Leitlinie",
+  "lk": "myko"
  },
  {
   "n": "Mycobacterium xenopi",
@@ -8732,7 +8794,8 @@
    "c. albicans",
    "candida albicans"
   ],
-  "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis, bis 15%!) in der 1. Woche, TEE (Endokarditis, v.a. bei Persistenz/Device), Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie."
+  "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis, bis 15%!) in der 1. Woche, TEE (Endokarditis, v.a. bei Persistenz/Device), Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie.",
+  "lk": "fungi"
  },
  {
   "n": "Candida non-albicans (glabrata, krusei, tropicalis)",
@@ -8834,7 +8897,8 @@
    "candida parapsilosis",
    "candida tropicalis"
   ],
-  "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis, bis 15%!) in der 1. Woche, TEE (Endokarditis, v.a. bei Persistenz/Device), Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie."
+  "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis, bis 15%!) in der 1. Woche, TEE (Endokarditis, v.a. bei Persistenz/Device), Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie.",
+  "lk": "fungi"
  },
  {
   "n": "Candida auris",
@@ -8896,7 +8960,8 @@
    "c. auris",
    "candida auris"
   ],
-  "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis, bis 15%!) in der 1. Woche, TEE (Endokarditis, v.a. bei Persistenz/Device), Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie."
+  "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis, bis 15%!) in der 1. Woche, TEE (Endokarditis, v.a. bei Persistenz/Device), Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie.",
+  "lk": "fungi"
  },
  {
   "n": "Candida (Mund-/Ösophageal-Soor)",
@@ -9044,7 +9109,8 @@
    "a. fumigatus",
    "aspergillus fumigatus"
   ],
-  "wu": "Immunsuppression/Neutropenie abklären. Ausbreitung bildgebend (Thorax-CT, ggf. ZNS/NNH). Galactomannan."
+  "wu": "Immunsuppression/Neutropenie abklären. Ausbreitung bildgebend (Thorax-CT, ggf. ZNS/NNH). Galactomannan.",
+  "lk": "fungi"
  },
  {
   "n": "Mucor / Rhizopus (Mukormykose)",
@@ -10071,7 +10137,8 @@
   "w": 1,
   "det": [
    "3mrgn"
-  ]
+  ],
+  "lk": "esbl"
  },
  {
   "n": "4MRGN - Multiresistente gram-negative Stäbchen (alle 4 Gruppen resistent)",
@@ -10159,7 +10226,8 @@
   "w": 1,
   "det": [
    "4mrgn"
-  ]
+  ],
+  "lk": "cre"
  },
  {
   "n": "VRE - Vancomycin-resistente Enterokokken (E. faecalis / E. faecium)",
@@ -10264,7 +10332,8 @@
    "vanb",
    "vre"
   ],
-  "wu": "Bei Bakteriämie: Endokarditis erwägen (seltener als E. faecalis), Quellen-/Fokussuche, Kontroll-Blutkulturen. Nosokomial/Immunsuppression häufig."
+  "wu": "Bei Bakteriämie: Endokarditis erwägen (seltener als E. faecalis), Quellen-/Fokussuche, Kontroll-Blutkulturen. Nosokomial/Immunsuppression häufig.",
+  "lk": "vanr"
  },
  {
   "n": "Cutibacterium avidum",
@@ -10347,7 +10416,8 @@
   },
   "pi": "Cutibacterium – PIF-v11-Anaerobier-Schema | IV-Phase (PIF v11): Penicillin G 5 Mio. IE alle 6 h (4 × 5 Mio.) oder Ceftriaxon 2 g 1x/d, 2 Wochen | Rifampicin: PIF-v11-Empfehlung bei Cutibacterium (Evidenz schwach, s. C. acnes) | Oral: Rifampicin 450 mg 2x/d + Levofloxacin 500 mg 2x/d, oder + Amoxicillin 1 g 3x/d, oder + Doxycyclin 100 mg 2x/d | Dauer: 12 Wochen gesamt (PIF v11)",
   "wu": "Bei Nachweis in Blut/Klappe: kardiale Devices/Kunstklappe als Fokus (Prothesenklappen-Endokarditis). Sonst v.a. Schulter. Meist Kontaminante — Wertung nach Probenzahl (≥2 tiefe Proben).",
-  "ev": "PIF"
+  "ev": "PIF",
+  "lk": "apos"
  },
  {
   "n": "Parvimonas micra (früher: Peptostreptococcus micros)",
@@ -10431,7 +10501,8 @@
   },
   "pi": "Grampositiver Anaerobier (früher Peptostreptococcus) – PIF-v11-Tabelle | IV-Phase (PIF v11): Penicillin G 5 Mio. IE alle 6 h (4 × 5 Mio.) oder Ceftriaxon 2 g 1x/d, 2 Wochen | Rifampicin optional – laut PIF v11 v.a. bei Cutibacterium empfohlen, bei anderen Anaerobiern wenig Daten | Oral: Amoxicillin 1 g 3x/d oder Doxycyclin 100 mg 2x/d, optional + Rifampicin 450 mg 2x/d | Dauer: 12 Wochen gesamt (PIF v11)",
   "wu": "Dentaler/oraler Fokus. Bei Bakteriämie Endokarditis und Spondylodiszitis erwägen (zunehmend beschrieben).",
-  "ev": "PIF"
+  "ev": "PIF",
+  "lk": "apos"
  },
  {
   "n": "Rothia mucilaginosa (früher: Stomatococcus mucilaginosus)",
@@ -10502,7 +10573,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Bei Bakteriämie: Echo (Endokarditis), Immunstatus/Neutropenie prüfen, Zahnfokus."
+  "wu": "Bei Bakteriämie: Echo (Endokarditis), Immunstatus/Neutropenie prüfen, Zahnfokus.",
+  "lk": "gpos"
  },
  {
   "n": "Gemella morbillorum / haemolysans",
@@ -10568,7 +10640,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Endokarditis-Assoziation → Echo bei Bakteriämie. Zahnfokus, verlängerte Bebrütung."
+  "wu": "Endokarditis-Assoziation → Echo bei Bakteriämie. Zahnfokus, verlängerte Bebrütung.",
+  "lk": "strep"
  },
  {
   "n": "Aerococcus urinae / viridans",
@@ -10634,7 +10707,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Bei Bakteriämie: TEE (klassischer Endokarditis-Erreger), Zahnstatus/dentaler Fokus."
+  "wu": "Bei Bakteriämie: TEE (klassischer Endokarditis-Erreger), Zahnstatus/dentaler Fokus.",
+  "lk": "strep"
  },
  {
   "n": "Micrococcus luteus",
@@ -10696,7 +10770,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Meist Kontaminante — echte Infektion nur bei Fremdmaterial + mehrfachem Nachweis. Katheter prüfen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei Fremdmaterial + mehrfachem Nachweis. Katheter prüfen.",
+  "lk": "gpos"
  },
  {
   "n": "Kocuria spp.",
@@ -10758,7 +10833,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Meist Kontaminante — echte Infektion nur bei Fremdmaterial + mehrfachem Nachweis. Katheter prüfen."
+  "wu": "Meist Kontaminante — echte Infektion nur bei Fremdmaterial + mehrfachem Nachweis. Katheter prüfen.",
+  "lk": "gpos"
  },
  {
   "n": "Actinotignum schaalii (früher: Actinobaculum schaalii)",
@@ -10821,7 +10897,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Urogenitale Quelle/Obstruktion abklären (v.a. ältere Patienten)."
+  "wu": "Urogenitale Quelle/Obstruktion abklären (v.a. ältere Patienten).",
+  "lk": "apos"
  },
  {
   "n": "Helcococcus kunzii",
@@ -10887,7 +10964,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Diabetisches Fußsyndrom/chronische Wunde als Quelle, Gefäßstatus prüfen."
+  "wu": "Diabetisches Fußsyndrom/chronische Wunde als Quelle, Gefäßstatus prüfen.",
+  "lk": "gpos"
  },
  {
   "n": "Dermabacter hominis",
@@ -10956,7 +11034,8 @@
    "cave": [],
    "extra": []
   },
-  "pi": ""
+  "pi": "",
+  "lk": "gpos"
  },
  {
   "n": "Achromobacter xylosoxidans",
@@ -11026,7 +11105,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheter-/CF-Quelle prüfen, Immunstatus. Bei persistierender Bakteriämie endovaskulären Fokus erwägen."
+  "wu": "Katheter-/CF-Quelle prüfen, Immunstatus. Bei persistierender Bakteriämie endovaskulären Fokus erwägen.",
+  "lk": "nf"
  },
  {
   "n": "Elizabethkingia meningoseptica",
@@ -11092,7 +11172,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus."
+  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus.",
+  "lk": "nf"
  },
  {
   "n": "Chryseobacterium indologenes",
@@ -11158,7 +11239,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus."
+  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus.",
+  "lk": "nf"
  },
  {
   "n": "Ralstonia pickettii",
@@ -11224,7 +11306,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus."
+  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus.",
+  "lk": "nf"
  },
  {
   "n": "Ochrobactrum anthropi",
@@ -11290,7 +11373,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus."
+  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus.",
+  "lk": "nf"
  },
  {
   "n": "Sphingomonas paucimobilis",
@@ -11356,7 +11440,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus."
+  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus.",
+  "lk": "gn"
  },
  {
   "n": "Comamonas testosteroni",
@@ -11418,7 +11503,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus."
+  "wu": "Katheter-/Fremdmaterial als Quelle prüfen/entfernen. Kontamination durch Lösungen/Wasser ausschließen (Pseudo-Ausbruch). Immunstatus.",
+  "lk": "gn"
  },
  {
   "n": "Eggerthella lenta (früher: Eubacterium lentum)",
@@ -11489,7 +11575,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Gastrointestinale Quelle abklären (Bildgebung), Source-Control. Bei Bakteriämie Endokarditis erwägen."
+  "wu": "Gastrointestinale Quelle abklären (Bildgebung), Source-Control. Bei Bakteriämie Endokarditis erwägen.",
+  "lk": "apos"
  },
  {
   "n": "Clostridium ramosum / innocuum (nicht-toxinbildende Clostridien)",
@@ -11560,7 +11647,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "GI-Quelle abklären. Cave: C. innocuum intrinsisch Vancomycin-resistent."
+  "wu": "GI-Quelle abklären. Cave: C. innocuum intrinsisch Vancomycin-resistent.",
+  "lk": "apos"
  },
  {
   "n": "Trichosporon spp.",
@@ -11622,7 +11710,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheterassoziierte Fungämie → ZVK entfernen. Immunstatus/Neutropenie. Augenärztliche Kontrolle bei Fungämie."
+  "wu": "Katheterassoziierte Fungämie → ZVK entfernen. Immunstatus/Neutropenie. Augenärztliche Kontrolle bei Fungämie.",
+  "lk": "fungi"
  },
  {
   "n": "Rhodotorula spp.",
@@ -11680,7 +11769,8 @@
    "extra": []
   },
   "pi": "",
-  "wu": "Katheterassoziierte Fungämie → ZVK entfernen. Immunstatus/Neutropenie. Augenärztliche Kontrolle bei Fungämie."
+  "wu": "Katheterassoziierte Fungämie → ZVK entfernen. Immunstatus/Neutropenie. Augenärztliche Kontrolle bei Fungämie.",
+  "lk": "fungi"
  },
  {
   "n": "Paracoccidioides brasiliensis / lutzii (Parakokzidioidomykose)",
@@ -11747,7 +11837,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "fungi"
  },
  {
   "n": "Dematiäzeöse Schimmel / Phäohyphomykose (Exophiala, Cladophialophora, Alternaria, Curvularia)",
@@ -11823,7 +11914,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "fungi"
  },
  {
   "n": "Eumyzetom (Madurella mycetomatis u.a. / Madurafuß)",
@@ -11886,7 +11978,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "fungi"
  },
  {
   "n": "Purpureocillium lilacinum / Paecilomyces",
@@ -11956,7 +12049,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "fungi"
  },
  {
   "n": "Saccharomyces cerevisiae / boulardii (Probiotika-Fungämie)",
@@ -12023,7 +12117,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "fungi"
  },
  {
   "n": "Geotrichum / Magnusiomyces (Saprochaete) capitatus",
@@ -12081,7 +12176,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "fungi"
  },
  {
   "n": "Mycobacterium chimaera (Heater-Cooler / Herzchirurgie-Ausbrüche)",
@@ -12148,7 +12244,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 2
+  "w": 2,
+  "lk": "myko"
  },
  {
   "n": "Mycobacterium bovis / BCG (BCG-Osteomyelitis)",
@@ -12211,7 +12308,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "myko"
  },
  {
   "n": "Mycobacterium haemophilum",
@@ -12274,7 +12372,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "myko"
  },
  {
   "n": "Mycobacterium terrae complex (Tenosynovitis der Hand)",
@@ -12332,7 +12431,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "myko"
  },
  {
   "n": "Streptococcus suis (Schweine-Zoonose)",
@@ -12397,7 +12497,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "strep"
  },
  {
   "n": "Corynebacterium striatum / jeikeium (multiresistente Diphtheroide)",
@@ -12460,7 +12561,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 2
+  "w": 2,
+  "lk": "gpos"
  },
  {
   "n": "Enterococcus gallinarum / casseliflavus (VanC - intrinsisch)",
@@ -12531,7 +12633,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "vanr"
  },
  {
   "n": "Rhodococcus equi",
@@ -12595,7 +12698,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "gpos"
  },
  {
   "n": "Gordonia / Tsukamurella spp. (Katheter-Aktinomyzeten)",
@@ -12656,7 +12760,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "gpos"
  },
  {
   "n": "Pantoea agglomerans (Pflanzendorn-Arthritis)",
@@ -12723,7 +12828,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "gn"
  },
  {
   "n": "Chromobacterium violaceum",
@@ -12783,7 +12889,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "gn"
  },
  {
   "n": "Pseudomonas putida / fluorescens (Non-aeruginosa)",
@@ -12849,7 +12956,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "nf"
  },
  {
   "n": "Clostridium septicum (spontaner Gasbrand)",
@@ -12909,7 +13017,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 2
+  "w": 2,
+  "lk": "apos"
  },
  {
   "n": "Veillonella spp.",
@@ -12980,7 +13089,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "aneg"
  },
  {
   "n": "Anaerococcus / Peptoniphilus (GPAC)",
@@ -13048,7 +13158,8 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "strep"
  },
  {
   "n": "Porphyromonas spp. (oral-anaerob)",
@@ -13120,6 +13231,7 @@
    "extra": []
   },
   "pi": "",
-  "w": 1
+  "w": 1,
+  "lk": "aneg"
  }
 ]
