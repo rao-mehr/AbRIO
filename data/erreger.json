@@ -51,7 +51,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Haut/Weichteil 5-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage (unkomp.) - Endokarditis 4-6 Wo. - Osteomyelitis 4-6 Wo. - Spondylodiszitis 6-12 Wo. - PJI 3 Mo. (3-6)",
+  "dur": "Haut/Weichteil 5-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage (unkomp.) - Endokarditis 4-6 Wo. - Osteomyelitis 4-6 Wo. - Spondylodiszitis 6-12 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "",
   "pi": "DAIR / Wechsel-OP je nach Zeitfenster: | IV-Phase PJI (PIF-Pocket-Guide PJI v11): Cefazolin 2 g alle 8 h (PIF-Primärwahl für Prothesen!) | IV-Phase FRI/septische Arthritis (PIF v4/v2): Flucloxacillin 2 g alle 4-6 h (PIF-Primärwahl dort) | Beide gleichwertig wirksam, Wahl ist syndromspezifisch in den Original-Pocket-Guides | Rifampicin: ab Tag 2-7 (Wunde trocken!) 300-450 mg alle 12 h - nie früher! | Oral-Switch: Levofloxacin 500 mg 2x/d + Rifampicin 300-450 mg 2x/d | oder: Ciprofloxacin 750 mg 2x/d + Rifampicin 300-450 mg 2x/d | Dauer: Hüfte/Knie 3 Monate - Schulter/Ellbogen/Sprunggelenk 6 Monate | Unterdrückungstherapie: Cefalexin 500 mg 2x/d + Rifampicin (wenn OP nicht möglich)",
   "pig": {
@@ -71,19 +71,21 @@
    ],
    "surg": [
     "DAIR / Wechsel-OP je nach Zeitfenster:",
-    "Unterdrückungstherapie: Cefalexin 500 mg 2x/d + Rifampicin (wenn OP nicht möglich)"
+    "Suppression (wenn OP nicht möglich): orale Monotherapie nach Antibiogramm (z. B. Cefalexin, Doxycyclin, Cotrimoxazol) – kein Rifampicin in der Langzeitsuppression (Resistenzselektion, Interaktionen)"
    ],
    "dur": [
     "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen"
+   ],
    "extra": [
     "Beide gleichwertig wirksam, Wahl ist syndromspezifisch in den Original-Pocket-Guides",
     "Ciprofloxacin + Rifampicin ist nicht Teil von PIF v11 (dort Levofloxacin)"
    ]
   },
   "syn": {
-   "PJI": "PJI 3 Mo. (3-6)",
+   "PJI": "PJI 12 Wochen (PIF v11)",
    "FRI": "Osteomyelitis 4-6 Wo.",
    "SI": "Spondylodiszitis 6-12 Wo."
   },
@@ -160,7 +162,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Haut/Weichteil 5-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage (unkomp.) - Endokarditis 6 Wo. - Osteomyelitis 6 Wo. - PJI 3 Mo. (3-6)",
+  "dur": "Haut/Weichteil 5-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage (unkomp.) - Endokarditis 6 Wo. - Osteomyelitis 6 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "Daptomycin NICHT bei Lungenpneumonie - AUC-TDM obligat",
   "pi": "DAIR möglich bei früher Infektion + stabiles Implantat: | IV-Phase: Vancomycin (AUC 400-600) oder Daptomycin 6-8 mg/kg 1x/d | Rifampicin: ab Tag 2-7 (Wunde trocken!) 300-450 mg alle 12 h | Oral-Switch: TMP/SMX 1-2 DS alle 12 h + Rifampicin 300-450 mg 2x/d | oder: Linezolid 600 mg alle 12 h + Rifampicin (wenn TMP/SMX-R) | oder: Doxycyclin 100 mg alle 12 h + Rifampicin (wenn sensibel) | Dauer: Hüfte/Knie 3 Monate - Schulter/Ellbogen 6 Monate | Zwei-Stufen-Wechsel bevorzugt bei chronischer Infektion",
   "pig": {
@@ -183,14 +185,15 @@
     "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
    "cave": [
-    "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie"
+    "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie",
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen"
    ],
    "extra": [
     "Rifampicin-resistent: 2 Wochen i.v., dann Langzeitsuppression ≥1 Jahr (PIF v11)"
    ]
   },
   "syn": {
-   "PJI": "PJI 3 Mo. (3-6)",
+   "PJI": "PJI 12 Wochen (PIF v11)",
    "FRI": "Osteomyelitis 6 Wo."
   },
   "syns": [
@@ -271,7 +274,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Haut 7-10 Tage - Bakteriämie 14 Tage - Endokarditis 4-6 Wo. (aggressiv wie S. aureus) - PJI 3-6 Mo.",
+  "dur": "Haut 7-10 Tage - Bakteriämie 14 Tage - Endokarditis 4-6 Wo. (aggressiv wie S. aureus) - PJI 12 Wo. (PIF v11)",
   "note": "VIRULENTER als andere CoNS - klinisch wie S. aureus! - Endokarditis, Gelenkinfektionen, tiefe Weichteilinfektionen - Penicillinase-Nachweis obligat - Endokarditistherapie: Dauer wie S. aureus",
   "pi": "Virulenter als andere CoNS -> wie S. aureus behandeln: | MSLug (oxacillinsensibel): | IV: Flucloxacillin 2 g alle 4-6 h; Rifampicin ab Tag 2-7 | Oral: Levofloxacin 500 mg 2x/d + Rifampicin 300-450 mg 2x/d | MRSLug (oxacillinresistent): | IV: Vancomycin/Daptomycin; Rifampicin ab Tag 2-7 | Oral: TMP/SMX + Rifampicin oder Doxycyclin + Rifampicin | Dauer: Hüfte/Knie 3 Mo. - Schulter/Ellbogen 6 Mo. | Frühe chirurgische Konsultation obligat - Endokarditis ausschließen!",
   "pig": {
@@ -289,7 +292,10 @@
    "dur": [
     "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen",
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
+   ],
    "extra": [
     "MSLug (oxacillinsensibel):",
     "MRSLug (oxacillinresistent):",
@@ -297,7 +303,7 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s lugdunensis",
@@ -355,7 +361,7 @@
   "o": [
    [
     "TMP/SMX + Rifampicin",
-    "TMP/SMX 1 DS p.o. alle 12 h + Rifampicin 300 mg alle 12 h"
+    "960 mg p.o. 3x/d + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Implantat/Biofilm"
    ],
    [
     "Linezolid",
@@ -363,7 +369,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Katheter-Bakteriämie 5-7 Tage (nach Zug) - ZVK ohne Zug 10-14 Tage - Endokarditis 6 Wo. - PJI 3-6 Mo.",
+  "dur": "Katheter-Bakteriämie 5-7 Tage (nach Zug) - ZVK ohne Zug 10-14 Tage - Endokarditis 6 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "Häufigster CoNS - Biofilm-Bildner - Fremdmaterial-assoziiert - Rifampicin immer nur in Kombination",
   "pi": "CoNS auf Implantat - meist oxacillinresistent (MRCoNS): | IV-Phase: Vancomycin (AUC-guided) oder Daptomycin 6 mg/kg | Rifampicin: ab Tag 2-7 (Wunde trocken!) 300-450 mg alle 12 h | Oral-Switch (MRCoNS): TMP/SMX 1 DS alle 12 h + Rifampicin 300-450 mg 2x/d | oder: Ciprofloxacin 750 mg 2x/d + Rifampicin (wenn Cipro sensibel) | Oral-Switch (MSCoNS): Levofloxacin 500 mg 2x/d + Rifampicin | Dauer: Hüfte/Knie 3 Mo. - Schulter/Ellbogen 6 Mo. | Implantatentfernung wenn möglich - Fremdmaterial stark biofilmassoziiert",
   "pig": {
@@ -375,7 +381,7 @@
     "Rifampicin: ab Tag 2-7 (Wunde trocken!) 450 mg alle 12 h (>75 J.: 300 mg)"
    ],
    "oral": [
-    "Oral-Switch (MRCoNS): TMP/SMX 1 DS alle 12 h + Rifampicin 450 mg 2x/d (>75 J.: 300 mg)",
+    "Oral-Switch (MRCoNS): TMP/SMX 960 mg 3x/d + Rifampicin 450 mg 2x/d (>75 J.: 300 mg)",
     "oder: Ciprofloxacin 750 mg 2x/d + Rifampicin (wenn Cipro sensibel)",
     "Oral-Switch (MSCoNS): Levofloxacin 500 mg 2x/d + Rifampicin"
    ],
@@ -385,11 +391,14 @@
    "dur": [
     "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen",
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
+   ],
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s epidermidis",
@@ -447,11 +456,11 @@
    ],
    [
     "TMP/SMX + Rifampicin",
-    "160/800 mg alle 12 h + Rifampicin 300 mg alle 12 h (wenn sensibel)"
+    "960 mg p.o. 3x/d + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Implantat/Biofilm"
    ]
   ],
   "olabel": "",
-  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. - PJI 3-6 Mo. - oft Zwei-Stufen-Wechsel",
+  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. - PJI 12 Wo. (PIF v11) - oft Zwei-Stufen-Wechsel",
   "note": "Häufig multiresistenter CoNS - hetero-VISA/VISA-Phänotyp beschrieben (reduzierte Glykopeptid-Empfindlichkeit) - TDM bei Vancomycin obligat - Kontaminante vs. Pathogen: Klinik + Kulturanzahl bewerten",
   "pi": "Häufig multiresistent - cave: hetero-VISA möglich: | IV-Phase: Vancomycin (AUC-guided) oder Teicoplanin | Rifampicin: ab Tag 2-7 (Wunde trocken!) 300-450 mg alle 12 h | Oral-Switch: TMP/SMX + Rifampicin (wenn sensibel) | oder: Linezolid 600 mg alle 12 h + Rifampicin (wenn TMP/SMX-R) | oder: Doxycyclin 100 mg alle 12 h + Rifampicin | Zwei-Stufen-Wechsel oft nötig bei chronischer Infektion | Dauer: Hüfte/Knie 3 Mo. - Schulter/Ellbogen 6 Mo.",
   "pig": {
@@ -474,12 +483,14 @@
     "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
    "cave": [
-    "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie"
+    "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie",
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen",
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
    ],
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s haemolyticus",
@@ -533,7 +544,7 @@
   "o": [
    [
     "TMP/SMX + Rifampicin",
-    "160/800 mg p.o. alle 12 h + Rifampicin 300 mg alle 12 h"
+    "960 mg p.o. 3x/d + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Implantat/Biofilm"
    ],
    [
     "Linezolid",
@@ -541,7 +552,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Katheter-Bakteriämie 5-7 Tage - Endokarditis 6 Wo. - PJI 3-6 Mo.",
+  "dur": "Katheter-Bakteriämie 5-7 Tage - Endokarditis 6 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "Häufige Haut-Normalflora - nosokomial bei Kathetern / Fremdmaterial - Kontaminante vs. Pathogen: mind. 2 pos. Kulturen gleicher Art/Antibiogramm",
   "pi": "MRCoNS-Protokoll: | IV-Phase: Vancomycin (AUC-guided) | Rifampicin: ab Tag 2-7 (Wunde trocken!) 300-450 mg alle 12 h | Oral-Switch: TMP/SMX + Rifampicin (wenn sensibel) | oder: Ciprofloxacin 750 mg 2x/d + Rifampicin | Dauer: 3-6 Monate je nach Implantatlokalisation",
   "pig": {
@@ -558,13 +569,16 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate je nach Implantatlokalisation"
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen",
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
+   ],
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s hominis",
@@ -618,11 +632,11 @@
    ],
    [
     "TMP/SMX + Rifampicin",
-    "160/800 mg p.o. alle 12 h + Rifampicin 300 mg (wenn sensibel)"
+    "960 mg p.o. 3x/d + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Implantat/Biofilm"
    ]
   ],
   "olabel": "",
-  "dur": "NICU-Bakteriämie 7-14 Tage - Endokarditis 6 Wo. - PJI 3-6 Mo.",
+  "dur": "NICU-Bakteriämie 7-14 Tage - Endokarditis 6 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "Besonders relevant auf NICU/Neonatologie - NRCS-A-Klon: pandemischer multiresistenter Klon mit reduzierter Glykopeptid-Empfindlichkeit - Katheter-assoziierte Septikämie bei Frühgeborenen",
   "pi": "NRCS-A-Klon: cave reduzierte Glykopeptid-Empfindlichkeit: | IV-Phase: Vancomycin (AUC-guided, Ziel 400-600 mg - h/L) oder Daptomycin | Rifampicin: ab Tag 2-7 300-450 mg alle 12 h | Oral-Switch: TMP/SMX + Rifampicin oder Linezolid + Rifampicin | NICU: Teicoplanin bevorzugt über Vancomycin | Dauer: 3-6 Monate",
   "pig": {
@@ -638,17 +652,19 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate"
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
    "cave": [
-    "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie"
+    "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie",
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen",
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
    ],
    "extra": [
     "NICU: Teicoplanin bevorzugt über Vancomycin"
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s capitis",
@@ -794,11 +810,11 @@
    ],
    [
     "TMP/SMX + Rifampicin",
-    "160/800 mg alle 12 h + Rifampicin 300 mg alle 12 h"
+    "960 mg p.o. 3x/d + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Implantat/Biofilm"
    ]
   ],
   "olabel": "",
-  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. - PJI 3-6 Mo.",
+  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "Seltener Infektionserreger - häufig Kontaminante - relativ häufiger oxacillinsensibel vs. S. epidermidis - Antibiogramm obligat",
   "pi": "MSCoNS häufiger als S. epidermidis - günstigere Prognose: | IV-Phase: Oxacillin/Flucloxacillin 2 g alle 4-6 h (wenn sensibel) | oder Vancomycin (wenn oxacillinresistent) | Rifampicin: ab Tag 2-7 300-450 mg alle 12 h | Oral-Switch (MSCoNS): Levofloxacin 500 mg 2x/d + Rifampicin | Oral-Switch (MRCoNS): TMP/SMX + Rifampicin | Dauer: 3-6 Monate",
   "pig": {
@@ -815,15 +831,17 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate"
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen"
+   ],
    "extra": [
     "oder Vancomycin (wenn oxacillinresistent)"
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s warneri",
@@ -889,7 +907,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Haut/Weichteil 7-10 Tage - PJI 3-6 Mo.",
+  "dur": "Haut/Weichteil 7-10 Tage - PJI 12 Wo. (PIF v11)",
   "note": "Periprothetische Gelenk- und Knocheninfektionen - oft noch oxacillinsensibel (bessere Prognose) - Rifampicin-Kombination bei Fremdmaterial",
   "pi": "Oft oxacillinsensibel - günstigeres Resistenzprofil: | IV-Phase: Flucloxacillin 2 g alle 4-6 h + Rifampicin ab Tag 2-7 | Oral-Switch: Levofloxacin 500 mg 2x/d + Rifampicin 300-450 mg 2x/d | oder: Ciprofloxacin 750 mg 2x/d + Rifampicin | Dauer: Hüfte/Knie 3 Mo. - Schulter/Ellbogen 6 Mo. | DAIR günstig bei MSCoNS + früher Infektion",
   "pig": {
@@ -912,7 +930,7 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s simulans",
@@ -978,7 +996,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "HWI 5-7 Tage - Bakteriämie 14 Tage - PJI 3-6 Mo.",
+  "dur": "HWI 5-7 Tage - Bakteriämie 14 Tage - PJI 12 Wo. (PIF v11)",
   "note": "Ziegenassoziiert - beim Menschen: HWI, Knochen-/Gelenkinfektionen, periprothetisch - oft oxacillinsensibel - Antibiogramm obligat",
   "pi": "Oft oxacillinsensibel: | IV-Phase: Flucloxacillin/Oxacillin 2 g alle 4-6 h | Rifampicin: ab Tag 2-7 300-450 mg alle 12 h | Oral-Switch: Levofloxacin 500 mg 2x/d + Rifampicin | oder: Ciprofloxacin 750 mg 2x/d + Rifampicin | Dauer: 3-6 Monate je Implantatlokalisation",
   "pig": {
@@ -995,13 +1013,13 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate je Implantatlokalisation"
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
    "cave": [],
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s caprae",
@@ -1071,7 +1089,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Haut/Weichteil 7-10 Tage - Bakteriämie 14 Tage - PJI 3-6 Mo.",
+  "dur": "Haut/Weichteil 7-10 Tage - Bakteriämie 14 Tage - PJI 12 Wo. (PIF v11)",
   "note": "2 Subspezies: schleiferi (KoNS) und coagulans (koagulase-positiv, virulenter) - Wundinfektionen, Otitis externa, Mastitis - tierassoziiert (Hund) - Zoonose möglich - variable Resistenz, Antibiogramm obligat",
   "pi": "Variable Resistenz - immer Antibiogramm abwarten: | IV-Phase: Je nach Oxacillin-Sensibilität: | Sensibel: Flucloxacillin + Rifampicin ab Tag 2-7 | Resistent: Vancomycin + Rifampicin ab Tag 2-7 | Oral-Switch: Levofloxacin/Ciprofloxacin + Rifampicin (sensibel) | oder TMP/SMX + Rifampicin (resistent, wenn sensibel) | Dauer: 3-6 Monate",
   "pig": {
@@ -1088,13 +1106,16 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate"
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen",
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
+   ],
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "s schleiferi",
@@ -1168,7 +1189,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Haut/Weichteil 7-10 Tage - Osteomyelitis 4-6 Wo. - PJI 3-6 Mo.",
+  "dur": "Haut/Weichteil 7-10 Tage - Osteomyelitis 4-6 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "Haupterreger bei Hunden (Pyodermie) - Zoonose! - beim Menschen: Wundinfektionen nach Tierbiss, Ohreninfektionen - MRSP (Methicillin-resistenter S. pseudintermedius) zunehmend - oft falsch als S. aureus identifiziert -> MALDI-TOF/Sequenzierung",
   "pi": "Tierassoziiert - cave Zoonose: | IV-Phase: Oxacillin/Flucloxacillin (wenn MSensibel) oder Vancomycin | Rifampicin: ab Tag 2-7 300-450 mg alle 12 h | Oral-Switch: Fluoroquinolon + Rifampicin (wenn sensibel) | oder TMP/SMX + Rifampicin | MRSP zunehmend - Antibiogramm obligat | Dauer: 3-6 Monate",
   "pig": {
@@ -1184,16 +1205,18 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate"
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
+   ],
    "extra": [
     "oder TMP/SMX + Rifampicin",
     "MRSP zunehmend - Antibiogramm obligat"
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo.",
+   "PJI": "PJI 12 Wochen (PIF v11)",
    "FRI": "Osteomyelitis 4-6 Wo."
   },
   "syns": [
@@ -1257,7 +1280,7 @@
   "o": [
    [
     "TMP/SMX + Rifampicin",
-    "TMP/SMX 160/800 mg p.o. alle 12 h + Rifampicin 300 mg alle 12 h"
+    "960 mg p.o. 3x/d + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Implantat/Biofilm"
    ],
    [
     "Linezolid",
@@ -1269,7 +1292,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Katheter-Bakteriämie 5-7 Tage (nach Zug) - Endokarditis 6 Wo. (Klappenersatz) - PJI 3-6 Mo.",
+  "dur": "Katheter-Bakteriämie 5-7 Tage (nach Zug) - Endokarditis 6 Wo. (Klappenersatz) - PJI 12 Wo. (PIF v11)",
   "note": "CoNS-Arten: epidermidis, haemolyticus, hominis, capitis, warneri, simulans, caprae, schleiferi, lugdunensis - 60-80 % oxacillinresistent - mind. 2 unabhängige Blutkulturen für Pathogen-Nachweis - Fremdmaterial-Entfernung wenn möglich",
   "pi": "Allgemeines CoNS-Implantat-Protokoll (Pro-Implant Foundation): | Schritt 1: Oxacillin-Status bestimmen! | MSCoNS: Flucloxacillin/Cefazolin IV -> Fluoroquinolon + Rifampicin oral | MRCoNS: Vancomycin IV -> TMP/SMX + Rifampicin oral | Rifampicin-Timing: IMMER erst ab trockener Wunde (Tag 2-7) | Biofilm: Rifampicin ist der einzige bewährte Biofilm-aktive Wirkstoff bei Staphylokokken | Implantatentfernung wenn möglich -> bessere Heilungsrate | Dauer: Hüfte/Knie 3 Mo. - Schulter/Ellbogen 6 Mo. | Suppression (OP nicht möglich): TMP/SMX oder Cefalexin + Rifampicin",
   "pig": {
@@ -1282,12 +1305,14 @@
    "oral": [],
    "surg": [
     "Implantatentfernung wenn möglich -> bessere Heilungsrate",
-    "Suppression (OP nicht möglich): TMP/SMX oder Cefalexin + Rifampicin"
+    "Suppression (wenn OP nicht möglich): orale Monotherapie nach Antibiogramm (z. B. Cefalexin, Doxycyclin, Cotrimoxazol) – kein Rifampicin in der Langzeitsuppression (Resistenzselektion, Interaktionen)"
    ],
    "dur": [
     "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
    ],
-   "cave": [],
+   "cave": [
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
+   ],
    "extra": [
     "Schritt 1: Oxacillin-Status bestimmen!",
     "MSCoNS: Flucloxacillin/Cefazolin IV -> Fluoroquinolon + Rifampicin oral",
@@ -1295,7 +1320,7 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "coagulase negative",
@@ -3999,7 +4024,7 @@
   "g": "Gram-negativ",
   "impl": {
    "pji": "selten",
-   "dair": "-",
+   "dair": "—",
    "rif": "ja"
   },
   "route": "ERSTLINIE I.V.",
@@ -8024,7 +8049,7 @@
   "g": "Mykobakterien",
   "impl": {
    "pji": "selten",
-   "dair": "-",
+   "dair": "—",
    "rif": "ja"
   },
   "route": "ERSTLINIE (oral)",
