@@ -35,6 +35,7 @@ function renderEbjis(){var el=document.getElementById('dxEb');if(!el)return;
   else{v='Infektion unwahrscheinlich';c='var(--ok)';txt='Alle erhobenen Befunde negativ. Kein Test schließt eine Infektion sicher aus – Aussagekraft hängt davon ab, was erhoben wurde ('+done.length+' von '+EBP.length+' Parametern).';}
   h+='<div class="dxres"><div class="dxverdict" style="background:'+c+'">'+v+'</div><div class="dxnote">'+txt+'</div>'
     +(why.length?'<ul class="dxwhy">'+why.map(function(k){return '<li>'+EBNAME[k]+': '+EBP.filter(function(p){return p.k===k;})[0].o.filter(function(o){return o[0]===EB[k];})[0][1]+'</li>';}).join('')+'</ul>':'')
+    +'<div class="dxnote">Leukozyten >3000/µl und Granulozyten >80 % sind laut EBJIS-Tabelle jeweils für sich beweisend (der Fließtext formuliert „und“). Zellzahl nur bei klarem Punktat ohne Spülung, EDTA-Röhrchen, Analyse <1 h; bei blutigem Punktat korrigieren.</div>'
     +'<div class="dxnote">Synovia-Grenzwerte gelten nicht für die obere Extremität und sind früh postoperativ, bei Metallose, Kristallarthropathie, entzündlicher Grunderkrankung und periprothetischer Fraktur eingeschränkt verwertbar. Die Definition gibt keine Therapie vor.</div>'
     +'<div class="dxnote"><b>Probenentnahme:</b> ≥5 Gewebeproben mit getrennten Instrumenten (bevorzugt Knochen-Implantat-Grenzschicht), ≥3 für Histologie, 2 Wochen antibiotikafrei (Prophylaxe trotzdem geben), Bebrütung ≥14 Tage oder Anreicherung/Sonikation.</div></div>';
   el.innerHTML=h;}
@@ -58,7 +59,7 @@ function renderFri(){var el=document.getElementById('dxFr');if(!el)return;
   else{v='Keine Kriterien angekreuzt';c='var(--off)';t='Zutreffendes oben antippen.';}
   h+='<div class="dxres"><div class="dxverdict" style="background:'+c+'">'+v+'</div><div class="dxnote">'+t+'</div>'
     +'<div class="dxnote">CRP, Leukozyten und BSG reichen weder zum Beweis noch zum Ausschluss einer chronischen FRI. Drei-Phasen-Skelettszintigrafie wird nicht empfohlen.</div>'
-    +'<div class="dxnote"><b>Probenentnahme:</b> ≥5 tiefe Gewebeproben, bevorzugt Knochen-Implantat-Grenzfläche, je Probe frisches Instrument; keine Abstriche, keine Fistelproben; möglichst 2 Wochen antibiotikafrei; Bebrütung 10–14 Tage.</div></div>';
+    +'<div class="dxnote"><b>Probenentnahme:</b> ≥5 tiefe Gewebeproben, bevorzugt Knochen-Implantat-Grenzfläche, je Probe frisches Instrument; keine Abstriche, keine Fistelproben, keine Nadelbiopsie; möglichst 2 Wochen antibiotikafrei; Bebrütung 10–14 Tage.</div></div>';
   el.innerHTML=h;}
 TOOLKEY.fr=function(v){FR[v]=!FR[v];renderFri();};
 

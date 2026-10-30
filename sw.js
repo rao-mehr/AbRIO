@@ -4,7 +4,7 @@
 // und bietet dann "Aktualisieren" an.
 // Beim Release: CACHE_NAME ändern -> alte Caches werden beim Aktivieren gelöscht.
 
-const CACHE_NAME = 'abrio-cache-2026-10-30-6';
+const CACHE_NAME = 'abrio-cache-2026-10-30-7';
 const ASSETS_TO_CACHE = ['./', './index.html'];
 
 self.addEventListener('install', (event) => {

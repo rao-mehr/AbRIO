@@ -24,16 +24,16 @@ function renderStrat(){var el=document.getElementById('dxSt');if(!el)return;
     if(akut&&ST.stab==='ja'&&ST.fist==='nein'&&ST.err!=='dtt'){
       r=['DAIR mit Wechsel der mobilen Teile','var(--ok)',
         ['Radikales Débridement, Synovektomie, Spülung; mobile Teile (Inlay, Kopf) immer wechseln – ohne Wechsel hohe Versagerrate.',
-         'Keine arthroskopische Spülung.',
+         'Keine arthroskopische Spülung.','ICM 2025 enger: beste Kandidaten bei Symptomen <7 Tage bzw. <6 Wochen nach Implantation; EBJIS 2025: DAIR dringlich, möglichst in den ersten 7 Tagen.',
          'Antibiotika insgesamt 12 Wochen (PIF v11, ICM 2025).']
          .concat(ST.err==='unb'?['Erreger noch unbekannt: Gewebeproben vor Antibiotikagabe, Strategie nach Erregernachweis bestätigen.']:[])];
     }else{
       var why=[];if(!akut)why.push('Biofilm reif (chronisch)');if(ST.stab==='nein')why.push('Implantat gelockert');if(ST.fist==='ja')why.push('Fistel/freiliegende Prothese');if(ST.err==='dtt')why.push('Problemerreger');
       var lines=['Kein Implantaterhalt: '+why.join(', ')+'.'];
-      if(ST.err==='dtt'){r=['Zweizeitiger Wechsel, langes Intervall','var(--bad)',lines.concat(['Intervall 4–6 Wochen; >8 Wochen vermeiden, vor allem mit Spacer.','Candida: ggf. mehrzeitig mit Spacerwechsel nach 2–4 Wochen.','Keine biofilmaktiven Antibiotika (Rifampicin, Ciprofloxacin) bei liegendem Spacer.'])];}
-      else if(ST.wt==='schlecht'||ST.fist==='ja'){r=['Zweizeitiger Wechsel, kurzes Intervall','var(--mid)',lines.concat(['Intervall 2–4 Wochen, damit sich Weichteile erholen.','Keine Antibiotikapause vor Reimplantation nötig.','Nach Reimplantation weitere 6 Wochen (gesamt 12 Wochen ab Explantation); bei positiven Reimplantationskulturen 12 Wochen ab Reimplantation.'])];}
-      else if(ST.err==='unb'){r=['Wechsel – Erreger zuerst klären','var(--mid)',lines.concat(['Einzeitiger Wechsel setzt einen bekannten Erreger voraus (OPTION, JBJS 2026).','Erregerdiagnostik vorziehen (Punktion, ggf. Biopsie); sonst zweizeitig.'])];}
-      else{r=['Einzeitiger Wechsel','var(--ok)',lines.concat(['Bevorzugt bei intakten Weichteilen und bekanntem, gut behandelbarem Erreger.','OPTION (JBJS 2026): einzeitig nichtunterlegen bei chronischer PJI nach Primärprothese, bekanntem Erreger, ohne Immunsuppression.','Antibiotika insgesamt 12 Wochen.'])];}
+      if(ST.err==='dtt'){r=['Zweizeitiger Wechsel, langes Intervall','var(--bad)',lines.concat(['Intervall 6–8 Wochen (PIF-Algorithmus v9; Wortlaut v11 nicht verifiziert).','Candida: ggf. mehrzeitig mit Spacerwechsel nach 2–4 Wochen.','Keine biofilmaktiven Antibiotika (Rifampicin, Ciprofloxacin) bei liegendem Spacer.'])];}
+      else if(ST.wt==='schlecht'||ST.fist==='ja'){r=['Zweizeitiger Wechsel, kurzes Intervall','var(--mid)',lines.concat(['Intervall 2–3 Wochen (PIF-Abbildung v9; im Fließtext und Zimmerli-Algorithmus 2–4 Wochen), damit sich Weichteile erholen.','Keine Antibiotikapause vor Reimplantation nötig.','Nach Reimplantation weitere 6 Wochen (gesamt 12 Wochen ab Explantation); bei positiven Reimplantationskulturen 12 Wochen ab Reimplantation.'])];}
+      else if(ST.err==='unb'){r=['Wechsel – Erreger zuerst klären','var(--mid)',lines.concat(['Einzeitiger Wechsel setzt einen bekannten Erreger voraus (Fehring et al., JBJS 2026).','Erregerdiagnostik vorziehen (Punktion, ggf. Biopsie); sonst zweizeitig.'])];}
+      else{r=['Einzeitiger Wechsel','var(--ok)',lines.concat(['Bevorzugt bei intakten Weichteilen und bekanntem, gut behandelbarem Erreger.','Fehring et al. (JBJS 2026, RCT): einzeitig nichtunterlegen (97 % vs. 91 %) bei chronischer PJI nach Primär-TEP mit bekanntem Erreger – auch mit Fistel; ausgeschlossen: kulturnegativ, Pilze, frühere Revision, Sepsis, HIV.','Antibiotika insgesamt 12 Wochen.'])];}
     }
   }
   h+='<div class="dxres">';
@@ -43,5 +43,5 @@ function renderStrat(){var el=document.getElementById('dxSt');if(!el)return;
   el.innerHTML=h;}
 TOOLKEY.st=function(v){var p=v.split(':');ST[p[0]]=ST[p[0]]===p[1]?undefined:p[1];renderStrat();};
 regTool({id:'strategie',grp:'dx',t:'DAIR oder Wechsel?',s:'PRO-IMPLANT-Algorithmus',c:'var(--alt)',dom:'dxSt',render:renderStrat,
-  src:'PRO-IMPLANT Pocket Guide PJI v11 · Izakovicova P, Borens O, Trampuz A. EFORT Open Rev 2019;4:482–94 · OPTION-Studie, JBJS 2026 · ICM 2025',
+  src:'PRO-IMPLANT Pocket Guide PJI v11 · Izakovicova P, Borens O, Trampuz A. EFORT Open Rev 2019;4:482–94 · Fehring TK et al., JBJS 2026 · ICM 2025 (J Arthroplasty) · EBJIS-Positionspapier DAIR, JBJI 2025',
   ic:'<path d="M6 3v7a4 4 0 0 0 4 4h4"/><path d="M18 3v4"/><path d="M14 10l4 4-4 4"/><circle cx="6" cy="20" r="1.5"/>'});
