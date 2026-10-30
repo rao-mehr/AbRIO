@@ -44,6 +44,11 @@ def build():
     }
     for js in ("app.js", "sw-register.js", "update-check.js"):
         parts["{{" + js + "}}"] = read("src/" + js)
+    # Werkzeuge (src/tools/*.js, alphabetisch) laufen im selben Scope wie app.js
+    tool_js = "".join(p.read_text(encoding="utf-8") for p in sorted((SRC / "tools").glob("*.js")))
+    if "/*@TOOLS*/" not in parts["{{app.js}}"]:
+        raise SystemExit("Build-Fehler: Marker /*@TOOLS*/ fehlt in src/app.js")
+    parts["{{app.js}}"] = parts["{{app.js}}"].replace("/*@TOOLS*/", tool_js)
     # Platzhalter in einem Durchgang ersetzen (Inhalte werden nicht erneut gescannt)
     for key, val in parts.items():
         html = html.replace(key, val.replace("{{VERSION}}", version))
