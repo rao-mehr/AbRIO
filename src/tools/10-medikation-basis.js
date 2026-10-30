@@ -1,6 +1,6 @@
 var LG={all:'',sw:{},ren:{age:'',kg:'',scr:'',unit:'mgdl',sex:'m'},mr:{grp:'ent',r:{}}};
 function dxChip(key,val,label,on){return '<button class="clschip dxc'+(on?' on':'')+'" data-k="'+key+'" data-v="'+val+'" aria-pressed="'+(on?'true':'false')+'">'+label+'</button>';}
-function dxRow(cls,lv,txt){var L={ok:['geben','var(--ok)'],mid:['Vorsicht','var(--mid)'],bad:['meiden','var(--bad)']}[lv];
+function dxRow(cls,lv,txt){var L={ok:['geben','var(--ok)'],mid:['Vorsicht','var(--mid)'],bad:['meiden','var(--bad)'],ki:['KI','var(--bad)']}[lv];
   return '<div class="dxrow"><span class="dxlv" style="background:'+L[1]+'">'+L[0]+'</span><div><b>'+cls+'</b><div class="dxtx">'+txt+'</div></div></div>';}
 function renderAll(){var el=document.getElementById('dxAll');if(!el)return;
   var T=[['low','Unklar / Unverträglichkeit','Übelkeit, Durchfall, Kopfschmerz, unklare Kindheitsanamnese'],

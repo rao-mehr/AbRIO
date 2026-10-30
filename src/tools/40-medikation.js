@@ -1,21 +1,23 @@
 /* ---------- Medikation: Rifampicin-Interaktionen, Monitoring unter Langzeittherapie ---------- */
 /* Rifampicin ist starker Induktor von CYP3A4, CYP2C9/2C19, P-gp und UGT. */
 var RIX=[
-  ['doak','DOAKs (Apixaban, Rivaroxaban, Edoxaban, Dabigatran)','bad','Spiegel stark gesenkt – Kombination meiden. Für die Dauer der Rifampicin-Therapie auf NMH umstellen.'],
-  ['vka','Vitamin-K-Antagonisten (Phenprocoumon, Warfarin)','bad','Wirkung stark abgeschwächt, meist deutliche Dosissteigerung nötig. INR engmaschig. Nach Absetzen von Rifampicin INR-Anstieg – Dosis wieder senken.'],
-  ['tx','Tacrolimus, Ciclosporin, Everolimus, Sirolimus','bad','Spiegel fallen massiv – Abstoßungsgefahr. Nur mit Transplantationszentrum; Rifabutin oder Verzicht erwägen.'],
-  ['azol','Voriconazol, Posaconazol, Isavuconazol','bad','Kontraindiziert (Spiegel nicht therapeutisch). Fluconazol-Spiegel ebenfalls gesenkt.'],
-  ['hiv','HIV-Therapie (Proteasehemmer, viele NNRTI/Integrasehemmer)','bad','Meist kontraindiziert – HIV-Behandler einbinden.'],
-  ['ctr','Hormonelle Kontrazeption (Pille, Pflaster, Ring, Implantat)','bad','Unwirksam. Barrieremethode oder Kupferspirale bis 4 Wochen nach Rifampicin-Ende.'],
-  ['opi','Opioide (Oxycodon, Fentanyl, Methadon, Tramadol, Morphin)','mid','Wirkverlust bis Entzug. Schmerzkontrolle prüfen, Dosis titrieren; nach Absetzen Überdosierungsgefahr.'],
-  ['ster','Kortikosteroide (Prednisolon, Dexamethason, Hydrocortison)','mid','Wirkung etwa halbiert – Dosis anpassen; bei Substitution (Addison) Krisengefahr.'],
-  ['aep','Antiepileptika (Lamotrigin, Valproat, Phenytoin, Carbamazepin)','mid','Spiegel sinken – Anfallsgefahr. Spiegel kontrollieren, Neurologie einbinden.'],
-  ['stat','Statine (Simvastatin, Atorvastatin)','mid','Wirkung deutlich reduziert. Für die Therapiedauer meist tolerierbar; ggf. Rosuvastatin/Pravastatin.'],
-  ['kv','Kalziumantagonisten, Betablocker (Amlodipin, Nifedipin, Verapamil, Metoprolol)','mid','Blutdruck/Frequenz entgleisen möglich – RR und Puls kontrollieren.'],
-  ['dm','Orale Antidiabetika (Sulfonylharnstoffe, Repaglinid)','mid','Blutzucker steigt – BZ engmaschiger, nach Absetzen Hypoglykämiegefahr.'],
-  ['psy','Antidepressiva/Antipsychotika (Sertralin, Quetiapin, Haloperidol, Aripiprazol)','mid','Wirkverlust möglich – Psychiatrie bzw. Spiegel bei Bedarf.'],
-  ['thy','Levothyroxin','mid','Bedarf kann steigen – TSH nach 4–6 Wochen.'],
-  ['ab','Antibiotika-Partner: Clindamycin, Linezolid, Doxycyclin, Cotrimoxazol','mid','Spiegel gesenkt, bei Clindamycin und Linezolid deutlich. Linezolid + Rifampicin nicht PIF-Standard; bei Clindamycin keine verlässliche Kombination.']
+  ['hiv','HIV-Therapie: Proteasehemmer, Doravirin, Etravirin, Nevirapin, Rilpivirin, Bictegravir, Cabotegravir, Cobicistat, Lenacapavir','ki','Kontraindiziert laut Fachinformation. Efavirenz, Dolutegravir, Raltegravir nur mit Dosisanpassung – HIV-Behandler einbinden.'],
+  ['azol','Azol-Antimykotika','ki','Voriconazol kontraindiziert. Itraconazol/Ketoconazol nicht empfohlen. Fluconazol: laut FI alternatives Antimykotikum verwenden. Posaconazol/Isavuconazol nicht in der FI-Tabelle, gleiches Prinzip.'],
+  ['doak','DOAKs (Apixaban, Rivaroxaban, Dabigatran, Edoxaban)','bad','Gleichzeitige Gabe nicht empfohlen (FI). Für die Dauer der Rifampicin-Therapie auf NMH umstellen. Edoxaban nicht in der FI-Tabelle, gleiches Prinzip.'],
+  ['vka','Vitamin-K-Antagonisten (Phenprocoumon, Warfarin)','bad','Sollte vermieden werden (FI). Wenn unumgänglich: INR engmaschig, v. a. bei Beginn und nach Ende – nach Absetzen INR-Anstieg.'],
+  ['tx','Tacrolimus, Ciclosporin, Everolimus, Sirolimus, Mycophenolat, Azathioprin','bad','Nicht empfohlen – Risiko der Transplantatabstoßung. Wenn nötig nur mit Spiegeln und Transplantationszentrum.'],
+  ['ctr','Hormonelle Kontrazeption (Pille, Pflaster, Ring, Implantat)','bad','Unwirksam. Zusätzlich nicht-hormonelle Verhütung während und bis 28 Tage nach Rifampicin-Ende (FSRH 2022).'],
+  ['cefa','Cefazolin und Cephalosporine mit MTT-Seitenkette','mid','FI: gleichzeitige Gabe sollte vermieden werden (Vitamin-K-abhängige Gerinnungsstörung). In der PIF-Kombination Cefazolin + Rifampicin üblich – dann Gerinnung (Quick/INR) kontrollieren, ggf. Vitamin K.'],
+  ['para','Paracetamol','mid','FI: nicht empfohlen, Hepatotoxizitätsrisiko erhöht. Möglichst niedrig dosieren und Leberwerte kontrollieren.'],
+  ['stat','Statine','mid','Simvastatin nicht empfohlen (AUC −87 %). Atorvastatin, Fluvastatin, Pravastatin: Wirkverlust möglich; Atorvastatin zeitgleich mit Rifampicin einnehmen.'],
+  ['opi','Opioide (Morphin, Fentanyl, Buprenorphin, Methadon, Codein)','mid','Wirkverlust bis Entzug – eng überwachen, Dosis titrieren; nach Absetzen Überdosierungsgefahr. Oxycodon/Tramadol nicht in der FI-Tabelle, ebenfalls Wirkverlust zu erwarten.'],
+  ['ster','Glukokortikoide','mid','Wirkung abgeschwächt – Dosisanpassung bei Beginn und Ende; bei Substitution (Addison) Krisengefahr.'],
+  ['aep','Antiepileptika (Carbamazepin, Phenytoin, Valproat, Lamotrigin)','mid','Spiegel sinken – Spiegel/enge Überwachung, ggf. Dosiserhöhung; Neurologie einbinden.'],
+  ['kv','Kalziumantagonisten, Betablocker','mid','Wirkverlust – RR und Puls kontrollieren; nach Absetzen erneut anpassen.'],
+  ['dm','Antidiabetika (Sulfonylharnstoffe, Glinide, DPP-4-Hemmer, Insulin, Metformin)','mid','BZ engmaschiger; nach Absetzen Hypoglykämiegefahr.'],
+  ['psy','Antidepressiva/Antipsychotika (Sertralin, Citalopram, Mirtazapin, TZA, Quetiapin, Clozapin, Haloperidol, Risperidon)','mid','Wirkverlust – klinischer Status bzw. Spiegel.'],
+  ['thy','Levothyroxin','mid','TSH-Kontrolle, Anpassung bei Beginn und Ende.'],
+  ['ab','Antibiotika-Partner','mid','Clarithromycin/Azithromycin nicht empfohlen. Doxycyclin: Dosiserhöhung nötig. Linezolid: Wirkverlust möglich. Cotrimoxazol erhöht den Rifampicin-Spiegel (Hepatotoxizität, Leberwerte). Ciprofloxacin/Moxifloxacin: keine Anpassung. Clindamycin (nicht in FI): Spiegel deutlich gesenkt.']
 ];
 var RIS={};
 function renderRif(){var el=document.getElementById('dxRi');if(!el)return;
@@ -24,11 +26,11 @@ function renderRif(){var el=document.getElementById('dxRi');if(!el)return;
   var sel=RIX.filter(function(x){return RIS[x[0]];});
   h+='<div class="dxres">';
   if(!sel.length)h+='<div class="dxnote">Keine Komedikation gewählt.</div>';
-  else{var bad=sel.filter(function(x){return x[2]==='bad';}).length;
-    h+='<div class="dxverdict" style="background:'+(bad?'var(--bad)':'var(--mid)')+'">'+(bad?bad+'× Kombination meiden / umstellen':'Anpassung und Kontrolle nötig')+'</div>'
+  else{var ki=sel.filter(function(x){return x[2]==='ki';}).length,bad=ki+sel.filter(function(x){return x[2]==='bad';}).length;
+    h+='<div class="dxverdict" style="background:'+(bad?'var(--bad)':'var(--mid)')+'">'+(ki?ki+'× kontraindiziert':bad?bad+'× nicht empfohlen / umstellen':'Anpassung und Kontrolle nötig')+'</div>'
      +sel.map(function(x){return dxRow(x[1],x[2],x[3]);}).join('');}
-  h+='<div class="dxnote"><b>Zeitverlauf:</b> Induktion beginnt nach wenigen Tagen, ist nach 1–2 Wochen maximal und klingt nach dem Absetzen über etwa 2 Wochen ab – in dieser Phase Dosierungen wieder zurücknehmen.</div>'
-    +'<div class="dxnote"><b>Rifabutin</b> induziert schwächer und ist bei kritischen Interaktionen eine Option (Vergleichsstudie RIFAMAB läuft) – nur nach Infektiologie.</div>'
+  h+='<div class="dxnote"><b>Zeitverlauf:</b> Induktion nach etwa 1 Woche voll ausgeprägt, klingt nach dem Absetzen über etwa 2 (bis 4) Wochen ab. Die FI verlangt Dosisanpassungen bei Beginn und besonders nach Beendigung.</div>'
+    +'<div class="dxnote"><b>Rifabutin</b> induziert schwächer und ist bei kritischen Interaktionen eine Option (RCT RIFAMAB rekrutiert, Ergebnisse ausstehend) – nur nach Infektiologie.</div>'
     +'<div class="dxnote">Außerdem: Orangefärbung von Urin, Tränen und weichen Kontaktlinsen; Hepatotoxizität. Liste nicht vollständig – im Zweifel Interaktionscheck/Fachinformation und klinische Pharmazie.</div></div>';
   el.innerHTML=h;}
 TOOLKEY.ri=function(v){RIS[v]=!RIS[v];renderRif();};
@@ -58,7 +60,7 @@ function renderMon(){var el=document.getElementById('dxMo');if(!el)return;
 TOOLKEY.mo=function(v){MOS[v]=!MOS[v];renderMon();};
 
 regTool({id:'rif-ia',grp:'med',t:'Rifampicin-Interaktionen',s:'Komedikation prüfen',c:'#FF6B22',dom:'dxRi',render:renderRif,
-  src:'Fachinformation Rifampicin · Interaktionsprofil starker CYP3A4/P-gp-Induktoren',
+  src:'Fachinformation EREMFAT (Stand 02/2026), Abschn. 4.3–4.5 · FSRH CEU Drug Interactions with Hormonal Contraception 2022 · Niemi M et al. Clin Pharmacokinet 2003',
   ic:'<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/>'});
 regTool({id:'monitor',grp:'med',t:'Monitoring',s:'Labor unter Langzeittherapie',c:'var(--pi)',dom:'dxMo',render:renderMon,
   src:'Fachinformationen · IDSA-OPAT-Leitlinie 2018 · Vancomycin-Konsensus ASHP/IDSA 2020 · PIF v11 (Linezolid max. 4 Wochen)',
