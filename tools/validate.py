@@ -91,13 +91,17 @@ def main():
         if k > 1:
             errors.append(f"Name doppelt: {n} ({k}x)")
 
-    # Dosis-Konsistenz TMP/SMX in den PJI-Oralschemata
+    # Dosis-Konsistenz TMP/SMX in den PJI-Oralschemata der Staphylokokken
+    # (andere Erreger, z. B. S. maltophilia, haben bewusst eigene Dosierungen)
     tmp = defaultdict(list)
     for e in db:
+        if not (e["n"].startswith("Staphylococcus") or "CoNS" in e["n"]):
+            continue
         for t in e["pig"].get("oral", []):
             if re.search(r"TMP/SMX|Cotrimoxazol", t):
                 m = re.search(r"(?:TMP/SMX|Cotrimoxazol)\s*(\d[\d/]*\s*(?:DS|mg)[^,;)+]*?(?:alle \d+ h|\dx/d))", t)
-                tmp[m.group(1) if m else "ohne Dosisangabe"].append(e["n"])
+                if m:
+                    tmp[m.group(1)].append(e["n"])
     if len(tmp) > 1:
         lines = "; ".join(f"'{k}' ({len(v)}x)" for k, v in tmp.items())
         warnings.append(f"TMP/SMX-Dosis in PJI-Oralschemata uneinheitlich: {lines}")
