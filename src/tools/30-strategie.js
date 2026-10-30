@@ -1,13 +1,21 @@
-/* ---------- Strategie: DAIR oder Wechsel (PRO-IMPLANT-Algorithmus) ---------- */
+/* ---------- Strategie: DAIR oder Wechsel (PRO-IMPLANT Pocket Guide PJI v11, 11/2023) ---------- */
 var ST={};
 var STQ=[
-  {k:'typ',q:'Infektionsform',o:[['po-a','Postoperativ, OP <4 Wochen her'],['po-c','Postoperativ, OP ≥4 Wochen her'],['he-a','Hämatogen, Symptome <3 Wochen'],['he-c','Hämatogen, Symptome ≥3 Wochen']]},
-  {k:'stab',q:'Implantat',o:[['ja','stabil'],['nein','gelockert']]},
-  {k:'fist',q:'Fistel oder freiliegende Prothese',o:[['nein','nein'],['ja','ja']]},
-  {k:'wt',q:'Knochen und Weichteile',o:[['ok','intakt / leicht beeinträchtigt'],['schlecht','kompromittiert / mehrfach voroperiert']]},
-  {k:'err',q:'Erreger',o:[['gut','bekannt, gut behandelbar'],['dtt','Problemerreger'],['unb','unbekannt']],h:'Problemerreger (PIF v11): Rifampicin-resistente Staphylokokken, Ciprofloxacin-resistente Gramnegative, Candida.'},
-  {k:'op',q:'Operation möglich',o:[['ja','ja'],['nein','nein (multimorbid, inoperabel)']]}
+  {k:'typ',q:'Infektionsform',o:[['po-a','Perioperativ, <4 Wochen nach OP'],['po-c','Perioperativ, ≥4 Wochen nach OP'],['he-a','Hämatogen/per continuitatem, Symptome <3 Wochen'],['he-c','Hämatogen/per continuitatem, Symptome ≥3 Wochen']]},
+  {k:'stab',q:'Prothese',o:[['ja','fest'],['nein','gelockert']]},
+  {k:'wt',q:'Weichteile und Knochen',o:[['ok','gut'],['schlecht','schlecht']]},
+  {k:'fist',q:'Fistel',o:[['nein','nein'],['ja','ja']]},
+  {k:'rev',q:'Multiple Revisionen',o:[['nein','nein'],['ja','ja']]},
+  {k:'err',q:'Erreger',o:[['gut','kein Problemerreger'],['dtt','Problemerreger'],['unb','unbekannt']],h:'Problemerreger (PIF v11): Rifampicin-resistente Staphylokokken, Ciprofloxacin-resistente gramnegative Bakterien, Pilze (Candida).'},
+  {k:'op',q:'Eradikation operativ möglich',o:[['ja','ja'],['nein','nein']]}
 ];
+var STAB={
+  dair:'Antibiotika gesamt 12 Wochen: 2 Wochen i.v., dann 10 Wochen oral biofilmaktiv.',
+  one:'Antibiotika gesamt 12 Wochen: 2 Wochen i.v., dann 10 Wochen oral biofilmaktiv.',
+  short:'Antibiotika gesamt 12 Wochen: 2 Wochen i.v. nach Explantation, Reimplantation, 1 Woche i.v., dann 9 Wochen oral biofilmaktiv.',
+  long:'Antibiotika: 2 Wochen i.v., 4 Wochen oral ohne Biofilmaktivität bis zur Reimplantation, dann 1 Woche i.v. und 5 Wochen oral biofilmaktiv.',
+  three:'Dreizeitig: 3 Wochen bis Spacerwechsel, 3 Wochen bis Reimplantation, dann 1 Woche i.v. und 5 Wochen biofilmaktiv (falls verfügbar, sonst Suppression).'
+};
 function renderStrat(){var el=document.getElementById('dxSt');if(!el)return;
   var h='';
   STQ.forEach(function(x){h+='<div class="dxp"><div class="dxp-n">'+x.q+'</div>'+(x.h?'<div class="dxp-h">'+x.h+'</div>':'')+'<div class="dxchips'+(x.k==='typ'?' dxcol':'')+'">'
@@ -15,33 +23,41 @@ function renderStrat(){var el=document.getElementById('dxSt');if(!el)return;
   var miss=STQ.filter(function(x){return !ST[x.k];});
   var r=null;
   if(ST.op==='nein'){
-    r=['Keine kurative Operation','var(--mid)',
-      ['Suppressionstherapie: nur bei bekanntem Erreger und ohne radiologische Lockerung. Nach Absetzen Rezidiv in >80 %.',
-       'Alternative bei fehlendem Funktionsanspruch: Prothesenentfernung ohne Reimplantation oder iatrogene stabile Fistel (dann keine Antibiotika).',
+    r=['Antibiotische Langzeitsuppression','var(--mid)',
+      ['Wenn eine Eradikation nicht möglich ist (PIF v11). Erreger muss bekannt sein.',
+       'Orale Substanz je nach Erreger: Staphylokokken – Cotrimoxazol, Doxycyclin, Clindamycin; Streptokokken/Enterokokken – Amoxicillin, Doxycyclin; gramnegativ – Ciprofloxacin, Cotrimoxazol; Candida – Fluconazol.',
        'Kein Rifampicin in der Langzeitsuppression.']];
   }else if(!miss.length){
     var akut=ST.typ==='po-a'||ST.typ==='he-a';
-    if(akut&&ST.stab==='ja'&&ST.fist==='nein'&&ST.err!=='dtt'){
-      r=['DAIR mit Wechsel der mobilen Teile','var(--ok)',
-        ['Radikales Débridement, Synovektomie, Spülung; mobile Teile (Inlay, Kopf) immer wechseln – ohne Wechsel hohe Versagerrate.',
-         'Keine arthroskopische Spülung.','ICM 2025 enger: beste Kandidaten bei Symptomen <7 Tage bzw. <6 Wochen nach Implantation; EBJIS 2025: DAIR dringlich, möglichst in den ersten 7 Tagen.',
-         'Antibiotika insgesamt 12 Wochen (PIF v11, ICM 2025).']
-         .concat(ST.err==='unb'?['Erreger noch unbekannt: Gewebeproben vor Antibiotikagabe, Strategie nach Erregernachweis bestätigen.']:[])];
+    if(akut&&ST.stab==='ja'&&ST.wt==='ok'&&ST.err!=='dtt'){
+      r=['Débridement und Erhalt, Wechsel der mobilen Teile','var(--ok)',
+        ['Akute Infektion, feste Prothese, gute Weichteile/Knochen, kein Problemerreger.',STAB.dair,
+         'Mobile Teile immer wechseln; keine arthroskopische Spülung.',
+         'ICM 2025 enger: beste Kandidaten bei Symptomen <7 Tagen bzw. <6 Wochen nach Implantation.']
+         .concat(ST.fist==='ja'?['Fistel bei „akuter“ Präsentation: Klassifikation prüfen – Fistel spricht für reifen Biofilm.']:[])
+         .concat(ST.err==='unb'?['Erreger unbekannt: Gewebeproben vor Antibiotikagabe; empirisch Ampicillin/Sulbactam 3×3 g i.v. (± Vancomycin).']:[])];
     }else{
-      var why=[];if(!akut)why.push('Biofilm reif (chronisch)');if(ST.stab==='nein')why.push('Implantat gelockert');if(ST.fist==='ja')why.push('Fistel/freiliegende Prothese');if(ST.err==='dtt')why.push('Problemerreger');
-      var lines=['Kein Implantaterhalt: '+why.join(', ')+'.'];
-      if(ST.err==='dtt'){r=['Zweizeitiger Wechsel, langes Intervall','var(--bad)',lines.concat(['Intervall 6–8 Wochen (PIF-Algorithmus v9; Wortlaut v11 nicht verifiziert).','Candida: ggf. mehrzeitig mit Spacerwechsel nach 2–4 Wochen.','Keine biofilmaktiven Antibiotika (Rifampicin, Ciprofloxacin) bei liegendem Spacer.'])];}
-      else if(ST.wt==='schlecht'||ST.fist==='ja'){r=['Zweizeitiger Wechsel, kurzes Intervall','var(--mid)',lines.concat(['Intervall 2–3 Wochen (PIF-Abbildung v9; im Fließtext und Zimmerli-Algorithmus 2–4 Wochen), damit sich Weichteile erholen.','Keine Antibiotikapause vor Reimplantation nötig.','Nach Reimplantation weitere 6 Wochen (gesamt 12 Wochen ab Explantation); bei positiven Reimplantationskulturen 12 Wochen ab Reimplantation.'])];}
-      else if(ST.err==='unb'){r=['Wechsel – Erreger zuerst klären','var(--mid)',lines.concat(['Einzeitiger Wechsel setzt einen bekannten Erreger voraus (Fehring et al., JBJS 2026).','Erregerdiagnostik vorziehen (Punktion, ggf. Biopsie); sonst zweizeitig.'])];}
-      else{r=['Einzeitiger Wechsel','var(--ok)',lines.concat(['Bevorzugt bei intakten Weichteilen und bekanntem, gut behandelbarem Erreger.','Fehring et al. (JBJS 2026, RCT): einzeitig nichtunterlegen (97 % vs. 91 %) bei chronischer PJI nach Primär-TEP mit bekanntem Erreger – auch mit Fistel; ausgeschlossen: kulturnegativ, Pilze, frühere Revision, Sepsis, HIV.','Antibiotika insgesamt 12 Wochen.'])];}
+      var why=[];if(!akut)why.push('chronische Infektion');else{if(ST.stab==='nein')why.push('Prothese gelockert');if(ST.wt==='schlecht')why.push('schlechte Weichteile/Knochen');if(ST.err==='dtt')why.push('Problemerreger');}
+      var two=ST.err==='dtt'||ST.wt==='schlecht'||ST.fist==='ja'||ST.rev==='ja';
+      var lines=['Prothesenwechsel: '+why.join(', ')+'.'];
+      if(!two){r=['Einzeitiger Wechsel','var(--ok)',lines.concat(['Kein Problemerreger, gute Weichteile/Knochen, keine Fistel, keine multiplen Revisionen.',STAB.one,
+        'RCT Fehring 2026: einzeitig nichtunterlegen (97 % vs. 91 %) bei chronischer PJI nach Primär-TEP mit bekanntem Erreger.'])
+        .concat(ST.err==='unb'?['Erreger möglichst präoperativ sichern (Punktion, ggf. Biopsie).']:[])];}
+      else if(ST.err==='dtt'||ST.wt==='schlecht'){r=['Zweizeitiger Wechsel, langes Intervall (6–8 Wochen)','var(--bad)',lines.concat([
+        (ST.err==='dtt'?'Problemerreger':'Schlechte Weichteile/Knochen')+' → langes Intervall.',STAB.long,
+        'Im Intervall keine biofilmaktiven Antibiotika; Rifampicin erst nach Wiederaufbau.',
+        'Unbefriedigender Verlauf (Infektzeichen, CRP, Eiter, kompromittierte Weichteile): dreizeitiger Wechsel. '+STAB.three])];}
+      else{r=['Zweizeitiger Wechsel, kurzes Intervall (2–3 Wochen)','var(--mid)',lines.concat([
+        (ST.fist==='ja'?'Fistel':'Multiple Revisionen')+' ohne Problemerreger und ohne schlechte Weichteile → kurzes Intervall.',STAB.short,
+        'Rifampicin erst nach Wiederaufbau der Prothese.'])];}
     }
   }
   h+='<div class="dxres">';
   if(r)h+='<div class="dxverdict" style="background:'+r[1]+'">'+r[0]+'</div><ul class="dxwhy">'+r[2].map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>';
   else h+='<div class="dxverdict" style="background:var(--off)">Noch '+miss.length+' offen</div><div class="dxnote">'+miss.map(function(x){return x.q;}).join(' · ')+'</div>';
-  h+='<div class="dxnote">Entscheidungshilfe, keine Indikationsstellung. Wahl im Team mit Patient:in treffen; die Antibiotika-Details stehen beim Erreger.</div></div>';
+  h+='<div class="dxnote">Entscheidungshilfe nach dem Behandlungsalgorithmus des PRO-IMPLANT Pocket Guide PJI v11, keine Indikationsstellung. Antibiotika-Details beim Erreger.</div></div>';
   el.innerHTML=h;}
 TOOLKEY.st=function(v){var p=v.split(':');ST[p[0]]=ST[p[0]]===p[1]?undefined:p[1];renderStrat();};
-regTool({id:'strategie',grp:'dx',t:'DAIR oder Wechsel?',s:'PRO-IMPLANT-Algorithmus',c:'var(--alt)',dom:'dxSt',render:renderStrat,
-  src:'PRO-IMPLANT Pocket Guide PJI v11 · Izakovicova P, Borens O, Trampuz A. EFORT Open Rev 2019;4:482–94 · Fehring TK et al., JBJS 2026 · ICM 2025 (J Arthroplasty) · EBJIS-Positionspapier DAIR, JBJI 2025',
+regTool({id:'strategie',grp:'dx',t:'DAIR oder Wechsel?',s:'PRO-IMPLANT-Algorithmus v11',c:'var(--alt)',dom:'dxSt',render:renderStrat,
+  src:'PRO-IMPLANT Pocket Guide PJI v11 (11/2023): Behandlungsalgorithmus und chirurgisches Vorgehen · ICM 2025 (J Arthroplasty) · Fehring TK et al., JBJS 2026',
   ic:'<path d="M6 3v7a4 4 0 0 0 4 4h4"/><path d="M18 3v4"/><path d="M14 10l4 4-4 4"/><circle cx="6" cy="20" r="1.5"/>'});

@@ -9,9 +9,9 @@ var EBP=[
   {k:'pmn',n:'Synovia: Granulozyten',o:[[0,'≤65 %'],[1,'>65 %'],[2,'>80 %']]},
   {k:'ad',n:'Alpha-Defensin',o:[[0,'negativ'],[2,'positiv']],h:'Falsch positiv bei Metallose, Gicht, entzündlicher Grunderkrankung. Negativ schließt nicht aus. Lateral-Flow-Test weniger sensitiv als ELISA.'},
   {k:'cult',n:'Kultur (Punktat / intraoperativ)',o:[[0,'negativ'],[1,'1 positive Probe'],[2,'≥2 Proben, gleicher Erreger']],
-   h:'Einzelner Nachweis eines typischen Kontaminanten (KNS, C. acnes) beweist nichts, sollte aber weitere Abklärung auslösen.'},
+   h:'PIF v11: bei hochvirulenten Erregern (S. aureus, E. coli, Streptokokken) oder unter Antibiotika ist schon 1 positive Probe relevant; bei niedrig-virulenten (KNS, C. acnes) erst ≥2.'},
   {k:'son',n:'Sonikation',o:[[0,'kein Wachstum'],[1,'>1 KBE/ml'],[2,'>50 KBE/ml']],h:'Grenzwerte für nicht zentrifugiertes Verfahren; mit Zentrifugation beweisend ab 200 KBE/ml.'},
-  {k:'his',n:'Histologie (400×)',o:[[0,'negativ'],[1,'≥5 Granulozyten in 1 HPF'],[2,'≥5 Gran. in ≥5 HPF / Erreger sichtbar']]},
+  {k:'his',n:'Histologie (400×)',o:[[0,'negativ'],[1,'≥5 Granulozyten in 1 HPF'],[2,'≥5 Gran. in ≥5 HPF / Erreger sichtbar']],h:'SLIM-Klassifikation (Krenn/Morawietz) Typ II oder III gilt laut PIF v11 als gleichwertig.'},
   {k:'nuc',n:'Nuklearmedizin',o:[[0,'3-Phasen-Szinti negativ'],[1,'Leukozyten-Szinti positiv']],h:'3-Phasen-Skelettszintigrafie erst >2 J. (Hüfte) bzw. >5 J. (Knie) nach Implantation verwertbar.'}
 ];
 var EBNAME={clin:'Klinik',crp:'CRP',wbc:'Synovia-Leukozyten',pmn:'Synovia-Granulozyten',ad:'Alpha-Defensin',cult:'Kultur',son:'Sonikation',his:'Histologie',nuc:'Nuklearmedizin'};
@@ -33,7 +33,10 @@ function renderEbjis(){var el=document.getElementById('dxEb');if(!el)return;
   else if(trig.length&&other.length){v='Infektion wahrscheinlich';c='var(--mid)';why=trig.concat(other);txt='Klinisches Zeichen oder CRP plus ein weiterer positiver Test. Weitere Abklärung (Punktion, Gewebeproben) einleiten; mehrere verdächtige Befunde beweisen die Infektion nicht.';}
   else if(lik.length){v='Einzelne verdächtige Befunde';c='var(--mid)';why=lik;txt='Kriterium „wahrscheinlich“ nicht erfüllt: dafür braucht es ein klinisches Zeichen oder CRP >10 mg/l zusammen mit einem positiven Synovia-, Mikrobiologie-, Histologie- oder Nuklearbefund. Infektion damit nicht ausgeschlossen.';}
   else{v='Infektion unwahrscheinlich';c='var(--ok)';txt='Alle erhobenen Befunde negativ. Kein Test schließt eine Infektion sicher aus – Aussagekraft hängt davon ab, was erhoben wurde ('+done.length+' von '+EBP.length+' Parametern).';}
+  var dom=[EB.clin===1||EB.clin===2,EB.crp===1,EB.wbc>=1||EB.pmn>=1,EB.cult>=1||EB.son>=1,EB.his>=1].filter(Boolean).length;
+  var pif=conf.length?'bestätigt':dom>=2?'wahrscheinlich':null;
   h+='<div class="dxres"><div class="dxverdict" style="background:'+c+'">'+v+'</div><div class="dxnote">'+txt+'</div>'
+    +(done.length&&!conf.length&&pif==='wahrscheinlich'&&v!=='Infektion wahrscheinlich'?'<div class="dxnote"><b>PIF v11 (modifizierte EBJIS-Kriterien):</b> wahrscheinlich – dort genügen ≥2 Kriterien aus Klinik/CRP, Zellzahl, Mikrobiologie, Histologie.</div>':'')
     +(why.length?'<ul class="dxwhy">'+why.map(function(k){return '<li>'+EBNAME[k]+': '+EBP.filter(function(p){return p.k===k;})[0].o.filter(function(o){return o[0]===EB[k];})[0][1]+'</li>';}).join('')+'</ul>':'')
     +'<div class="dxnote">Leukozyten >3000/µl und Granulozyten >80 % sind laut EBJIS-Tabelle jeweils für sich beweisend (der Fließtext formuliert „und“). Zellzahl nur bei klarem Punktat ohne Spülung, EDTA-Röhrchen, Analyse <1 h; bei blutigem Punktat korrigieren.</div>'
     +'<div class="dxnote">Synovia-Grenzwerte gelten nicht für die obere Extremität und sind früh postoperativ, bei Metallose, Kristallarthropathie, entzündlicher Grunderkrankung und periprothetischer Fraktur eingeschränkt verwertbar. Die Definition gibt keine Therapie vor.</div>'
@@ -64,7 +67,7 @@ function renderFri(){var el=document.getElementById('dxFr');if(!el)return;
 TOOLKEY.fr=function(v){FR[v]=!FR[v];renderFri();};
 
 regTool({id:'pji-dx',grp:'dx',t:'PJI-Diagnose',s:'EBJIS 2021',c:'var(--teal)',dom:'dxEb',render:renderEbjis,
-  src:'McNally M et al. The EBJIS definition of periprosthetic joint infection. Bone Joint J 2021;103-B:18–25 (endorsed by MSIS, ESGIAI)',
+  src:'McNally M et al. The EBJIS definition of periprosthetic joint infection. Bone Joint J 2021;103-B:18–25 · PRO-IMPLANT Pocket Guide PJI v11 (modifizierte EBJIS-Kriterien)',
   ic:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/>'});
 regTool({id:'fri-dx',grp:'dx',t:'FRI-Diagnose',s:'Konsensus-Definition',c:'var(--pi)',dom:'dxFr',render:renderFri,
   src:'Metsemakers WJ et al. Injury 2018;49:505–10 · Govaert GAM et al. J Orthop Trauma 2020;34:8–17 (Update: Histologie, Nuklearmedizin)',

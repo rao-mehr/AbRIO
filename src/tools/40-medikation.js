@@ -52,7 +52,7 @@ function renderMon(){var el=document.getElementById('dxMo');if(!el)return;
   var h='<div class="dxq">Laufende Antibiotika antippen:</div><div class="dxchips">'
     +MON.map(function(m){return dxChip('mo',m[0],m[1],!!MOS[m[0]]);}).join('')+'</div>';
   var sel=MON.filter(function(m){return MOS[m[0]];});
-  h+='<div class="dxres"><div class="dxsec">Basis bei jeder Langzeittherapie</div><ul class="dxwhy"><li>Blutbild, Kreatinin, Elektrolyte, Leberwerte und CRP wöchentlich, solange i.v. bzw. in den ersten Wochen oral</li><li>Wunde, Klinik, Adhärenz; Nebenwirkungen aktiv abfragen</li></ul>';
+  h+='<div class="dxres"><div class="dxsec">Basis bei jeder Langzeittherapie</div><ul class="dxwhy"><li>PIF v11: Leukozyten, CRP, Kreatinin/eGFR, Leberenzyme (AST, ALT) 2× pro Woche; Elektrolyte je nach Substanz</li><li>Dosisanpassung nach Nierenfunktion und Körpergewicht (<40 kg / >100 kg)</li><li>Wunde, Klinik, Adhärenz; Nebenwirkungen aktiv abfragen</li></ul>';
   sel.forEach(function(m){h+='<div class="dxsec">'+esc(m[1])+'</div><ul class="dxwhy">'+m[2].map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>';});
   if(!sel.length)h+='<div class="dxnote">Substanz antippen für die spezifischen Kontrollen.</div>';
   h+='<div class="dxnote">Übersicht für den Alltag, ersetzt nicht die Fachinformation. Dosisanpassung an die Nierenfunktion: Tool „Kreatinin-Clearance“.</div></div>';

@@ -94,6 +94,14 @@ def main():
         for t in ("pmma", "stim", "cer"):
             if t not in cat:
                 errors.append(f"lokal.json: Kategorie '{key}' ohne '{t}'")
+        if cat.get("pmma") and cat["pmma"] not in lok["pmma"]:
+            errors.append(f"lokal.json: Kategorie '{key}' verweist auf unbekannte PMMA-Situation '{cat['pmma']}'")
+        if not cat.get("pmma") and not cat.get("pmma_n"):
+            errors.append(f"lokal.json: Kategorie '{key}' ohne PMMA-Situation und ohne Hinweis")
+    for key, pm in lok["pmma"].items():
+        for t in ("s", "fix", "sp"):
+            if not pm.get(t):
+                errors.append(f"lokal.json: PMMA-Situation '{key}' ohne '{t}'")
     for i, e in enumerate(db):
         lk = e.get("lk")
         if e["impl"].get("pji") in ("ja", "selten") and not lk:
