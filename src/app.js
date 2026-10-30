@@ -194,11 +194,18 @@ function col(label,color,arr,olab){var h='<div class="col-h">'+esc(label)+'</div
   if(olab)h+='<div class="olab">⚠ '+esc(olab)+'</div>';return h+'</div>';}
 var LOK={{LOK}};
 function lokalPanel(e){var c=e.lk&&LOK.kat[e.lk];if(!c)return '';
+  var pm=c.pmma&&LOK.pmma[c.pmma];
   var h='<div class="col-h">LOKALE ANTIBIOTIKA</div><div class="col lok">';
-  ['pmma','stim','cer'].forEach(function(k){var T=LOK.traeger[k];
+  h+='<div class="drug"><span class="dn">PMMA-Zement <span class="par">pro 40 g</span></span>';
+  if(pm){h+='<span class="lok-s">'+esc(pm.s)+'</span>'
+    +'<div class="lok-kv"><span class="lok-k">Fixation</span><span class="lok-v">'+esc(pm.fix)+'</span>'
+    +'<span class="lok-k">Spacer</span><span class="lok-v">'+esc(pm.sp)+'</span></div>';}
+  if(c.pmma_n)h+='<span class="lok-w">'+esc(c.pmma_n)+'</span>';
+  h+='<details class="lok-d"><summary>Regeln (PIF v11)</summary><ul class="blist">'+LOK.pmma_regeln.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></details></div>';
+  ['stim','cer'].forEach(function(k){var T=LOK.traeger[k];
     h+='<div class="drug"><span class="dn">'+esc(T.t)+'</span><span class="lok-w">'+esc(c[k])+'</span>'
       +'<details class="lok-d"><summary>Hinweise zum Träger</summary><ul class="blist">'+T.h.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></details></div>';});
-  h+='<div class="olab lok-n">Wahl nach Antibiogramm; lokale Spiegel liegen weit über systemischen Grenzwerten. Lokale Träger ergänzen, ersetzen aber nicht die systemische Therapie (Ausnahme: SOLARIO-Konzept, siehe Info).</div></div>'
+  h+='<div class="olab lok-n">Lokale Träger ergänzen die systemische Therapie. Ausnahme mit Evidenz: SOLARIO (siehe Info).</div></div>'
     +'<div class="tl-src" style="margin:8px 32px 0">'+esc(LOK.quellen)+'</div>';
   return h;}
 var LAST=home,CSYN='PJI';

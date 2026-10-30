@@ -325,3 +325,7 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 .lok-d[open] summary:before{content:'▾ ';}
 .lok-d .blist{margin-top:2px;font-size:12.5px;color:var(--tx2)}
 .lok-n{color:var(--tx2)!important}
+.lok-s{display:block;font:600 12px var(--sans);color:var(--teal);margin-top:3px}
+.lok-kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin-top:8px;align-items:baseline}
+.lok-k{font:700 9.5px var(--mono);letter-spacing:.5px;text-transform:uppercase;color:var(--tx2)}
+.lok-v{font:400 13.5px var(--sans);line-height:1.4}

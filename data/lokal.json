@@ -1,17 +1,6 @@
 {
  "_quelle": "Siehe 'quellen'. Wirkstoffwahl richtet sich nach dem Antibiogramm; lokale Spiegel liegen weit über systemischen Breakpoints.",
  "traeger": {
-  "pmma": {
-   "t": "PMMA (Zement, Spacer)",
-   "h": [
-    "Nur hitzestabile, wasserlösliche Antibiotika in Pulverform, ins Zementpulver mischen; flüssige Antibiotika senken die Festigkeit deutlich (Druckfestigkeit −37 % mit flüssigem Gentamicin, −13 % mit Vancomycin-Pulver).",
-    "Ungeeignet: Rifampicin (fängt Radikale ab, verzögert die Aushärtung, Festigkeit unter ISO 5833), Tetracycline, Flucytosin.",
-    "Fixierung: industriell vorgemischter Zement (z. B. Palacos R+G mit 0,5 g Gentamicin, Copal G+V mit 0,5 g Gentamicin + 2 g Vancomycin pro 40 g); manuell ≤2 g Antibiotikum pro 40 g.",
-    "Spacer (Hochdosis): üblich 6–8 g pro 40 g, höchstens empfohlen 8 g pro 40 g. Biomechanisch geprüft: Gentamicin-Zement + 4 g Vancomycin pro 40 g.",
-    "Vancomycin + Aminoglykosid ergänzen sich: das Aminoglykosid steigert die Vancomycin-Freisetzung, auch wenn der Erreger aminoglykosidresistent ist.",
-    "Hochdosis-Spacer: Kreatinin in der ersten postoperativen Woche kontrollieren (Aminoglykosid-Nephrotoxizität, v. a. bei vorbestehender Niereninsuffizienz)."
-   ]
-  },
   "stim": {
    "t": "STIMULAN (Calciumsulfat)",
    "h": [
@@ -34,90 +23,132 @@
  },
  "kat": {
   "staph": {
-   "pmma": "Gentamicin-Zement; Spacer mit Vancomycin + Gentamicin",
+   "pmma": "std",
    "stim": "Vancomycin ± Gentamicin",
    "cer": "G (bei Gentamicin-Sensibilität) oder V"
   },
   "mrs": {
-   "pmma": "Vancomycin + Aminoglykosid (Gentamicin/Tobramycin) – Aminoglykosid auch bei Resistenz als Freisetzungs-Verstärker",
+   "pmma": "mrs",
    "stim": "Vancomycin (± Gentamicin/Tobramycin)",
    "cer": "V bevorzugt (KNS/MRSA oft gentamicinresistent); G nur bei Sensibilität"
   },
   "strep": {
-   "pmma": "Vancomycin oder Clindamycin (z. B. Gentamicin-Clindamycin-Zement); Aminoglykosid allein unzureichend",
+   "pmma": "std",
    "stim": "Vancomycin",
    "cer": "V"
   },
   "ente": {
-   "pmma": "Vancomycin (+ Aminoglykosid als Freisetzungs-Verstärker)",
+   "pmma": "mrs",
    "stim": "Vancomycin",
    "cer": "V"
   },
   "vanr": {
-   "pmma": "Vancomycin unwirksam. Daptomycin im Zement in vitro wirksam (Freisetzung mit Tobramycin besser) – nur nach Infektiologie",
+   "pmma": "vre",
    "stim": "kein geeigneter freigegebener Zusatz",
-   "cer": "nicht geeignet"
+   "cer": "nicht geeignet",
+   "pmma_n": "Gilt auch für andere vancomycinresistente Grampositive (Erysipelothrix, Leuconostoc)."
   },
   "gpos": {
-   "pmma": "Vancomycin (nach Antibiogramm)",
+   "pmma": "std",
    "stim": "Vancomycin",
    "cer": "V"
   },
   "apos": {
-   "pmma": "Vancomycin oder Clindamycin; Aminoglykoside gegen Anaerobier unwirksam",
+   "pmma": "std",
    "stim": "Vancomycin",
    "cer": "V"
   },
   "gn": {
-   "pmma": "Aminoglykosid (Gentamicin/Tobramycin) bei Sensibilität; Spacer bei Resistenz: Meropenem (in vitro aktive Freisetzung 3–27 Tage) oder Cefotaxim",
+   "pmma": "std",
    "stim": "Gentamicin oder Tobramycin",
    "cer": "G"
   },
   "esbl": {
-   "pmma": "Aminoglykosid bei Sensibilität; Spacer: Meropenem",
+   "pmma": "gnr",
    "stim": "Gentamicin/Tobramycin nur bei Sensibilität",
    "cer": "G nur bei Sensibilität"
   },
   "cre": {
-   "pmma": "Nur nach Antibiogramm und Infektiologie – kein Standard",
+   "pmma": "gnr",
    "stim": "Gentamicin/Tobramycin nur bei Sensibilität",
    "cer": "G nur bei Sensibilität"
   },
   "pae": {
-   "pmma": "Tobramycin oder Gentamicin; Spacer zusätzlich Meropenem",
+   "pmma": "std",
    "stim": "Tobramycin oder Gentamicin",
    "cer": "G bei Sensibilität"
   },
   "nf": {
-   "pmma": "Nach Antibiogramm. S. maltophilia: Aminoglykoside und Carbapeneme intrinsisch unwirksam – kein verlässlicher lokaler Wirkstoff",
+   "pmma": "gnr",
    "stim": "nur bei nachgewiesener Aminoglykosid-Sensibilität",
-   "cer": "G nur bei Sensibilität"
+   "cer": "G nur bei Sensibilität",
+   "pmma_n": "S. maltophilia: Aminoglykoside und Carbapeneme intrinsisch unwirksam – lokale Wahl nach Antibiogramm."
   },
   "aneg": {
-   "pmma": "Clindamycin bei Sensibilität oder Meropenem; Aminoglykoside und Vancomycin unwirksam",
+   "pmma": "std",
    "stim": "kein geeigneter freigegebener Zusatz",
-   "cer": "nicht geeignet"
+   "cer": "nicht geeignet",
+   "pmma_n": "Wirksam ist hier der Clindamycin-Anteil; Aminoglykoside wirken nicht gegen Anaerobier."
   },
   "fungi": {
-   "pmma": "Spacer mit Amphotericin B (Literatur: 200 mg pro 40 g) oder Voriconazol (300–600 mg pro 40 g) – keine Konsens-Dosis; Amphotericin-Desoxycholat wird schlecht freigesetzt",
+   "pmma": "fungi",
    "stim": "keine Daten/Freigabe für Antimykotika",
    "cer": "nicht geeignet"
   },
   "myko": {
-   "pmma": "kein etabliertes lokales Konzept – systemische Therapie maßgeblich",
+   "pmma": null,
    "stim": "nicht etabliert",
-   "cer": "nicht etabliert"
+   "cer": "nicht etabliert",
+   "pmma_n": "Kein PIF-Schema für lokale Antibiotika bei Mykobakterien."
   },
   "atyp": {
-   "pmma": "Ohne Zellwand: Vancomycin und Beta-Laktame unwirksam – kein etabliertes lokales Konzept",
+   "pmma": null,
    "stim": "nicht etabliert",
-   "cer": "nicht etabliert"
+   "cer": "nicht etabliert",
+   "pmma_n": "Kein etabliertes lokales Konzept (keine Zellwand)."
   },
   "ab": {
-   "pmma": "Nach Antibiogramm",
+   "pmma": "std",
    "stim": "nach Antibiogramm (Vancomycin, Gentamicin, Tobramycin)",
    "cer": "G oder V je nach Sensibilität"
   }
  },
- "quellen": "Gramlich/Hinz, Biomedicines 2022 (doi 10.3390/biomedicines10081830) · Antimicrobial regimens in cement spacers, Antibiotics 2024 (doi 10.3390/antibiotics13080772) · Biocomposites (STIMULAN) Herstellerangaben, Setting times · Kallala, Bone Joint Res 2018 · Calciumsulfat-Review, J Clin Med 2026 · Colding-Rasmussen, JBJI 2018 · FDA De Novo DEN210044 (CERAMENT G) · Bezstarosti, CORR 2024 · McNally, Bone Joint J 2016 und 2022 · Spacer-Festigkeit PMC9617327 · STIMULAN-Mischanleitung (Biocomposites, DE) · CERAMENT G US-IFU 2024 · SOLARIO, NEJM 2026"
+ "quellen": "PRO-IMPLANT Pocket Guide PJI v11 (11/2023), Tabelle „Lokale Antibiotika im Knochenzement“ · STIMULAN-Mischanleitung (Biocomposites) · Kallala, Bone Joint Res 2018 · CERAMENT G US-IFU 2024 · FDA DEN210044 · Bezstarosti, CORR 2024 · McNally, Bone Joint J 2016/2022 · SOLARIO, NEJM 2026",
+ "pmma": {
+  "std": {
+   "s": "Standard: empfindlicher oder unbekannter Erreger",
+   "fix": "Gentamicin 1 g + Clindamycin 1 g (industriell vorgemischt)",
+   "sp": "Gentamicin 1 g + Clindamycin 1 g + Vancomycin 2 g (Vancomycin manuell)"
+  },
+  "mrs": {
+   "s": "MRSA/MRSE oder Enterokokken",
+   "fix": "Gentamicin 0,5 g + Vancomycin 2 g (industriell) · alternativ Gentamicin 0,5 g + Daptomycin 2 g",
+   "sp": "Gentamicin 0,5 g + Vancomycin 2 g + Vancomycin 2 g manuell* · alternativ Gentamicin 0,5 g + Daptomycin 3 g"
+  },
+  "vre": {
+   "s": "Vancomycin-resistente Enterokokken",
+   "fix": "Gentamicin 0,5 g + Linezolid 1 g oder Daptomycin 2 g (oder Fosfomycin-Natrium 2 g*)",
+   "sp": "Gentamicin 0,5–1 g + Linezolid 2 g oder Daptomycin 3 g oder Fosfomycin-Natrium 2–4 g"
+  },
+  "gnr": {
+   "s": "Resistente Gramnegative (z. B. E. coli, Klebsiella, Enterobacter, Pseudomonas)",
+   "fix": "Gentamicin 0,5 g + Colistin 5–10 Mio. IE oder Meropenem 2 g oder Ciprofloxacin 2 g (oder Fosfomycin-Natrium 2 g*)",
+   "sp": "Gentamicin 0,5–1 g + Colistin 10–20 Mio. IE oder Meropenem 3 g oder Ciprofloxacin 3 g oder Fosfomycin-Natrium 2–4 g"
+  },
+  "fungi": {
+   "s": "Hefe- oder Schimmelpilze",
+   "fix": "Gentamicin 0,5 g + Amphotericin B liposomal 0,2 g oder Voriconazol 0,2 g",
+   "sp": "Gentamicin 0,5–1 g + Amphotericin B liposomal 0,4 g* oder Voriconazol 0,4 g*"
+  }
+ },
+ "pmma_regeln": [
+  "Mengen pro 40 g PMMA-Zement; ergänzend zur systemischen Therapie.",
+  "* erfüllt die ISO-Anforderungen an Fixationszement nicht – nur für Spacer.",
+  "Höchstens 10 % der Pulvermenge (= 4 g pro 40 g) beimischen; zu Kombinationen >2 Substanzen fehlen Stabilitätsdaten.",
+  "Industriell vorgemischten Antibiotika-Zement als Basis nehmen statt antibiotikafreiem (bessere Mechanik und Elution).",
+  "Nur sterile Pulver; keine flüssigen Antibiotika. Nicht verwenden: Rifampicin, Metronidazol (hemmen die Polymerisation), thermolabile Beta-Laktame.",
+  "Spacer-Zement ohne Vakuum anmischen (höhere Porosität, bessere Freisetzung).",
+  "Systemische Resistenz im Antibiogramm gilt lokal nicht zwingend (höhere Spiegel, Synergie).",
+  "Vancomycin-/Gentamicin-Serumspiegel bei eGFR <60 ml/min oder gleichzeitiger i.v.-Gabe kontrollieren."
+ ]
 }
