@@ -317,3 +317,11 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 .dxwhy{margin:6px 0 0;padding:0;list-style:none}
 .dxwhy li{font-size:13px;color:var(--tx);padding:3px 0 3px 14px;position:relative}
 .dxwhy li:before{content:'';position:absolute;left:2px;top:10px;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.45}
+.lok-w{display:block;font:400 13.5px var(--sans);color:var(--tx);margin-top:3px;line-height:1.45}
+.lok-d{margin-top:6px}
+.lok-d summary{font:400 12.5px var(--sans);color:var(--teal);cursor:pointer;list-style:none;padding:4px 0;min-height:28px}
+.lok-d summary::-webkit-details-marker{display:none}
+.lok-d summary:before{content:'▸ ';}
+.lok-d[open] summary:before{content:'▾ ';}
+.lok-d .blist{margin-top:2px;font-size:12.5px;color:var(--tx2)}
+.lok-n{color:var(--tx2)!important}

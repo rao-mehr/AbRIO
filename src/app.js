@@ -192,6 +192,15 @@ function fmtName(n){return esc(n).replace(/\(([^)]*)\)/g,'<span class="par">($1)
 function col(label,color,arr,olab){var h='<div class="col-h">'+esc(label)+'</div><div class="col">';if(!arr||!arr.length)h+='<div class="drug"><span class="dd">—</span></div>';
   arr.forEach(function(d){h+='<div class="drug"><span class="dn" style="color:'+color+'">'+fmtName(d[0])+'</span>'+(d[1]?'<span class="dd">'+esc(d[1])+'</span>':'')+'</div>';});
   if(olab)h+='<div class="olab">⚠ '+esc(olab)+'</div>';return h+'</div>';}
+var LOK={{LOK}};
+function lokalPanel(e){var c=e.lk&&LOK.kat[e.lk];if(!c)return '';
+  var h='<div class="col-h">LOKALE ANTIBIOTIKA</div><div class="col lok">';
+  ['pmma','stim','cer'].forEach(function(k){var T=LOK.traeger[k];
+    h+='<div class="drug"><span class="dn">'+esc(T.t)+'</span><span class="lok-w">'+esc(c[k])+'</span>'
+      +'<details class="lok-d"><summary>Hinweise zum Träger</summary><ul class="blist">'+T.h.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></details></div>';});
+  h+='<div class="olab lok-n">Wahl nach Antibiogramm; lokale Spiegel liegen weit über systemischen Grenzwerten. Lokale Träger ergänzen, ersetzen aber nicht die systemische Therapie (Ausnahme: SOLARIO-Konzept, siehe Info).</div></div>'
+    +'<div class="tl-src" style="margin:8px 32px 0">'+esc(LOK.quellen)+'</div>';
+  return h;}
 var LAST=home,CSYN='PJI';
 function detail(e,syn){CSYN=syn||'PJI';LAST=function(){detail(e,CSYN);};pushRecent(e.n);
   var eh='#/e/'+encodeURIComponent(e.n);go(eh+'/'+CSYN,location.hash.indexOf(eh+'/')===0);
@@ -223,6 +232,7 @@ function detail(e,syn){CSYN=syn||'PJI';LAST=function(){detail(e,CSYN);};pushRece
     if(e.note)cv+='<span class="r-k">CAVE</span>'+esc(e.note);
     if(e.wu){var wb=bulletList(e.wu);cv+='<div class="wu'+(e.note?' wu-sep':'')+'"><span class="wu-k">ABKLÄRUNG</span>'+(wb||esc(e.wu))+'</div>';}
     h+=cv+'</div>';}
+  h+=lokalPanel(e);
   h+='</div></div>';
   var v=document.getElementById('view');v.innerHTML=h;
   var bb=document.getElementById('backBtn');if(bb)bb.addEventListener('click',goBack);

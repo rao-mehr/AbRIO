@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "erreger.json"
 
+OPTIONAL = ["ev", "wu", "lk"]
 REQUIRED = ["n", "g", "impl", "route", "f", "a", "o", "olabel", "dur", "note",
             "pi", "pig", "syn", "syns", "w", "det"]
 PIG_KEYS = {"head", "iv", "bio", "oral", "surg", "dur", "cave", "extra"}
@@ -86,6 +87,19 @@ def main():
             for t in e["pig"].get("dur", []):
                 if re.search(r"3-6 Monate|Schulter", t) and e["g"] == "Gram-positiv" and "Staph" in e["n"]:
                     warnings.append(f"{tag}: Staphylokokken-Dauer weicht von PIF v11 (12 Wochen) ab: '{t}'")
+
+    # Lokale Antibiotika: jede implantatrelevante Kategorie muss in data/lokal.json existieren
+    lok = json.loads((ROOT / "data" / "lokal.json").read_text(encoding="utf-8"))
+    for key, cat in lok["kat"].items():
+        for t in ("pmma", "stim", "cer"):
+            if t not in cat:
+                errors.append(f"lokal.json: Kategorie '{key}' ohne '{t}'")
+    for i, e in enumerate(db):
+        lk = e.get("lk")
+        if e["impl"].get("pji") in ("ja", "selten") and not lk:
+            warnings.append(f"[{i}] {e['n']}: implantatrelevant, aber ohne Kategorie für lokale Antibiotika (lk)")
+        if lk and lk not in lok["kat"]:
+            errors.append(f"[{i}] {e['n']}: unbekannte lk-Kategorie '{lk}'")
 
     for n, k in names.items():
         if k > 1:
