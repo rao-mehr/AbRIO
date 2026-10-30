@@ -304,3 +304,16 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 .infocard{background:var(--card);border-radius:12px;margin:8px 16px 0;padding:16px}
 .infocard p{font:400 13.5px var(--sans);line-height:1.55;color:var(--tx);margin:0 0 12px}
 .infocard .modal-logo{margin-top:0;padding-right:0}
+.dxp{padding:9px 0;border-top:.5px solid var(--bd2)}
+.dxp:first-of-type{border-top:0}
+.dxp-n{font:600 14px var(--sans);margin-bottom:6px}
+.dxp-h{font:400 12px var(--sans);color:var(--tx2);margin:-3px 0 6px}
+.dxp .dxchips{margin-bottom:2px}
+.lv-mid{background:var(--mid)!important;color:#fff!important}
+.lv-bad{background:var(--bad)!important;color:#fff!important}
+.lv-ok{background:var(--ok)!important;color:#fff!important}
+.dxsec{font:700 10px var(--mono);letter-spacing:.5px;color:var(--teal);text-transform:uppercase;margin:14px 0 4px}
+.dxsec:first-child{margin-top:2px}
+.dxwhy{margin:6px 0 0;padding:0;list-style:none}
+.dxwhy li{font-size:13px;color:var(--tx);padding:3px 0 3px 14px;position:relative}
+.dxwhy li:before{content:'';position:absolute;left:2px;top:10px;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.45}
