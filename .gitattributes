@@ -1,0 +1,3 @@
+# Immer LF – verhindert die CRLF-Bytedifferenzen unter Git for Windows
+* text=auto eol=lf
+*.png binary
