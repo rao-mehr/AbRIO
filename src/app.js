@@ -292,139 +292,7 @@ function browse(){LAST=browse;go('#/filter');
   v.querySelectorAll('.freset').forEach(function(rst){rst.addEventListener('click',function(){FILT={g:null,pji:null,dair:null,rif:false,pif:false,wu:false};browse();});});
   v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],'PJI');});});
 }
-function logic(){LAST=logic;setActiveTab('Logik');go('#/logik');
-  document.getElementById('view').innerHTML='<div class="card"><div class="body"><div class="logic"><h3>Therapie-Logik</h3>'
-   +'<div class="ln"><b style="color:var(--teal)">sensibel</b> → Beta-Laktam der 1. Wahl.</div>'
-   +'<div class="ln"><b style="color:var(--alt)">MRSA / MRSE</b> → Vancomycin (AUC 400–600 mg·h/L) oder Daptomycin.</div>'
-   +'<div class="ln"><b style="color:var(--pi)">Biofilm / Implantat</b> → Rifampicin nur bei Staphylokokken und Cutibacterium (dort PIF-Empfehlung, Evidenz schwach). Immer kombiniert, nie Monotherapie, erst ab trockener Wunde (Tag 2–7).</div>'
-   +'<div class="ln"><b style="color:var(--oral)">Gram-negativ + Biofilm</b> → Ciprofloxacin ist der orale Biofilm-Partner, nicht Rifampicin.</div>'
-   +'<div class="ln"><b style="color:var(--dur)">Oraler Switch</b> → nur nach dokumentierter Sensibilität; sonst i.v. fortführen oder Suppression.</div>'
-   +'<h4>Implantat-Chips lesen</h4>'
-   +'<div class="ln"><b>PJI</b> — klinische Relevanz als Protheseninfekt-Erreger.</div>'
-   +'<div class="ln"><b>DAIR</b> — biofilmtherapeutische Aussicht bei Implantaterhalt. <b>DTT</b> = difficult-to-treat, kein verlässlicher oraler biofilmaktiver Partner. Klinische DAIR-Kriterien (Symptome &lt;3–4 Wo., stabiles Implantat, kein Fistelgang) müssen zusätzlich erfüllt sein.</div>'
-   +'<div class="ln"><b>Rifampicin</b> — Biofilm-Zusatznutzen: ja / bedingt / nein.</div>'
-   +'<div class="ln"><b>Evidenz-Badge</b> — PIF-Protokoll (verifiziert) → Leitlinie → Fallserien → Fallbericht. <b style="color:var(--bad)">Entwurf</b> = noch nicht am PIF-Original geprüft.</div>'
-   +'<h4>Abweichungen von den Pocket Guides</h4>'
-   +'<div class="ln"><b>Vancomycin</b> — hier AUC-Monitoring (400–600 mg·h/L, IDSA/ASHP 2020); die Pocket Guides nennen noch Talspiegel 15–20 µg/ml. Bewusste Modernisierung.</div>'
-   +'<div class="ln"><b>Penicillin G → Ampicillin/Sulbactam</b> — bei fehlender Verfügbarkeit klinisch gleichwertig für Streptokokken, Cutibacterium und grampositive Anaerobier.</div>'
-   +'<div class="ln"><b>Rifampicin-Timing</b> — das PIF-Dogma (Tag 2–7, trockene Wunde) bleibt Standard. Kohorte 2024 (n=103) fand keine Timing-Outcome-Korrelation; RCTs laufen.</div>'
-   +'<div class="ln"><b>Problemerreger (PIF v11)</b> — nur Rifampicin-resistente Staphylokokken, Ciprofloxacin-resistente Gramnegative und Candida. Enterokokken und Streptokokken zählen nicht dazu.</div>'+'<h4>Evidenz-Updates (Stand 10/2026)</h4>'+'<div class="ln"><b>EUCAST v16 (ab 01/2026, aktuell v16.1)</b> — Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4): mehr Isolate werden R, Oral-Switch mit Cotrimoxazol am aktuellen Antibiogramm prüfen. Cefoxitin-negative Staphylokokken: Cefazolin/Ceftriaxon & Co. werden als I (erhöhte Exposition) berichtet, also hoch dosieren; oral auf ausreichende Exposition achten. Daptomycin: Breakpoint nur für S. aureus. Angekündigt: Konsultationen zu Carbapenem- und Fluorchinolon-Breakpoints.</div>'+'<div class="ln"><b>ICM 2025</b> — der Konsens (J Arthroplasty 2026) setzt mindestens 12 Wochen Antibiose nach DAIR bei akuter PJI fest, deckungsgleich mit PIF v11.</div>'+'<div class="ln"><b>Therapiedauer</b> — 12 statt 6 Wochen: Nichtunterlegenheit von 6 Wochen nicht gezeigt, mehr persistierende Infektionen (DATIPO, NEJM 2021). Die 3-Monats-Angaben bleiben Standard.</div>'+'<div class="ln"><b>Oraler Switch</b> — früher Wechsel auf oral bei gut bioverfügbarer, wirksamer Substanz gleichwertig (OVIVA, NEJM 2019).</div>'+'<div class="ln"><b>Lokale Antibiotikaträger</b> — mit implantiertem Träger war ≤7 Tage systemische Therapie nichtunterlegen gegenüber ≥4 Wochen, bei weniger Nebenwirkungen (SOLARIO, NEJM 09/2026). Gilt NICHT für DAIR und nur bei Erregern, die gegen den lokalen Wirkstoff sensibel sind.</div>'+'<div class="ln"><b>Ein- vs. zweizeitiger Wechsel</b> — einzeitig nichtunterlegen (2 J.: 97 % vs. 91 %) bei chronischer PJI nach Primärprothese, bekanntem Erreger, ohne Immunsuppression (OPTION, JBJS 2026). Einträge mit »Zwei-Stufen-Wechsel bevorzugt« in diesem Licht lesen.</div>'+'<div class="ln"><b>Antibiotikapause vor Reimplantation</b> — kein belegter Vorteil, verlängert aber das Intervall (Scoping-Review, JBJS 2025).</div>'+'<div class="ln"><b>Rifampicin bei Staphylokokken</b> — Standard, aber auf Beobachtungsdaten gestützt. Laufende RCTs: RiCOTTA (Monotherapie vs. Rifampicin-Kombination nach DAIR), ROADMAP (Rifampicin-Domäne), RIFAMAB (Rifabutin vs. Rifampicin).</div>'+'<div class="ln"><b>Dalbavancin</b> — bei komplizierter S.-aureus-Bakteriämie nicht überlegen (DOTS, JAMA 2025; retiniertes Fremdmaterial ausgeschlossen). Bei PJI nur Beobachtungsdaten, v.a. Suppression.</div>'+'<h4>Penicillin-/Beta-Laktam-Allergie</h4><div class="dx" id="dxAll"></div>'
-   +'<h4>Oraler Switch — Checkliste</h4><div class="dx" id="dxSw"></div>'
-   +'<h4>Kreatinin-Clearance (Cockcroft-Gault)</h4><div class="dx" id="dxRen"></div>'
-   +'<h4>MRGN-Einstufung (KRINKO)</h4><div class="dx" id="dxMr"></div>'
-   +'</div></div></div>';
-  wireLogic();
-}
-var LG={all:'',sw:{},ren:{age:'',kg:'',scr:'',unit:'mgdl',sex:'m'},mr:{grp:'ent',r:{}}};
-function dxChip(key,val,label,on){return '<button class="clschip dxc'+(on?' on':'')+'" data-k="'+key+'" data-v="'+val+'" aria-pressed="'+(on?'true':'false')+'">'+label+'</button>';}
-function dxRow(cls,lv,txt){var L={ok:['geben','var(--ok)'],mid:['Vorsicht','var(--mid)'],bad:['meiden','var(--bad)']}[lv];
-  return '<div class="dxrow"><span class="dxlv" style="background:'+L[1]+'">'+L[0]+'</span><div><b>'+cls+'</b><div class="dxtx">'+txt+'</div></div></div>';}
-function renderAll(){var el=document.getElementById('dxAll');if(!el)return;
-  var T=[['low','Unklar / Unverträglichkeit','Übelkeit, Durchfall, Kopfschmerz, unklare Kindheitsanamnese'],
-         ['rash','Leichtes Exanthem','benignes, verzögertes Exanthem/Urtikaria ohne Systembeteiligung'],
-         ['ige','Soforttyp / Anaphylaxie','Anaphylaxie, Angioödem, Bronchospasmus, Hypotonie, Urtikaria &lt;1 h'],
-         ['scar','Schwere Haut-/Organreaktion','SJS/TEN, DRESS, AGEP, interstitielle Nephritis, Hämolyse']];
-  var h='<div class="dxq">Welche Reaktion auf Penicillin?</div><div class="dxchips dxcol">';
-  T.forEach(function(t){h+='<button class="dxopt'+(LG.all===t[0]?' on':'')+'" data-k="all" data-v="'+t[0]+'" aria-pressed="'+(LG.all===t[0])+'"><b>'+t[1]+'</b><span>'+t[2]+'</span></button>';});
-  h+='</div>';
-  var v=LG.all;
-  if(v){h+='<div class="dxres">';
-    if(v==='low'||v==='rash'){
-      h+=dxRow('Penicilline','mid','Niedriges Risiko. Label kritisch prüfen — Delabeling per direkter oraler Amoxicillin-Provokation (Allergologie) ist meist möglich.')
-        +dxRow('Cefazolin','ok','Einsetzbar.')
-        +dxRow('Cefalexin / Cefadroxil','ok','Einsetzbar.')
-        +dxRow('Andere Cephalosporine','ok','Einsetzbar.')
-        +dxRow('Carbapeneme','ok','Einsetzbar.')
-        +dxRow('Aztreonam','ok','Einsetzbar.');
-    }else if(v==='ige'){
-      h+=dxRow('Penicilline','bad','Meiden bis zur allergologischen Abklärung.')
-        +dxRow('Cefazolin','ok','Eigene R1-Seitenkette — auch nach Penicillin-Anaphylaxie ohne Testung einsetzbar (Prophylaxe und Therapie).')
-        +dxRow('Cefalexin / Cefadroxil','bad','R1-Seitenkette identisch mit Amoxicillin/Ampicillin — nach Aminopenicillin-Reaktion meiden. Relevant für den oralen Switch.')
-        +dxRow('Andere Cephalosporine','ok','Unterschiedliche Seitenkette: Kreuzreaktivität &lt;1 %, ohne Testung einsetzbar (Cefuroxim, Ceftriaxon, Cefepim, Ceftazidim).')
-        +dxRow('Carbapeneme','ok','Kreuzreaktivität &lt;1 %, ohne Testung einsetzbar.')
-        +dxRow('Aztreonam','ok','Keine Kreuzreaktivität mit Penicillinen. Cave: Ceftazidim-/Cefiderocol-Allergie (gleiche Seitenkette).');
-    }else{
-      h+=dxRow('Penicilline','bad','Lebenslang meiden, keine Testexposition.')
-        +dxRow('Cefazolin','bad','Nur nach allergologischer Abklärung.')
-        +dxRow('Cefalexin / Cefadroxil','bad','Nur nach allergologischer Abklärung.')
-        +dxRow('Andere Cephalosporine','bad','Nur nach allergologischer Abklärung.')
-        +dxRow('Carbapeneme','bad','Nur nach allergologischer Abklärung.')
-        +dxRow('Aztreonam','mid','Nicht-Beta-Laktam bevorzugen; nur nach Rücksprache.')
-        +'<div class="dxnote">Alternativen je nach Erreger: Vancomycin, Daptomycin, Linezolid, Clindamycin, Fluorchinolone, TMP/SMX.</div>';
-    }
-    h+='<div class="dxnote">Im Zweifel Allergologie/Infektiologie — unnötige Beta-Laktam-Vermeidung ist mit mehr Wundinfekten und schlechterem Outcome assoziiert.</div></div>';
-  }
-  el.innerHTML=h;}
-function renderSw(){var el=document.getElementById('dxSw');if(!el)return;
-  var I=[['stab','Klinisch stabil, afebril seit ≥48 h'],['hd','Keine Sepsis, hämodynamisch stabil'],['focus','Fokuskontrolle erreicht (Débridement/Drainage erfolgt)'],
-         ['abg','Erreger + Antibiogramm bekannt, orale Substanz wirksam'],['bio','Orale Substanz hoch bioverfügbar, gute Knochen-/Gewebegängigkeit'],
-         ['gi','Orale Aufnahme und Resorption gesichert'],['ex','Keine S.-aureus-Bakteriämie, Endokarditis oder undrainierter Abszess'],['fu','Adhärenz und Nachsorge gesichert']];
-  var h='<div class="dxq">Alle Punkte antippen, die erfüllt sind:</div><div class="dxchips dxcol">';
-  var miss=[];
-  I.forEach(function(i){var on=!!LG.sw[i[0]];if(!on)miss.push(i[1]);
-    h+='<button class="dxchk'+(on?' on':'')+'" data-k="sw" data-v="'+i[0]+'" aria-pressed="'+on+'"><span class="dxbox">'+(on?'✓':'')+'</span>'+i[1]+'</button>';});
-  h+='</div><div class="dxres">';
-  if(!miss.length)h+='<div class="dxverdict" style="background:var(--ok)">Oraler Switch möglich</div><div class="dxnote">Früher Wechsel auf eine wirksame, gut bioverfügbare orale Substanz ist gleichwertig zur i.v.-Therapie (OVIVA, NEJM 2019).</div>';
-  else h+='<div class="dxverdict" style="background:var(--mid)">Noch nicht — '+miss.length+' offen</div><ul class="blist dxmiss">'+miss.map(function(m){return '<li>'+m+'</li>';}).join('')+'</ul>';
-  el.innerHTML=h+'</div>';}
-function renderRen(){var el=document.getElementById('dxRen');if(!el)return;var R=LG.ren;
-  var h='<div class="dxgrid">'
-   +'<label>Alter<input class="dxin" inputmode="numeric" data-f="age" value="'+R.age+'" placeholder="Jahre"></label>'
-   +'<label>Gewicht<input class="dxin" inputmode="decimal" data-f="kg" value="'+R.kg+'" placeholder="kg"></label>'
-   +'<label>Kreatinin<input class="dxin" inputmode="decimal" data-f="scr" value="'+R.scr+'" placeholder="'+(R.unit==='mgdl'?'mg/dl':'µmol/l')+'"></label>'
-   +'</div><div class="dxchips">'+dxChip('sex','m','männlich',R.sex==='m')+dxChip('sex','w','weiblich',R.sex==='w')
-   +'<span class="dxsep"></span>'+dxChip('unit','mgdl','mg/dl',R.unit==='mgdl')+dxChip('unit','umol','µmol/l',R.unit==='umol')+'</div>'
-   +'<div class="dxres" id="dxRenOut"></div>';
-  el.innerHTML=h;renderRenOut();}
-function renderRenOut(){var o=document.getElementById('dxRenOut');if(!o)return;var R=LG.ren;
-  function num(x){return parseFloat(String(x).replace(',','.'));}
-  var age=num(R.age),kg=num(R.kg),scr=num(R.scr);
-  if(!(age>=18&&age<=110&&kg>=25&&kg<=300&&scr>0)){o.innerHTML='<div class="dxnote">Alter (18–110 J.), Gewicht (kg) und Serumkreatinin eingeben.</div>';return;}
-  var mg=R.unit==='mgdl'?scr:scr/88.4;
-  if(mg<0.1||mg>20){o.innerHTML='<div class="dxnote" style="color:var(--bad)">Kreatininwert unplausibel — Einheit prüfen.</div>';return;}
-  var cl=(140-age)*kg/(72*mg)*(R.sex==='w'?0.85:1);cl=Math.round(cl);
-  var st=cl>50?['&gt;50 ml/min','var(--ok)','Für die meisten Substanzen keine Anpassung.']:
-         cl>=30?['30–50 ml/min','var(--mid)','Viele renal eliminierte Substanzen brauchen Intervall- oder Dosisanpassung.']:
-         cl>=10?['10–29 ml/min','var(--bad)','Deutliche Anpassung nötig — Rücksprache Nephrologie/klinische Pharmakologie vor Therapiestart.']:
-                ['&lt;10 ml/min','var(--bad)','Dosierung wie bei Dialyse — Nephrologie einbinden.'];
-  var h='<div class="dxverdict" style="background:'+st[1]+'">CrCl ≈ '+cl+' ml/min · '+st[0]+'</div><div class="dxnote">'+st[2]+'</div>'
-   +'<div class="dxnote"><b>Initialdosis nie reduzieren</b> — nur Erhaltungsdosis bzw. Intervall anpassen. Vancomycin und Aminoglykoside spiegelgesteuert (AUC/Talspiegel) dosieren.</div>'
-   +'<div class="dxnote">Unzuverlässig bei akutem Nierenversagen (Kreatinin nicht im Steady State), Adipositas (tatsächliches Gewicht überschätzt), Kachexie und hohem Alter mit geringer Muskelmasse.</div>';
-  if(typeof RENAL!=='undefined'&&RENAL.length)h+='<div class="dxq" style="margin-top:10px">Renal anzupassen (Datenbank):</div><div class="dxtags">'+RENAL.map(function(d){return '<span class="tag tag-ren">'+esc(d)+'</span>';}).join('')+'</div>';
-  o.innerHTML=h;}
-function renderMr(){var el=document.getElementById('dxMr');if(!el)return;var M=LG.mr;
-  var G=[['ent','Enterobacterales'],['pae','P. aeruginosa'],['aci','A. baumannii']];
-  var A=[['pip','Piperacillin'],['ceph','Cefotaxim/Ceftazidim (3./4. Gen.)'],['carb','Imipenem/Meropenem'],['fq','Ciprofloxacin']];
-  var h='<div class="dxq">Erregergruppe</div><div class="dxchips">'+G.map(function(g){return dxChip('grp',g[0],g[1],M.grp===g[0]);}).join('')+'</div>'
-   +'<div class="dxq">Im Antibiogramm <b>R</b> (resistent):</div><div class="dxchips dxcol">';
-  A.forEach(function(x){var on=!!M.r[x[0]];h+='<button class="dxchk'+(on?' on':'')+'" data-k="mr" data-v="'+x[0]+'" aria-pressed="'+on+'"><span class="dxbox">'+(on?'✓':'')+'</span>'+x[1]+'</button>';});
-  var cp=!!M.r.cp;
-  h+='<button class="dxchk'+(cp?' on':'')+'" data-k="mr" data-v="cp" aria-pressed="'+cp+'"><span class="dxbox">'+(cp?'✓':'')+'</span>Carbapenemase nachgewiesen</button></div>';
-  var r=M.r,n=['pip','ceph','carb','fq'].filter(function(k){return r[k];}).length,v,col,txt='';
-  if(cp){v='4MRGN';col='var(--bad)';txt='Carbapenemase-Nachweis ⇒ 4MRGN, unabhängig vom Phänotyp. Meldepflichtig.';}
-  else if(M.grp==='pae'){
-    if(n===4){v='4MRGN';col='var(--bad)';}else if(n===3){v='3MRGN';col='var(--mid)';txt='Bei P. aeruginosa: beliebige 3 der 4 Gruppen resistent.';}else{v='kein 3/4MRGN';col='var(--ok)';}
-  }else{
-    if(n===4){v='4MRGN';col='var(--bad)';}
-    else if(r.pip&&r.ceph&&r.fq&&!r.carb){v='3MRGN';col='var(--mid)';txt='Piperacillin, Cephalosporine und Ciprofloxacin resistent, Carbapenem noch wirksam.';}
-    else if(r.carb){v='kein 3/4MRGN nach Definition';col='var(--mid)';txt='Carbapenem-Resistenz trotzdem hygiene- und meldepflichtrelevant — Carbapenemase-Testung veranlassen.';}
-    else{v='kein 3/4MRGN';col='var(--ok)';}
-  }
-  h+='<div class="dxres"><div class="dxverdict" style="background:'+col+'">'+v+'</div>'+(txt?'<div class="dxnote">'+txt+'</div>':'')
-   +'<div class="dxnote">Nur <b>R</b> zählt — <b>I</b> (sensibel bei erhöhter Exposition, EUCAST) gilt als sensibel. Isolierung nach lokaler Hygieneordnung.</div></div>';
-  el.innerHTML=h;}
-function wireLogic(){renderAll();renderSw();renderRen();renderMr();
-  var v=document.getElementById('view');if(!v||v._lgw)return;v._lgw=true;
-  v.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-k]');if(!b||!document.getElementById('dxAll'))return;
-    var k=b.getAttribute('data-k'),val=b.getAttribute('data-v');
-    if(k==='all'){LG.all=LG.all===val?'':val;renderAll();}
-    else if(k==='sw'){LG.sw[val]=!LG.sw[val];renderSw();}
-    else if(k==='sex'||k==='unit'){if(k==='unit'&&LG.ren.unit!==val){LG.ren.scr='';}LG.ren[k]=val;renderRen();}
-    else if(k==='grp'){LG.mr.grp=val;renderMr();}
-    else if(k==='mr'){LG.mr.r[val]=!LG.mr.r[val];renderMr();}
-  });
-  v.addEventListener('input',function(ev){var t=ev.target;if(!t.classList||!t.classList.contains('dxin'))return;LG.ren[t.getAttribute('data-f')]=t.value;renderRenOut();});
-}
+/*@TOOLS*/
 function classes(){LAST=classes;setActiveTab('Klassen');go('#/klassen');
   var ROLE={f:['Erstlinie i.v.','var(--teal)'],a:['Alternative','var(--alt)'],o:['Oral','var(--oral)']};
   function matchPanel(m){
@@ -490,9 +358,9 @@ q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefaul
 q.addEventListener('focus',function(){if(cur.length)ac.className='on';});
 document.addEventListener('click',function(e){if(!ac.contains(e.target)&&e.target!==q)ac.className='';});
 clr.addEventListener('click',function(){q.value='';clr.hidden=true;cur=[];ac.className='';q.focus();home();});
-function setActiveTab(n){['Suche','Filter','Klassen','Logik'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});
+function setActiveTab(n){['Suche','Filter','Klassen','Tools','Info'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});
   var sb=document.querySelector('.searchbox'),ks=document.getElementById('ksec');
-  if(sb)sb.hidden=(n==='Klassen');
+  if(sb)sb.hidden=(n==='Klassen'||n==='Tools'||n==='Info');
   if(ks)ks.hidden=(n!=='Klassen');
 }
 document.querySelectorAll('#ksec .stab').forEach(function(b){b.addEventListener('click',function(){
@@ -503,22 +371,16 @@ document.querySelectorAll('#ksec .stab').forEach(function(b){b.addEventListener(
 document.getElementById('tabSuche').addEventListener('click',function(){home();window.scrollTo(0,1);});
 document.getElementById('tabFilter').addEventListener('click',function(){if(LAST===browse){FOPEN=!FOPEN;}else{FOPEN=true;}browse();window.scrollTo(0,1);});
 document.getElementById('tabKlassen').addEventListener('click',function(){classes();window.scrollTo(0,1);});
-document.getElementById('tabLogik').addEventListener('click',function(){logic();window.scrollTo(0,1);});
-document.getElementById('tabInfo').addEventListener('click',function(){showInfo();});
+document.getElementById('tabTools').addEventListener('click',function(){tools();window.scrollTo(0,1);});
+document.getElementById('tabInfo').addEventListener('click',function(){info();window.scrollTo(0,1);});
 function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;try{localStorage.setItem('ari_theme',t);}catch(e){}
   document.querySelector('meta[name=theme-color]').setAttribute('content',t==='light'?'#F2F2F7':'#000000');LAST();}
 document.getElementById('themeBtn').addEventListener('click',function(){setTheme(THEME==='light'?'dark':'light');});
-var infoModal=document.getElementById('infoModal');
-function showInfo(){infoModal.hidden=false;}
-function hideInfo(){infoModal.hidden=true;}
-document.getElementById('infoX').addEventListener('click',hideInfo);
-document.getElementById('infoClose').addEventListener('click',hideInfo);
-document.addEventListener('keydown',function(e){if(e.key==='Escape')hideInfo();});
 window.addEventListener('scroll',function(){var hd=document.getElementById('hdr');if(hd)hd.classList.toggle('collapsed',(window.scrollY||window.pageYOffset||0)>34);},{passive:true});
 var dbIssues=validateDB(DB);if(dbIssues.length)showDataWarning(dbIssues);
 function route(){ROUTING=true;try{var p=(location.hash||'#/').slice(2).split('/');
     if(p[0]==='e'&&p[1]){var nm=decodeURIComponent(p[1]);var e=DB.filter(function(x){return x.n===nm;})[0];if(e){detail(e,p[2]||'PJI');window.scrollTo(0,0);}else home();}
-    else if(p[0]==='filter')browse();else if(p[0]==='klassen')classes();else if(p[0]==='logik')logic();else home();
+    else if(p[0]==='filter')browse();else if(p[0]==='klassen')classes();else if(p[0]==='tools'||p[0]==='logik'){if(p[1])tool(p[1]);else tools();}else if(p[0]==='info')info();else home();
   }finally{ROUTING=false;}}
 window.addEventListener('popstate',function(){if(NAVDEPTH>0)NAVDEPTH--;route();});
 ROUTING=true;setTheme(THEME);ROUTING=false;if(location.hash&&location.hash!=="#/")route();else home();

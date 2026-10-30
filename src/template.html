@@ -10,17 +10,6 @@
 {{STYLE}}</style>
 </head>
 <body>
-<div class="modal" id="infoModal" hidden>
-  <div class="modal-bd" id="infoClose"></div>
-  <div class="modal-card">
-    <button class="modal-x" id="infoX" aria-label="Schließen">✕</button>
-    <div class="modal-logo">Antibiotika Referenz Index – Orthopädie (AbRIO)</div>
-    <p class="modal-copy">© 2026 Dr. Raouf Mehrabi — Alle Rechte vorbehalten.</p>
-    <p>Konzept, Idee, Aufbau und Inhalt dieser Anwendung sind geistiges Eigentum von Dr. Raouf Mehrabi. Die App und die ihr zugrunde liegende Idee dürfen ohne ausdrückliche schriftliche Genehmigung des Inhabers nicht kopiert, vervielfältigt, weitergegeben, veröffentlicht oder kommerziell genutzt werden.</p>
-    <p class="modal-dis">Nur für medizinisches Fachpersonal. Standarddosen gelten für Erwachsene mit normaler Nieren- und Leberfunktion; mit »Niere« gekennzeichnete Substanzen sind nach Nierenfunktion (GFR/CrCl) anzupassen. Lokale Resistenzraten und Infektiologiekonsil beachten. Diese Referenz ersetzt keine klinische Einzelfallentscheidung.</p>
-    <p class="modal-src">Version {{VERSION}} · Datengrundlage: Pro-Implant Foundation · EBJIS · EUCAST v16.1 · PEG · Datenstand 10/2026 (Basis PIF v11 + Literatur-Update) · offline lauffähig</p>
-  </div>
-</div>
 <header id="hdr">
   <div class="wrap">
     <div class="hd">
@@ -46,7 +35,7 @@
   <button class="tab on" id="tabSuche" aria-label="Suche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span>Suche</span></button>
   <button class="tab" id="tabFilter" aria-label="Filter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span>Filter</span></button>
   <button class="tab" id="tabKlassen" aria-label="Wirkstoffklassen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Klassen</span></button>
-  <button class="tab" id="tabLogik" aria-label="Therapie-Logik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4 4 4 0 0 0-1 7 3 3 0 0 0 5 2 3 3 0 0 0 5-2 4 4 0 0 0-1-7 4 4 0 0 0-4-4z"/></svg><span>Logik</span></button>
+  <button class="tab" id="tabTools" aria-label="Tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.4-.4-2.4z"/></svg><span>Tools</span></button>
   <button class="tab" id="tabInfo" aria-label="Info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5"/><circle cx="12" cy="8" r=".6" fill="currentColor"/></svg><span>Info</span></button>
 </nav>
 <script type="application/json" id="DB">{{DB}}</script>
