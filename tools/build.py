@@ -52,6 +52,8 @@ def build():
     # Lokale Antibiotika: data/lokal.json wird als Objekt LOK in app.js eingebettet
     lok = json.dumps(json.loads(read("data/lokal.json")), ensure_ascii=False, separators=(", ", ": "))
     parts["{{LOK}}"] = lok.replace("</", "<\\/")
+    sub = json.dumps(json.loads(read("data/substanzen.json")), ensure_ascii=False, separators=(", ", ": "))
+    parts["{{SUB}}"] = sub.replace("</", "<\\/")
     # Platzhalter in einem Durchgang ersetzen (Inhalte werden nicht erneut gescannt)
     for key, val in parts.items():
         html = html.replace(key, val.replace("{{VERSION}}", version))

@@ -1,0 +1,866 @@
+{
+ "_hinweis": "Kurzprofile für den Klassen-Tab. sp = Spektrum/Einsatz, lu = wichtige Lücken, kn = Knochen/Biofilm, bv = oral, do = übliche Erwachsenendosis (normale Nierenfunktion), cv = Cave. Quellen: Fachinformationen, PRO-IMPLANT Pocket Guide PJI v11, EUCAST Expected Resistant Phenotypes, Standardlehrbücher. Klinisch prüfen.",
+ "gruppen": [
+  [
+   "β-Laktame",
+   [
+    "Penicilline",
+    "β-Laktam + Inhibitor",
+    "Cephalosporine",
+    "Carbapeneme",
+    "Monobactame"
+   ]
+  ],
+  [
+   "Grampositiv-Spezialisten",
+   [
+    "Glykopeptide",
+    "Lipoglykopeptide",
+    "Lipopeptide",
+    "Oxazolidinone",
+    "Streptogramine"
+   ]
+  ],
+  [
+   "Oral-/Biofilm-Partner",
+   [
+    "Ansamycine (Rifamycine)",
+    "Fluorchinolone",
+    "Folatantagonisten",
+    "Tetracycline",
+    "Lincosamide",
+    "Fusidane"
+   ]
+  ],
+  [
+   "Weitere",
+   [
+    "Aminoglykoside",
+    "Makrolide",
+    "Glycylcycline",
+    "Nitroimidazole",
+    "Polymyxine",
+    "Fosfomycine",
+    "Nitrofurane",
+    "Phenicole",
+    "Pleuromutiline"
+   ]
+  ],
+  [
+   "Tuberkulose",
+   [
+    "Antituberkulotika"
+   ]
+  ]
+ ],
+ "s": {
+  "Penicillin G": {
+   "sp": "Streptokokken, Cutibacterium, grampositive Anaerobier, Actinomyces, Treponemen",
+   "lu": "Staphylokokken (Penicillinase), Gramnegative",
+   "kn": "gut im Knochen; kein Biofilmpartner",
+   "bv": "nur i.v.",
+   "do": "4 × 5 Mio. IE i.v. (PIF v11)",
+   "cv": "Allergie; hohe Kaliumlast bei Kalium-Salz"
+  },
+  "Penicillin V": {
+   "sp": "Streptokokken (leichte Infektionen)",
+   "lu": "Staphylokokken, Gramnegative",
+   "kn": "für Knochen-/Implantatinfekte zu schwach",
+   "bv": "~60 %",
+   "do": "3 × 1–1,5 Mio. IE p.o.",
+   "cv": "nicht für PJI-Oralphase"
+  },
+  "Ampicillin": {
+   "sp": "Enterokokken (E. faecalis), Streptokokken, Listerien",
+   "lu": "Staphylokokken, viele Enterobacterales (β-Laktamasen)",
+   "kn": "gut; kein Biofilmpartner",
+   "bv": "nur i.v. (oral: Amoxicillin)",
+   "do": "4 × 2 g i.v. (PIF v11, Enterokokken)",
+   "cv": "Exanthem bei EBV"
+  },
+  "Amoxicillin": {
+   "sp": "Streptokokken, Enterokokken, grampositive Anaerobier – Standard der Oralphase",
+   "lu": "Staphylokokken, β-Laktamase-Bildner",
+   "kn": "ausreichend bei hoher Dosis",
+   "bv": "~80 %",
+   "do": "3 × 1 g p.o. (PIF v11)",
+   "cv": "Allergie"
+  },
+  "Flucloxacillin": {
+   "sp": "MSSA, oxacillinsensible KNS",
+   "lu": "MRSA, Enterokokken, Gramnegative",
+   "kn": "gut; kein Biofilmpartner",
+   "bv": "~50 % – oral nur eingeschränkt",
+   "do": "4–6 × 2 g i.v. (FRI, SA)",
+   "cv": "cholestatische Hepatitis (auch verzögert); mit Paracetamol Pyroglutamat-Azidose"
+  },
+  "Oxacillin": {
+   "sp": "MSSA, oxacillinsensible KNS",
+   "lu": "MRSA, Enterokokken, Gramnegative",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "6 × 2 g i.v.",
+   "cv": "in Österreich/Deutschland meist Flucloxacillin"
+  },
+  "Piperacillin": {
+   "sp": "Pseudomonas, Enterobacterales (nur mit Tazobactam sinnvoll)",
+   "lu": "β-Laktamase-Bildner ohne Inhibitor",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "nur als Piperacillin/Tazobactam",
+   "cv": "–"
+  },
+  "Amoxicillin/Clavulansäure": {
+   "sp": "Staphylokokken (MSSA), Streptokokken, Anaerobier, Haemophilus, viele Enterobacterales; Biss-Infektionen",
+   "lu": "MRSA, Pseudomonas, ESBL",
+   "kn": "gut",
+   "bv": "~70 %",
+   "do": "3 × 875/125 mg p.o.; i.v. 3 × 2,2 g",
+   "cv": "Hepatotoxizität, Diarrhö; PIF: äquivalent zu Ampicillin/Sulbactam"
+  },
+  "Ampicillin/Sulbactam": {
+   "sp": "Empirische PJI-Therapie (PIF v11), Anaerobier, MSSA, Streptokokken, Acinetobacter (Sulbactam)",
+   "lu": "MRSA, Pseudomonas, ESBL",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 3 g i.v. (PIF v11)",
+   "cv": "–"
+  },
+  "Piperacillin/Tazobactam": {
+   "sp": "Pseudomonas, Enterobacterales (nicht ESBL-sicher), Anaerobier, Streptokokken",
+   "lu": "MRSA, ESBL (Carbapenem bevorzugt), AmpC-Derepression",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3–4 × 4,5 g i.v., verlängerte Infusion",
+   "cv": "Nephrotoxizität mit Vancomycin"
+  },
+  "Ceftazidim/Avibactam": {
+   "sp": "KPC-, OXA-48-Bildner, DTR-Pseudomonas",
+   "lu": "Metallo-β-Laktamasen (dann + Aztreonam), Grampositive, Anaerobier",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 2,5 g i.v. über 2 h",
+   "cv": "Reserve – Infektiologie"
+  },
+  "Ceftolozan/Tazobactam": {
+   "sp": "DTR-Pseudomonas aeruginosa",
+   "lu": "Carbapenemasen, Grampositive",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 1,5–3 g i.v.",
+   "cv": "Reserve"
+  },
+  "Meropenem/Vaborbactam": {
+   "sp": "KPC-Bildner",
+   "lu": "OXA-48, MBL",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 4 g i.v. über 3 h",
+   "cv": "Reserve"
+  },
+  "Imipenem/Relebactam": {
+   "sp": "KPC-Bildner, DTR-Pseudomonas",
+   "lu": "OXA-48, MBL",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "4 × 1,25 g i.v.",
+   "cv": "Reserve; Krampfschwelle"
+  },
+  "Aztreonam/Avibactam": {
+   "sp": "Metallo-β-Laktamase-Bildner (NDM, VIM)",
+   "lu": "Grampositive, Anaerobier",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "nach Fachinformation (Ladedosis + Erhaltung)",
+   "cv": "Reserve"
+  },
+  "Cefazolin (1. Gen)": {
+   "sp": "MSSA, oxacillinsensible KNS, Streptokokken – PIF-Primärwahl bei Staph-PJI",
+   "lu": "MRSA, Enterokokken, Anaerobier, viele Gramnegative",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 2 g i.v. (PIF v11)",
+   "cv": "EUCAST v16: bei Cefoxitin-negativen Staph als „I“ – hoch dosieren; mit Rifampicin Gerinnung kontrollieren"
+  },
+  "Cefalexin (1. Gen, oral)": {
+   "sp": "MSSA, Streptokokken – Oral-Suppression",
+   "lu": "MRSA, Enterokokken, Gramnegative",
+   "kn": "mäßig",
+   "bv": "~90 %",
+   "do": "4 × 0,5–1 g p.o.",
+   "cv": "Kreuzallergie mit Aminopenicillinen (gleiche Seitenkette)"
+  },
+  "Cefuroxim (2. Gen)": {
+   "sp": "MSSA, Streptokokken, einige Enterobacterales; perioperative Prophylaxe",
+   "lu": "MRSA, Enterokokken, Pseudomonas, Anaerobier",
+   "kn": "gut (i.v.)",
+   "bv": "Axetil ~40 %",
+   "do": "3 × 1,5 g i.v.",
+   "cv": "oral für Knochen ungeeignet"
+  },
+  "Ceftriaxon (3. Gen)": {
+   "sp": "Streptokokken, Enterobacterales, Gonokokken, Borrelien; OPAT 1×/d",
+   "lu": "Enterokokken, Pseudomonas, MRSA, Listerien, AmpC-Bildner",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "1 × 2 g i.v. (Streptokokken-PJI, PIF v11)",
+   "cv": "Gallenschlamm; nicht mit Calcium i.v. bei Neugeborenen"
+  },
+  "Cefotaxim (3. Gen)": {
+   "sp": "Streptokokken, Enterobacterales, Gonokokken; Alternative zu Ceftriaxon",
+   "lu": "Enterokokken, Pseudomonas, MRSA, Listerien, AmpC-Bildner",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 2 g i.v.",
+   "cv": "–"
+  },
+  "Ceftazidim (3. Gen, Pseudomonas)": {
+   "sp": "Pseudomonas, Enterobacterales",
+   "lu": "Grampositive (schwach), Anaerobier, ESBL",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 2 g i.v. (PIF v11, Nonfermenter)",
+   "cv": "keine Staph-Wirkung"
+  },
+  "Cefixim (3. Gen, oral)": {
+   "sp": "Enterobacterales (HWI), Gonokokken",
+   "lu": "Staphylokokken, Pseudomonas",
+   "kn": "ungeeignet",
+   "bv": "~50 %",
+   "do": "1 × 400 mg p.o.",
+   "cv": "nicht für Knochen"
+  },
+  "Cefpodoxim (3. Gen, oral)": {
+   "sp": "Enterobacterales, Streptokokken (Atemwege, HWI)",
+   "lu": "Pseudomonas, Enterokokken",
+   "kn": "ungeeignet",
+   "bv": "~50 %",
+   "do": "2 × 200 mg p.o.",
+   "cv": "nicht für Knochen"
+  },
+  "Cefepim (4. Gen)": {
+   "sp": "Pseudomonas, AmpC-Bildner (Enterobacter, Serratia), MSSA",
+   "lu": "MRSA, Enterokokken, Anaerobier",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 2 g i.v.",
+   "cv": "Neurotoxizität bei Niereninsuffizienz"
+  },
+  "Ceftarolin (5. Gen, MRSA)": {
+   "sp": "MRSA, Streptokokken, Enterobacterales ohne ESBL",
+   "lu": "Pseudomonas, Enterokokken (E. faecium), Anaerobier",
+   "kn": "Daten begrenzt",
+   "bv": "nur i.v.",
+   "do": "3 × 600 mg i.v.",
+   "cv": "Reserve"
+  },
+  "Ceftobiprol (5. Gen, MRSA)": {
+   "sp": "MRSA, Pseudomonas (teilweise), E. faecalis",
+   "lu": "ESBL, E. faecium",
+   "kn": "Daten begrenzt",
+   "bv": "nur i.v.",
+   "do": "3 × 500 mg i.v.",
+   "cv": "Reserve"
+  },
+  "Cefiderocol (Siderophor)": {
+   "sp": "Carbapenem-resistente Gramnegative inkl. MBL, CRAB, S. maltophilia",
+   "lu": "Grampositive, Anaerobier",
+   "kn": "Daten begrenzt",
+   "bv": "nur i.v.",
+   "do": "3 × 2 g i.v. über 3 h",
+   "cv": "Reserve – Infektiologie"
+  },
+  "Meropenem": {
+   "sp": "ESBL, AmpC, Pseudomonas, Anaerobier – breitestes β-Laktam",
+   "lu": "MRSA, E. faecium, S. maltophilia, Carbapenemasen",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3 × 1–2 g i.v. (Pseudomonas 3 × 2 g, verlängert)",
+   "cv": "Valproat-Spiegel fällt stark"
+  },
+  "Imipenem/Cilastatin": {
+   "sp": "ESBL, AmpC, Pseudomonas, Anaerobier; etwas besser gegen E. faecalis als Meropenem",
+   "lu": "MRSA, E. faecium, S. maltophilia, Carbapenemasen",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "4 × 500 mg–1 g i.v.",
+   "cv": "Krampfschwelle"
+  },
+  "Ertapenem": {
+   "sp": "ESBL-Enterobacterales, Anaerobier; OPAT 1×/d",
+   "lu": "Pseudomonas, Acinetobacter, Enterokokken",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "1 × 1 g i.v.",
+   "cv": "keine Pseudomonas-Wirkung"
+  },
+  "Doripenem": {
+   "sp": "ESBL, AmpC, Pseudomonas, Anaerobier",
+   "lu": "MRSA, E. faecium, Carbapenemasen",
+   "kn": "–",
+   "bv": "nur i.v.",
+   "do": "in der EU nicht mehr vermarktet",
+   "cv": "nicht mehr verfügbar"
+  },
+  "Aztreonam": {
+   "sp": "Gramnegative inkl. Pseudomonas; bei Penicillin-Anaphylaxie",
+   "lu": "Grampositive, Anaerobier",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "3–4 × 2 g i.v.",
+   "cv": "Kreuzallergie mit Ceftazidim (Seitenkette)"
+  },
+  "Gentamicin": {
+   "sp": "Gramnegative, Synergie bei Enterokokken/Streptokokken; lokal im Zement",
+   "lu": "Anaerobier, Streptokokken allein, intrazellulär",
+   "kn": "schlecht systemisch; lokal sehr gut",
+   "bv": "nur i.v.",
+   "do": "1 × 5–7 mg/kg i.v.; PIF: 1 × 240 mg (Pseudomonas), 1 × 120 mg (Enterokokken)",
+   "cv": "Nephro-/Ototoxizität – Talspiegel <1 mg/l"
+  },
+  "Tobramycin": {
+   "sp": "Pseudomonas (stärker als Gentamicin)",
+   "lu": "Anaerobier, Streptokokken allein, Burkholderia",
+   "kn": "lokal im Zement",
+   "bv": "nur i.v.",
+   "do": "1 × 5–7 mg/kg i.v.; PIF: 1 × 300 mg",
+   "cv": "Nephro-/Ototoxizität – Talspiegel <1 mg/l"
+  },
+  "Amikacin": {
+   "sp": "Gentamicin-resistente Gramnegative, Mykobakterien (NTM, MDR-TB), Nocardien",
+   "lu": "Anaerobier",
+   "kn": "schlecht systemisch",
+   "bv": "nur i.v.",
+   "do": "1 × 15–20 mg/kg i.v.",
+   "cv": "Ototoxizität"
+  },
+  "Streptomycin": {
+   "sp": "Tuberkulose, Tularämie, Brucellose",
+   "lu": "–",
+   "kn": "–",
+   "bv": "nur i.m./i.v.",
+   "do": "1 × 15 mg/kg",
+   "cv": "Ototoxizität"
+  },
+  "Netilmicin": {
+   "sp": "Gramnegative (Aminoglykosid)",
+   "lu": "Anaerobier",
+   "kn": "–",
+   "bv": "nur i.v.",
+   "do": "kaum noch verfügbar",
+   "cv": "–"
+  },
+  "Vancomycin": {
+   "sp": "MRSA, MRSE, Enterokokken (nicht VRE), C. acnes, Corynebakterien; lokal im Zement",
+   "lu": "Gramnegative, VRE, Leuconostoc/Pediococcus/Erysipelothrix (intrinsisch R)",
+   "kn": "mäßig systemisch; lokal sehr gut",
+   "bv": "oral nicht resorbiert (nur C. difficile)",
+   "do": "2 × 1 g bzw. 15–20 mg/kg i.v., spiegelgesteuert",
+   "cv": "Nephrotoxizität (v. a. mit Pip/Tazo); Red-Man-Syndrom"
+  },
+  "Teicoplanin": {
+   "sp": "MRSA, MRSE, Enterokokken (VanB oft S); 1×/d, OPAT",
+   "lu": "VanA-VRE, Gramnegative",
+   "kn": "gut",
+   "bv": "nur i.v./i.m.",
+   "do": "Ladedosis 12 mg/kg alle 12 h × 3–5, dann 1 × 12 mg/kg",
+   "cv": "Spiegel bei Knocheninfekt (Tal ≥20 mg/l)"
+  },
+  "Dalbavancin": {
+   "sp": "MRSA, Streptokokken; Langzeit-i.v. mit 1–2 Gaben",
+   "lu": "Gramnegative, VanA-VRE",
+   "kn": "gute Knochenspiegel",
+   "bv": "nur i.v.",
+   "do": "1500 mg Tag 1 und Tag 8 (Osteomyelitis-Schema)",
+   "cv": "DOTS 2025: nicht überlegen bei S.-aureus-Bakteriämie; bei PJI nur Beobachtungsdaten"
+  },
+  "Oritavancin": {
+   "sp": "MRSA, Streptokokken, VRE (teilweise)",
+   "lu": "Gramnegative",
+   "kn": "Daten begrenzt",
+   "bv": "nur i.v.",
+   "do": "1200 mg Einmalgabe (Haut)",
+   "cv": "Gerinnungstests verfälscht"
+  },
+  "Telavancin": {
+   "sp": "MRSA",
+   "lu": "Gramnegative",
+   "kn": "–",
+   "bv": "nur i.v.",
+   "do": "in der EU nicht vermarktet",
+   "cv": "Nephrotoxizität"
+  },
+  "Daptomycin": {
+   "sp": "MRSA, MRSE, Enterokokken inkl. VRE; biofilmaktiver als Vancomycin",
+   "lu": "Gramnegative; NICHT bei Pneumonie (Surfactant)",
+   "kn": "gut",
+   "bv": "nur i.v.",
+   "do": "1 × 8 mg/kg (Staph), 10 mg/kg (Enterokokken) i.v. (PIF v11)",
+   "cv": "CK wöchentlich, Statin pausieren; eosinophile Pneumonie; EUCAST-Breakpoint nur für S. aureus"
+  },
+  "Ciprofloxacin": {
+   "sp": "Gramnegative inkl. Pseudomonas – DER orale Biofilmpartner bei Gramnegativen",
+   "lu": "Streptokokken, Anaerobier, schwach gegen Staphylokokken",
+   "kn": "sehr gut",
+   "bv": "~70–80 %",
+   "do": "2 × 750 mg p.o. (PIF v11)",
+   "cv": "Sehnen, QT, Aortenaneurysma, Delir; nicht mit Calcium/Magnesium/Eisen einnehmen"
+  },
+  "Levofloxacin": {
+   "sp": "Staphylokokken (Rifampicin-Partner der Wahl), Streptokokken, Gramnegative",
+   "lu": "Anaerobier, MRSA oft R, schwächer gegen Pseudomonas als Cipro",
+   "kn": "sehr gut",
+   "bv": "~99 %",
+   "do": "2 × 500 mg p.o. (PIF v11)",
+   "cv": "Sehnen (v. a. >60 J. und mit Steroiden), QT, Aortenaneurysma, Delir; nicht mit Calcium/Magnesium/Eisen einnehmen"
+  },
+  "Moxifloxacin": {
+   "sp": "Streptokokken, Staphylokokken, Anaerobier, atypische Erreger, Mykobakterien",
+   "lu": "Pseudomonas",
+   "kn": "sehr gut",
+   "bv": "~90 %",
+   "do": "1 × 400 mg p.o./i.v.",
+   "cv": "QT, Hepatotoxizität; keine Nierenanpassung"
+  },
+  "Ofloxacin": {
+   "sp": "Gramnegative, Staphylokokken (Vorgänger von Levofloxacin)",
+   "lu": "–",
+   "kn": "gut",
+   "bv": "~95 %",
+   "do": "2 × 200–400 mg",
+   "cv": "durch Levofloxacin ersetzt; Nebenwirkungen wie Fluorchinolone"
+  },
+  "Delafloxacin": {
+   "sp": "MRSA, Gramnegative inkl. Pseudomonas",
+   "lu": "–",
+   "kn": "Daten begrenzt",
+   "bv": "~60 %",
+   "do": "2 × 450 mg p.o.",
+   "cv": "Reserve, wenig Knochendaten"
+  },
+  "Azithromycin": {
+   "sp": "Atypische, Bartonellen, Campylobacter, Chlamydien",
+   "lu": "für Knocheninfekte ungeeignet; Staph-Resistenz häufig",
+   "kn": "intrazellulär hoch, Knochen unzureichend",
+   "bv": "~40 %",
+   "do": "1 × 500 mg",
+   "cv": "QT"
+  },
+  "Clarithromycin": {
+   "sp": "Atypische, NTM (M. avium, M. abscessus), H. pylori",
+   "lu": "Knochen-/Implantatinfekte",
+   "kn": "–",
+   "bv": "~50 %",
+   "do": "2 × 500 mg p.o.",
+   "cv": "starker CYP3A4-Hemmer; mit Rifampicin nicht empfohlen"
+  },
+  "Erythromycin": {
+   "sp": "Streptokokken, Atypische (historisch)",
+   "lu": "–",
+   "kn": "–",
+   "bv": "variabel",
+   "do": "4 × 500 mg",
+   "cv": "QT, GI-Nebenwirkungen"
+  },
+  "Roxithromycin": {
+   "sp": "Atemwege",
+   "lu": "–",
+   "kn": "–",
+   "bv": "gut",
+   "do": "2 × 150 mg",
+   "cv": "–"
+  },
+  "Clindamycin": {
+   "sp": "MSSA, Streptokokken, grampositive Anaerobier; Toxinhemmung (nekrotisierende Fasziitis); im Zement mit Gentamicin",
+   "lu": "Enterokokken, Gramnegative, induzierbare Resistenz (D-Test)",
+   "kn": "sehr gut",
+   "bv": "~90 %",
+   "do": "3 × 600 mg p.o./i.v.",
+   "cv": "C. difficile; Rifampicin senkt Spiegel stark"
+  },
+  "Linezolid": {
+   "sp": "MRSA, VRE, Nocardien, NTM",
+   "lu": "Gramnegative",
+   "kn": "gut",
+   "bv": "~100 %",
+   "do": "2 × 600 mg p.o. (max. 4 Wochen, PIF v11)",
+   "cv": "Blutbild wöchentlich, Neuropathie, Serotonin-Syndrom; Rifampicin senkt Spiegel"
+  },
+  "Tedizolid": {
+   "sp": "MRSA, Streptokokken",
+   "lu": "Gramnegative",
+   "kn": "Daten begrenzt",
+   "bv": "~90 %",
+   "do": "1 × 200 mg",
+   "cv": "weniger Myelotoxizität als Linezolid, wenig Knochendaten"
+  },
+  "Doxycyclin": {
+   "sp": "Staphylokokken (auch MRSA), Streptokokken, Atypische, Borrelien, Brucellen – Oral-/Suppressionspartner",
+   "lu": "Pseudomonas, Proteus",
+   "kn": "gut",
+   "bv": "~95 %",
+   "do": "2 × 100 mg p.o. (PIF v11)",
+   "cv": "Photosensibilität; Rifampicin senkt Spiegel – Dosiserhöhung"
+  },
+  "Minocyclin": {
+   "sp": "MRSA, Acinetobacter, S. maltophilia, Nocardien",
+   "lu": "Pseudomonas",
+   "kn": "gut",
+   "bv": "~95 %",
+   "do": "2 × 100 mg p.o.",
+   "cv": "Schwindel, Pigmentierung"
+  },
+  "Tetracyclin": {
+   "sp": "historisch",
+   "lu": "–",
+   "kn": "–",
+   "bv": "~70 %",
+   "do": "–",
+   "cv": "durch Doxycyclin ersetzt"
+  },
+  "Tigecyclin": {
+   "sp": "MRSA, VRE, ESBL, CRAB – Reserve",
+   "lu": "Pseudomonas, Proteus, Providencia",
+   "kn": "Gewebe gut, Serum niedrig",
+   "bv": "nur i.v.",
+   "do": "100 mg, dann 2 × 50 mg i.v.",
+   "cv": "erhöhte Mortalität in Studien; nicht bei Bakteriämie"
+  },
+  "Eravacyclin": {
+   "sp": "MRSA, VRE, ESBL, CRAB – komplizierte intraabdominelle Infektionen",
+   "lu": "Pseudomonas",
+   "kn": "Daten begrenzt",
+   "bv": "nur i.v.",
+   "do": "1 mg/kg alle 12 h",
+   "cv": "Reserve"
+  },
+  "Metronidazol": {
+   "sp": "gramnegative Anaerobier (Bacteroides, Fusobacterium), C. difficile",
+   "lu": "aerobe Erreger, Cutibacterium, Actinomyces",
+   "kn": "sehr gut",
+   "bv": "~100 %",
+   "do": "3 × 400–500 mg p.o. (PIF v11)",
+   "cv": "Neuropathie bei Langzeitgabe, Alkohol; hemmt PMMA-Polymerisation"
+  },
+  "Tinidazol": {
+   "sp": "gramnegative Anaerobier, Protozoen (Alternative zu Metronidazol)",
+   "lu": "–",
+   "kn": "–",
+   "bv": "~100 %",
+   "do": "–",
+   "cv": "–"
+  },
+  "Trimethoprim/Sulfamethoxazol (Cotrimoxazol)": {
+   "sp": "Staphylokokken inkl. MRSA, Enterobacterales, S. maltophilia, Nocardien – Rifampicin-Partner",
+   "lu": "Streptokokken (unsicher), Pseudomonas, Anaerobier, Enterokokken",
+   "kn": "gut",
+   "bv": "~95 %",
+   "do": "3 × 960 mg p.o. (PIF v11)",
+   "cv": "Hyperkaliämie, Kreatininanstieg, Zytopenie, SJS; EUCAST v16: Breakpoint S ≤0,5 mg/l"
+  },
+  "Trimethoprim": {
+   "sp": "unkomplizierter HWI",
+   "lu": "–",
+   "kn": "–",
+   "bv": "gut",
+   "do": "2 × 200 mg",
+   "cv": "nicht für Knochen"
+  },
+  "Sulfadiazin": {
+   "sp": "Toxoplasmose, Nocardien",
+   "lu": "–",
+   "kn": "–",
+   "bv": "gut",
+   "do": "–",
+   "cv": "Kristallurie"
+  },
+  "Colistin (Polymyxin E)": {
+   "sp": "Carbapenem-resistente Gramnegative (Reserve); lokal im Zement",
+   "lu": "Proteus, Serratia, Providencia, Burkholderia (intrinsisch R), Grampositive",
+   "kn": "schlecht systemisch",
+   "bv": "nur i.v.",
+   "do": "9 Mio. IE Ladedosis, dann 2 × 4,5 Mio. IE i.v.; PIF: 3 × 3 Mio. IE",
+   "cv": "Nephro-/Neurotoxizität"
+  },
+  "Polymyxin B": {
+   "sp": "Carbapenem-resistente Gramnegative (Reserve)",
+   "lu": "Proteus, Serratia, Providencia, Burkholderia, Grampositive",
+   "kn": "–",
+   "bv": "nur i.v.",
+   "do": "in Europa kaum verfügbar",
+   "cv": "–"
+  },
+  "Rifampicin": {
+   "sp": "Biofilmaktiv gegen Staphylokokken und Cutibacterium – NIE als Monotherapie",
+   "lu": "Gramnegative (klinisch), Enterokokken, Streptokokken (kein belegter Nutzen)",
+   "kn": "sehr gut, biofilmaktiv",
+   "bv": "~95 %",
+   "do": "2 × 450 mg p.o., >75 J. 2 × 300 mg (PIF v11)",
+   "cv": "erst ab trockener Wunde; starker CYP-Induktor – Interaktions-Tool; hemmt PMMA-Polymerisation"
+  },
+  "Rifabutin": {
+   "sp": "Alternative bei Rifampicin-Interaktionen, MAC",
+   "lu": "–",
+   "kn": "biofilmaktiv (in vitro)",
+   "bv": "~20 %",
+   "do": "1 × 300 mg",
+   "cv": "Uveitis; RCT RIFAMAB läuft"
+  },
+  "Rifaximin": {
+   "sp": "nur intestinal (nicht resorbiert)",
+   "lu": "systemisch unwirksam",
+   "kn": "–",
+   "bv": "<1 %",
+   "do": "–",
+   "cv": "nicht für Knochen"
+  },
+  "Rifapentin": {
+   "sp": "Tuberkulose",
+   "lu": "–",
+   "kn": "–",
+   "bv": "–",
+   "do": "–",
+   "cv": "in der EU nicht zugelassen"
+  },
+  "Fosfomycin": {
+   "sp": "i.v.: Staphylokokken, Enterokokken, Gramnegative – Kombinationspartner bei PJI (PIF v11); oral nur HWI",
+   "lu": "nie Monotherapie i.v. (Resistenz)",
+   "kn": "gut, biofilmaktiv in Kombination",
+   "bv": "oral (Trometamol) nur Blase",
+   "do": "3 × 5 g i.v. (PIF v11)",
+   "cv": "Natriumlast, Hypokaliämie"
+  },
+  "Nitrofurantoin": {
+   "sp": "unkomplizierter HWI",
+   "lu": "Proteus, Pseudomonas",
+   "kn": "–",
+   "bv": "nur Urin",
+   "do": "2 × 100 mg ret.",
+   "cv": "nicht für Knochen; Lungenfibrose bei Dauergabe"
+  },
+  "Quinupristin/Dalfopristin": {
+   "sp": "E. faecium (VRE), MRSA",
+   "lu": "E. faecalis",
+   "kn": "–",
+   "bv": "nur ZVK",
+   "do": "3 × 7,5 mg/kg",
+   "cv": "praktisch nicht mehr verfügbar"
+  },
+  "Chloramphenicol": {
+   "sp": "Reserve (Meningitis, Rickettsien)",
+   "lu": "–",
+   "kn": "gut",
+   "bv": "~80 %",
+   "do": "4 × 0,5–1 g",
+   "cv": "aplastische Anämie"
+  },
+  "Fusidinsäure": {
+   "sp": "Staphylokokken – Rifampicin-Partner (PIF v11)",
+   "lu": "Streptokokken, Gramnegative; nie Monotherapie",
+   "kn": "gut",
+   "bv": "~90 %",
+   "do": "3 × 500 mg p.o. (PIF v11)",
+   "cv": "Hepatotoxizität; in Österreich eingeschränkt verfügbar"
+  },
+  "Lefamulin": {
+   "sp": "ambulante Pneumonie",
+   "lu": "–",
+   "kn": "keine Daten",
+   "bv": "~25 %",
+   "do": "–",
+   "cv": "nicht für Knochen"
+  },
+  "Isoniazid": {
+   "sp": "M. tuberculosis",
+   "lu": "NTM",
+   "kn": "gut",
+   "bv": "~90 %",
+   "do": "1 × 5 mg/kg (max. 300 mg) + Vitamin B6",
+   "cv": "Hepatotoxizität, Neuropathie"
+  },
+  "Pyrazinamid": {
+   "sp": "M. tuberculosis (nicht M. bovis)",
+   "lu": "M. bovis, NTM",
+   "kn": "gut",
+   "bv": "~90 %",
+   "do": "1 × 25 mg/kg",
+   "cv": "Hepatotoxizität, Hyperurikämie"
+  },
+  "Ethambutol": {
+   "sp": "M. tuberculosis, MAC",
+   "lu": "–",
+   "kn": "mäßig",
+   "bv": "~80 %",
+   "do": "1 × 15–20 mg/kg",
+   "cv": "Optikusneuritis – Visus-/Farbtest"
+  },
+  "Bedaquilin": {
+   "sp": "MDR-/XDR-TB (BPaLM)",
+   "lu": "–",
+   "kn": "–",
+   "bv": "mit Mahlzeit",
+   "do": "nach WHO-Schema",
+   "cv": "QT"
+  },
+  "Delamanid": {
+   "sp": "MDR-TB",
+   "lu": "–",
+   "kn": "–",
+   "bv": "–",
+   "do": "nach WHO-Schema",
+   "cv": "QT"
+  },
+  "Clofazimin": {
+   "sp": "MDR-TB, NTM (M. abscessus, MAC), Lepra",
+   "lu": "–",
+   "kn": "–",
+   "bv": "variabel",
+   "do": "1 × 100 mg",
+   "cv": "Hautverfärbung, QT"
+  },
+  "Cycloserin": {
+   "sp": "MDR-TB",
+   "lu": "–",
+   "kn": "–",
+   "bv": "gut",
+   "do": "–",
+   "cv": "psychiatrische Nebenwirkungen"
+  },
+  "Pretomanid": {
+   "sp": "MDR-TB (BPaLM)",
+   "lu": "–",
+   "kn": "–",
+   "bv": "gut",
+   "do": "nach WHO-Schema",
+   "cv": "Hepatotoxizität, Neuropathie"
+  },
+  "Fluconazol": {
+   "sp": "Candida albicans, parapsilosis, tropicalis; Kryptokokken – Oral-/Suppressionsphase bei Candida-PJI",
+   "lu": "C. krusei (intrinsisch R), C. glabrata (oft R), C. auris, Schimmelpilze",
+   "kn": "gut",
+   "bv": "~95 %",
+   "do": "1 × 400 mg p.o. (PIF v11), Ladedosis 800 mg",
+   "cv": "QT; mit Rifampicin nicht empfohlen"
+  },
+  "Itraconazol": {
+   "sp": "endemische Mykosen, Aspergillus (Reserve)",
+   "lu": "Mucorales",
+   "kn": "mäßig",
+   "bv": "variabel (Kapsel mit Essen)",
+   "do": "2 × 200 mg, TDM",
+   "cv": "Herzinsuffizienz, CYP3A4"
+  },
+  "Voriconazol": {
+   "sp": "Aspergillus (Mittel der Wahl), Fusarium, Scedosporium, fluconazolresistente Candida",
+   "lu": "Mucorales",
+   "kn": "gut",
+   "bv": "~96 %",
+   "do": "2 × 4 mg/kg i.v. (Ladung 6 mg/kg) bzw. 2 × 200 mg p.o.; TDM",
+   "cv": "Sehstörungen, Hepatotoxizität, Fluorose, Photosensibilität; Rifampicin kontraindiziert"
+  },
+  "Posaconazol": {
+   "sp": "Aspergillus, Mucorales, Prophylaxe",
+   "lu": "–",
+   "kn": "–",
+   "bv": "Retardtablette gut",
+   "do": "Tag 1: 2 × 300 mg, dann 1 × 300 mg; TDM",
+   "cv": "QT, CYP3A4"
+  },
+  "Isavuconazol": {
+   "sp": "Aspergillus, Mucorales",
+   "lu": "–",
+   "kn": "–",
+   "bv": "~98 %",
+   "do": "3 × 200 mg × 2 Tage, dann 1 × 200 mg",
+   "cv": "QT-Verkürzung"
+  },
+  "Caspofungin": {
+   "sp": "Candida inkl. glabrata/krusei – i.v.-Start bei Candida-PJI (PIF v11)",
+   "lu": "Kryptokokken, Mucorales, C. parapsilosis (höhere MHK)",
+   "kn": "mäßig",
+   "bv": "nur i.v.",
+   "do": "70 mg Tag 1, dann 50 mg (≥80 kg: 70 mg)",
+   "cv": "Leberwerte"
+  },
+  "Micafungin": {
+   "sp": "Candida inkl. glabrata/krusei",
+   "lu": "Kryptokokken, Mucorales; C. parapsilosis höhere MHK",
+   "kn": "mäßig",
+   "bv": "nur i.v.",
+   "do": "1 × 100 mg",
+   "cv": "–"
+  },
+  "Anidulafungin": {
+   "sp": "Candida inkl. glabrata/krusei; keine Leberanpassung",
+   "lu": "Kryptokokken, Mucorales; C. parapsilosis höhere MHK",
+   "kn": "mäßig",
+   "bv": "nur i.v.",
+   "do": "200 mg Tag 1, dann 1 × 100 mg (PIF v11)",
+   "cv": "–"
+  },
+  "Rezafungin": {
+   "sp": "Candidämie, 1× pro Woche",
+   "lu": "Kryptokokken, Mucorales; C. parapsilosis höhere MHK",
+   "kn": "keine Daten",
+   "bv": "nur i.v.",
+   "do": "400 mg, dann 200 mg wöchentlich",
+   "cv": "Reserve"
+  },
+  "Amphotericin B liposomal": {
+   "sp": "breit: Candida, Aspergillus, Mucorales, Kryptokokken; im Spacer (PIF: 0,2–0,4 g/40 g)",
+   "lu": "Candida lusitaniae, Aspergillus terreus, Scedosporium",
+   "kn": "mäßig",
+   "bv": "nur i.v.",
+   "do": "3–5 mg/kg i.v. (Mucor bis 10)",
+   "cv": "Nephrotoxizität, Hypokaliämie"
+  },
+  "Amphotericin B Deoxycholat": {
+   "sp": "Candida, Aspergillus, Mucorales, Kryptokokken",
+   "lu": "–",
+   "kn": "–",
+   "bv": "nur i.v.",
+   "do": "0,7–1 mg/kg",
+   "cv": "stark nephrotoxisch – liposomal bevorzugen"
+  },
+  "Nystatin (topisch)": {
+   "sp": "Schleimhaut-Candidose",
+   "lu": "systemisch unwirksam",
+   "kn": "–",
+   "bv": "nicht resorbiert",
+   "do": "–",
+   "cv": "–"
+  },
+  "Flucytosin (5-FC)": {
+   "sp": "Kryptokokken-Meningitis (mit Ampho B)",
+   "lu": "nie Monotherapie",
+   "kn": "gut",
+   "bv": "~90 %",
+   "do": "4 × 25 mg/kg",
+   "cv": "Myelotoxizität, TDM; im PMMA inaktiv"
+  },
+  "Terbinafin": {
+   "sp": "Dermatophyten, Sporothrix",
+   "lu": "Candida (schwach)",
+   "kn": "–",
+   "bv": "~70 %",
+   "do": "1 × 250 mg",
+   "cv": "Hepatotoxizität"
+  },
+  "Griseofulvin": {
+   "sp": "Dermatophyten (Kinder)",
+   "lu": "–",
+   "kn": "–",
+   "bv": "variabel",
+   "do": "–",
+   "cv": "–"
+  },
+  "Imidazole topisch: Clotrimazol / Miconazol / Ketoconazol": {
+   "sp": "Haut-/Schleimhautmykosen",
+   "lu": "–",
+   "kn": "–",
+   "bv": "topisch",
+   "do": "–",
+   "cv": "Ketoconazol systemisch hepatotoxisch"
+  }
+ }
+}

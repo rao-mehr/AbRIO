@@ -41,7 +41,7 @@ var MON=[
   ['tmp','Cotrimoxazol',['Kalium und Kreatinin wöchentlich – Hyperkaliämie, v. a. mit ACE-Hemmer/Sartan/Spironolacton','Kreatinin-Anstieg durch gehemmte tubuläre Sekretion ohne echten GFR-Verlust möglich','Blutbild (Zytopenie, Folsäuremangel); Exanthem → sofort absetzen (SJS-Risiko)']],
   ['fq','Levofloxacin / Ciprofloxacin',['EKG (QTc) bei Risikofaktoren oder QT-verlängernder Komedikation','Sehnenbeschwerden (Risiko: >60 J., Kortikosteroide) → absetzen','Blutzucker-Entgleisung, Delir bei Älteren; Warnhinweis Aortenaneurysma']],
   ['dap','Daptomycin',['CK wöchentlich, häufiger mit Statin (Statin pausieren erwägen)','Eosinophile Pneumonie: neuer Husten/Fieber/Infiltrat']],
-  ['van','Vancomycin',['AUC-gesteuert (Ziel 400–600 mg·h/l) oder Talspiegel','Kreatinin 2–3× pro Woche; Nephrotoxizität v. a. mit Piperacillin/Tazobactam']],
+  ['van','Vancomycin',[function(){return SET.vanco==='tal'?'Talspiegel vor der nächsten Gabe mindestens 1×/Woche, Ziel 15–20 µg/ml (PIF v11)':'AUC-gesteuert, Ziel 400–600 mg·h/l (IDSA/ASHP 2020); alternativ Talspiegel 15–20 µg/ml (PIF)';},'Kreatinin 2–3× pro Woche; Nephrotoxizität v. a. mit Piperacillin/Tazobactam']],
   ['gen','Gentamicin',['Talspiegel vor der nächsten Gabe <1 mg/l (Einmaldosierung)','Kreatinin; bei längerer Gabe Gehör/Gleichgewicht']],
   ['flu','Flucloxacillin (hochdosiert)',['Leberwerte (cholestatische Hepatitis, auch verzögert)','Blutbild nach >2 Wochen (Neutropenie)','Mit Paracetamol: metabolische Azidose mit hoher Anionenlücke (Pyroglutaminsäure)']],
   ['fos','Fosfomycin i.v.',['Natrium (Hypernatriämie, hohe Natriumlast) und Kalium (Hypokaliämie)']],
@@ -53,7 +53,7 @@ function renderMon(){var el=document.getElementById('dxMo');if(!el)return;
     +MON.map(function(m){return dxChip('mo',m[0],m[1],!!MOS[m[0]]);}).join('')+'</div>';
   var sel=MON.filter(function(m){return MOS[m[0]];});
   h+='<div class="dxres"><div class="dxsec">Basis bei jeder Langzeittherapie</div><ul class="dxwhy"><li>PIF v11: Leukozyten, CRP, Kreatinin/eGFR, Leberenzyme (AST, ALT) 2× pro Woche; Elektrolyte je nach Substanz</li><li>Dosisanpassung nach Nierenfunktion und Körpergewicht (<40 kg / >100 kg)</li><li>Wunde, Klinik, Adhärenz; Nebenwirkungen aktiv abfragen</li></ul>';
-  sel.forEach(function(m){h+='<div class="dxsec">'+esc(m[1])+'</div><ul class="dxwhy">'+m[2].map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>';});
+  sel.forEach(function(m){h+='<div class="dxsec">'+esc(m[1])+'</div><ul class="dxwhy">'+m[2].map(function(t){return '<li>'+(typeof t==='function'?t():t)+'</li>';}).join('')+'</ul>';});
   if(!sel.length)h+='<div class="dxnote">Substanz antippen für die spezifischen Kontrollen.</div>';
   h+='<div class="dxnote">Übersicht für den Alltag, ersetzt nicht die Fachinformation. Dosisanpassung an die Nierenfunktion: Tool „Kreatinin-Clearance“.</div></div>';
   el.innerHTML=h;}
