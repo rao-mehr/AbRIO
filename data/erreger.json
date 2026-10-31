@@ -29,7 +29,7 @@
    ],
    [
     "Ceftriaxon",
-    "2 g i.v. 1x/d"
+    "2 g i.v. alle 12 h (Staph: EUCAST 'I' – hohe Exposition nötig)"
    ],
    [
     "Vancomycin",
@@ -145,7 +145,15 @@
    ],
    [
     "TMP/SMX + Rifampicin",
-    "5 mg/kg TMP i.v. alle 8-12 h + Rifampicin 300 mg alle 12 h"
+    "5 mg/kg TMP i.v. alle 8-12 h + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg)"
+   ],
+   [
+    "Dalbavancin",
+    "1500 mg i.v. Tag 1 + Tag 8 – Konsolidierung kompl. S.-aureus-Bakteriämie nach Blutkultur-Clearance (nicht bei Linksherz-Endokarditis, ZNS-Infektion, retiniertem infiziertem Fremdmaterial)"
+   ],
+   [
+    "Ceftobiprol",
+    "500 mg i.v. alle 6 h (Tag 1-8), dann alle 8 h – kompl. S.-aureus-Bakteriämie inkl. MRSA"
    ]
   ],
   "o": [
@@ -155,7 +163,7 @@
    ],
    [
     "TMP/SMX",
-    "160/800 mg p.o. alle 12 h"
+    "160/800 mg p.o. alle 12 h (Haut/Weichteil) – Knochen/Implantat: 960 mg 3x/d (PIF v11)"
    ],
    [
     "Doxycyclin",
@@ -254,7 +262,7 @@
    ],
    [
     "Ceftriaxon",
-    "2 g i.v. 1x/d (wenn sensibel)"
+    "2 g i.v. alle 12 h (wenn oxacillinsensibel; EUCAST 'I' – hohe Exposition)"
    ]
   ],
   "o": [
@@ -272,7 +280,7 @@
    ],
    [
     "Rifampicin",
-    "300 mg p.o. alle 12 h - kombiniert bei Fremdmaterial/Biofilm"
+    "450 mg p.o. alle 12 h (>75 J.: 300 mg) - nur kombiniert bei Fremdmaterial/Biofilm"
    ]
   ],
   "olabel": "",
@@ -341,12 +349,16 @@
    [
     "Oxacillin",
     "2 g i.v. alle 4 h - nur wenn Antibiogramm Sensibilität bestätigt"
+   ],
+   [
+    "Cefazolin",
+    "2 g i.v. alle 8 h - nur wenn oxacillinsensibel (PIF-v11-Primärwahl bei MSCoNS)"
    ]
   ],
   "a": [
    [
     "Daptomycin",
-    "6 mg/kg i.v. 1x/d"
+    "6-8 mg/kg i.v. 1x/d (Knochen/Implantat: 8 mg/kg, PIF v11)"
    ],
    [
     "Linezolid",
@@ -378,7 +390,7 @@
   "pig": {
    "head": "CoNS auf Implantat - meist oxacillinresistent (MRCoNS)",
    "iv": [
-    "IV-Phase: Vancomycin (AUC-guided) oder Daptomycin 6 mg/kg"
+    "IV-Phase: Vancomycin (AUC-guided) oder Daptomycin 8 mg/kg 1x/d (PIF v11)"
    ],
    "bio": [
     "Rifampicin: ab Tag 2-7 (Wunde trocken!) 450 mg alle 12 h (>75 J.: 300 mg)"
@@ -450,7 +462,7 @@
    ],
    [
     "Rifampicin + Vancomycin",
-    "Rifampicin 300 mg alle 12 h kombiniert mit Vancomycin (Fremdmaterial/Biofilm)"
+    "Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) kombiniert mit Vancomycin (Fremdmaterial/Biofilm)"
    ]
   ],
   "o": [
@@ -477,7 +489,7 @@
    ],
    "oral": [
     "Oral-Switch: TMP/SMX + Rifampicin (wenn sensibel)",
-    "oder: Linezolid 600 mg alle 12 h + Rifampicin (wenn TMP/SMX-R)",
+    "oder: Linezolid 600 mg alle 12 h (max. ~4 Wochen; wenn TMP/SMX-R) – Kombination mit Rifampicin nur nach Infektiologie",
     "oder: Doxycyclin 100 mg alle 12 h + Rifampicin"
    ],
    "surg": [
@@ -539,11 +551,11 @@
    ],
    [
     "Daptomycin",
-    "6 mg/kg i.v. 1x/d"
+    "6-8 mg/kg i.v. 1x/d (Knochen/Implantat: 8 mg/kg, PIF v11)"
    ],
    [
     "Rifampicin",
-    "300 mg i.v./p.o. alle 12 h - immer kombiniert"
+    "450 mg i.v./p.o. alle 12 h (>75 J.: 300 mg) - immer kombiniert"
    ]
   ],
   "o": [
@@ -628,7 +640,7 @@
    ],
    [
     "Daptomycin",
-    "6 mg/kg i.v. 1x/d - Dosisanpassung bei Neonaten/Kindern beachten"
+    "6-8 mg/kg i.v. 1x/d (Knochen/Implantat: 8 mg/kg, PIF v11)"
    ]
   ],
   "o": [
@@ -654,7 +666,7 @@
     "Rifampicin: ab Tag 2-7 450 mg alle 12 h (>75 J.: 300 mg)"
    ],
    "oral": [
-    "Oral-Switch: TMP/SMX + Rifampicin oder Linezolid + Rifampicin"
+    "Oral-Switch: TMP/SMX + Rifampicin oder Linezolid (Linezolid + Rifampicin nur nach Infektiologie)"
    ],
    "surg": [],
    "dur": [
@@ -663,7 +675,8 @@
    "cave": [
     "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie",
     "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen",
-    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie"
+    "Daptomycin: EUCAST v16 nennt einen Breakpoint nur für S. aureus, nicht für CoNS – Einsatz nach Infektiologie",
+    "S. capitis ist intrinsisch resistent gegen Fosfomycin (EUCAST) – PIF-Option '± Fosfomycin' hier nicht anwenden"
    ],
    "extra": [
     "NICU: Teicoplanin bevorzugt über Vancomycin"
@@ -738,7 +751,7 @@
   ],
   "olabel": "",
   "dur": "HWI unkompliziert 3-5 Tage - Pyelonephritis 7-14 Tage",
-  "note": "Hauptsächlich unkomplizierte HWI junger Frauen - intrinsisch resistent gegen Novobiocin (Diagnostikum!) - i.v.-Therapie fast nie nötig - Ciprofloxacin-Resistenz zunehmend",
+  "note": "Hauptsächlich unkomplizierte HWI junger Frauen - intrinsisch resistent gegen Novobiocin (Diagnostikum!), Fosfomycin und Fusidinsäure (EUCAST) – Fosfomycin-Einmaldosis bei Zystitis ungeeignet - i.v.-Therapie fast nie nötig - Ciprofloxacin-Resistenz zunehmend",
   "pi": "Selten implantat-assoziiert - hauptsächlich HWI: | Wenn Implantat (Blasenkatheter, Harnableitung): | Katheterwechsel/-entfernung wenn möglich | TMP/SMX 160/800 mg alle 12 h x 7-14 Tage | Pro-Implant Foundation: Protokoll nicht spezifisch für S. saprophyticus",
   "pig": {
    "head": "Selten implantat-assoziiert - hauptsächlich HWI",
@@ -804,7 +817,7 @@
    ],
    [
     "Rifampicin",
-    "300 mg alle 12 h - kombiniert bei Fremdmaterial"
+    "450 mg alle 12 h (>75 J.: 300 mg) - kombiniert bei Fremdmaterial"
    ]
   ],
   "o": [
@@ -898,7 +911,7 @@
    ],
    [
     "Rifampicin",
-    "300 mg i.v./p.o. alle 12 h - kombiniert bei Knochen/Biofilm"
+    "450 mg i.v./p.o. alle 12 h (>75 J.: 300 mg) - kombiniert bei Knochen/Biofilm"
    ]
   ],
   "o": [
@@ -911,8 +924,8 @@
     "500 mg p.o. alle 6 h"
    ],
    [
-    "Clindamycin + Rifampicin",
-    "300 mg alle 8 h + Rifampicin 300 mg alle 12 h (Knochen/Gelenk)"
+    "Levofloxacin + Rifampicin",
+    "500 mg p.o. alle 12 h + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Knochen/Gelenk/Implantat"
    ]
   ],
   "olabel": "",
@@ -984,11 +997,11 @@
   "a": [
    [
     "Ceftriaxon",
-    "2 g i.v. 1x/d"
+    "2 g i.v. alle 12 h (Staph: EUCAST 'I' – hohe Exposition nötig)"
    ],
    [
     "Rifampicin",
-    "300 mg i.v./p.o. alle 12 h - kombiniert bei Knochen/Fremdmaterial"
+    "450 mg i.v./p.o. alle 12 h (>75 J.: 300 mg) - kombiniert bei Knochen/Fremdmaterial"
    ]
   ],
   "o": [
@@ -1001,8 +1014,8 @@
     "160/800 mg p.o. alle 12 h (HWI)"
    ],
    [
-    "Clindamycin + Rifampicin",
-    "300 mg alle 8 h + Rifampicin 300 mg alle 12 h"
+    "Levofloxacin + Rifampicin",
+    "500 mg p.o. alle 12 h + Rifampicin 450 mg alle 12 h (>75 J.: 300 mg) – Knochen/Gelenk/Implantat"
    ]
   ],
   "olabel": "",
@@ -1078,7 +1091,7 @@
    ],
    [
     "Daptomycin",
-    "6 mg/kg i.v. 1x/d"
+    "6-8 mg/kg i.v. 1x/d (Knochen/Implantat: 8 mg/kg, PIF v11)"
    ]
   ],
   "o": [
@@ -1101,7 +1114,7 @@
   ],
   "olabel": "",
   "dur": "Haut/Weichteil 7-10 Tage - Bakteriämie 14 Tage - PJI 12 Wo. (PIF v11)",
-  "note": "2 Subspezies: schleiferi (KoNS) und coagulans (koagulase-positiv, virulenter) - Wundinfektionen, Otitis externa, Mastitis - tierassoziiert (Hund) - Zoonose möglich - variable Resistenz, Antibiogramm obligat",
+  "note": "seit 2020 zwei Spezies: S. schleiferi (koagulase-negativ) und S. coagulans (früher subsp. coagulans, koagulase-positiv, virulenter) - Methicillin-Resistenz mit Oxacillin-1-µg-Screen testen (EUCAST), nicht Cefoxitin - Wundinfektionen, Otitis externa, Mastitis - tierassoziiert (Hund) - Zoonose möglich - variable Resistenz, Antibiogramm obligat",
   "pi": "Variable Resistenz - immer Antibiogramm abwarten: | IV-Phase: Je nach Oxacillin-Sensibilität: | Sensibel: Flucloxacillin + Rifampicin ab Tag 2-7 | Resistent: Vancomycin + Rifampicin ab Tag 2-7 | Oral-Switch: Levofloxacin/Ciprofloxacin + Rifampicin (sensibel) | oder TMP/SMX + Rifampicin (resistent, wenn sensibel) | Dauer: 3-6 Monate",
   "pig": {
    "head": "Variable Resistenz - immer Antibiogramm abwarten",
@@ -1179,7 +1192,7 @@
    ],
    [
     "Daptomycin",
-    "6 mg/kg i.v. 1x/d"
+    "6-8 mg/kg i.v. 1x/d (Knochen/Implantat: 8 mg/kg, PIF v11)"
    ]
   ],
   "o": [
@@ -1202,7 +1215,7 @@
   ],
   "olabel": "",
   "dur": "Haut/Weichteil 7-10 Tage - Osteomyelitis 4-6 Wo. - PJI 12 Wo. (PIF v11)",
-  "note": "Haupterreger bei Hunden (Pyodermie) - Zoonose! - beim Menschen: Wundinfektionen nach Tierbiss, Ohreninfektionen - MRSP (Methicillin-resistenter S. pseudintermedius) zunehmend - oft falsch als S. aureus identifiziert -> MALDI-TOF/Sequenzierung",
+  "note": "Haupterreger bei Hunden (Pyodermie) - Zoonose! - beim Menschen: Wundinfektionen nach Tierbiss, Ohreninfektionen - MRSP (Methicillin-resistenter S. pseudintermedius) zunehmend - oft falsch als S. aureus identifiziert -> MALDI-TOF/Sequenzierung - Methicillin-Resistenz mit Oxacillin-1-µg-Screen testen (EUCAST), nicht Cefoxitin",
   "pi": "Tierassoziiert - cave Zoonose: | IV-Phase: Oxacillin/Flucloxacillin (wenn MSensibel) oder Vancomycin | Rifampicin: ab Tag 2-7 300-450 mg alle 12 h | Oral-Switch: Fluoroquinolon + Rifampicin (wenn sensibel) | oder TMP/SMX + Rifampicin | MRSP zunehmend - Antibiogramm obligat | Dauer: 3-6 Monate",
   "pig": {
    "head": "Tierassoziiert - cave Zoonose",
@@ -1270,6 +1283,10 @@
    [
     "Oxacillin / Flucloxacillin",
     "2 g i.v. alle 4-6 h - NUR wenn Antibiogramm Oxacillin-Sensibilität bestätigt"
+   ],
+   [
+    "Cefazolin",
+    "2 g i.v. alle 8 h - nur bei bestätigter Oxacillin-Sensibilität (PIF-v11-Primärwahl)"
    ]
   ],
   "a": [
@@ -1287,7 +1304,7 @@
    ],
    [
     "Rifampicin",
-    "300 mg i.v./p.o. alle 12 h - IMMER nur in Kombination (Biofilm-Aktivität)"
+    "450 mg i.v./p.o. alle 12 h (>75 J.: 300 mg) - IMMER nur in Kombination (Biofilm-Aktivität)"
    ]
   ],
   "o": [
@@ -1772,19 +1789,19 @@
   "note": "Häufigste Endokarditis-Erreger (Nativklappe). Zahnpflege-assoziiert. Penicillin-MHK bestimmt Strategie.",
   "pi": "Prothesen-/Klappen-Endokarditis (Viridans-Streptokokken): | IV: Penicillin G 4 Mio. IE alle 4 h x 4 Wochen (Nativklappe) / 6 Wochen (Klappenersatz) | oder Ceftriaxon 2 g 1x/d x 4-6 Wochen | Rifampicin: Nutzen unsicher – retrospektiv Assoziation mit Erfolg bei frühem Einsatz nach DAIR (Lora-Tamayo, CID 2017, n=462); kein Standard | Aminoglykosid-Synergismus (optional, 2 Wochen): Gentamicin 3 mg/kg/d | Oral-Switch: Amoxicillin 750 mg-1 g alle 8 h (nur nach sicherer Stabilisierung) | Dauer: 4 Wochen (Nativklappe) - 6 Wochen (Klappenersatz) | Zahnprophylaxe bei Risikopatienten obligat",
   "pig": {
-   "head": "Prothesen-/Klappen-Endokarditis (Viridans-Streptokokken)",
+   "head": "Viridans-Streptokokken-PJI: hämatogen – Endokarditis (TEE) und dentalen Fokus (OPG) abklären",
    "iv": [
-    "IV: Penicillin G 4 Mio. IE alle 4 h x 4 Wochen (Nativklappe) / 6 Wochen (Klappenersatz)"
+    "IV-Phase (PIF v11, Streptokokken): Penicillin G 5 Mio. IE alle 6 h (4 × 5 Mio.) oder Ceftriaxon 2 g 1x/d, 2-4 Wochen"
    ],
    "bio": [
     "Rifampicin: Nutzen unsicher – retrospektiv Assoziation mit Erfolg bei frühem Einsatz nach DAIR (Lora-Tamayo, CID 2017, n=462); kein Standard"
    ],
    "oral": [
-    "Oral-Switch: Amoxicillin 750 mg-1 g alle 8 h (nur nach sicherer Stabilisierung)"
+    "Oral-Switch: Amoxicillin 1 g 3x/d oder Doxycyclin 100 mg 2x/d (ggf. Suppression ≥1 Jahr)"
    ],
    "surg": [],
    "dur": [
-    "Dauer: 4 Wochen (Nativklappe) - 6 Wochen (Klappenersatz)"
+    "Dauer: 12 Wochen gesamt (PIF v11); bei begleitender Endokarditis i.v.-Dauer nach Endokarditis-Leitlinie"
    ],
    "cave": [],
    "extra": [
@@ -1883,7 +1900,7 @@
   "pig": {
    "head": "Implantat-assoziiert: Abszesse um Fremdmaterial, Knochen",
    "iv": [
-    "IV: Penicillin G 4 Mio. IE alle 4 h oder Ampicillin/Sulbactam"
+    "IV-Phase (PIF v11, Streptokokken): Penicillin G 5 Mio. IE alle 6 h oder Ceftriaxon 2 g 1x/d, 2-4 Wochen; polymikrobiell mit Anaerobiern: Ampicillin/Sulbactam 3 g alle 8 h"
    ],
    "bio": [
     "Rifampicin: Nutzen unsicher – retrospektiv Assoziation mit Erfolg bei frühem Einsatz nach DAIR (Lora-Tamayo, CID 2017, n=462); kein Standard"
@@ -1895,7 +1912,7 @@
     "Chirurgische Drainage / Débridement OBLIGAT vor AB-Therapie!"
    ],
    "dur": [
-    "Dauer: 3-6 Monate je nach Lokalisation und chirurgischer Sanierung"
+    "Dauer: 12 Wochen gesamt (PIF v11); bei nicht sanierten Abszessen ggf. länger nach Verlauf"
    ],
    "cave": [],
    "extra": []
@@ -2126,10 +2143,6 @@
    [
     "Tigecyclin",
     "100 mg Loading + 50 mg i.v. alle 12 h"
-   ],
-   [
-    "Quinupristin/Dalfopristin [Reserve]",
-    "7,5 mg/kg i.v. alle 8 h (nur E. faecium)"
    ]
   ],
   "o": [
@@ -2149,7 +2162,7 @@
   "pig": {
    "head": "Meist ampicillinresistent",
    "iv": [
-    "IV-Phase (PIF v11, ampicillinresistent): Vancomycin oder Daptomycin 10 mg/kg 1x/d ± Fosfomycin 5 g 3x/d, 2-4 Wochen"
+    "IV-Phase (VRE): Daptomycin 10 mg/kg 1x/d ± Fosfomycin 5 g 3x/d oder Linezolid 600 mg alle 12 h – PIF v11: VRE individuell (Implantatentfernung oder lebenslange Suppression)"
    ],
    "bio": [
     "Rifampicin: keine PIF-Empfehlung bei Enterokokken"
@@ -2224,7 +2237,7 @@
   "o": [
    [
     "Levofloxacin + Rifampicin",
-    "500 mg 1x/d + 450 mg alle 12 h (biofilmaktiv, Oral-Switch bei PJI)"
+    "500 mg alle 12 h + 450 mg alle 12 h (biofilmaktiv, Oral-Switch bei PJI; Rifampicin 300 mg alle 12 h bei >75 J.)"
    ],
    [
     "Amoxicillin",
@@ -2232,13 +2245,13 @@
    ]
   ],
   "olabel": "",
-  "dur": "PJI: mind. 8 Wochen, meist 3-6 Mo. wie andere PJI-Erreger - hohe Therapieversagerrate dokumentiert",
+  "dur": "PJI: 12 Wochen gesamt (PIF v11), ca. 2-4 Wo. i.v. - hohe Therapieversagerrate dokumentiert",
   "note": "Frueher als Abiotrophia klassifiziert, komplexe Naehrstoffanspruche (Pyridoxal/Vitamin-B6-abhaengig) - waechst NICHT auf Standardmedien -> falsch-negative Kulturen moeglich! Diagnose oft erst per 16S-rRNA-Sequenzierung oder MALDI-TOF - Assoziation mit Zahnbehandlungen/oralem Fokus dokumentiert - bei Endokarditis-Verdacht TEE erwaegen",
   "pi": "Kein eigenes PIF-Pocket-Guide-Protokoll - Fallserien-basiertes Vorgehen analog Viridans-Streptokokken/Enterokokken-PJI-Schema: | IV-Phase: Penicillin G + Gentamicin (synergistisch) ueber 4 Wochen | Rifampicin-Kombination bei Implantatretention beschrieben und erfolgreich (Fallbericht: Granulicatella para-adiacens PJI, geheilt mit Rifampicin + Debridement + Erhalt) | Oral-Switch: Levofloxacin + Rifampicin | DAIR moeglich bei fruehzeitiger Diagnose und stabilem Implantat, aber: hohe Versagerrate in der Literatur - niedrige Schwelle fuer Wechsel-OP",
   "pig": {
    "head": "Kein eigenes PIF-Pocket-Guide-Protokoll - Fallserien-basiertes Vorgehen analog Viridans-Streptokokken/Enterokokken-PJI-Schema",
    "iv": [
-    "IV-Phase: Penicillin G + Gentamicin (synergistisch) ueber 4 Wochen"
+    "IV-Phase: Penicillin G 4 x 5 Mio. IE (oder Ampicillin 4 x 2 g) ± Gentamicin 1 x 120 mg (nur bei HL-Empfindlichkeit) für 2-3 Wochen, analog PIF-v11-Enterokokken-Schema"
    ],
    "bio": [
     "Rifampicin-Kombination bei Implantatretention beschrieben und erfolgreich (Fallbericht: Granulicatella para-adiacens PJI, geheilt mit Rifampicin + Debridement + Erhalt)"
@@ -2254,7 +2267,7 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI: mind. 8 Wochen, meist 3-6 Mo. wie andere PJI-Erreger"
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "abiotrophia",
@@ -2356,7 +2369,7 @@
    ],
    [
     "Doxycyclin",
-    "100 mg i.v. alle 12 h (Alternative zu Ciprofloxacin)"
+    "200 mg i.v. Ladedosis, dann 100 mg alle 12 h - bevorzugter Proteinsynthesehemmer als KOMBINATIONSPARTNER zu Ciprofloxacin (nicht als Ersatz)"
    ]
   ],
   "a": [
@@ -2366,11 +2379,11 @@
    ],
    [
     "Linezolid",
-    "600 mg i.v. alle 12 h - ZNS-Beteiligung"
+    "600 mg i.v. alle 12 h - alternativer Proteinsynthesehemmer (Liquorgängigkeit laut CDC 2023 gering)"
    ],
    [
     "Rifampicin",
-    "300 mg i.v./p.o. alle 12 h - Kombinationspartner"
+    "600 mg i.v. alle 12 h - nur als Kombinationspartner (RNA-Synthesehemmer), nie Monotherapie"
    ]
   ],
   "o": [
@@ -2384,8 +2397,8 @@
    ]
   ],
   "olabel": "",
-  "dur": "Inhalation/systemisch 60 Tage (+ Antitoxin) - Kutan 7-10 Tage - PEP 60 Tage",
-  "note": "MELDEPFLICHT! Bioterrorismus-Potenzial. Inhalationsanthrax: fast immer letal ohne sofortige Therapie. Antitoxin + Kombinationstherapie (>=3 Wirkstoffe). Kutaner Milzbrand: gute Prognose.",
+  "dur": "Systemisch i.v. mind. 2 Wochen bis klinisch stabil, dann oral - bei möglicher Aerosolexposition Gesamtdauer 60 Tage ab Krankheitsbeginn (+ Antitoxin) - Kutan 7-10 Tage (natürlich erworben; bei Aerosolexposition Übergang in PEP, gesamt 42-60 Tage) - PEP 60 Tage",
+  "note": "MELDEPFLICHT! Bioterrorismus-Potenzial. Inhalationsanthrax: fast immer letal ohne sofortige Therapie. Systemisch: Meningitis nicht ausgeschlossen -> 2 bakterizide Wirkstoffe verschiedener Klassen + Proteinsynthesehemmer (Doxycyclin/Minocyclin bevorzugt) + Antitoxin; Meningitis ausgeschlossen -> 1 bakterizider Wirkstoff + Proteinsynthesehemmer. Kutaner Milzbrand: Monotherapie, gute Prognose.",
   "pi": "",
   "pig": {
    "head": "",
@@ -2509,7 +2522,7 @@
   "f": [
    [
     "Penicillin G",
-    "4 Mio. IE i.v. alle 4-6 h (Implantat-Infektionen, Endokarditis)"
+    "5 Mio. IE i.v. alle 6 h (PJI, PIF v11); Endokarditis 4 Mio. IE alle 4 h"
    ],
    [
     "Ceftriaxon",
@@ -2524,10 +2537,6 @@
    [
     "Vancomycin",
     "15-20 mg/kg i.v. alle 8-12 h (Penicillin-Allergie)"
-   ],
-   [
-    "Metronidazol",
-    "500 mg i.v. alle 8 h"
    ]
   ],
   "o": [
@@ -2545,12 +2554,12 @@
    ],
    [
     "Rifampicin",
-    "300 mg p.o. alle 12 h - nur kombiniert (Biofilm)"
+    "450 mg p.o. alle 12 h - nur kombiniert (Biofilm); 300 mg alle 12 h bei >75 J."
    ]
   ],
   "olabel": "",
-  "dur": "Schulter-PJI 6 Monate (häufigster Erreger!) - sonstige PJI 3-6 Mo. - Endokarditis 4-6 Wo. - Spondylodiszitis 6 Wo.",
-  "note": "Kulturinkubation mind. 14 Tage! Rifampicin-Kombination laut PIF v11 empfohlen; klinische Evidenz schwach (Achermann, CID 2020: kein signifikanter Vorteil).",
+  "dur": "PJI (inkl. Schulter): 12 Wochen gesamt, davon 2 Wo. i.v. (PIF v11) - Endokarditis 4-6 Wo. - Spondylodiszitis 6 Wo.",
+  "note": "Kulturinkubation mind. 14 Tage! Metronidazol unwirksam (C. acnes regelhaft resistent). Rifampicin-Kombination laut PIF v11 empfohlen; klinische Evidenz schwach (Kusejko et al., CID 2021: kein signifikanter Vorteil).",
   "pi": "Häufigster Erreger bei Schulterprothesen-Infektion: | IV-Phase: Penicillin G 5 Mio. IE alle 6 h oder Ceftriaxon 2 g 1x/d (bei fehlender Verfügbarkeit: Ampicillin/Sulbactam 3 g alle 8 h) | Rifampicin: PIF-v11-Empfehlung (ab Tag 2-7, Wunde trocken) – Evidenz schwach: Kohorte n=187 ohne signifikanten Vorteil (HR 0,5; p=0,07; Achermann, CID 2020) | Oral-Switch: Rifampicin 450 mg 2x/d + Levofloxacin 500 mg 2x/d (Erstlinie) | Alternative: Rifampicin + Amoxicillin 1 g alle 8 h | Alternative: Rifampicin + Doxycyclin 100 mg alle 12 h | Dauer: Schulter/Wirbelsäule 6 Monate | Kulturinkubation: mind. 14 Tage! (langsam wachsend) | DAIR: umstritten bei C. acnes - Pro-Implant: eher Wechsel",
   "pig": {
    "head": "Häufigster Erreger bei Schulterprothesen-Infektion",
@@ -2558,7 +2567,7 @@
     "IV-Phase (PIF v11): Penicillin G 5 Mio. IE alle 6 h (4 × 5 Mio.) oder Ceftriaxon 2 g 1x/d, 2 Wochen (bei fehlender Verfügbarkeit: Ampicillin/Sulbactam 3 g alle 8 h – App-Abweichung)"
    ],
    "bio": [
-    "Rifampicin: PIF-v11-Empfehlung (ab Tag 2-7, Wunde trocken) – Evidenz schwach: Kohorte n=187 ohne signifikanten Vorteil (HR 0,5; p=0,07; Achermann, CID 2020)"
+    "Rifampicin: PIF-v11-Empfehlung (ab Tag 2-7, Wunde trocken) – Evidenz schwach: Kohorte n=187 ohne signifikanten Vorteil (HR 0,5; p=0,07; Kusejko et al., CID 2021)"
    ],
    "oral": [
     "Oral-Switch: Rifampicin 450 mg 2x/d + Levofloxacin 500 mg 2x/d",
@@ -2656,7 +2665,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Bakteriämie 7-14 Tage - Endokarditis 4-6 Wo. - PJI 3-6 Mo. - C. jeikeium oft länger",
+  "dur": "Bakteriämie 7-14 Tage - Endokarditis 4-6 Wo. - PJI 12 Wochen gesamt (PIF v11) - C. jeikeium oft länger",
   "note": "C. jeikeium: multiresistent - fast immer nur Vancomycin/Linezolid - Fremdmaterial-Assoziation - Antibiogramm obligat Rifampicin NICHT als reguläre Ergänzung - nur kontextabhängige Kombinationsoption bei Implantat/Biofilm (C. jeikeium multiresistent, Vancomycin-Rückgrat).",
   "pi": "Selten implantat-assoziiert - meist Kontaminante: | C. jeikeium: multiresistent -> Vancomycin IV + Rifampicin ab Tag 2-7 | Sensible Stämme: Penicillin G oder Ampicillin/Sulbactam | Oral: Linezolid + Rifampicin (C. jeikeium) | oder Amoxicillin (sensibel) | Dauer: 3-6 Monate - Antibiogramm obligat",
   "pig": {
@@ -2670,7 +2679,7 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate - Antibiogramm obligat"
+    "Dauer: 12 Wochen gesamt (PIF v11) - Antibiogramm obligat"
    ],
    "cave": [
     "cave: Rifampicin senkt den Linezolid-Spiegel – Kombination nicht PIF-v11, nur nach Infektiologie"
@@ -2855,7 +2864,7 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3-6 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [
     "WICHTIG: Vancomycin INTRINSISCH UNWIRKSAM - niemals einsetzen!"
@@ -2926,7 +2935,7 @@
   ],
   "olabel": "",
   "dur": "Katheter-Bakteriämie 7-14 Tage (+ Katheterzug) - Endokarditis 4-6 Wo.",
-  "note": "INTRINSISCH VANCOMYCIN-RESISTENT! Seltene Pathogene bei Immunsuppression, ZVK, Frühgeborene, Kurzdarmsyndrom. Antibiogramm obligat. Niemals Vancomycin einsetzen!",
+  "note": "Leuconostoc und Pediococcus INTRINSISCH VANCOMYCIN-RESISTENT; Lactobacillus nur teilweise (EUCAST: L. casei/L. rhamnosus - heute Lacticaseibacillus) - andere Lactobacillus-Arten (z. B. L. acidophilus-/gasseri-Gruppe) oft vancomycinsensibel -> Antibiogramm. Seltene Pathogene bei Immunsuppression, ZVK, Frühgeborene, Kurzdarmsyndrom. Antibiogramm obligat.",
   "pi": "Implantat-assoziiert (ZVK, Prothesen): | VANCOMYCIN INTRINSISCH UNWIRKSAM - NIEMALS einsetzen! | IV: Penicillin G oder Ampicillin | Implantatentfernung wenn möglich | Oral: Amoxicillin 500-1000 mg alle 8 h | Antibiogramm obligat!",
   "pig": {
    "head": "Implantat-assoziiert (ZVK, Prothesen)",
@@ -3093,7 +3102,7 @@
   "o": [
    [
     "Fosfomycin",
-    "3 g p.o. Einmaldosis (unkomplizierter HWI)"
+    "3 g p.o. Einmaldosis (unkomplizierte Zystitis, nur E. coli)"
    ],
    [
     "Nitrofurantoin",
@@ -3102,11 +3111,19 @@
    [
     "Ciprofloxacin",
     "500 mg p.o. alle 12 h (nur wenn sensibel)"
+   ],
+   [
+    "TMP/SMX",
+    "160/800 mg p.o. alle 12 h (wenn sensibel; Zystitis und kompliziertem HWI)"
+   ],
+   [
+    "Pivmecillinam",
+    "400 mg p.o. alle 8 h x 3 Tage (unkomplizierte Zystitis)"
    ]
   ],
   "olabel": "",
   "dur": "HWI 7-10 Tage - Pyelonephritis 10-14 Tage - Bakteriämie 7-14 Tage - PJI 3 Mo. - Cholangitis 7-14 Tage",
-  "note": "Orale Optionen nur für unkomplizierten HWI verlässlich",
+  "note": "Oral: Nitrofurantoin/Fosfomycin (nur E. coli)/Pivmecillinam nur für unkomplizierte Zystitis; TMP/SMX, Ciprofloxacin, Levofloxacin auch bei kompliziertem HWI, wenn sensibel. Außerhalb des Harntrakts Carbapenem (kritisch krank/Hypoalbuminämie: Meropenem/Imipenem statt Ertapenem); Piperacillin/Tazobactam nicht für invasive Infektionen.",
   "pi": "ESBL-PJI - eingeschränkte Oral-Optionen: | IV-Phase: Ertapenem 1 g 1x/d oder Meropenem | Oral-Switch: Ciprofloxacin/Levofloxacin nur wenn noch sensibel! | (ESBL-Stämme oft auch fluoroquinolon-resistent) | Fosfomycin oral: nur HWI-Prophylaxe, nicht PJI | Zwei-Stufen-Wechsel oft bevorzugt da oraler Switch schwierig | Pro-Implant: bei fehlendem oralem Switch -> IV-Langzeittherapie oder Suppression | Dauer: 3 Monate",
   "pig": {
    "head": "ESBL-PJI - eingeschränkte Oral-Optionen",
@@ -3127,7 +3144,7 @@
    "cave": [],
    "extra": [
     "(ESBL-Stämme oft auch fluoroquinolon-resistent)",
-    "Fosfomycin oral: nur HWI-Prophylaxe, nicht PJI"
+    "Fosfomycin oral: nur unkomplizierte Zystitis (E. coli), nicht PJI"
    ]
   },
   "syn": {
@@ -3200,7 +3217,7 @@
   ],
   "olabel": "",
   "dur": "HWI 5-7 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage - Leberabszess 4-6 Wo. (+ Drainage)",
-  "note": "",
+  "note": "Intrinsisch resistent gegen Ampicillin/Amoxicillin (chromosomale SHV-Penicillinase) – Aminopenicilline ohne Inhibitor nie verwenden.",
   "pi": "Gram-negative PJI: | IV-Phase: Ceftriaxon 2 g 1x/d | Oral-Switch: Ciprofloxacin 750 mg alle 12 h (wenn sensibel) | oder Levofloxacin 500 mg alle 12 h | DAIR möglich bei früher Infektion + sensiblem Keim | Dauer: 3 Monate",
   "pig": {
    "head": "Gram-negative PJI",
@@ -3264,11 +3281,15 @@
    ],
    [
     "Aztreonam/Avibactam",
-    "6,5 g/d i.v. - MBL-Stämme"
+    "2,67 g (2 g/0,67 g) Loading über 3 h, dann 2 g (1,5 g/0,5 g) i.v. alle 6 h über 3 h - MBL-Stämme (bevorzugt bei NDM)"
    ],
    [
     "Colistin",
     "9 Mio. IE Loading, dann 4,5 Mio. IE alle 12 h - Reserve!"
+   ],
+   [
+    "Cefiderocol",
+    "2 g i.v. alle 8 h über 3 h (KPC/MBL, nach Antibiogramm)"
    ]
   ],
   "o": [],
@@ -3336,7 +3357,7 @@
   "f": [
    [
     "Ceftriaxon",
-    "2 g i.v. 1x/d - wenn AmpC nicht dereprimiert"
+    "2 g i.v. 1x/d - wenn sensibel (cave OXY-Hyperproduktion)"
    ],
    [
     "Piperacillin/Tazobactam",
@@ -3373,7 +3394,7 @@
   ],
   "olabel": "",
   "dur": "HWI 5-7 Tage - Hämorrh. Kolitis: selbstlimitierend (AB absetzen) - Bakteriämie 7-14 Tage",
-  "note": "Chromosomale AmpC-Aktivität möglich -> Ampicillin fast immer resistent. ESBL-Produktion wie K. pneumoniae. Hämorrhagische Kolitis durch Cytotoxin (OKT8428 Toxin) beschrieben.",
+  "note": "Chromosomale Klasse-A-β-Laktamase (OXY/K1, keine AmpC) -> Ampicillin intrinsisch resistent; OXY-Hyperproduktion: Resistenz gegen Ceftriaxon/Cefuroxim/Aztreonam und Piperacillin/Tazobactam, Ceftazidim meist erhalten. ESBL-Produktion wie K. pneumoniae. Antibiotika-assoziierte hämorrhagische Kolitis durch die Enterotoxine Tilivallin/Tilimycin.",
   "pi": "Gram-negative PJI durch K. oxytoca: | IV: Ceftriaxon (wenn sensibel, kein AmpC) -> Oral: Ciprofloxacin 750 mg alle 12 h | Bei AmpC-Derepression: Meropenem -> Ciprofloxacin oral | DAIR möglich bei früher Infektion + sensibler Fluoroquinolon-Option | Dauer: 3 Monate",
   "pig": {
    "head": "Gram-negative PJI durch K. oxytoca",
@@ -3390,7 +3411,7 @@
    ],
    "cave": [],
    "extra": [
-    "Bei AmpC-Derepression: Meropenem -> Ciprofloxacin oral"
+    "Bei Ceftriaxon-Resistenz (ESBL/OXY-Hyperproduktion): Carbapenem -> Ciprofloxacin oral (wenn sensibel)"
    ]
   },
   "syn": {},
@@ -3422,15 +3443,15 @@
   "f": [
    [
     "Meropenem",
-    "1-2 g i.v. alle 8 h - Mittel der Wahl bei schwerem Verlauf"
+    "1-2 g i.v. alle 8 h - bei Cefepim-Resistenz / ESBL-Koproduktion"
    ],
    [
     "Cefepim",
-    "2 g i.v. alle 8 h - AmpC-stabil, wenn sensibel"
+    "2 g i.v. alle 8 h (verlängerte Inf. über 3 h) - bevorzugt, wenn sensibel und keine ESBL"
    ],
    [
     "Piperacillin/Tazobactam",
-    "4,5 g i.v. alle 6-8 h - nur bei niedrigem MHK"
+    "4,5 g i.v. alle 6-8 h - nicht für invasive Infektionen (nur leichte Infektionen, wenn sensibel)"
    ]
   ],
   "a": [
@@ -3463,7 +3484,7 @@
   ],
   "olabel": "",
   "dur": "HWI 7-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 7-14 Tage - PJI 3 Mo. - Cefalosporine 3 immer meiden!",
-  "note": "Chromosomale AmpC -> Cefalosporine 1-3 IMMER unwirksam (auch bei init. sensiblem Befund, Derepression!) - Cefepim und Carbapeneme AmpC-stabil",
+  "note": "Chromosomale induzierbare AmpC -> Cefalosporine 1./2. Generation intrinsisch resistent; Cefalosporine 3. Generation bei invasiven Infektionen meiden (Derepression unter Therapie). Ausnahme: nicht schwere Infektion mit Fokuskontrolle und klinischer Besserung – Abschluss mit Ceftriaxon vertretbar. Cefepim und Carbapeneme AmpC-stabil.",
   "pi": "AmpC-Derepression: Cefalosporine 1-3 IMMER vermeiden: | IV-Phase: Meropenem 1-2 g alle 8 h oder Cefepim 2 g alle 8 h (AmpC-stabil) | Oral-Switch: Ciprofloxacin 750 mg alle 12 h (wenn sensibel) | oder Levofloxacin 500 mg alle 12 h | Cave: Resistenzentwicklung unter Therapie - engmaschige Kulturen | Zwei-Stufen-Wechsel bei Enterobacter-PJI bevorzugt (Resistenzrisiko) | Dauer: 3 Monate",
   "pig": {
    "head": "AmpC-Derepression: Cefalosporine 1-3 IMMER vermeiden",
@@ -3560,7 +3581,7 @@
   ],
   "olabel": "",
   "dur": "HWI 7-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage - Endokarditis 4-6 Wo. (selten)",
-  "note": "Chromosomale AmpC-β-Laktamase -> Cephalosporin-3-Resistenz möglich unter Therapie (Derepression) - Cefalosporine 1/2 unwirksam",
+  "note": "Chromosomale AmpC, aber geringes Risiko einer klinisch relevanten Derepression -> Therapie nach Antibiogramm, Ceftriaxon bei Sensibilität möglich - Cefalosporine 1/2 und Colistin intrinsisch unwirksam",
   "pi": "Gram-negative PJI - AmpC-Derepression beachten: | IV-Phase: Meropenem 1-2 g alle 8 h (cave Cephalosporin-Derepression) | oder Cefepim 2 g alle 8 h (AmpC-stabil) | Oral-Switch: Ciprofloxacin 750 mg alle 12 h (wenn sensibel) | Cave: Resistenzentwicklung unter Therapie möglich -> Follow-up-Kulturen | Zwei-Stufen-Wechsel bevorzugt bei Serratia-PJI | Dauer: 3 Monate",
   "pig": {
    "head": "Gram-negative PJI - AmpC-Derepression beachten",
@@ -3748,7 +3769,7 @@
   ],
   "olabel": "",
   "dur": "HWI 7-14 Tage - Bakteriämie 7-14 Tage - nosokomiale Infektionen 7-14 Tage",
-  "note": "Im Gegensatz zu P. mirabilis: indol-positiv -> häufig Ampicillin/Ampicillin-Sulbactam resistent. AmpC und ESBL möglich. Nosokomial (HWI, Wunden). Antibiogramm obligat!",
+  "note": "Im Gegensatz zu P. mirabilis: indol-positiv, chromosomale Cefuroximase -> intrinsisch resistent gegen Ampicillin, Cefazolin, Cefuroxim, Tigecyclin/Tetracycline, Colistin, Nitrofurantoin. ESBL möglich. Nosokomial (HWI, Wunden). Antibiogramm obligat!",
   "pi": "Gram-negative PJI: | IV: Piperacillin/Tazobactam oder Meropenem (cave Resistenzen) | Oral: Ciprofloxacin 750 mg alle 12 h (wenn sensibel) | DAIR möglich bei früher Infektion + Fluoroquinolon-sensibel | Dauer: 3 Monate",
   "pig": {
    "head": "Gram-negative PJI",
@@ -3913,6 +3934,10 @@
    [
     "Ertapenem",
     "1 g i.v. 1x/d"
+   ],
+   [
+    "Cefepim",
+    "2 g i.v. alle 8 h (C. freundii, AmpC-stabil, wenn sensibel und keine ESBL)"
    ]
   ],
   "o": [
@@ -3946,7 +3971,7 @@
    ],
    "cave": [],
    "extra": [
-    "C. freundii: cave AmpC - Carbapeneme bevorzugt",
+    "C. freundii: cave AmpC - Cefepim bevorzugt (wenn sensibel, keine ESBL), sonst Carbapenem",
     "C. koseri: Ceftriaxon möglich (wenn sensibel)",
     "-> Oral: Ciprofloxacin 750 mg alle 12 h"
    ]
@@ -4019,7 +4044,7 @@
   ],
   "olabel": "",
   "dur": "HWI 7-14 Tage - Bakteriämie 7-14 Tage - nosokomial - oft Katheter-assoziiert",
-  "note": "Intrinsisch resistent: Ampicillin, Nitrofurantoin, Colistin, P. stuartii auch Aminoglykoside. Nosokomial (Katheter, HWI, Wunden). AmpC/ESBL häufig. Antibiogramm obligat.",
+  "note": "Intrinsisch resistent: Ampicillin, Amoxicillin-Clavulanat, Cefazolin, Tetracycline/Tigecyclin, Nitrofurantoin, Colistin; P. stuartii zusätzlich Gentamicin/Tobramycin. Nosokomial (Katheter, HWI, Wunden). AmpC/ESBL häufig. Antibiogramm obligat.",
   "pi": "Gram-negative PJI: | IV: Piperacillin/Tazobactam oder Meropenem | Oral: Ciprofloxacin 750 mg alle 12 h (wenn sensibel) | Cave: Aminoglykoside (P. stuartii) intrinsisch unwirksam! | Zwei-Stufen-Wechsel bei Resistenz | Dauer: 3 Monate",
   "pig": {
    "head": "Gram-negative PJI",
@@ -4067,7 +4092,7 @@
   "impl": {
    "pji": "selten",
    "dair": "—",
-   "rif": "ja"
+   "rif": "nein"
   },
   "route": "ERSTLINIE I.V.",
   "f": [
@@ -4357,6 +4382,22 @@
    [
     "Colistin",
     "9 Mio. IE Loading, dann 4,5 Mio. IE alle 12 h - Reserve!"
+   ],
+   [
+    "Ceftolozan/Tazobactam",
+    "3 g i.v. alle 8 h über 3 h (DTR-P. aeruginosa)"
+   ],
+   [
+    "Ceftazidim/Avibactam",
+    "2,5 g i.v. alle 8 h über 3 h (DTR-P. aeruginosa)"
+   ],
+   [
+    "Imipenem/Cilastatin/Relebactam",
+    "1,25 g i.v. alle 6 h (DTR-P. aeruginosa)"
+   ],
+   [
+    "Cefiderocol",
+    "2 g i.v. alle 8 h über 3 h (DTR-P. aeruginosa, Reserve)"
    ]
   ],
   "o": [
@@ -4366,7 +4407,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "HWI 7-14 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage - Endokarditis 6 Wo. - Osteomyelitis 6 Wo. - PJI 3-6 Mo. - Otitis externa maligna 6-8 Wo.",
+  "dur": "HWI 7-14 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage - Endokarditis 6 Wo. - Osteomyelitis 6 Wo. - PJI 12 Wo. (PIF v11) - Otitis externa maligna 6-8 Wo.",
   "note": "Kombinationstherapie mit Aminoglykosid ist PIF-PJI-Standard (nicht nur Reserve bei schwerem Verlauf!) - verlängerte Infusion verbessert PK/PD",
   "pi": "Schwierige PJI - Resistenzentwicklung unter Therapie häufig: | IV-Phase (PIF-Standard, NICHT nur bei schwerem Verlauf): Piperacillin/Tazobactam 4,5 g alle 6 h ODER Meropenem ODER Ceftazidim/Cefepim 2 g alle 8 h JEWEILS + Gentamicin 240 mg 1x/d (oder Tobramycin 300 mg 1x/d) für 2-3 Wochen | (verlängerte Infusion empfohlen) | Oral-Switch: Ciprofloxacin 750 mg alle 12 h (wenn sensibel - einzige orale Option) | Cave: Resistenzentwicklung unter Ciprofloxacin - Follow-up-Kulturen obligat | Zwei-Stufen-Wechsel stark bevorzugt bei Pseudomonas-PJI | Dauer: 3-6 Monate - Suppressionstherapie oft nötig",
   "pig": {
@@ -4392,7 +4433,7 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo.",
+   "PJI": "PJI 12 Wochen (PIF v11)",
    "FRI": "Osteomyelitis 6 Wo."
   },
   "syns": [
@@ -4424,11 +4465,15 @@
   "f": [
    [
     "TMP/SMX",
-    "5 mg/kg (TMP-Anteil) i.v. alle 8 h - Mittel der Wahl"
+    "5 mg/kg (TMP-Anteil) i.v. alle 8 h - wenn sensibel; bei kritisch Kranken initial in Kombination"
    ],
    [
     "Levofloxacin [Reserve]",
     "750 mg i.v. 1x/d"
+   ],
+   [
+    "Cefiderocol",
+    "2 g i.v. alle 8 h über 3 h - bevorzugt bei invasiver Infektion (IDSA 2026)"
    ]
   ],
   "a": [
@@ -4438,15 +4483,15 @@
    ],
    [
     "Tigecyclin",
-    "100 mg Loading, dann 50 mg i.v. alle 12 h"
+    "200 mg Loading, dann 100 mg i.v. alle 12 h"
    ],
    [
     "Ceftazidim/Avibactam [Reserve]",
-    "2,5 g i.v. alle 8 h - selektiv"
+    "2,5 g i.v. alle 8 h über 3 h - NUR zusammen mit Aztreonam 2 g i.v. alle 8 h (L1-Metallo-β-Laktamase)"
    ],
    [
-    "Aztreonam",
-    "2 g i.v. alle 6-8 h - in Kombination"
+    "Aztreonam/Avibactam",
+    "2,67 g Loading über 3 h, dann 2 g i.v. alle 6 h über 3 h - bevorzugt mit zweitem aktivem Mittel"
    ]
   ],
   "o": [
@@ -4469,7 +4514,7 @@
   ],
   "olabel": "",
   "dur": "Pneumonie 7-14 Tage - Bakteriämie 14 Tage - CF-Exazerbation 14 Tage - PJI 3-6 Mo.",
-  "note": "TMP/SMX ist alleiniger First-line-Pfeiler. Übrige Optionen nur bei Unverträglichkeit/Resistenz und dokumentierter Sensibilität. Intrinsisch resistent gegen Carbapeneme (!) und die meisten Beta-Laktame.",
+  "note": "IDSA 2026: Cefiderocol-Monotherapie bevorzugt bei invasiver Infektion; Aztreonam/Avibactam (bevorzugt kombiniert) als Alternative; TMP/SMX, Minocyclin, Levofloxacin nach Sensibilität. Kritisch Kranke: initial Kombination, dann Deeskalation. Intrinsisch resistent gegen Carbapeneme (!), die meisten Beta-Laktame und Aminoglykoside.",
   "pi": "PJI durch S. maltophilia - intrinsisch carbapenemresistent: | IV-Phase: TMP/SMX 5 mg/kg (TMP) alle 8 h (Mittel der Wahl) | oder Levofloxacin 750 mg 1x/d | Oral-Switch: TMP/SMX 320/1600 mg alle 12 h | oder Levofloxacin 500-750 mg 1x/d | Pro-Implant: Implantatentfernung stark empfohlen | Carbapeneme unwirksam! - Dauer: 3-6 Monate",
   "pig": {
    "head": "PJI durch S. maltophilia - intrinsisch carbapenemresistent",
@@ -4522,8 +4567,8 @@
   "route": "ERSTLINIE I.V.",
   "f": [
    [
-    "Sulbactam hochdosiert",
-    "3-4 g i.v. alle 6 h (als Ampicillin/Sulbactam)"
+    "Sulbactam/Durlobactam",
+    "2 g (1 g/1 g) i.v. alle 6 h über 3 h + Imipenem oder Meropenem (CRAB; Verfügbarkeit prüfen)"
    ],
    [
     "Meropenem",
@@ -4531,7 +4576,7 @@
    ],
    [
     "Ampicillin/Sulbactam",
-    "12 g Sulbactam-Anteil/d i.v."
+    "9 g i.v. alle 8 h über 4 h (= 9 g Sulbactam/d) oder 27 g/24 h Dauerinfusion - Überbrückung, wenn Sulbactam/Durlobactam nicht verfügbar"
    ]
   ],
   "a": [
@@ -4541,7 +4586,11 @@
    ],
    [
     "Tigecyclin",
-    "100 mg Loading, dann 50-100 mg i.v. alle 12 h"
+    "200 mg Loading, dann 100 mg i.v. alle 12 h - nur Kombination/Überbrückung"
+   ],
+   [
+    "Cefiderocol",
+    "2 g i.v. alle 8 h über 3 h - nur in Kombination (z. B. mit Sulbactam/Durlobactam bei SUL-DUR-Resistenz)"
    ]
   ],
   "o": [
@@ -4555,7 +4604,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Pneumonie (HAP/VAP) 7-14 Tage - Bakteriämie 14 Tage - Schwere Infektion 14-21 Tage - PJI 3-6 Mo.",
+  "dur": "Pneumonie (HAP/VAP) 7-14 Tage - Bakteriämie 14 Tage - Schwere Infektion 14-21 Tage - PJI 12 Wo. (PIF v11)",
   "note": "Häufig MRAB/4MRGN - Infektiologen einbeziehen Rifampicin-Kombination nicht empfohlen: RCT ohne Mortalitätsvorteil (Durante-Mangoni, CID 2013).",
   "pi": "MRAB-PJI - sehr schwieriges Management: | IV-Phase: Sulbactam hochdosiert (Ampicillin/Sulbactam) oder Meropenem | Oral-Switch: Minocyclin 200 mg alle 12 h (wenn sensibel) | Pro-Implant: Implantatentfernung DRINGEND empfohlen | Zwei-Stufen-Wechsel mit langem Intervall | Infektiologie + Mikrobiologie obligat - Dauer: 3-6 Monate",
   "pig": {
@@ -4578,11 +4627,11 @@
    ],
    "cave": [],
    "extra": [
-    "Infektiologie + Mikrobiologie obligat - Dauer: 3-6 Monate"
+    "Infektiologie + Mikrobiologie obligat"
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)"
   },
   "syns": [
    "a baumannii",
@@ -4706,7 +4755,7 @@
    ],
    [
     "Meropenem",
-    "1 g i.v. alle 8 h (Intensivphase, schwer/neurologisch)"
+    "1 g i.v. alle 8 h (Intensivphase, schwer) - 2 g alle 8 h bei neurologischer Beteiligung"
    ]
   ],
   "a": [
@@ -4718,7 +4767,7 @@
   "o": [
    [
     "TMP/SMX",
-    "160/800 mg (8 mg/kg TMP) p.o. alle 12 h - ERADIKATIONSPHASE"
+    "320/1600 mg p.o. alle 12 h bei >60 kg (240/1200 mg bei 40-60 kg) - ERADIKATIONSPHASE"
    ],
    [
     "Doxycyclin",
@@ -5175,7 +5224,7 @@
   "f": [
    [
     "Ceftriaxon",
-    "1 g i.m./i.v. Einmaldosis (bei Gonokokken-Arthritis: 1 g/d i.v. über 7 Tage)"
+    "1 g i.m. Einmaldosis + Azithromycin 2 g p.o. Einmaldosis (unkompliziert) - Gonokokken-Arthritis/DGI: 1-2 g i.v. 1x/d (PIF: 2 g/d + Azithromycin 1 g p.o. einmalig)"
    ]
   ],
   "a": [
@@ -5184,18 +5233,18 @@
     "1 g i.v. alle 8 h (disseminiert/Arthritis, Alternative)"
    ],
    [
-    "Azithromycin",
-    "2 g p.o. Einmaldosis (nur bei Cephalosporin-Allergie, Resistenz beachten)"
+    "Gentamicin + Azithromycin",
+    "240 mg i.m. Einmaldosis + 2 g p.o. Einmaldosis (schwere Beta-Laktam-Allergie; alternativ Spectinomycin 2 g i.m. + Azithromycin 2 g)"
    ]
   ],
   "o": [
    [
     "Cefixim",
-    "400 mg p.o. Einmaldosis (nur bei dokumentierter Sensibilität - nicht bei Arthritis)"
+    "400 mg p.o. Einmaldosis + Azithromycin 2 g p.o. (unkompliziert, nur wenn i.m. unmöglich) - DGI/Arthritis-Step-down: 400 mg p.o. alle 12 h (nur bei dokumentierter Sensibilität, nach 24-48 h klinischer Besserung)"
    ]
   ],
   "olabel": "oral nur wenn sensibel",
-  "dur": "Unkompliziert: Einmaldosis - Disseminiert/Arthritis: 7 Tage (Beginn i.v., Umstellung nach Klinik)",
+  "dur": "Unkompliziert: Einmaldosis - Disseminiert/Arthritis: 7 Tage gesamt (IUSTI), laut PIF 1-2 Wochen i.v.; länger bei Komorbidität/langsamem Ansprechen; Oralisierung nur nach Antibiogramm",
   "note": "Immer Ko-Therapie gegen Chlamydien erwägen (Doxycyclin 100 mg 2x7 d, außer Schwangerschaft). Resistenztestung essentiell (zunehmende Cephalosporin-MHK).",
   "pi": "",
   "pig": {
@@ -5445,7 +5494,7 @@
   "f": [
    [
     "Triple-Therapie",
-    "PPI 2x/d + Clarithromycin 500 mg 2x/d + Amoxicillin 1 g 2x/d x 14 d"
+    "PPI 2x/d + Clarithromycin 500 mg 2x/d + Amoxicillin 1 g 2x/d x 14 d (NUR bei nachgewiesener Clarithromycin-Sensibilität - empirisch Bismut-Quadrupel bevorzugen)"
    ],
    [
     "Bismut-Quadrupel",
@@ -5455,7 +5504,7 @@
   "a": [
    [
     "Levofloxacin-Triple",
-    "PPI + Levofloxacin 500 mg 1x/d + Amoxicillin 1 g 2x/d x 14 d"
+    "PPI + Levofloxacin 500 mg 1x/d + Amoxicillin 1 g 2x/d x 14 d (Rescue-Therapie, nicht Erstlinie)"
    ],
    [
     "Rifabutin-basiert",
@@ -5659,12 +5708,12 @@
   "route": "ERSTLINIE (oral)",
   "f": [
    [
-    "Azithromycin",
-    "1 g p.o. Einmaldosis - erste Wahl WHO (auch bei Kindern)"
+    "Doxycyclin",
+    "300 mg p.o. Einmaldosis - erste Wahl WHO/GTFCC (Erwachsene inkl. Schwangere, wenn lokaler Stamm sensibel)"
    ],
    [
-    "Doxycyclin",
-    "300 mg p.o. Einmaldosis - Erwachsene"
+    "Azithromycin",
+    "1 g p.o. Einmaldosis - Alternative (WHO/GTFCC)"
    ]
   ],
   "a": [
@@ -5810,7 +5859,7 @@
    ],
    [
     "Doxycyclin",
-    "100 mg p.o. alle 12 h + Gentamicin 5 mg/kg i.v. 1x/d x 2-3 Wochen"
+    "100 mg p.o. alle 12 h x 6 Wochen + Gentamicin 5 mg/kg i.v. 1x/d x 7 Tage (bzw. Streptomycin 1 g i.m. 1x/d x 2-3 Wochen)"
    ]
   ],
   "a": [
@@ -5890,22 +5939,26 @@
   "route": "ERSTLINIE I.V.",
   "f": [
    [
-    "Gentamicin",
-    "5-7 mg/kg i.v. 1x/d x 10-14 Tage"
+    "Ciprofloxacin",
+    "400 mg i.v. alle 8 h bzw. 750 mg p.o. alle 12 h"
    ],
    [
-    "Streptomycin",
-    "7,5-15 mg/kg i.m. alle 12 h x 10-14 Tage (Goldstandard)"
+    "Gentamicin",
+    "6 mg/kg i.v. 1x/d x 10 Tage (Spiegel-/Nierenfunktionskontrolle)"
    ]
   ],
   "a": [
    [
-    "Ciprofloxacin",
-    "400 mg i.v. alle 8-12 h x 10-14 Tage"
+    "Levofloxacin",
+    "750 mg i.v./p.o. 1x/d"
    ],
    [
     "Doxycyclin",
-    "100 mg i.v. alle 12 h x 14-21 Tage"
+    "200 mg Loading, dann 100 mg i.v./p.o. alle 12 h x 14-21 Tage"
+   ],
+   [
+    "Streptomycin",
+    "1 g i.m. alle 12 h x 10 Tage (nachrangig)"
    ]
   ],
   "o": [
@@ -5919,7 +5972,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Streptomycin/Gentamicin 10-14 Tage - Ciprofloxacin 10-14 Tage - Doxycyclin 14-21 Tage - PEP 14 Tage",
+  "dur": "Gentamicin/Streptomycin 10 Tage - Ciprofloxacin/Levofloxacin 10-14 Tage - Doxycyclin 14-21 Tage - PEP: Fluorchinolon 7 Tage, Doxycyclin 10-14 Tage",
   "note": "Meldepflicht! Zoonose (Hasen, Nagetiere, Zecken, Fliegen). Bioterrorismus-Potenzial (Kategorie A). Typhoide Form sehr ernst. β-Laktame, Chloramphenicol nur bakteriostatisch. Ciprofloxacin/Doxycyclin oral sehr wirksam.",
   "pi": "",
   "pig": {
@@ -6235,11 +6288,11 @@
   "f": [
    [
     "Azithromycin",
-    "500 mg i.v. 1x/d x 5 Tage (CSD leicht-mittel)"
+    "500 mg Tag 1, dann 250 mg 1x/d Tag 2-5 (CSD mit ausgeprägter Lymphadenopathie; typische CSD meist keine AB)"
    ],
    [
     "Gentamicin",
-    "3-5 mg/kg i.v. 1x/d + Rifampicin 300 mg alle 12 h (Bakteriämie/Endokarditis)"
+    "3 mg/kg i.v. 1x/d x 14 Tage + Doxycyclin 100 mg alle 12 h x 6 Wochen (Endokarditis; bei V.a. zusätzlich Ceftriaxon 2 g/d) - Rifampicin 300 mg alle 12 h nur als Ersatz, falls Gentamicin kontraindiziert"
    ]
   ],
   "a": [
@@ -6259,7 +6312,7 @@
   "o": [
    [
     "Azithromycin",
-    "500 mg p.o. 1x/d x 5 Tage (CSD unkompliziert)"
+    "500 mg p.o. Tag 1, dann 250 mg Tag 2-5 (CSD)"
    ],
    [
     "Doxycyclin",
@@ -6271,7 +6324,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "CSD (immunkompetent) 5 Tage - Bazill. Angiomatose 3-4 Monate - Endokarditis >=6 Monate (+ ggf. OP)",
+  "dur": "CSD (immunkompetent) 5 Tage - Bazill. Angiomatose 3 Monate - Endokarditis: Doxycyclin 6 Wochen + Gentamicin 14 Tage (manche Experten Doxycyclin 3-6 Monate; + ggf. OP)",
   "note": "B. henselae: Katzenkratzkrankheit (CSD), bazilläre Angiomatose (HIV). B. quintana: Schützengrabenfieber, Obdachlose. Endokarditis: sehr lange Therapie >=6 Monate. HIV-Patienten: Sekundärprophylaxe Azithromycin/Doxycyclin.",
   "pi": "Bazilläre Angiomatose (Gefäßläsionen) bei HIV - kein typischer PJI-Erreger: | Langzeittherapie: Doxycyclin 100 mg alle 12 h x Monate | oder Erythromycin 500 mg alle 6 h x Monate | Gefäß-/Herzklappen-Beteiligung: Gentamicin + Doxycyclin x >=6 Monate | Pro-Implant: kein spezifisches Standard-Protokoll",
   "pig": {
@@ -6285,7 +6338,7 @@
    "extra": [
     "Langzeittherapie: Doxycyclin 100 mg alle 12 h x Monate",
     "oder Erythromycin 500 mg alle 6 h x Monate",
-    "Gefäß-/Herzklappen-Beteiligung: Gentamicin + Doxycyclin x >=6 Monate",
+    "Gefäß-/Herzklappen-Beteiligung: Doxycyclin 6 Wochen + Gentamicin 14 Tage (ggf. Doxycyclin verlängert)",
     "Pro-Implant: kein spezifisches Standard-Protokoll"
    ]
   },
@@ -6319,22 +6372,22 @@
   "route": "ERSTLINIE (oral)",
   "f": [
    [
-    "Vancomycin oral",
-    "125 mg p.o. alle 6 h x 10 Tage (schwer: 500 mg alle 6 h)"
+    "Fidaxomicin",
+    "200 mg p.o. alle 12 h x 10 Tage - bevorzugt (Erstepisode und 1. Rezidiv)"
    ],
    [
-    "Fidaxomicin",
-    "200 mg p.o. alle 12 h x 10 Tage"
+    "Vancomycin oral",
+    "125 mg p.o. alle 6 h x 10 Tage (fulminant: 500 mg p.o./Sonde alle 6 h + Metronidazol 500 mg i.v. alle 8 h)"
    ]
   ],
   "a": [
    [
     "Metronidazol",
-    "500 mg p.o./i.v. alle 8 h x 10 Tage - nur leichter Verlauf"
+    "500 mg p.o. alle 8 h x 10 Tage - nur nicht-schwerer Verlauf, wenn Fidaxomicin/Vancomycin nicht verfügbar"
    ],
    [
     "Bezlotoxumab",
-    "10 mg/kg i.v. Einmaldosis - Rezidivprophylaxe"
+    "10 mg/kg i.v. Einmaldosis - Rezidivprophylaxe; Vertrieb durch Hersteller (Merck) per 31.01.2025 eingestellt - praktisch nicht mehr verfügbar"
    ]
   ],
   "o": [
@@ -6482,7 +6535,7 @@
    ],
    [
     "Tetanus-Immunglobulin (HTIG)",
-    "3.000-6.000 IE i.m. Einmalgabe - PRIMÄRTHERAPIE!"
+    "500 IE i.m. Einmalgabe (gleich wirksam wie 3.000-6.000 IE) - PRIMÄRTHERAPIE!"
    ]
   ],
   "a": [
@@ -6539,18 +6592,18 @@
   "route": "ERSTLINIE I.V.",
   "f": [
    [
-    "Heptavalentes Botulinum-Antitoxin (HBAT)",
-    "Einmalgabe i.v. - PRIMÄRTHERAPIE (über CDC/ECDC erhältlich)"
+    "Heptavalentes Botulinum-Antitoxin (BAT®, Pferdeserum)",
+    "Einmalgabe i.v. innerhalb 48 h - PRIMÄRTHERAPIE (seit 2019 in Europa erhältlich; Bezug über Gesundheitsbehörde/Notfalldepot klären; Intrakutantest empfohlen)"
    ],
    [
-    "Metronidazol",
-    "500 mg i.v. alle 8 h (Wundbotulismus - Keimeradikation)"
+    "Penicillin G",
+    "4 Mio. IE i.v. alle 4 h (Wundbotulismus, zusätzlich zum Débridement)"
    ]
   ],
   "a": [
    [
-    "Penicillin G",
-    "4 Mio. IE i.v. alle 4 h (Wundbotulismus, Alternative)"
+    "Metronidazol",
+    "500 mg i.v. alle 8 h (Wundbotulismus, Alternative z. B. bei Penicillin-Allergie)"
    ]
   ],
   "o": [
@@ -6561,7 +6614,7 @@
   ],
   "olabel": "",
   "dur": "Antitoxin sofort - Wundbotulismus + AB 7-10 Tage - Lebensmittelbotulismus: keine AB nötig",
-  "note": "ANTIBIOTIKA SPIELEN UNTERGEORDNETE ROLLE! Antitoxin ist Kerntherapie - sofort anfordern! Lebensmittelbotulismus: Magenlavage + Antitoxin. Wundbotulismus: Débridement + Metronidazol. Meldepflicht! Aminoglykoside kontraindiziert (verstärken neuromuskuläre Blockade). Intensivmedizin: Beatmung, supportiv - Wochen bis Monate",
+  "note": "ANTIBIOTIKA SPIELEN UNTERGEORDNETE ROLLE! Antitoxin ist Kerntherapie - sofort anfordern! Lebensmittelbotulismus: Magenlavage + Antitoxin. Wundbotulismus: Débridement + Penicillin G. Meldepflicht! Aminoglykoside kontraindiziert (verstärken neuromuskuläre Blockade); Magnesium kontraindiziert; Clindamycin und Tetrazykline nur nach sorgfältiger Abwägung (CDC 2021). Intensivmedizin: Beatmung, supportiv - Wochen bis Monate",
   "pi": "",
   "pig": {
    "head": "",
@@ -6744,7 +6797,7 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI/Osteomyelitis 3-6 Mo. (wie andere grampositive Anaerobier)",
+   "PJI": "PJI 12 Wochen (PIF v11)",
    "FRI": "PJI/Osteomyelitis 3-6 Mo. (wie andere grampositive Anaerobier)"
   },
   "syns": [
@@ -6881,7 +6934,7 @@
   "a": [
    [
     "Clindamycin",
-    "600-900 mg i.v. alle 8 h"
+    "600-900 mg i.v. alle 8 h - nicht empirisch, nur nach Antibiogramm (B.-fragilis-Gruppe in Europa ~32 % resistent)"
    ],
    [
     "Meropenem",
@@ -6899,7 +6952,7 @@
    ],
    [
     "Clindamycin",
-    "300-450 mg p.o. alle 8 h"
+    "300-450 mg p.o. alle 8 h (nur wenn sensibel getestet)"
    ],
    [
     "Amoxicillin-Clavulanat",
@@ -7432,7 +7485,7 @@
   "f": [
    [
     "Doxycyclin",
-    "100 mg p.o./i.v. alle 12 h x 7 d (urogenital) / 21 d (PID)"
+    "100 mg p.o./i.v. alle 12 h x 7 d (urogenital) / 21 d (LGV)"
    ]
   ],
   "a": [
@@ -7500,11 +7553,11 @@
   "a": [
    [
     "Azithromycin",
-    "500 mg i.v./p.o. 1x/d x 7 Tage"
+    "500 mg i.v./p.o. 1x/d x 7 Tage (auch Schwangerschaft)"
    ],
    [
     "Chloramphenicol",
-    "500 mg i.v. alle 6 h (Schwangerschaft)"
+    "500 mg i.v. alle 6 h (Reserve)"
    ],
    [
     "Moxifloxacin",
@@ -7664,7 +7717,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Erythema migrans 14 Tage - Neuroborreliose 14-21 Tage - Lyme-Karditis 14-21 Tage - Lyme-Arthritis 28 Tage",
+  "dur": "Erythema migrans: Doxycyclin 10 Tage, Amoxicillin/Cefuroxim-Axetil 14 Tage - Neuroborreliose 14-21 Tage - Lyme-Karditis 14-21 Tage - Lyme-Arthritis 28 Tage",
   "note": "Doxycyclin oral auch bei Neuroborreliose wirksam",
   "pi": "",
   "pig": {
@@ -7862,7 +7915,7 @@
    ],
    [
     "TMP/SMX",
-    "160/800 mg p.o. alle 12 h x 12 Monate (Schwangerschaft Langzeit-Prophylaxe)"
+    "160/800 mg p.o. alle 12 h + Folsaeure fuer die Dauer der Schwangerschaft (akutes Q-Fieber in der Schwangerschaft)"
    ]
   ],
   "o": [
@@ -7932,7 +7985,7 @@
   "a": [
    [
     "Rifampicin",
-    "300 mg p.o. alle 12 h x 7-10 Tage - Schwangerschaft / Kinder <8 Jahre"
+    "300 mg p.o. alle 12 h x 7-10 Tage - NUR Anaplasmose (Schwangerschaft/Doxycyclin-Kontraindikation); fuer Ehrlichiose nicht belegt"
    ]
   ],
   "o": [
@@ -7942,7 +7995,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Doxycyclin 10-14 Tage (mind. 5-7 Tage nach Entfieberung)",
+  "dur": "Ehrlichiose: bis mind. 3 Tage nach Entfieberung, mind. 5-7 Tage gesamt - Anaplasmose: 10-14 Tage (deckt Borrelien-Koinfektion ab)",
   "note": "Zeckenübertragen (Ixodes, Amblyomma). HME = Human Monocytic Ehrlichiosis; HGA = Human Granulocytic Anaplasmosis. Therapiebeginn EMPIRISCH - nicht auf Serologie warten! Leukopenie, Thrombopenie, erhöhte Transaminasen typisch. β-Laktame unwirksam.",
   "pi": "",
   "pig": {
@@ -8056,7 +8109,7 @@
    ],
    [
     "Atovaquon",
-    "750 mg p.o. alle 6 h - bei Pyrimethamin/Sulfadiazin-Intoleranz"
+    "1500 mg p.o. alle 12 h (mit Mahlzeit) ± Pyrimethamin oder Sulfadiazin - bei Intoleranz"
    ]
   ],
   "o": [
@@ -8115,7 +8168,7 @@
   "f": [
    [
     "Isoniazid + Rifampicin + Pyrazinamid + Ethambutol",
-    "INTENSIVPHASE: 2 Monate (Standard-Vierfachtherapie, DOT empfohlen)"
+    "INTENSIVPHASE 2 Monate: INH 5 mg/kg (max. 300 mg) + RMP 10 mg/kg (max. 600 mg) + PZA 25 mg/kg + EMB 15 mg/kg p.o. 1x/d (DOT empfohlen)"
    ]
   ],
   "a": [
@@ -8124,8 +8177,12 @@
     "KONTINUIERUNGSPHASE: 4 Monate (nach Intensivphase)"
    ],
    [
-    "Levofloxacin / Moxifloxacin",
-    "bei INH/RMP-Resistenz oder Unverträglichkeit (MDR-TB: individuelles Regime)"
+    "MDR/RR-TB: BPaLM",
+    "Bedaquilin 400 mg 1x/d x 2 Wo., dann 200 mg 3x/Wo. + Pretomanid 200 mg 1x/d + Linezolid 600 mg 1x/d + Moxifloxacin 400 mg 1x/d x 6 Monate - NICHT bei osteoartikulaerer, ZNS- oder disseminierter TB; sonst individuelles Regime (WHO 2025: BDLLfxC 6 Mo. bzw. modifizierte 9-Monats-Regime), TB-Zentrum"
+   ],
+   [
+    "INH-mono-resistente TB (Hr-TB)",
+    "Rifampicin + Ethambutol + Pyrazinamid + Levofloxacin x 6 Monate"
    ]
   ],
   "o": [
@@ -8136,7 +8193,7 @@
   ],
   "olabel": "komplett oral (DOT)",
   "dur": "Standard 6 Monate (2 Mo. Intensiv + 4 Mo. Kontinuierung) - Knochen/Gelenk 9-12 Mo. - ZNS 9-12 Mo.",
-  "note": "Sonderformen verlängert: ossär/artikulär 9-12 Mo., ZNS-TB 9-12 Mo. (+ Steroide). Resistenztestung (phänotypisch + molekular) vor Therapie. Spiegelkontrollen bei Organinsuffizienz.",
+  "note": "Sonderformen verlängert: ossär/artikulär 9-12 Mo., ZNS-TB 9-12 Mo. (+ Steroide). Resistenztestung (phänotypisch + molekular) vor Therapie. Spiegelkontrollen bei Organinsuffizienz. 4-Monats-Regime (2HPZM/2HPM: Isoniazid + Rifapentin + Moxifloxacin + Pyrazinamid, WHO 2022) nur fuer pulmonale TB - nicht fuer Knochen-/Gelenk-TB.",
   "pi": "",
   "pig": {
    "head": "",
@@ -8182,8 +8239,8 @@
   "route": "ERSTLINIE (oral)",
   "f": [
    [
-    "Azithromycin + Ethambutol + Rifabutin",
-    "Azithromycin 250-500 mg/d + Ethambutol 15 mg/kg/d + Rifabutin 300 mg/d"
+    "Azithromycin + Ethambutol + Rifampicin",
+    "Kavitaer/schwer: Azithromycin 250-500 mg/d + Ethambutol 15 mg/kg/d + Rifampicin 10 mg/kg/d (450-600 mg) taeglich ± Amikacin i.v. - Nodulaer-bronchiektatisch: Azithromycin 500 mg + Ethambutol 25 mg/kg + Rifampicin 600 mg 3x/Woche - Rifabutin nur bei Interaktionen (HIV/ART) bzw. disseminiert"
    ]
   ],
   "a": [
@@ -8194,12 +8251,16 @@
    [
     "Amikacin i.v.",
     "10-15 mg/kg 1x/d (schwere pulmonal-kavitäre MAC)"
+   ],
+   [
+    "Amikacin liposomal inhalativ (ALIS)",
+    "590 mg 1x/d inhaliert - refraktaere MAC nach >=6 Monaten leitliniengerechter Therapie"
    ]
   ],
   "o": [
    [
-    "Azithromycin + Ethambutol + Rifabutin",
-    "Alle drei Substanzen oral verfügbar"
+    "Azithromycin + Ethambutol + Rifampicin",
+    "alle drei oral (Rifabutin nur bei Interaktionen)"
    ]
   ],
   "olabel": "",
@@ -8266,6 +8327,10 @@
    [
     "Inhalatives Amikacin",
     "590 mg/d inhaliert - CF-Lungenbefund"
+   ],
+   [
+    "Tigecyclin",
+    "100 mg Loading, dann 50 mg i.v. alle 12 h - Initialphase (mit Amikacin + Imipenem/Cefoxitin)"
    ]
   ],
   "o": [
@@ -8280,15 +8345,11 @@
    [
     "Linezolid",
     "600 mg p.o. alle 12 h"
-   ],
-   [
-    "TMP/SMX",
-    "160/800 mg p.o. alle 12 h (M. abscessus oft sensibel)"
    ]
   ],
   "olabel": "",
   "dur": "IV-Initialphase 2-4 Wochen + Erhaltung >=12 Monate nach neg. Kultur - Lungentransplantation oft lebenslang",
-  "note": "SEHR schwierig zu behandeln! Subspecies entscheidend: abscessus (Clarithromycin-R erm (41)), massiliense (oft -sensibel), bolletii. CF: häufigster NTM-Erreger. Therapiedauer: >=12 Monate nach neg. Kultur. Infektiologe + Speziallabor obligat!",
+  "note": "SEHR schwierig zu behandeln! Subspecies entscheidend: abscessus (Clarithromycin-R erm (41)), massiliense (oft -sensibel), bolletii. CF: häufigster NTM-Erreger. Therapiedauer: >=12 Monate nach neg. Kultur. Infektiologe + Speziallabor obligat! Mind. 3 aktive Substanzen in der Initialphase; Makrolid bei erm(41)-induzierbarer/mutationaler Resistenz nicht als aktive Substanz zaehlen.",
   "pi": "MABS auf Implantat (CF-Lunge, Brust-Implantat, Haut-Filler): | Implantatentfernung OBLIGAT wenn möglich | IV: Amikacin + Azithromycin + Imipenem (Initialphase) | Oral: Azithromycin + Clofazimin (Erhaltung) | Therapie: >=12 Monate nach neg. Kultur | Pro-Implant: kein Standardprotokoll - Spezialist obligat",
   "pig": {
    "head": "MABS auf Implantat (CF-Lunge, Brust-Implantat, Haut-Filler)",
@@ -8345,7 +8406,7 @@
   "f": [
    [
     "Rifampicin",
-    "10 mg/kg/d p.o. (max 600 mg) + Isoniazid 5 mg/kg/d + Ethambutol 15 mg/kg/d x mind. 12 Monate nach neg. Kultur"
+    "10 mg/kg/d p.o. (max 600 mg) + Ethambutol 15 mg/kg/d + Isoniazid 5 mg/kg/d ODER Azithromycin 250 mg/d (500 mg 3x/Wo.) x 12 Monate"
    ]
   ],
   "a": [
@@ -8358,8 +8419,8 @@
     "500 mg p.o. alle 12 h - Ergänzung bei Resistenz"
    ],
    [
-    "TMP/SMX",
-    "160/800 mg p.o. alle 12 h - alternative Komponente"
+    "Moxifloxacin",
+    "400 mg p.o. 1x/d - Zweitlinie bei Rifampicin-Resistenz/Unvertraeglichkeit"
    ]
   ],
   "o": [
@@ -8369,7 +8430,7 @@
    ]
   ],
   "olabel": "",
-  "dur": ">=12 Monate nach neg. Kultur (meist 18 Mo. Gesamtdauer)",
+  "dur": "12 Monate Gesamtdauer (fixe Dauer, nicht 12 Monate nach Kulturkonversion) - Spezialist, wenn Kultur nach ca. 4 Monaten nicht negativ",
   "note": "Ähnelt MTB klinisch (Kavitäten, Fieber, Gewichtsverlust). HIV: häufigste NTM-Pneumonie. Günstigere Prognose als MAC/MABS. Rifampicin NICHT weglassen - Schlüsselsubstanz! ATS/ERS-Kriterien für Behandlungsindikation.",
   "pi": "",
   "pig": {
@@ -8514,6 +8575,10 @@
    [
     "Linezolid",
     "600 mg i.v./p.o. alle 12 h"
+   ],
+   [
+    "Tobramycin",
+    "5-7 mg/kg i.v. 1x/d - M. chelonae (aktiver als Amikacin)"
    ]
   ],
   "o": [
@@ -8526,17 +8591,13 @@
     "500 mg p.o. alle 12 h x 4-6 Monate - M. chelonae"
    ],
    [
-    "Minocyclin",
-    "100 mg p.o. alle 12 h (M. chelonae)"
-   ],
-   [
     "Doxycyclin",
     "100 mg p.o. alle 12 h"
    ]
   ],
   "olabel": "",
   "dur": "Hautinfektion 4-6 Monate - Disseminiert/Implantat >=6 Monate - M. chelonae oft länger",
-  "note": "RGM (Rapid Growing Mycobacteria) = Wachstum in <7 Tagen. Posttraumatisch, post-chirurgisch, Injektionsstellen. M. chelonae: meist nur Clarithromycin sensibel. M. fortuitum: breiter sensibel. ANTIBIOGRAMM OBLIGAT!",
+  "note": "RGM (Rapid Growing Mycobacteria) = Wachstum in <7 Tagen. Posttraumatisch, post-chirurgisch, Injektionsstellen. M. chelonae: meist nur Clarithromycin sensibel. M. fortuitum: breiter sensibel. ANTIBIOGRAMM OBLIGAT! M. fortuitum: induzierbare Makrolidresistenz (erm(39)) - Makrolide unzuverlaessig. M. chelonae: Cefoxitin-resistent.",
   "pi": "RGM-Implantat-Infektionen (Brustimplantate, Herzschrittmacher, Knochen): | Implantatentfernung OBLIGAT - RGM sind exzellente Biofilmbildner | IV: Amikacin + Imipenem (M. fortuitum) oder Amikacin + Clarithromycin (M. chelonae) | Oral: TMP/SMX + Ciprofloxacin (M. fortuitum) oder Clarithromycin (M. chelonae) | Therapiedauer: >=6 Monate - Antibiogramm obligat",
   "pig": {
    "head": "RGM-Implantat-Infektionen (Brustimplantate, Herzschrittmacher, Knochen)",
@@ -8597,8 +8658,8 @@
     "10 mg/kg/d + Ethambutol 15 mg/kg/d + Clarithromycin 500 mg alle 12 h (± Moxifloxacin 400 mg/d)"
    ],
    [
-    "Isoniazid",
-    "5 mg/kg/d - Sensibilität variabel, Antibiogramm!"
+    "Moxifloxacin",
+    "400 mg p.o. 1x/d - statt oder zusaetzlich zum Makrolid (mind. 3 Substanzen)"
    ]
   ],
   "a": [
@@ -8659,17 +8720,17 @@
   "f": [
    [
     "WHO-MDT multibazillär",
-    "Rifampicin 600 mg 1x/Monat (überwacht) + Clofazimin 300 mg 1x/Monat + Dapson 100 mg/d x 12 Monate"
+    "Rifampicin 600 mg + Clofazimin 300 mg 1x/Monat (überwacht) + Clofazimin 50 mg/d + Dapson 100 mg/d x 12 Monate"
    ],
    [
     "WHO-MDT paucibazillär",
-    "Rifampicin 600 mg 1x/Monat (überwacht) + Dapson 100 mg/d x 6 Monate"
+    "Rifampicin 600 mg + Clofazimin 300 mg 1x/Monat (überwacht) + Clofazimin 50 mg/d + Dapson 100 mg/d x 6 Monate"
    ]
   ],
   "a": [
    [
-    "Ofloxacin/Minocyclin",
-    "bei Rifampicin-Resistenz oder Dapson-Intoleranz"
+    "Rifampicin-Resistenz",
+    "mind. 2 aus Clarithromycin/Minocyclin/Fluorchinolon (Levo-/Moxi-/Ofloxacin) + Clofazimin taeglich x 6 Mo., dann Clofazimin + 1 Substanz x 18 Mo."
    ],
    [
     "Clarithromycin",
@@ -8684,7 +8745,7 @@
   ],
   "olabel": "",
   "dur": "Paucibazillär 6 Monate - Multibazillär 12 Monate - Reaktionen Typ 1/2: zusätzlich Kortikosteroide",
-  "note": "WHO-MDT (Rifampicin + Dapson +/- Clofazimin) - paucibazillär 6 Mo., multibazillär 12 Mo. REAKTIONEN als Zusatztherapie (nicht überlesen!): Typ 1 (Reversal) -> Prednisolon; Typ 2 (Erythema nodosum leprosum) -> Thalidomid oder Clofazimin/Prednisolon. Meldepflicht.",
+  "note": "WHO-MDT (Rifampicin + Dapson + Clofazimin, seit 2018 auch PB) - paucibazillär 6 Mo., multibazillär 12 Mo. REAKTIONEN als Zusatztherapie (nicht überlesen!): Typ 1 (Reversal) -> Prednisolon; Typ 2 (Erythema nodosum leprosum) -> Thalidomid oder Clofazimin/Prednisolon. Meldepflicht.",
   "pi": "",
   "pig": {
    "head": "",
@@ -8726,7 +8787,7 @@
   "f": [
    [
     "Caspofungin",
-    "70 mg i.v. Loading, dann 50 mg 1x/d"
+    "70 mg i.v. Loading, dann 50 mg 1x/d (≥80 kg: 70 mg 1x/d)"
    ],
    [
     "Anidulafungin",
@@ -8735,6 +8796,10 @@
    [
     "Micafungin",
     "100 mg i.v. 1x/d"
+   ],
+   [
+    "Rezafungin",
+    "400 mg i.v. Woche 1, dann 200 mg i.v. 1x/Woche"
    ]
   ],
   "a": [
@@ -8754,7 +8819,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Candidämie: 14 Tage ab erster neg. Blutkultur - Endokarditis 4-6 Wo. (+ OP) - ZNS 4 Wo. (nach Sx-Auflösung) - Osteomyelitis 6-12 Mo. - Augenbefall verlängern",
+  "dur": "Candidämie: 14 Tage ab erster neg. Blutkultur - Endokarditis ≥6 Wo. nach OP (länger bei Komplikationen/ohne OP) - ZNS 4 Wo. (nach Sx-Auflösung) - Osteomyelitis 6-12 Mo. - Augenbefall verlängern",
   "note": "CVC-Entfernung empfohlen - Augenhintergrunduntersuchung - Therapie >=14 Tage ab neg. Blutkultur",
   "pi": "Candida auf Implantat (Prothese, Katheter, Herzschrittmacher): | Implantatentfernung DRINGEND empfohlen (ESCMID/Pro-Implant) | IV-Phase: Echinocandin (Caspofungin 70 mg Loading -> 50 mg 1x/d) | Oral Step-down (nach Stabilisierung + sensibel): | Fluconazol 400 mg 1x/d | Therapie: >=14 Tage nach neg. Blutkultur | Bei Implantatretention (nicht möglich): >=6 Wochen | Langzeit-Fluconazol-Suppression wenn Entfernung unmöglich",
   "pig": {
@@ -8809,7 +8874,7 @@
   "f": [
    [
     "Caspofungin",
-    "70 mg Loading -> 50 mg 1x/d"
+    "70 mg Loading -> 50 mg 1x/d (≥80 kg: 70 mg 1x/d)"
    ],
    [
     "Anidulafungin",
@@ -8818,6 +8883,10 @@
    [
     "Micafungin",
     "100 mg i.v. 1x/d"
+   ],
+   [
+    "Rezafungin",
+    "400 mg i.v. Woche 1, dann 200 mg i.v. 1x/Woche"
    ]
   ],
   "a": [
@@ -8836,12 +8905,8 @@
     "200-300 mg p.o. alle 12 h"
    ],
    [
-    "Isavuconazol",
-    "200 mg p.o. 1x/d"
-   ],
-   [
-    "Posaconazol",
-    "300 mg p.o. alle 12 h -> 300 mg 1x/d"
+    "Fluconazol",
+    "400-800 mg p.o. 1x/d - nur bei nachgewiesener Sensibilität (z. B. C. tropicalis; C. glabrata SDD: 800 mg)"
    ]
   ],
   "olabel": "oraler Switch speziesabhängig",
@@ -8917,6 +8982,10 @@
    [
     "Micafungin",
     "100-150 mg i.v. 1x/d"
+   ],
+   [
+    "Anidulafungin",
+    "200 mg i.v. Loading, dann 100 mg 1x/d"
    ]
   ],
   "a": [
@@ -9011,7 +9080,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Mundsoor 7-14 Tage - Ösophagealsoor 14-21 Tage - Rezidiv (HIV): Erhaltung 100-200 mg Fluconazol 3x/Wo.",
+  "dur": "Mundsoor 7-14 Tage - Ösophagealsoor 14-28 Tage - Rezidiv (HIV): Erhaltung 100-200 mg Fluconazol 3x/Wo.",
   "note": "",
   "pi": "",
   "pig": {
@@ -9077,11 +9146,15 @@
    [
     "Itraconazol",
     "200 mg p.o. alle 12 h (ABPA)"
+   ],
+   [
+    "Posaconazol",
+    "300 mg p.o. alle 12 h Tag 1, dann 300 mg 1x/d (Tablette)"
    ]
   ],
   "olabel": "",
   "dur": "Invasiv pulmonal mindestens 6-12 Wochen - ZNS/disseminiert >=3 Monate - individualisiert bis Immunität wiederhergestellt + radiolog. Auflösung",
-  "note": "TDM obligat: Voriconazol Tal 1-5,5 mg/L - Isavuconazol Tal >1 mg/L",
+  "note": "TDM obligat: Voriconazol Tal 1-5,5 mg/L - Isavuconazol Tal >1 mg/L - Azol-Resistenz (z. B. TR34/L98H) testen; bei lokaler Resistenzrate >10 % initial L-AmB oder Voriconazol + Echinocandin",
   "pi": "",
   "pig": {
    "head": "",
@@ -9267,7 +9340,7 @@
   "a": [
    [
     "Voriconazol + Terbinafin",
-    "Kombination bei S. apiospermum - synergistisch"
+    "Terbinafin 500-1000 mg/d p.o. + Voriconazol - Erstlinie bei L. prolificans"
    ],
    [
     "Micafungin + Voriconazol",
@@ -9286,7 +9359,7 @@
   ],
   "olabel": "",
   "dur": "S. apiospermum: 6+ Wochen, oft Monate - L. prolificans: experimentell, sehr lange - Referenzlabor obligat",
-  "note": "L. prolificans: PAN-RESISTENT gegen alle Standard-Antimykotika -> Experimentaltherapien. S. apiospermum: Voriconazol oft noch wirksam. Referenzlabor obligat. Ertrinkungs-assoziiert (traumatisch). TDM.",
+  "note": "L. prolificans: weitgehend pan-resistent -> Voriconazol + Terbinafin (Erstlinie, Synergie); Olorofim/Fosmanogepix nur in Studien/Compassionate Use. S. apiospermum: Voriconazol Mittel der Wahl. Referenzlabor obligat. Ertrinkungs-assoziiert (traumatisch). TDM.",
   "pi": "Selten auf Implantat - meist traumatisch (Ertrinken): | Implantatentfernung OBLIGAT | S. apiospermum: Voriconazol x Monate | L. prolificans: pan-resistent - experimentelle Therapien | Referenzlabor obligat - kein Standardprotokoll",
   "pig": {
    "head": "Selten auf Implantat - meist traumatisch (Ertrinken)",
@@ -9338,7 +9411,11 @@
    ],
    [
     "Isavuconazol",
-    "200 mg p.o./i.v. 1x/d"
+    "200 mg p.o./i.v. 1x/d - nur bei Fluconazol-Resistenz/-Unverträglichkeit (nicht in Studien geprüft)"
+   ],
+   [
+    "L-AmB Einmaldosis + Flucytosin + Fluconazol (HIV-Meningitis, AMBITION)",
+    "L-AmB 10 mg/kg einmalig + Flucytosin 100 mg/kg/d + Fluconazol 1200 mg/d x 14 Tage"
    ]
   ],
   "o": [
@@ -9459,7 +9536,7 @@
   "f": [
    [
     "Amphotericin B liposomal",
-    "3-5 mg/kg/d i.v. x 1-2 Wochen - schwer/ZNS"
+    "3-5 mg/kg/d i.v. x 1-2 Wochen (schwer) - ZNS: 5 mg/kg/d x 4-6 Wochen"
    ],
    [
     "Itraconazol",
@@ -9685,7 +9762,7 @@
   "f": [
    [
     "Itraconazol",
-    "200 mg p.o. alle 12 h x 3-6 Monate - kutane/lymphangitische Form"
+    "200 mg p.o. 1x/d x 3-6 Monate (bis 2-4 Wo. nach Abheilung) - kutane/lymphangitische Form"
    ],
    [
     "Amphotericin B liposomal",
@@ -9709,7 +9786,7 @@
   "o": [
    [
     "Itraconazol",
-    "200 mg p.o. alle 12 h x 3-6 Monate - Standard oral"
+    "200 mg p.o. 1x/d x 3-6 Monate (kutan) - osteoartikulär 200 mg alle 12 h x ≥12 Monate"
    ],
    [
     "Terbinafin",
@@ -9729,7 +9806,7 @@
    "iv": [],
    "bio": [],
    "oral": [
-    "Oral: Itraconazol 200 mg alle 12 h x 3-6 Monate"
+    "Oral: Itraconazol 200 mg alle 12 h x ≥12 Monate"
    ],
    "surg": [
     "Chirurgisches Débridement obligat!"
@@ -9852,7 +9929,7 @@
   "a": [
    [
     "Itraconazol",
-    "200 mg p.o. 2x/d x 1 Wo./Monat x 3-4 Zyklen"
+    "200 mg p.o. 2x/d x 1 Wo./Monat - Fingernägel 2 Zyklen, Zehennägel 3 Zyklen"
    ],
    [
     "Fluconazol",
@@ -9874,7 +9951,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Fingernägel 6 Wochen Terbinafin - Zehennägel 12 Wochen - Itraconazol-Puls 3 Zyklen Finger / 3-4 Zyklen Zehe",
+  "dur": "Fingernägel 6 Wochen Terbinafin - Zehennägel 12 Wochen - Itraconazol-Puls 2 Zyklen Finger / 3 Zyklen Zehe",
   "note": "Topische Therapie allein bei Nagelbefall unzureichend",
   "pi": "",
   "pig": {
@@ -10063,12 +10140,8 @@
     "Meropenem 2 g i.v. alle 8 h über 3 h - wenn noch carbapenemsensibel"
    ],
    [
-    "Ceftazidim/Avibactam",
-    "2,5 g i.v. alle 8 h über 2 h - ESBL/AmpC + Carbapenem-Sparstrategie"
-   ],
-   [
-    "Piperacillin/Tazobactam",
-    "4,5 g i.v. alle 6 h - wenn Pip/Tazo noch sensibel (MHK <=16 mg/L)"
+    "Ertapenem (wenn sensibel)",
+    "1 g i.v. 1x/d - ESBL-Enterobacterales, nicht kritisch krank, Albumin normal"
    ]
   ],
   "a": [
@@ -10083,6 +10156,14 @@
    [
     "Tigecyclin",
     "100 mg Loading, dann 50 mg alle 12 h - Kombination, nicht Bakteriämie"
+   ],
+   [
+    "Cefepim/Enmetazobactam",
+    "2,5 g i.v. alle 8 h über 2 h - Alternative zu Carbapenem bei ESBL-E"
+   ],
+   [
+    "Ceftazidim/Avibactam",
+    "2,5 g i.v. alle 8 h über 2 h - NUR bei Carbapenem-Resistenz (z. B. 3MRGN P. aeruginosa carbapenem-R)"
    ]
   ],
   "o": [
@@ -10097,10 +10178,14 @@
    [
     "Ciprofloxacin/Levofloxacin",
     "nur wenn Fluorchinolon noch sensibel - selten bei 3MRGN"
+   ],
+   [
+    "TMP/SMX",
+    "960 mg p.o. alle 8-12 h - nur wenn sensibel (PJI/Knochen: 3x960 mg, PIF)"
    ]
   ],
   "olabel": "",
-  "dur": "Standard wie sensible Erreger der jeweiligen Spezies - PJI 3 Mo. (mit Fluorchinolon-Switch) - Bakteriämie 14 Tage - Hygienemaßnahmen obligat",
+  "dur": "Standard wie sensible Erreger der jeweiligen Spezies - PJI 12 Wochen (mit Fluorchinolon-Switch) - Bakteriämie 7 Tage (unkompliziert, Fokus saniert, klinisch stabil), sonst 14 Tage - Hygienemaßnahmen obligat",
   "note": "3MRGN = resistent gegen 3 der 4 Gruppen: Acylaminopenicilline, 3./4.-Gen.-Cephalosporine, Carbapeneme, Fluorchinolone - Hygienemaßnahmen - Infektiologie",
   "pi": "3MRGN auf Implantat: | Wenn Fluoroquinolon noch sensibel: | IV Induktionsphase -> Ciprofloxacin 750 mg alle 12 h oral (PJI-Standard) | DAIR möglich wenn Cipro-sensibel + frühe Infektion | Wenn Fluoroquinolon resistent: | IV-Langzeittherapie oder Zwei-Stufen-Wechsel | Kein verlässlicher oraler Switch bei Pan-Resistenz | Pro-Implant: Fluoroquinolon-Sensibilität ist entscheidend für orale Therapiemöglichkeit | Dauer: 3 Monate",
   "pig": {
@@ -10119,8 +10204,8 @@
    ],
    "cave": [],
    "extra": [
-    "Wenn Fluoroquinolon noch sensibel:",
-    "Wenn Fluoroquinolon resistent:",
+    "Wenn Fluoroquinolon noch sensibel: initial i.v. (z. B. Meropenem 1 g alle 8 h oder Fosfomycin 5 g alle 8 h) bis Wundtrockenheit, dann Ciprofloxacin 750 mg p.o. alle 12 h, gesamt 12 Wochen",
+    "Wenn Fluoroquinolon resistent: je nach Antibiogramm Kombination aus Meropenem 2 g i.v. alle 8 h, Colistin 3 Mio. IE i.v. alle 8 h und/oder Fosfomycin 5 g i.v. alle 8 h, ggf. Suppression; Zwei-Stufen-Wechsel mit langem Intervall (Problemerreger)",
     "Kein verlässlicher oraler Switch bei Pan-Resistenz",
     "Pro-Implant: Fluoroquinolon-Sensibilität ist entscheidend für orale Therapiemöglichkeit"
    ]
@@ -10160,7 +10245,7 @@
    ],
    [
     "Aztreonam/Avibactam",
-    "Aztreonam 6 g/d + Avibactam 1,5 g/d i.v. - MBL-Stämme: NDM, IMP, VIM"
+    "Loading 2 g/0,67 g i.v. über 3 h, dann 1,5 g/0,5 g i.v. alle 6 h über 3 h - MBL-Stämme: NDM, IMP, VIM"
    ]
   ],
   "a": [
@@ -10179,6 +10264,14 @@
    [
     "Fosfomycin + Carbapenem",
     "Fosfomycin 8 g i.v. alle 6-8 h + Meropenem - kombiniert"
+   ],
+   [
+    "Ceftolozan/Tazobactam",
+    "3 g i.v. alle 8 h (Zystitis 1,5 g) - DTR-P. aeruginosa (bevorzugt), keine Carbapenemase-Aktivitaet"
+   ],
+   [
+    "Sulbactam/Durlobactam + Imipenem oder Meropenem",
+    "1 g/1 g i.v. alle 6 h über 3 h + Carbapenem - CRAB (4MRGN A. baumannii), EU-Verfuegbarkeit pruefen"
    ]
   ],
   "o": [
@@ -10193,7 +10286,7 @@
   ],
   "olabel": "",
   "dur": "Standard 14-21 Tage (verlängert bei schwerer Infektion) - Bakteriämie 14 Tage - PJI: Implantatentfernung + 3-6 Mo. - Isolierung Kat. III - Infektiologie obligat",
-  "note": "4MRGN = resistent gegen ALLE 4 Gruppen - Isolierung Kategorie III - Infektiologie + Krankenhaushygiene OBLIGAT",
+  "note": "4MRGN = resistent gegen ALLE 4 Gruppen - Isolierung Kategorie III - Infektiologie + Krankenhaushygiene OBLIGAT Substanzwahl nach Carbapenemase-Typ: KPC -> Meropenem/Vaborbactam, Ceftazidim/Avibactam, Imipenem/Relebactam; OXA-48 -> Ceftazidim/Avibactam; MBL (NDM/VIM/IMP) -> Aztreonam/Avibactam (alternativ Cefiderocol); DTR-P. aeruginosa -> Ceftolozan/Tazobactam; CRAB -> Sulbactam/Durlobactam + Carbapenem.",
   "pi": "4MRGN auf Implantat - schlechteste Prognose: | Implantatentfernung DRINGEND - Retention kaum möglich | IV: Ceftazidim/Avibactam oder Meropenem/Vaborbactam (je nach Resistenzmuster) | Oraler Switch: NICHT möglich bei echtem 4MRGN-Profil | Pro-Implant: Zwei-Stufen-Wechsel mit langem antibiotikumfreiem Intervall | Bestätigung neg. Kulturen vor Reimplantation obligat | Infektiologie + Krankenhaushygiene + Mikrobiologie: alle einbeziehen",
   "pig": {
    "head": "4MRGN auf Implantat - schlechteste Prognose",
@@ -10246,10 +10339,6 @@
    [
     "Daptomycin",
     "8-12 mg/kg i.v. 1x/d - hohe Dosis, besonders E. faecium"
-   ],
-   [
-    "Tigecyclin",
-    "100 mg Loading, dann 50 mg i.v. alle 12 h"
    ]
   ],
   "a": [
@@ -10266,14 +10355,14 @@
     "Synergismus bei E. faecalis - wenn Ampicillin sensibel"
    ],
    [
-    "Quinupristin/Dalfopristin",
-    "7,5 mg/kg i.v. alle 8 h - nur E. faecium, NICHT E. faecalis!"
+    "Tigecyclin",
+    "100 mg Loading, dann 50 mg i.v. alle 12 h - Reserve, nicht bei Bakteriämie"
    ]
   ],
   "o": [
    [
     "Linezolid",
-    "600 mg p.o. alle 12 h (BV ~100 %)"
+    "600 mg p.o. alle 12 h (BV ~100 %) - max. 4 Wochen (PIF)"
    ],
    [
     "Tedizolid",
@@ -10295,7 +10384,7 @@
   "pig": {
    "head": "VRE auf Implantat",
    "iv": [
-    "IV: Linezolid 600 mg alle 12 h oder Daptomycin 8-10 mg/kg"
+    "IV: Linezolid 600 mg alle 12 h oder Daptomycin 10 mg/kg 1x/d"
    ],
    "bio": [],
    "oral": [
@@ -10342,7 +10431,7 @@
   "f": [
    [
     "Penicillin G",
-    "4 Mio. IE i.v. alle 4-6 h"
+    "5 Mio. IE i.v. alle 6 h (PJI, PIF v11)"
    ],
    [
     "Ceftriaxon",
@@ -10374,8 +10463,8 @@
    ]
   ],
   "olabel": "",
-  "dur": "Schulter-PJI 6 Monate (wie C. acnes) - sonstige PJI 3-6 Mo.",
-  "note": "Zweithäufigste Cutibacterium-Spezies bei Schulter-PJI, gilt als aggressiver/virulenter als C. acnes (mehr Lipase-Aktivität). Kulturinkubation mind. 14 Tage. Wie C. acnes behandeln, Rifampicin-Kombination laut PIF empfohlen (Evidenz schwach, s. C. acnes).",
+  "dur": "PJI (inkl. Schulter): 12 Wochen gesamt, davon 2 Wo. i.v. (PIF v11)",
+  "note": "Zweithäufigste Cutibacterium-Spezies bei Schulter-PJI, gilt als aggressiver/virulenter als C. acnes (mehr Lipase-Aktivität). Kulturinkubation mind. 14 Tage. Wie C. acnes behandeln, Rifampicin-Kombination laut PIF empfohlen (Evidenz schwach, s. C. acnes). Metronidazol unwirksam.",
   "impl": {
    "pji": "ja",
    "dair": "erschwert (DTT)",
@@ -10490,7 +10579,7 @@
     "Rifampicin optional – laut PIF v11 v.a. bei Cutibacterium empfohlen, bei anderen Anaerobiern wenig Daten"
    ],
    "oral": [
-    "Oral: Amoxicillin 1 g 3x/d oder Doxycyclin 100 mg 2x/d, optional + Rifampicin 450 mg 2x/d"
+    "Oral: Amoxicillin 1 g 3x/d oder Doxycyclin 100 mg 2x/d, optional + Rifampicin 450 mg 2x/d; Rifampicin-Partner alternativ Levofloxacin 500 mg 2x/d"
    ],
    "surg": [],
    "dur": [
@@ -10723,7 +10812,7 @@
   "a": [
    [
     "Daptomycin",
-    "6 mg/kg i.v. 1x/d"
+    "8 mg/kg i.v. 1x/d (Knochen/PJI-Dosis)"
    ],
    [
     "Linezolid",
@@ -10737,7 +10826,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "PJI 3-6 Monate (individuell) - meist Kontaminante, Klinik entscheidend",
+  "dur": "PJI 12 Wochen gesamt (PIF v11; individuell) - meist Kontaminante, Klinik entscheidend",
   "note": "Hautkommensale, in der überwiegenden Mehrzahl der Fälle Kontaminante. Diagnose einer echten PJI nur bei mehrfachem Nachweis aus unabhängigen tiefen Proben plus klinischem Infektbild. Kein Standardschema - Fallserien-basiert.",
   "impl": {
    "pji": "selten",
@@ -10786,7 +10875,7 @@
   "a": [
    [
     "Daptomycin",
-    "6 mg/kg i.v. 1x/d"
+    "8 mg/kg i.v. 1x/d (Knochen/PJI-Dosis)"
    ],
    [
     "Linezolid",
@@ -10800,7 +10889,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "PJI 3-6 Monate (individuell)",
+  "dur": "PJI 12 Wochen gesamt (PIF v11; individuell)",
   "note": "Mit Micrococcus verwandte Hautkommensale, meist Kontaminante. Vereinzelte reale PJI-Fallberichte bei liegendem Fremdmaterial. Variable Beta-Laktam-Empfindlichkeit, Vancomycin meist zuverlässig wirksam.",
   "impl": {
    "pji": "selten",
@@ -10931,7 +11020,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Wundinfektion 7-14 Tage - PJI individuell 3-6 Monate",
+  "dur": "Wundinfektion 7-14 Tage - PJI 12 Wochen gesamt (PIF v11; individuell)",
   "note": "V.a. bei diabetischem Fußsyndrom und chronischen Wunden nachgewiesen, meist Teil polymikrobieller Flora. Eigenständige Pathogenität oft unklar - Klinik und wiederholter Nachweis entscheidend für Therapieindikation.",
   "impl": {
    "pji": "selten",
@@ -11002,7 +11091,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "individuell 3-6 Monate",
+  "dur": "PJI 12 Wochen gesamt (PIF v11; individuell)",
   "note": "Sehr seltener Erreger (Diphtheroide/Hautkommensale), vor der MALDI-TOF-Ära häufig als Corynebacterium fehlklassifiziert. Kaum Literaturdaten, Einzelfallberichte bei PJI.",
   "impl": {
    "pji": "selten",
@@ -11114,22 +11203,34 @@
   "route": "ERSTLINIE I.V.",
   "f": [
    [
-    "Vancomycin + Rifampicin",
-    "15-20 mg/kg alle 8-12 h + 300-450 mg alle 12 h - ungewöhnliches Regime für gramnegativ, aber Standard bei Elizabethkingia"
-   ]
-  ],
-  "a": [
+    "Minocyclin",
+    "200 mg i.v. alle 12 h (beste In-vitro-Empfindlichkeitsraten)"
+   ],
    [
     "Levofloxacin",
     "750 mg i.v. 1x/d (wenn sensibel)"
-   ],
+   ]
+  ],
+  "a": [
    [
     "TMP/SMX",
     "5 mg/kg (TMP) i.v. alle 8 h"
    ],
    [
-    "Minocyclin",
-    "200 mg i.v. alle 12 h"
+    "Rifampicin",
+    "300-450 mg alle 12 h (nur Kombinationspartner)"
+   ],
+   [
+    "Piperacillin/Tazobactam",
+    "4,5 g i.v. alle 6 h (wenn sensibel)"
+   ],
+   [
+    "Cefiderocol",
+    "2 g i.v. alle 8 h (Reserve, niedrige MHK)"
+   ],
+   [
+    "Vancomycin",
+    "15-20 mg/kg alle 8-12 h (nur Einzelfälle, Wirksamkeit unsicher)"
    ]
   ],
   "o": [
@@ -11140,7 +11241,7 @@
   ],
   "olabel": "",
   "dur": "individuell, PJI-Fallberichte 3-6 Monate",
-  "note": "INTRINSISCH RESISTENT gegen die meisten gramnegativ-wirksamen Antibiotika (Carbapeneme, Aminoglykoside, Colistin trotz Gramnegativ-Status unwirksam!) - paradoxerweise oft empfindlich auf Vancomycin/Rifampicin/Fluorchinolone/TMP-SMX. Gefürchtet bei Neonaten und Immunsupprimierten. Infektiologie und Referenzlabor obligat.",
+  "note": "INTRINSISCH RESISTENT gegen die meisten gramnegativ-wirksamen Antibiotika (Carbapeneme, Aminoglykoside, Colistin trotz Gramnegativ-Status unwirksam!) - oft empfindlich auf Minocyclin, Rifampicin, Fluorchinolone, TMP-SMX (Vancomycin-Rolle unsicher, MHK oft hoch); klinische Isolate häufig E. anophelis. Gefürchtet bei Neonaten und Immunsupprimierten. Infektiologie und Referenzlabor obligat.",
   "impl": {
    "pji": "selten",
    "dair": "erschwert (DTT)",
@@ -11784,7 +11885,7 @@
   "f": [
    [
     "Itraconazol",
-    "200 mg p.o. 1-2x/d (leicht-mittelschwer, Mittel der Wahl)"
+    "200 mg p.o. 1x/d x 9-18 Monate (leicht-mittelschwer, Mittel der Wahl)"
    ],
    [
     "Amphotericin B liposomal",
@@ -11794,7 +11895,7 @@
   "a": [
    [
     "TMP/SMX",
-    "Langzeit-Alternative (Monate)"
+    "160/800-240/1200 mg p.o. alle 12 h x 18-24 Monate"
    ],
    [
     "Voriconazol",
@@ -12531,7 +12632,7 @@
     "600 mg p.o. alle 12 h (begrenzter oraler Switch)"
    ]
   ],
-  "olabel": "oraler Switch praktisch nur Linezolid",
+  "olabel": "oraler Switch praktisch nur Linezolid (max. ca. 4 Wochen, dann Suppression/Infektiologie - Myelo-/Neurotoxizität)",
   "dur": "PJI 3 Mo. (individuell) je nach OP-Strategie",
   "note": "Zunehmend ECHTER multiresistenter Device-/PJI-Erreger (nicht nur Kontaminante!) - v.a. C. striatum. Meist multiresistent (nur Vancomycin/Linezolid zuverlässig). Cave: rasche Daptomycin-Resistenz unter Therapie. Wertung bei mehrfachem Nachweis aus tiefen Proben. Evidenz: zunehmende Fallserien.",
   "wu": "Bei mehrfachem Nachweis echte Infektion annehmen (nicht als Diphtheroid-Kontaminante abtun!). Fremdmaterial/Katheter prüfen.",
@@ -13122,7 +13223,7 @@
    ],
    [
     "Vancomycin",
-    ""
+    "15-20 mg/kg i.v. alle 8-12 h (Penicillin-Allergie)"
    ]
   ],
   "o": [
@@ -13191,7 +13292,7 @@
    ],
    [
     "Meropenem",
-    ""
+    "1 g i.v. alle 8 h"
    ]
   ],
   "o": [
