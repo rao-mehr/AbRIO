@@ -3442,16 +3442,12 @@
   "route": "ERSTLINIE I.V.",
   "f": [
    [
-    "Meropenem",
-    "1-2 g i.v. alle 8 h - bei Cefepim-Resistenz / ESBL-Koproduktion"
-   ],
-   [
     "Cefepim",
-    "2 g i.v. alle 8 h (verlängerte Inf. über 3 h) - bevorzugt, wenn sensibel und keine ESBL"
+    "2 g i.v. alle 8 h (verlängerte Inf. über 3 h) - bevorzugt bei EUCAST S oder I (MHK ≤4 mg/L) und ohne ESBL; IDSA 2026: Cefepim ≈ Carbapenem"
    ],
    [
-    "Piperacillin/Tazobactam",
-    "4,5 g i.v. alle 6-8 h - nicht für invasive Infektionen (nur leichte Infektionen, wenn sensibel)"
+    "Meropenem",
+    "1-2 g i.v. alle 8 h - bei Cefepim-Resistenz / ESBL-Koproduktion / septischem Schock"
    ]
   ],
   "a": [
@@ -3462,6 +3458,10 @@
    [
     "Ciprofloxacin",
     "400 mg i.v. alle 8-12 h"
+   ],
+   [
+    "Piperacillin/Tazobactam",
+    "4,5 g i.v. alle 6-8 h - NICHT für invasive Infektionen (PJI, Osteomyelitis); nur leichte Infektionen, wenn sensibel (IDSA 2026)"
    ],
    [
     "Tigecyclin",
@@ -3910,19 +3910,23 @@
   "route": "ERSTLINIE I.V.",
   "f": [
    [
-    "Piperacillin/Tazobactam",
-    "4,5 g i.v. alle 6-8 h (C. koseri)"
-   ],
-   [
-    "Meropenem",
-    "1-2 g i.v. alle 8 h (C. freundii / schwer)"
+    "Cefepim",
+    "2 g i.v. alle 8 h - C. freundii bevorzugt (moderates AmpC-Risiko, IDSA 2026), bei EUCAST S oder I und ohne ESBL"
    ],
    [
     "Ceftriaxon",
-    "2 g i.v. 1x/d - nur C. koseri wenn sensibel"
+    "2 g i.v. 1x/d - nur C. koseri, wenn sensibel"
+   ],
+   [
+    "Meropenem",
+    "1-2 g i.v. alle 8 h - Cefepim-Resistenz / ESBL / schwer"
    ]
   ],
   "a": [
+   [
+    "Piperacillin/Tazobactam",
+    "4,5 g i.v. alle 6-8 h - C. koseri; bei C. freundii nicht für invasive Infektionen"
+   ],
    [
     "Ciprofloxacin",
     "400 mg i.v. alle 8-12 h"
@@ -3934,10 +3938,6 @@
    [
     "Ertapenem",
     "1 g i.v. 1x/d"
-   ],
-   [
-    "Cefepim",
-    "2 g i.v. alle 8 h (C. freundii, AmpC-stabil, wenn sensibel und keine ESBL)"
    ]
   ],
   "o": [
@@ -3956,7 +3956,7 @@
   ],
   "olabel": "",
   "dur": "HWI 7-10 Tage - Bakteriämie 7-14 Tage - C. koseri ZNS-Abszess Neonaten 4-6 Wo.",
-  "note": "C. freundii: AmpC -> Cephalosporin-3 kann unter Therapie versagen - C. koseri: ZNS-Abszesse bei Neonaten",
+  "note": "C. freundii: induzierbare AmpC (IDSA 2026: moderates Risiko) -> Ceftriaxon/Cefotaxim/Ceftazidim und Piperacillin/Tazobactam bei invasiven Infektionen meiden, Cefepim bevorzugt - C. koseri: kein relevantes AmpC-Risiko, ZNS-Abszesse bei Neonaten",
   "pi": "Gram-negative PJI: | C. freundii: cave AmpC - Carbapeneme bevorzugt | IV: Meropenem/Ertapenem -> Oral: Ciprofloxacin 750 mg alle 12 h | C. koseri: Ceftriaxon möglich (wenn sensibel) | -> Oral: Ciprofloxacin 750 mg alle 12 h | Dauer: 3 Monate",
   "pig": {
    "head": "Gram-negative PJI",
@@ -4464,16 +4464,16 @@
   "route": "ERSTLINIE I.V.",
   "f": [
    [
+    "Cefiderocol",
+    "2 g i.v. alle 8 h über 3 h - bevorzugt bei invasiver Infektion (IDSA 2026, v. a. In-vitro-/Tierdaten)"
+   ],
+   [
     "TMP/SMX",
-    "5 mg/kg (TMP-Anteil) i.v. alle 8 h - wenn sensibel; bei kritisch Kranken initial in Kombination"
+    "5 mg/kg (TMP-Anteil) i.v. alle 8 h - Alternative, v. a. als Kombinationspartner; wichtigste orale Option"
    ],
    [
     "Levofloxacin [Reserve]",
-    "750 mg i.v. 1x/d"
-   ],
-   [
-    "Cefiderocol",
-    "2 g i.v. alle 8 h über 3 h - bevorzugt bei invasiver Infektion (IDSA 2026)"
+    "750 mg i.v. 1x/d - Alternative als Kombinationspartner"
    ]
   ],
   "a": [
@@ -4513,27 +4513,27 @@
    ]
   ],
   "olabel": "",
-  "dur": "Pneumonie 7-14 Tage - Bakteriämie 14 Tage - CF-Exazerbation 14 Tage - PJI 3-6 Mo.",
-  "note": "IDSA 2026: Cefiderocol-Monotherapie bevorzugt bei invasiver Infektion; Aztreonam/Avibactam (bevorzugt kombiniert) als Alternative; TMP/SMX, Minocyclin, Levofloxacin nach Sensibilität. Kritisch Kranke: initial Kombination, dann Deeskalation. Intrinsisch resistent gegen Carbapeneme (!), die meisten Beta-Laktame und Aminoglykoside.",
+  "dur": "Pneumonie 7-14 Tage - Bakteriämie 14 Tage - CF-Exazerbation 14 Tage - PJI 12 Wo. (PIF-v11-Gesamtdauer)",
+  "note": "IDSA 2026: Cefiderocol-Monotherapie bevorzugt bei invasiver Infektion (Evidenz v. a. In-vitro-/Tierdaten); Aztreonam/Avibactam als Alternative (bevorzugt kombiniert); TMP/SMX, Minocyclin, Levofloxacin als alternative Kombinationspartner nach Sensibilität - Kombination nicht bei jeder invasiven Infektion zwingend. Für die lange orale PJI-Phase bleibt TMP/SMX die praktikabelste Option. Intrinsisch resistent gegen Carbapeneme (!), die meisten Beta-Laktame und Aminoglykoside.",
   "pi": "PJI durch S. maltophilia - intrinsisch carbapenemresistent: | IV-Phase: TMP/SMX 5 mg/kg (TMP) alle 8 h (Mittel der Wahl) | oder Levofloxacin 750 mg 1x/d | Oral-Switch: TMP/SMX 320/1600 mg alle 12 h | oder Levofloxacin 500-750 mg 1x/d | Pro-Implant: Implantatentfernung stark empfohlen | Carbapeneme unwirksam! - Dauer: 3-6 Monate",
   "pig": {
    "head": "PJI durch S. maltophilia - intrinsisch carbapenemresistent",
    "iv": [
-    "IV-Phase: TMP/SMX 5 mg/kg (TMP) alle 8 h (Mittel der Wahl)"
+    "IV-Phase: Cefiderocol 2 g alle 8 h (IDSA 2026 bevorzugt) oder TMP/SMX 5 mg/kg (TMP) alle 8 h, ggf. kombiniert mit Levofloxacin 750 mg 1x/d oder Minocyclin"
    ],
    "bio": [],
    "oral": [
-    "Oral-Switch: TMP/SMX 320/1600 mg alle 12 h"
+    "Oral-Switch: TMP/SMX 320/1600 mg alle 12 h (wenn sensibel); Alternativen Levofloxacin 750 mg 1x/d oder Minocyclin 100-200 mg alle 12 h"
    ],
    "surg": [
     "Pro-Implant: Implantatentfernung stark empfohlen"
    ],
-   "dur": [],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF-v11-Gesamtdauer; keine erregerspezifischen Daten)"
+   ],
    "cave": [],
    "extra": [
-    "oder Levofloxacin 750 mg 1x/d",
-    "oder Levofloxacin 500-750 mg 1x/d",
-    "Carbapeneme unwirksam! - Dauer: 3-6 Monate"
+    "Carbapeneme unwirksam!"
    ]
   },
   "syn": {
@@ -13877,7 +13877,7 @@
   "f": [
    [
     "Cefepim",
-    "2 g i.v. alle 8 h - AmpC-stabil, wenn sensibel und kein ESBL"
+    "2 g i.v. alle 8 h (verlängerte Inf. über 3 h) - bevorzugt bei EUCAST S oder I (MHK ≤4 mg/L) und ohne ESBL; IDSA 2026: Cefepim ≈ Carbapenem"
    ],
    [
     "Meropenem",

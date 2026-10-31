@@ -315,3 +315,16 @@ Salmonella non-typhoid: Osteomyelitis/septische Arthritis (Sichelzellanämie, Im
 Bereits vorhanden und daher nicht neu: Abiotrophia, M. marinum, MAC, M. kansasii, M. xenopi, Tropheryma, Coxiella, Bartonella, Cryptococcus, C. parapsilosis.
 
 Noch nicht direkt belegt: EUCAST-ERP-Spaltenzuordnung für K. aerogenes und Raoultella; exakter MHK-Grenzwert der IDSA-2026-Empfehlung für Cefepim.
+
+## Primärquellen-Prüfung der offenen Punkte (31.10.2026)
+
+| Punkt | Ergebnis | Quelle |
+|---|---|---|
+| Tetanus HTIG 500 IE | bestätigt (500 IE so wirksam wie 3.000–6.000 IE) | CDC Clinical Care of Tetanus |
+| Pivmecillinam | bestätigt (2–3 × 400 mg, 3 Tage) | AkdÄ/ABDA Äquivalenzdosistabelle Zystitis |
+| Bezlotoxumab | bestätigt (Marktrücknahme 31.01.2025) | Antimicrob Steward Healthc Epidemiol 2025 |
+| EUCAST Cotrimoxazol Staphylokokken | bestätigt (S ≤0,5 / R >0,5 mg/L, Änderung in v16.0) | EUCAST v16.0/16.1 Changes |
+| K. aerogenes Cefepim | korrigiert: IDSA 2026 Cefepim bei CLSI S/SDD (MHK ≤8); auf EUCAST übertragen: S oder I (MHK ≤4) mit 2 g alle 8 h | IDSA AMR Guidance 2026; EUCAST v16.1 |
+| E. cloacae | korrigiert: Cefepim vor Meropenem, Piperacillin/Tazobactam aus Erstlinie (nicht für invasive Infektionen) | IDSA AMR Guidance 2026 |
+| Citrobacter freundii | korrigiert: Cefepim in Erstlinie, Pip/Tazo nur C. koseri | IDSA AMR Guidance 2026 |
+| S. maltophilia | korrigiert: Cefiderocol vorrangig, TMP/SMX/Levofloxacin/Minocyclin als Kombinationspartner; PIF-Phasenbox widersprach dem (TMP/SMX „Mittel der Wahl“); doppelte Levofloxacin-Zeilen entfernt; PJI-Dauer 12 Wo. | IDSA AMR Guidance 2026 (Übersicht Infect Drug Resist 2026; Guideline Central) |
