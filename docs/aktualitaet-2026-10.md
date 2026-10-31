@@ -305,3 +305,13 @@ Pro Änderung: Eintrag · Feld · Grund · Quelle · Sicherheit.
 - **a**: Quinupristin/Dalfopristin (Synercid) wurde 2022 vom einzigen Hersteller eingestellt; Tigecyclin als Alternative statt Erstlinie. — _Drugs.com Drug Shortages: 'Pfizer discontinued Synercid in early 2022, no other suppliers' https://www.drugs.com/drug-shortages/dalfopristin-and-quinupristin-injection-823_
 - **pig.iv**: PIF v11 gibt Daptomycin bei Ampicillin-resistenten Enterokokken mit 1x10 mg/kg an. — _PIF Pocket Guide PJI v11 (Tabelle Gezielte Therapie): 'Ampicillin-resistent: Vancomycin oder Daptomycin 1 x 10 mg/kg i.v.'_
 - **o**: PIF v11 begrenzt Linezolid auf max. 4 Wochen. — _PIF Pocket Guide PJI v11 (Tabelle Gezielte Therapie): 'Linezolid (max. 4 Wochen) 2 x 600 mg p.o.'_
+
+## Neue Erreger (13) und Ergänzung Salmonella
+
+Neu aufgenommen (orthopädisch relevant, Evidenzlabel je Eintrag): Klebsiella aerogenes (Leitlinie, IDSA AMR Guidance 07/2026: moderates AmpC-Risiko, Cefepim bevorzugt), Staphylococcus argenteus, S. pettenkoferi (92 % fosfomycinresistent, ESGS 2026), Streptococcus canis, S. equi subsp. zooepidemicus, Corynebacterium amycolatum/tuberculostearicum, Winkia (Actinomyces) neuii, Campylobacter fetus (3.-Gen.-Cephalosporine und Trimethoprim unwirksam), Haemophilus parainfluenzae, Lactococcus garvieae, Trueperella bernardiae, Raoultella ornithinolytica/planticola, M.-smegmatis-Gruppe (M. goodii/wolinskyi).
+
+Salmonella non-typhoid: Osteomyelitis/septische Arthritis (Sichelzellanämie, Immunsuppression) mit Therapie und Dauer ergänzt.
+
+Bereits vorhanden und daher nicht neu: Abiotrophia, M. marinum, MAC, M. kansasii, M. xenopi, Tropheryma, Coxiella, Bartonella, Cryptococcus, C. parapsilosis.
+
+Noch nicht direkt belegt: EUCAST-ERP-Spaltenzuordnung für K. aerogenes und Raoultella; exakter MHK-Grenzwert der IDSA-2026-Empfehlung für Cefepim.

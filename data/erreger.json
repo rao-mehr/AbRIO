@@ -4253,8 +4253,8 @@
    ]
   ],
   "olabel": "",
-  "dur": "GI: meist keine AB - AB-Indikation: 5-7 Tage - Bakteriämie/Immunsuppr. 7-14 Tage - Endovaskulär 6 Wo.",
-  "note": "AB nur bei Immunsuppression, Bakteriämie, Extremalter",
+  "dur": "GI: meist keine AB - AB-Indikation: 5-7 Tage - Bakteriämie/Immunsuppr. 7-14 Tage - Endovaskulär 6 Wo. - Osteomyelitis 4-6 Wo.",
+  "note": "AB nur bei Immunsuppression, Bakteriämie, Extremalter - Osteomyelitis/septische Arthritis v. a. bei Sichelzellanämie, Immunsuppression: Ceftriaxon bzw. Ciprofloxacin nach Antibiogramm, 4-6 Wo.",
   "pi": "",
   "pig": {
    "head": "",
@@ -12536,6 +12536,102 @@
   "lk": "myko"
  },
  {
+  "n": "Mycobacterium goodii / wolinskyi / smegmatis (M.-smegmatis-Gruppe, RGM)",
+  "g": "Mykobakterien",
+  "impl": {
+   "pji": "ja",
+   "dair": "Wechsel bevorz.",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE (Kombination + Chirurgie)",
+  "f": [
+   [
+    "Amikacin",
+    "15 mg/kg i.v. 1x/d (Spiegel) + mind. 1 weiteres aktives Mittel"
+   ],
+   [
+    "Imipenem",
+    "1 g i.v. alle 6-8 h (wenn sensibel; bei M. wolinskyi Resistenz beschrieben)"
+   ]
+  ],
+  "a": [
+   [
+    "Ciprofloxacin / Moxifloxacin",
+    "nach Antibiogramm (M. goodii meist ciprofloxacinsensibel)"
+   ],
+   [
+    "Doxycyclin",
+    "100 mg p.o./i.v. alle 12 h"
+   ],
+   [
+    "Linezolid",
+    "600 mg p.o./i.v. alle 12 h (Toxizität)"
+   ]
+  ],
+  "o": [
+   [
+    "TMP/SMX + Ciprofloxacin (± Doxycyclin)",
+    "320/1600 mg 2x/d + 750 mg 2x/d (± Doxycyclin 100 mg 2x/d) – Fallbericht M. goodii, nur nach Antibiogramm"
+   ],
+   [
+    "Doxycyclin + Moxifloxacin",
+    "100 mg 2x/d + 400 mg 1x/d (M. wolinskyi, Fallserie 6 Wo.)"
+   ]
+  ],
+  "olabel": "Alle Kombinationen nach Antibiogramm",
+  "dur": "Mind. 6 Monate, ≥2 aktive Substanzen, kombiniert mit Débridement/Implantatentfernung",
+  "note": "Schnellwachsende Umweltmykobakterien (Wasser/Erde). Posttraumatisch, postoperativ, Implantat-assoziiert (Ausbruch M. goodii/M. fortuitum nach Gelenkersatz, Oregon 2010-2016; viele Fälle >90 Tage postop.). M. goodii: meist sensibel für TMP/SMX, Amikacin, Ciprofloxacin, Imipenem, Doxycyclin; INTRINSISCH RESISTENT gegen Makrolide und Rifampicin. M. wolinskyi: amikacinsensibel, tobramycinresistent, Doxycyclin/Chinolone oft intermediär. Speziesdiagnose per Sequenzierung, Antibiogramm obligat.",
+  "pig": {
+   "head": "RGM-Implantatinfektion – Implantatentfernung meist erforderlich",
+   "iv": [
+    "Induktion: Amikacin + Imipenem/weiteres aktives Mittel nach Antibiogramm (z. B. Amikacin ~5 Wochen im Fallbericht)"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral: TMP/SMX + Ciprofloxacin ± Doxycyclin (M. goodii) bzw. Doxycyclin + Moxifloxacin (M. wolinskyi) nach Antibiogramm"
+   ],
+   "surg": [
+    "Débridement + Entfernung des Implantats empfohlen (Fallbericht: Ausheilung erst nach Materialentfernung)"
+   ],
+   "dur": [
+    "Dauer: ≥6 Monate mit ≥2 aktiven Substanzen (Diaz 2020)"
+   ],
+   "cave": [
+    "Kein Makrolid, kein Rifampicin (intrinsisch resistent bei M. goodii)",
+    "Keine PIF-Empfehlung; kein lokales Antibiotika-Konzept"
+   ],
+   "extra": [
+    "Mykobakterien-Kultur bei Spät-SSI/Kultur-negativer PJI anfordern (Ausbruchsbericht)"
+   ]
+  },
+  "pi": "",
+  "syn": {},
+  "syns": [
+   "goodii",
+   "m goodii",
+   "m. goodii",
+   "m. smegmatis",
+   "m. wolinskyi",
+   "mycobacterium goodii",
+   "mycobacterium smegmatis",
+   "mycobacterium wolinskyi",
+   "smegmatis",
+   "wolinskyi"
+  ],
+  "w": 1,
+  "det": [
+   "m. goodii",
+   "mycobacterium goodii",
+   "m. wolinskyi",
+   "mycobacterium wolinskyi",
+   "m. smegmatis",
+   "mycobacterium smegmatis"
+  ],
+  "ev": "Fallserien",
+  "lk": "myko",
+  "wu": "Infektiologie obligat. Quelle (OP-Umfeld, Wasser, Trauma) abklären; bei Häufung Krankenhaushygiene informieren."
+ },
+ {
   "n": "Streptococcus suis (Schweine-Zoonose)",
   "g": "Gram-positiv",
   "impl": {
@@ -12865,6 +12961,715 @@
   "lk": "gpos"
  },
  {
+  "n": "Staphylococcus argenteus (S.-aureus-Komplex)",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "ja",
+   "dair": "möglich",
+   "rif": "ja"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Cefazolin",
+    "2 g i.v. alle 8 h (PIF v11 PJI-Primärwahl Staphylokokken)"
+   ],
+   [
+    "Flucloxacillin",
+    "2 g i.v. alle 4-6 h (oxacillinsensibel)"
+   ]
+  ],
+  "a": [
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h -> AUC-Monitoring (oxacillinresistent / β-Laktam-Allergie)"
+   ],
+   [
+    "Daptomycin",
+    "8 mg/kg i.v. 1x/d (PIF v11, oxacillinresistent)"
+   ]
+  ],
+  "o": [
+   [
+    "Rifampicin + Levofloxacin",
+    "450 mg 2x/d + 500 mg 2x/d (PIF v11, Implantat)"
+   ],
+   [
+    "Cefalexin",
+    "500 mg-1 g p.o. alle 6 h (ohne Implantat)"
+   ],
+   [
+    "Cotrimoxazol",
+    "960 mg p.o. 3x/d (nach Antibiogramm)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Wie S. aureus: Bakteriämie ≥14 Tage - Osteomyelitis 4-6 Wo. - PJI 12 Wo. (PIF v11)",
+  "note": "Weißlich pigmentierte Schwesterart von S. aureus (Klon CC2250 am häufigsten), Virulenzfaktoren wie S. aureus -> klinisch WIE S. AUREUS behandeln (Söderquist 2020). Wird leicht übersehen bzw. als S. aureus berichtet. In Europa selten, häufiger in Südostasien/Australien. Sensibilität nach Antibiogramm, beschriebene PJI-Isolate voll sensibel.",
+  "pig": {
+   "head": "Wie S.-aureus-PJI behandeln (PIF-v11-Staphylokokken-Schema)",
+   "iv": [
+    "IV-Phase (PIF v11): Cefazolin 2 g alle 8 h ± Fosfomycin 5 g alle 8 h, 2 Wochen (oxacillinresistent: Daptomycin 8 mg/kg 1x/d oder Vancomycin)"
+   ],
+   "bio": [
+    "Rifampicin: ab Wundtrockenheit 450 mg alle 12 h (>75 J.: 300 mg) - nie vor Prothesen-Wiederaufbau"
+   ],
+   "oral": [
+    "Oral-Switch (je nach Antibiogramm): Rifampicin 450 mg 2x/d + Levofloxacin 500 mg 2x/d",
+    "oder + Cotrimoxazol 960 mg 3x/d / Doxycyclin 100 mg 2x/d / Fusidinsäure 500 mg 3x/d"
+   ],
+   "surg": [
+    "DAIR / Wechsel-OP je nach Zeitfenster (PIF-Algorithmus)"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
+   ],
+   "cave": [
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen"
+   ],
+   "extra": [
+    "Evidenz: Einzelfälle (PJI mit Rezidiv trotz DAIR + biofilmaktiver Therapie -> Suppression); Übertragung des S.-aureus-Schemas laut Autoren"
+   ]
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF v11)"
+  },
+  "syns": [
+   "argenteus",
+   "s argenteus",
+   "s. argenteus",
+   "s. aureus-komplex",
+   "sargenteus",
+   "staph argenteus",
+   "staph. argenteus",
+   "staphylococcus argenteus"
+  ],
+  "w": 1,
+  "det": [
+   "s. argenteus",
+   "staphylococcus argenteus"
+  ],
+  "ev": "Fallbericht",
+  "lk": "staph",
+  "wu": "Wie S. aureus: bei Bakteriämie TEE, Kontroll-Blutkulturen, Fokus-/Metastasensuche."
+ },
+ {
+  "n": "Staphylococcus pettenkoferi",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "ja",
+   "dair": "möglich",
+   "rif": "ja"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h -> AUC-Monitoring (bis Antibiogramm; ~29 % methicillinresistent)"
+   ],
+   [
+    "Cefazolin",
+    "2 g i.v. alle 8 h - nur wenn oxacillin-/cefoxitinsensibel"
+   ]
+  ],
+  "a": [
+   [
+    "Linezolid",
+    "600 mg i.v. alle 12 h"
+   ],
+   [
+    "Teicoplanin",
+    "12 mg/kg i.v. alle 12 h für 3-5 Gaben, dann 12 mg/kg 1x/d (Knochen/Gelenk lt. Fachinfo, Talspiegel)"
+   ]
+  ],
+  "o": [
+   [
+    "Cotrimoxazol + Rifampicin",
+    "960 mg 3x/d + 450 mg 2x/d (Implantat; Isolate >90 % TMP/SMX-sensibel)"
+   ],
+   [
+    "Doxycyclin + Rifampicin",
+    "100 mg 2x/d + 450 mg 2x/d"
+   ],
+   [
+    "Fusidinsäure + Rifampicin",
+    "500 mg 3x/d + 450 mg 2x/d"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Bakteriämie 7-14 Tage - Osteomyelitis 6 Wo. - PJI 12 Wo. (PIF v11)",
+  "note": "Koagulase-negativer Staphylococcus (seit 2002), MALDI-TOF-Identifikation. Meist Kontaminante, aber echte Bakteriämien, Osteomyelitis (v. a. diabetischer Fuß) und PJI beschrieben. ESGS-Genomstudie 2026 (63 europ. Isolate): Fosfomycin fast immer resistent (92 %), Daptomycin-MHK erhöht (MHK90 2 mg/L, z. T. resistent), Cefoxitin-, Erythromycin- und Levofloxacin-Sensibilität <70 %, 35 % multiresistent; hoch sensibel (>90 %) für Vancomycin, Teicoplanin, Dalbavancin, Aminoglykoside, Linezolid/Tedizolid, TMP/SMX, Fusidinsäure, Tetrazyklin.",
+  "pig": {
+   "head": "Staphylokokken-Schema PIF v11 – aber KEIN Fosfomycin (meist resistent)",
+   "iv": [
+    "IV-Phase: oxacillinsensibel Cefazolin 2 g alle 8 h, sonst Vancomycin (Talspiegel/AUC), 2 Wochen – Fosfomycin-Zusatz aus PIF v11 hier ungeeignet"
+   ],
+   "bio": [
+    "Rifampicin: ab Wundtrockenheit 450 mg alle 12 h (>75 J.: 300 mg), Sensibilität prüfen"
+   ],
+   "oral": [
+    "Oral-Switch: Rifampicin + Cotrimoxazol 960 mg 3x/d oder + Doxycyclin 100 mg 2x/d oder + Fusidinsäure 500 mg 3x/d",
+    "Levofloxacin nur bei nachgewiesener Sensibilität (<70 % sensibel)"
+   ],
+   "surg": [
+    "DAIR / Wechsel-OP je nach Zeitfenster (PIF-Algorithmus); Wertung nur bei ≥2 tiefen Proben"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11 – gilt für alle Gelenke)"
+   ],
+   "cave": [
+    "Fosfomycin: 92 % resistent (ESGS 2026)",
+    "Daptomycin: erhöhte MHK, resistente Isolate beschrieben – nicht empirisch",
+    "EUCAST v16 (ab 01/2026): Cotrimoxazol-Breakpoint für Staphylokokken auf S ≤0,5 / R >0,5 mg/L gesenkt (vorher 2/4) – Sensibilität am aktuellen Antibiogramm bestätigen"
+   ],
+   "extra": [
+    "Evidenz: erster PJI-Fallbericht 2022; Resistenzdaten aus ESGS-PETTENK-OS-Studie 2026"
+   ]
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF v11)"
+  },
+  "syns": [
+   "pettenkoferi",
+   "s pettenkoferi",
+   "s. pettenkoferi",
+   "spettenkoferi",
+   "staph pettenkoferi",
+   "staph. pettenkoferi",
+   "staphylococcus pettenkoferi"
+  ],
+  "w": 1,
+  "det": [
+   "s. pettenkoferi",
+   "staphylococcus pettenkoferi"
+  ],
+  "ev": "Fallbericht",
+  "lk": "mrs",
+  "wu": "Meist Kontaminante – echte Infektion nur bei mehrfachem Nachweis + Klinik/Fremdmaterial. Diabetischer Fuß: Osteomyelitis abklären."
+ },
+ {
+  "n": "Streptococcus canis (Gruppe G, Haustier-Zoonose)",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "ja",
+   "dair": "möglich",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Penicillin G",
+    "5 Mio. IE i.v. alle 6 h (PIF v11: 4 × 5 Mio.)"
+   ],
+   [
+    "Ceftriaxon",
+    "2 g i.v. 1x/d"
+   ]
+  ],
+  "a": [
+   [
+    "Ampicillin",
+    "2 g i.v. alle 4-6 h"
+   ],
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h (Penicillin-Allergie Typ 1)"
+   ],
+   [
+    "Cefazolin",
+    "2 g i.v. alle 8 h (Penicillin-Allergie Nicht-Typ 1)"
+   ]
+  ],
+  "o": [
+   [
+    "Amoxicillin",
+    "1 g p.o. alle 8 h (PIF v11)"
+   ],
+   [
+    "Doxycyclin",
+    "100 mg p.o. alle 12 h (wenn sensibel)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Bakteriämie 14 Tage - septische Arthritis 4 Wo. - PJI 12 Wo. (PIF v11)",
+  "note": "β-hämolysierender Streptococcus der Lancefield-Gruppe G, Kommensale von Hunden/Katzen. Hämatogene PJI nach Tierkontakt beschrieben (Tieranamnese!). Therapie wie bei anderen β-hämolysierenden Streptokokken (PIF-Streptokokken-Schema); Antibiogramm.",
+  "pig": {
+   "head": "Hämatogene PJI nach Hunde-/Katzenkontakt",
+   "iv": [
+    "IV-Phase (PIF v11): Penicillin G 5 Mio. IE alle 6 h oder Ceftriaxon 2 g 1x/d, 2-4 Wochen"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral-Switch: Amoxicillin 1 g 3x/d oder Doxycyclin 100 mg 2x/d (ggf. Suppression ≥1 Jahr)"
+   ],
+   "surg": [
+    "DAIR bei akuter hämatogener Infektion + festem Implantat (Fallbericht: rTKA, DAIR + 8 Wo. Ceftriaxon, rezidivfrei nach 1 Jahr)"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF v11)"
+   ],
+   "cave": [],
+   "extra": [
+    "Rifampicin: bei Streptokokken nicht Standard (PIF v11)"
+   ]
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF v11)"
+  },
+  "syns": [
+   "canis",
+   "s canis",
+   "s. canis",
+   "scanis",
+   "strep canis",
+   "strep. canis",
+   "streptococcus canis"
+  ],
+  "w": 1,
+  "det": [
+   "s. canis",
+   "streptococcus canis"
+  ],
+  "ev": "Fallbericht",
+  "lk": "strep",
+  "wu": "Bakteriämie: Endokarditis erwägen; Tierkontakt (Hund/Katze) und Hautläsionen erfragen."
+ },
+ {
+  "n": "Streptococcus equi subsp. zooepidemicus (Gruppe C, Pferde-Zoonose)",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "selten",
+   "dair": "möglich",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Penicillin G",
+    "5 Mio. IE i.v. alle 6 h (PIF: 4 × 5 Mio.)"
+   ],
+   [
+    "Ceftriaxon",
+    "2 g i.v. 1x/d"
+   ]
+  ],
+  "a": [
+   [
+    "Ampicillin",
+    "2 g i.v. alle 4-6 h"
+   ],
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h (Penicillin-Allergie Typ 1)"
+   ]
+  ],
+  "o": [
+   [
+    "Amoxicillin",
+    "1 g p.o. alle 8 h"
+   ],
+   [
+    "Levofloxacin",
+    "500 mg p.o. alle 12 h (wenn sensibel)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Bakteriämie 14 Tage - septische Arthritis 4 Wo. (PIF) - Spondylodiszitis 6 Wo. (PIF) - Endokarditis 4-6 Wo.",
+  "note": "Gruppe-C-Streptococcus, kolonisiert Atemwege/Mundhöhle von Pferden. Seltene invasive Zoonose, meist Bakteriämie, Meningitis oder Pneumonie; Spondylodiszitis und Prothesenklappen-Endokarditis beschrieben. Pferdekontakt erfragen. Fallbericht-Therapie: Ceftriaxon, dann Levofloxacin.",
+  "pig": {
+   "head": "Streptokokken-Schema (PIF)",
+   "iv": [
+    "IV-Phase (PIF SI/SA): Penicillin G 5 Mio. IE alle 6 h oder Ceftriaxon 2 g 1x/d, 2-3 Wochen"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral: Amoxicillin 1 g 3x/d oder Levofloxacin 500 mg 2x/d"
+   ],
+   "surg": [],
+   "dur": [
+    "Spondylodiszitis: 6 Wochen gesamt (PIF SI); Fallbericht: 45 Tage Ceftriaxon i.v. + 10 Tage Levofloxacin p.o."
+   ],
+   "cave": [],
+   "extra": [
+    "Kein PJI-Fallbericht gefunden – PJI nach PIF-v11-Streptokokken-Schema"
+   ]
+  },
+  "pi": "",
+  "syn": {
+   "SI": "Spondylodiszitis 6 Wo. (PIF)",
+   "SA": "Septische Arthritis 4 Wo. (PIF)"
+  },
+  "syns": [
+   "s equi",
+   "s. equi",
+   "s. zooepidemicus",
+   "sequi",
+   "strep zooepidemicus",
+   "streptococcus equi",
+   "streptococcus equi subsp. zooepidemicus",
+   "streptococcus zooepidemicus",
+   "zooepidemicus"
+  ],
+  "w": 1,
+  "det": [
+   "s. zooepidemicus",
+   "streptococcus equi",
+   "zooepidemicus"
+  ],
+  "ev": "Fallbericht",
+  "lk": "strep",
+  "wu": "Bakteriämie: Endokarditis (TEE) und Meningitis ausschließen; Pferdekontakt erfragen."
+ },
+ {
+  "n": "Corynebacterium amycolatum / tuberculostearicum",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "selten",
+   "dair": "erschwert (DTT)",
+   "rif": "bedingt"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h -> AUC-Monitoring (empirisch, bis Antibiogramm)"
+   ]
+  ],
+  "a": [
+   [
+    "Linezolid",
+    "600 mg i.v. alle 12 h"
+   ],
+   [
+    "Penicillin G / Ceftriaxon",
+    "nur bei nachgewiesener Sensibilität"
+   ]
+  ],
+  "o": [
+   [
+    "Linezolid",
+    "600 mg p.o. alle 12 h (max. 4 Wochen, Blutbild)"
+   ],
+   [
+    "Doxycyclin",
+    "100 mg p.o. alle 12 h (wenn sensibel)"
+   ],
+   [
+    "Cotrimoxazol",
+    "960 mg p.o. 2-3x/d (wenn sensibel)"
+   ]
+  ],
+  "olabel": "Oral nur nach Antibiogramm",
+  "dur": "Osteomyelitis 6 Wo. - PJI 12 Wo. (PIF-Gesamtdauer)",
+  "note": "Häufigste Korynebakterien in orthopädischen Proben (Zürich: C. tuberculostearicum n=26, C. amycolatum n=17, C. striatum n=13). Meist Kontaminante – nur 24 % der Fälle mit ≥2 Proben waren echte Infektionen. Resistenzlage sehr variabel (C. amycolatum oft multiresistent), Vancomycin und Linezolid 100 % sensibel -> Antibiogramm obligat.",
+  "pig": {
+   "head": "Wertung nur bei gleichem Erreger in ≥2 tiefen Proben",
+   "iv": [
+    "IV-Phase: Vancomycin (Talspiegel 15-20 mg/L laut PIF) bis Antibiogramm, 2 Wochen"
+   ],
+   "bio": [
+    "Rifampicin: nur bei nachgewiesener Sensibilität als Kombinationspartner, Evidenz fehlt"
+   ],
+   "oral": [
+    "Oral nach Antibiogramm: Doxycyclin, Cotrimoxazol oder Linezolid (max. 4 Wochen)"
+   ],
+   "surg": [],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF-v11-Gesamtdauer, keine erregerspezifischen Daten)"
+   ],
+   "cave": [
+    "Linezolid >4 Wochen: Myelosuppression, Neuropathie"
+   ],
+   "extra": [
+    "Kein eigenes PIF-Schema für Korynebakterien"
+   ]
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF-Gesamtdauer)"
+  },
+  "syns": [
+   "amycolatum",
+   "c amycolatum",
+   "c tuberculostearicum",
+   "c. amycolatum",
+   "c. tuberculostearicum",
+   "corynebacterium amycolatum",
+   "corynebacterium tuberculostearicum",
+   "tuberculostearicum"
+  ],
+  "w": 1,
+  "det": [
+   "c. amycolatum",
+   "corynebacterium amycolatum",
+   "c. tuberculostearicum",
+   "corynebacterium tuberculostearicum"
+  ],
+  "ev": "Fallserien",
+  "lk": "gpos",
+  "wu": "Meist Kontaminante (Hautflora) – Infektion nur bei Nachweis in ≥2 Proben + Klinik. Bei Bakteriämie: Fremdmaterial/Kunstklappe prüfen."
+ },
+ {
+  "n": "Winkia neuii (früher: Actinomyces neuii)",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "selten",
+   "dair": "erschwert (DTT)",
+   "rif": "bedingt"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Penicillin G",
+    "5 Mio. IE i.v. alle 6 h"
+   ],
+   [
+    "Ceftriaxon",
+    "2 g i.v. 1x/d"
+   ]
+  ],
+  "a": [
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h (Allergie)"
+   ],
+   [
+    "Ampicillin",
+    "2 g i.v. alle 6 h"
+   ]
+  ],
+  "o": [
+   [
+    "Amoxicillin",
+    "1 g p.o. alle 8 h"
+   ],
+   [
+    "Doxycyclin",
+    "100 mg p.o. alle 12 h (wenn sensibel)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Vertebrale Osteomyelitis: i.v. Ceftriaxon, dann längere orale Therapie (Fallbericht) - PJI 12 Wo. (PIF-Gesamtdauer)",
+  "note": "Fakultativ anaerobes, grampositives Stäbchen, phylogenetisch von Actinomyces abgegrenzt. Beschrieben: Hüft-PJI, vertebrale Osteomyelitis (Diabetiker), Endokarditis. In Fallberichten erfolgreich mit β-Laktamen (Penicillin/Amoxicillin, Ceftriaxon) behandelt. In älteren Befunden als Actinomyces neuii geführt.",
+  "pig": {
+   "head": "Seltener PJI-Erreger – β-Laktam-Therapie",
+   "iv": [
+    "IV-Phase: Penicillin G 5 Mio. IE alle 6 h oder Ceftriaxon 2 g 1x/d, ca. 2 Wochen (Fallbericht Hüft-PJI: Vancomycin + Penicillin 2 Wochen)"
+   ],
+   "bio": [
+    "Rifampicin: PIF v11 optional für grampositive Anaerobier (wenig Daten) – für Winkia keine Daten"
+   ],
+   "oral": [
+    "Oral: Amoxicillin 1 g 3x/d (Fallbericht), Alternative Doxycyclin nach Antibiogramm"
+   ],
+   "surg": [],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF-v11-Gesamtdauer, keine erregerspezifischen Daten)"
+   ],
+   "cave": [],
+   "extra": []
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF-Gesamtdauer)"
+  },
+  "syns": [
+   "a neuii",
+   "a. neuii",
+   "actinomyces neuii",
+   "neuii",
+   "w neuii",
+   "w. neuii",
+   "winkia neuii"
+  ],
+  "w": 1,
+  "det": [
+   "winkia neuii",
+   "actinomyces neuii",
+   "a. neuii",
+   "w. neuii"
+  ],
+  "ev": "Fallbericht",
+  "lk": "apos",
+  "wu": "Bakteriämie: Endokarditis (auch Rechtsherz) ausschließen."
+ },
+ {
+  "n": "Lactococcus garvieae (Fisch-Zoonose)",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "selten",
+   "dair": "Wechsel bevorz.",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Penicillin G",
+    "5 Mio. IE i.v. alle 6 h (Mittel der Wahl bei Lactococcus)"
+   ],
+   [
+    "Ampicillin",
+    "2 g i.v. alle 4-6 h"
+   ]
+  ],
+  "a": [
+   [
+    "Ceftriaxon",
+    "2 g i.v. 1x/d (nach Antibiogramm)"
+   ],
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h (Allergie; keine Vancomycin-Resistenz bekannt)"
+   ]
+  ],
+  "o": [
+   [
+    "Amoxicillin",
+    "1 g p.o. alle 8 h"
+   ],
+   [
+    "Cotrimoxazol",
+    "960 mg p.o. alle 8-12 h (nach Antibiogramm)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Endokarditis 4-6 Wo. - PJI 12 Wo. (PIF-Gesamtdauer)",
+  "note": "Katalase-negativer grampositiver Kokkus (Fischpathogen; Assoziation mit Rohfisch, PJI aber auch ohne Exposition beschrieben); MALDI-TOF-Identifikation. Hauptmanifestation Endokarditis. Regelhaft CLINDAMYCIN-RESISTENT (Unterscheidungsmerkmal zu L. lactis, Elliott & Facklam 1996) -> kein Clindamycin ohne Testung. Penicillin Mittel der Wahl; Therapie nach Antibiogramm.",
+  "pig": {
+   "head": "Seltener PJI-Erreger – kein Clindamycin",
+   "iv": [
+    "IV-Phase: Penicillin G 5 Mio. IE alle 6 h oder Ampicillin 2 g alle 4-6 h, 2-4 Wochen (Übertragung PIF-Streptokokken-Schema, für Lactococcus nicht validiert)"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral: Amoxicillin 1 g 3x/d"
+   ],
+   "surg": [
+    "Einzelfälle: zweizeitiger Wechsel erfolgreich (Hüft-PJI); keine DAIR-Daten"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF-v11-Gesamtdauer, keine erregerspezifischen Daten)"
+   ],
+   "cave": [
+    "Clindamycin: regelhaft resistent"
+   ],
+   "extra": []
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF-Gesamtdauer)"
+  },
+  "syns": [
+   "garvieae",
+   "l garvieae",
+   "l. garvieae",
+   "lactococcus",
+   "lactococcus garvieae",
+   "lgarvieae"
+  ],
+  "w": 1,
+  "det": [
+   "l. garvieae",
+   "lactococcus garvieae"
+  ],
+  "ev": "Fallbericht",
+  "lk": "gpos",
+  "wu": "Bei Bakteriämie: TEE (Endokarditis häufigste Manifestation)."
+ },
+ {
+  "n": "Trueperella bernardiae (früher: Arcanobacterium bernardiae)",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "selten",
+   "dair": "möglich",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Ceftriaxon",
+    "2 g i.v. 1x/d"
+   ],
+   [
+    "Penicillin G",
+    "5 Mio. IE i.v. alle 6 h"
+   ]
+  ],
+  "a": [
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. alle 8-12 h (Allergie)"
+   ],
+   [
+    "Amoxicillin/Clavulansäure",
+    "2,2 g i.v. alle 8 h"
+   ]
+  ],
+  "o": [
+   [
+    "Amoxicillin",
+    "1 g p.o. alle 8 h"
+   ],
+   [
+    "Cefadroxil",
+    "500 mg-1 g p.o. 2x/d (Langzeitsuppression, Fallbericht)"
+   ],
+   [
+    "Clindamycin",
+    "300-450 mg p.o. alle 8 h (wenn sensibel)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Haut/Weichteil 7-14 Tage - Osteomyelitis 4-6 Wo. - PJI: Fallbericht 6 Wo. Ceftriaxon + Suppression",
+  "note": "Koryneformer grampositiver Kokkobazillus der Hautflora, oft polymikrobiell (Druckulzera, diabetischer Fuß). Sensibel für β-Laktame, Clindamycin, Vancomycin; Resistenz gegen Ciprofloxacin, Aminoglykoside und Metronidazol berichtet. Wächst schlecht auf Platten -> falsch-negative Kulturen möglich.",
+  "pig": {
+   "head": "Seltener PJI-Erreger (Hautflora)",
+   "iv": [
+    "IV-Phase: Ceftriaxon 2 g 1x/d (Fallbericht Hüft-PJI: 6 Wochen nach Débridement + Vancomycin-Kalziumsulfat-Beads)"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral: Amoxicillin; Suppression mit Cefadroxil 1-2 Jahre (Fallbericht)"
+   ],
+   "surg": [
+    "Débridement mit Implantaterhalt + lokale Antibiotika beschrieben (rezidivfrei)"
+   ],
+   "dur": [
+    "Dauer: PIF-v11-Gesamtdauer 12 Wochen; keine erregerspezifischen Daten"
+   ],
+   "cave": [
+    "Ciprofloxacin, Aminoglykoside, Metronidazol: Resistenz berichtet"
+   ],
+   "extra": []
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF-Gesamtdauer)"
+  },
+  "syns": [
+   "a. bernardiae",
+   "arcanobacterium bernardiae",
+   "bernardiae",
+   "t bernardiae",
+   "t. bernardiae",
+   "tbernardiae",
+   "trueperella",
+   "trueperella bernardiae"
+  ],
+  "w": 1,
+  "det": [
+   "t. bernardiae",
+   "trueperella bernardiae",
+   "arcanobacterium bernardiae"
+  ],
+  "ev": "Fallbericht",
+  "lk": "gpos",
+  "wu": "Häufig polymikrobiell – Begleiterreger mitbehandeln; Druckulkus/Weichteilfokus sanieren."
+ },
+ {
   "n": "Pantoea agglomerans (Pflanzendorn-Arthritis)",
   "g": "Gram-negativ",
   "impl": {
@@ -13059,6 +13864,378 @@
   "pi": "",
   "w": 1,
   "lk": "nf"
+ },
+ {
+  "n": "Klebsiella aerogenes (früher: Enterobacter aerogenes)",
+  "g": "Gram-negativ",
+  "impl": {
+   "pji": "ja",
+   "dair": "möglich",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Cefepim",
+    "2 g i.v. alle 8 h - AmpC-stabil, wenn sensibel und kein ESBL"
+   ],
+   [
+    "Meropenem",
+    "1-2 g i.v. alle 8 h - schwerer Verlauf / Cefepim-R / ESBL"
+   ]
+  ],
+  "a": [
+   [
+    "Ertapenem",
+    "1 g i.v. 1x/d (wenn sensibel)"
+   ],
+   [
+    "Ciprofloxacin",
+    "400 mg i.v. alle 8-12 h (wenn sensibel)"
+   ],
+   [
+    "TMP/SMX",
+    "160/800 mg i.v. alle 8-12 h (wenn sensibel)"
+   ]
+  ],
+  "o": [
+   [
+    "Ciprofloxacin",
+    "750 mg p.o. alle 12 h (Knochen/Implantat, PIF-Dosis)"
+   ],
+   [
+    "Levofloxacin",
+    "750 mg p.o. 1x/d"
+   ],
+   [
+    "TMP/SMX",
+    "160/800 mg p.o. alle 8-12 h"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Bakteriämie 7-14 Tage - Osteomyelitis/septische Arthritis 4-6 Wo. - PJI 12 Wo. (PIF v11)",
+  "note": "Chromosomale, induzierbare AmpC (IDSA: moderates Risiko für klinisch relevante AmpC-Derepression, wie E. cloacae-Komplex und C. freundii) -> Ceftriaxon/Cefotaxim/Ceftazidim und Piperacillin/Tazobactam bei invasiven Infektionen NICHT empfohlen, auch wenn initial sensibel getestet. Erwartete Resistenz (EUCAST Expected Resistant Phenotypes): Aminopenicilline ± Inhibitor, Cephalosporine der 1. Generation, Cefoxitin. IDSA führt auch Hafnia alvei als AmpC-Erreger mit moderatem Risiko. Fluorchinolone und TMP/SMX sind keine AmpC-Substrate -> Oral-Step-down bei Sensibilität.",
+  "pig": {
+   "head": "AmpC-Erreger: Cephalosporine 1-3 und Pip/Tazo meiden",
+   "iv": [
+    "IV-Phase: Cefepim 2 g alle 8 h oder Meropenem 1-2 g alle 8 h, ca. 2 Wochen (Abweichung von PIF v11, dort Ceftriaxon/Pip-Tazo in den ersten Tagen möglich – wegen AmpC hier nicht empfohlen)"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral-Switch (PIF v11 Enterobacterales): Ciprofloxacin 750 mg 2x/d (wenn sensibel)",
+    "oder TMP/SMX nach Antibiogramm"
+   ],
+   "surg": [
+    "DAIR / Wechsel-OP je nach Zeitfenster (PIF-Algorithmus)",
+    "Ciprofloxacin-resistent: Infektiologie, ggf. Implantatentfernung/Suppression (PIF v11)"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF v11)"
+   ],
+   "cave": [
+    "Resistenzentwicklung unter Cephalosporin-Therapie (AmpC-Derepression) – Kontrollkulturen"
+   ],
+   "extra": [
+    "IDSA AMR Guidance 2026 (Tamma et al.): Cefepim bevorzugt bei moderatem AmpC-Risiko, sofern kein ESBL"
+   ]
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF v11)"
+  },
+  "syns": [
+   "aerogenes",
+   "e aerogenes",
+   "e. aerogenes",
+   "enterobacter aerogenes",
+   "k aerogenes",
+   "k. aerogenes",
+   "kaerogenes",
+   "klebsiella aerogenes"
+  ],
+  "w": 2,
+  "det": [
+   "k. aerogenes",
+   "klebsiella aerogenes",
+   "e. aerogenes",
+   "enterobacter aerogenes"
+  ],
+  "ev": "Leitlinie",
+  "lk": "gn",
+  "wu": "AmpC-Erreger: bei Therapieversagen unter Cephalosporin erneute Kultur + Antibiogramm (Derepression). Bakteriämie: Fokus (Harnwege, Abdomen, Katheter) suchen."
+ },
+ {
+  "n": "Campylobacter fetus (invasiv / Bakteriämie)",
+  "g": "Gram-negativ",
+  "impl": {
+   "pji": "selten",
+   "dair": "erschwert (DTT)",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V. (Kombination bei schwer)",
+  "f": [
+   [
+    "Amoxicillin/Clavulansäure",
+    "2,2 g i.v. alle 8 h (+ Gentamicin initial)"
+   ],
+   [
+    "Imipenem",
+    "1 g i.v. alle 6-8 h (+ Gentamicin initial)"
+   ],
+   [
+    "Meropenem",
+    "1-2 g i.v. alle 8 h"
+   ]
+  ],
+  "a": [
+   [
+    "Gentamicin",
+    "5 mg/kg i.v. 1x/d (Spiegel) - nur initialer Kombinationspartner"
+   ],
+   [
+    "Ampicillin",
+    "2 g i.v. alle 4-6 h (wenn sensibel)"
+   ]
+  ],
+  "o": [
+   [
+    "Amoxicillin/Clavulansäure",
+    "875/125 mg p.o. alle 8 h (wenn sensibel)"
+   ],
+   [
+    "Ciprofloxacin",
+    "750 mg p.o. alle 12 h - nur bei nachgewiesener Sensibilität (~33 % resistent)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Bakteriämie: keine Standarddauer, nach Fokus - PJI 12 Wo. (PIF-Gesamtdauer)",
+  "note": "Zoonose (Nutztiere), betrifft v. a. Ältere/Immunsupprimierte; invasive Infektionen: Bakteriämie, Endokarditis (auch Prothesenklappe), septische Arthritis, PJI (oft Fistel, verzögerte Diagnose). Laut Zayet 2023 natürlich resistent gegen Cephalosporine der 3. Generation (Ceftriaxon ungeeignet; in EUCAST-ERP nicht gelistet – Antibiogramm). EUCAST ERP: erwartet resistent gegen Trimethoprim (-> kein Cotrimoxazol), Fusidinsäure, Streptogramine, Nalidixinsäure. Bakteriämie-Isolate Frankreich 2000-2021: Fluorchinolon-R 33 %, Amoxicillin-R und Azithromycin-R je 10 %, keine Resistenz gegen Amoxicillin/Clavulansäure, Imipenem, Gentamicin; initiale Amoxicillin/Clavulansäure und duale Initialtherapie mit geringerer 30-Tage-Mortalität assoziiert.",
+  "pig": {
+   "head": "Seltener PJI-Erreger – Ceftriaxon unwirksam!",
+   "iv": [
+    "IV-Phase: Amoxicillin/Clavulansäure 2,2 g alle 8 h oder Imipenem/Meropenem, initial + Gentamicin, ca. 2 Wochen"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral nach Antibiogramm: Amoxicillin/Clavulansäure oder Ciprofloxacin 750 mg 2x/d (nur wenn sensibel)"
+   ],
+   "surg": [
+    "DAIR / Wechsel-OP nach PIF-Algorithmus; bei Fluorchinolon-Resistenz kein biofilmaktiver Oralpartner -> Wechsel erwägen"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF-v11-Gesamtdauer, keine erregerspezifischen Daten)"
+   ],
+   "cave": [
+    "Keine Cephalosporine der 3. Generation (intrinsisch resistent)",
+    "Fluorchinolon-Resistenz ~33 % – Antibiogramm abwarten",
+    "Trimethoprim erwartet resistent (EUCAST ERP) – Cotrimoxazol ungeeignet"
+   ],
+   "extra": [
+    "PJI: Fallbericht + Literaturübersicht 3 Jahrzehnte (Hunkár 2026)"
+   ]
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF-Gesamtdauer)"
+  },
+  "syns": [
+   "c fetus",
+   "c. fetus",
+   "campy fetus",
+   "campy. fetus",
+   "campylobacter fetus",
+   "cfetus",
+   "fetus"
+  ],
+  "w": 1,
+  "det": [
+   "c. fetus",
+   "campylobacter fetus"
+  ],
+  "ev": "Fallserien",
+  "lk": "gn",
+  "wu": "Bei Bakteriämie: Endokarditis (TEE) ausschließen, Gefäßinfektion bedenken; Immunstatus prüfen."
+ },
+ {
+  "n": "Haemophilus parainfluenzae",
+  "g": "Gram-negativ",
+  "impl": {
+   "pji": "selten",
+   "dair": "möglich",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Ceftriaxon",
+    "2 g i.v. 1x/d"
+   ]
+  ],
+  "a": [
+   [
+    "Amoxicillin/Clavulansäure",
+    "2,2 g i.v. alle 8 h (wenn sensibel)"
+   ],
+   [
+    "Ciprofloxacin",
+    "400 mg i.v. alle 12 h"
+   ],
+   [
+    "Meropenem",
+    "1 g i.v. alle 8 h (Reserve)"
+   ]
+  ],
+  "o": [
+   [
+    "Ciprofloxacin",
+    "500-750 mg p.o. alle 12 h"
+   ],
+   [
+    "Cotrimoxazol",
+    "960 mg p.o. alle 8 h (wenn sensibel)"
+   ],
+   [
+    "Amoxicillin/Clavulansäure",
+    "875/125 mg p.o. alle 8 h (wenn sensibel)"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Bakteriämie 7-14 Tage - Endokarditis 4 Wo. (HACEK) - PJI 12 Wo. (PIF v11; Fallberichte teils länger)",
+  "note": "Oropharyngeale Kommensale, gehört zu den Haemophilus spp. der HACEK-Gruppe (Endokarditis!). Penicillin-/Cephalosporin-Resistenz oft β-Laktamase-vermittelt, Carbapeneme und Chinolone meist wirksam, Clarithromycin-R in Spanien >22 %. PJI sehr selten (5 publizierte Fälle, 4 geheilt, 1 chronisch).",
+  "pig": {
+   "head": "Seltener PJI-Erreger (oraler Fokus?)",
+   "iv": [
+    "IV-Phase: Ceftriaxon 2 g 1x/d (Fallbericht: + Ciprofloxacin 400 mg 2x/d, 7 Tage)"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral: Ciprofloxacin 500 mg 2x/d + Cotrimoxazol 800/160 mg 3x/d (Fallbericht, 6 Monate gesamt)",
+    "Alternativ Amoxicillin bzw. Amoxicillin/Clavulansäure nach Antibiogramm"
+   ],
+   "surg": [
+    "DAIR mit Inlaywechsel erfolgreich beschrieben (3 Jahre rezidivfrei); in älteren Fällen zweizeitiger Wechsel"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF v11); Fallberichte teils 3-10 Monate"
+   ],
+   "cave": [
+    "Ampicillin-Resistenz (β-Laktamase) häufig – Antibiogramm abwarten"
+   ],
+   "extra": []
+  },
+  "pi": "",
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF) / Fallberichte 3-6 Mo."
+  },
+  "syns": [
+   "h parainfluenzae",
+   "h. parainfluenzae",
+   "haemo parainfluenzae",
+   "haemo. parainfluenzae",
+   "haemophilus parainfluenzae",
+   "hparainfluenzae",
+   "parainfluenzae"
+  ],
+  "w": 1,
+  "det": [
+   "h. parainfluenzae",
+   "haemophilus parainfluenzae"
+  ],
+  "ev": "Fallbericht",
+  "lk": "gn",
+  "wu": "Bei Bakteriämie: Endokarditis (TEE) ausschließen, Zahnstatus als Fokus prüfen."
+ },
+ {
+  "n": "Raoultella ornithinolytica / planticola",
+  "g": "Gram-negativ",
+  "impl": {
+   "pji": "selten",
+   "dair": "möglich",
+   "rif": "nein"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Ceftriaxon",
+    "2 g i.v. 1x/d (wenn sensibel)"
+   ],
+   [
+    "Cefepim",
+    "2 g i.v. alle 8 h"
+   ]
+  ],
+  "a": [
+   [
+    "Meropenem",
+    "1 g i.v. alle 8 h (bei ESBL nach Antibiogramm)"
+   ],
+   [
+    "Ciprofloxacin",
+    "400 mg i.v. alle 8-12 h"
+   ],
+   [
+    "Piperacillin/Tazobactam",
+    "4,5 g i.v. alle 6-8 h"
+   ]
+  ],
+  "o": [
+   [
+    "Ciprofloxacin",
+    "750 mg p.o. alle 12 h (PIF Enterobacterales)"
+   ],
+   [
+    "TMP/SMX",
+    "160/800 mg p.o. alle 8-12 h"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Bakteriämie 7-14 Tage - Osteomyelitis/FRI 6-12 Wo. (PIF FRI: 12 Wo. bei Implantat)",
+  "note": "Klebsiella-nahe Enterobacterales (Umwelt/Wasser). Aminopenicilline erwartungsgemäß resistent (EUCAST Expected Resistant Phenotypes v1.2: Raoultella spp.) -> kein Ampicillin/Amoxicillin. Sonst Behandlung wie Klebsiella/Enterobacterales nach Antibiogramm. Beschrieben: posttraumatische Patella-Osteomyelitis nach ORIF (FRI), Kieferosteomyelitis.",
+  "pig": {
+   "head": "Wie Klebsiella / Enterobacterales (PIF)",
+   "iv": [
+    "IV-Phase: Ceftriaxon 2 g 1x/d oder nach Antibiogramm, initial bis Wundtrockenheit"
+   ],
+   "bio": [],
+   "oral": [
+    "Oral-Switch (PIF Enterobacterales): Ciprofloxacin 750 mg 2x/d (wenn sensibel)"
+   ],
+   "surg": [
+    "FRI: Débridement (Fallbericht posttraumatische Patella-Osteomyelitis nach ORIF)"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt (PIF v11)"
+   ],
+   "cave": [
+    "Ampicillin/Amoxicillin intrinsisch unwirksam"
+   ],
+   "extra": []
+  },
+  "pi": "",
+  "syn": {
+   "FRI": "FRI 12 Wochen (PIF)",
+   "PJI": "PJI 12 Wochen (PIF v11)"
+  },
+  "syns": [
+   "ornithinolytica",
+   "planticola",
+   "r ornithinolytica",
+   "r. ornithinolytica",
+   "r. planticola",
+   "raoultella",
+   "raoultella ornithinolytica",
+   "raoultella planticola"
+  ],
+  "w": 1,
+  "det": [
+   "raoultella",
+   "r. ornithinolytica",
+   "r. planticola",
+   "raoultella ornithinolytica",
+   "raoultella planticola"
+  ],
+  "ev": "Fallbericht",
+  "lk": "gn"
  },
  {
   "n": "Clostridium septicum (spontaner Gasbrand)",
