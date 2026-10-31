@@ -329,3 +329,51 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 .lok-kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin-top:8px;align-items:baseline}
 .lok-k{font:700 9.5px var(--mono);letter-spacing:.5px;text-transform:uppercase;color:var(--tx2)}
 .lok-v{font:400 13.5px var(--sans);line-height:1.4}
+/* ---------- EINSTELLUNGEN ---------- */
+.setl{padding:2px 0}
+.set-r{padding:12px 14px}
+.set-r+.set-r{border-top:.5px solid var(--bd2)}
+.set-t{font:600 14px var(--sans)}
+.set-h{font:400 12px var(--sans);color:var(--tx2);margin-top:2px}
+.set-seg{margin:8px 0 0}
+.set-btn{display:flex;justify-content:space-between;width:100%;background:none;border:0;padding:13px 16px;font:400 15px var(--sans);color:var(--teal);text-align:left;cursor:pointer;min-height:44px}
+.set-btn+.set-btn{border-top:.5px solid var(--bd2)}
+.set-btn span{color:var(--tx2)}
+.set-btn:focus-visible{outline:2px solid var(--teal);outline-offset:-2px}
+/* ---------- KLASSEN (neu) ---------- */
+.kl{display:grid;grid-template-columns:104px minmax(0,1fr);gap:10px;padding:0 12px 0 calc(10px + env(safe-area-inset-left))}
+.kl-side{position:sticky;top:calc(env(safe-area-inset-top) + 100px);align-self:start;max-height:calc(100vh - 200px);overflow-y:auto;padding-bottom:12px;-webkit-overflow-scrolling:touch}
+.kl-g{font:700 9.5px var(--mono);letter-spacing:.4px;text-transform:uppercase;color:var(--tx2);margin:12px 4px 4px}
+.kl-g:first-child{margin-top:2px}
+.kl-c{display:block;width:100%;overflow-wrap:anywhere;hyphens:auto;text-align:left;background:none;border:0;border-radius:8px;padding:7px 8px;font:500 12.5px var(--sans);color:var(--tx);line-height:1.2;cursor:pointer;min-height:34px}
+.kl-c.on{background:var(--teal);color:var(--on-tx);font-weight:600}
+.kl-c:not(.on):active{background:var(--fill)}
+.kl-c:focus-visible,.kc-cmp:focus-visible,.kc-hits:focus-visible{outline:2px solid var(--teal);outline-offset:1px}
+.kl-main{min-width:0;padding-bottom:70px}
+.kl-t{font:700 19px var(--sans);letter-spacing:-.3px;color:var(--head);margin:2px 2px 10px}
+.kl-t span{font:400 13px var(--sans);color:var(--tx2);margin-left:4px}
+.kc{background:var(--card);border-radius:12px;padding:11px 12px;margin-bottom:9px;border:1.5px solid transparent}
+.kc.sel{border-color:var(--teal)}
+.kc-h{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.kc-n{font:700 15px var(--sans);letter-spacing:-.2px;flex:1 1 auto;min-width:0}
+.kc-n .tag{margin-left:0}
+.kc-cls{font:400 11.5px var(--sans);color:var(--tx2);margin-top:1px}
+.kc-cmp{margin-left:auto;background:var(--fill);border:0;border-radius:99px;padding:4px 9px;font:600 11px var(--sans);color:var(--teal);cursor:pointer;white-space:nowrap}
+.kc.sel .kc-cmp{background:var(--teal);color:var(--on-tx)}
+.kc-r{display:grid;grid-template-columns:62px minmax(0,1fr);gap:8px;padding:6px 0 0;margin-top:6px;border-top:.5px solid var(--bd2)}
+.kc-k{font:700 9.5px var(--mono);letter-spacing:.3px;text-transform:uppercase;color:var(--tx2);padding-top:2px}
+.kc-v{font:400 13px var(--sans);line-height:1.4}
+.kc-hits{display:block;width:100%;text-align:left;background:none;border:0;border-top:.5px solid var(--bd2);margin-top:8px;padding:9px 0 2px;font:600 12.5px var(--sans);color:var(--teal);cursor:pointer}
+.kc .cls-match{border-top:0;margin-top:2px;padding-top:2px}
+.cls-match-row{width:100%;background:none;border:0;text-align:left;font:inherit;color:inherit}
+.kl-bar{position:fixed;left:12px;right:12px;bottom:calc(60px + env(safe-area-inset-bottom));z-index:65;max-width:456px;margin:0 auto;display:flex;align-items:center;gap:10px;background:var(--card);border-radius:14px;padding:8px 8px 8px 14px;box-shadow:0 6px 24px rgba(0,0,0,.18);font:400 14px var(--sans)}
+.kl-bar span{flex:1}
+.kl-bar-x{background:none;border:0;color:var(--tx2);font:400 14px var(--sans);cursor:pointer}
+.fdone[disabled]{opacity:.45}
+.cmp{margin:4px 16px 70px}
+.cmp-head{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;position:sticky;top:calc(env(safe-area-inset-top) + 100px);background:var(--bg);padding:6px 0;z-index:5}
+.cmp-head>span{display:none}
+.cmp-head b{font:700 14px var(--sans)}
+.cmp-k{font:700 9.5px var(--mono);letter-spacing:.4px;text-transform:uppercase;color:var(--teal);margin:12px 0 4px}
+.cmp-row{display:grid;gap:8px}
+.cmp-row>span{background:var(--card);border-radius:10px;padding:8px 9px;font:400 12.5px var(--sans);line-height:1.4}

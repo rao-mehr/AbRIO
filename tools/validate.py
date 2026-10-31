@@ -109,6 +109,13 @@ def main():
         if lk and lk not in lok["kat"]:
             errors.append(f"[{i}] {e['n']}: unbekannte lk-Kategorie '{lk}'")
 
+    # Substanz-Kurzprofile
+    sub = json.loads((ROOT / "data" / "substanzen.json").read_text(encoding="utf-8"))
+    for name, prof in sub["s"].items():
+        for t in ("sp", "lu", "kn", "bv", "do", "cv"):
+            if t not in prof:
+                errors.append(f"substanzen.json: '{name}' ohne Feld '{t}'")
+
     for n, k in names.items():
         if k > 1:
             errors.append(f"Name doppelt: {n} ({k}x)")

@@ -12,7 +12,16 @@ catch(dbErr){
   return;
 }
 var GCSETS={"light": {"Gram-positiv": "#AF52DE", "Gram-negativ": "#0A84FF", "Anaerobier": "#8E8E93", "Atypisch": "#FF9500", "Mykobakterien": "#FF3B30", "Pilze": "#FF375F", "Multiresistenz-Kategorien": "#FF6B22"}, "dark": {"Gram-positiv": "#BF5AF2", "Gram-negativ": "#0A84FF", "Anaerobier": "#98989D", "Atypisch": "#FF9F0A", "Mykobakterien": "#FF453A", "Pilze": "#FF375F", "Multiresistenz-Kategorien": "#FF9F0A"}};
-var THEME='light';try{THEME=localStorage.getItem('ari_theme')||document.documentElement.dataset.theme||'light';}catch(e){THEME=document.documentElement.dataset.theme||'light';}
+/* ---------- Einstellungen (localStorage, pro Gerät) ---------- */
+var SETDEF={theme:'auto',font:'1',start:'suche',syn:'PJI',vanco:'auc',ebjis:'orig',unit:'mgdl'};
+var SET={};(function(){var s={};try{s=JSON.parse(localStorage.getItem('ari_settings')||'{}')||{};}catch(e){s={};}
+  try{var old=localStorage.getItem('ari_theme');if(old&&!s.theme)s.theme=old==='dark'?'dark':'light';}catch(e){}
+  for(var k in SETDEF)SET[k]=(s[k]!==undefined?s[k]:SETDEF[k]);})();
+function saveSet(){try{localStorage.setItem('ari_settings',JSON.stringify(SET));}catch(e){}}
+var MQD=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+function effTheme(){return SET.theme==='auto'?(MQD&&MQD.matches?'dark':'light'):SET.theme;}
+function applyFont(){document.documentElement.style.zoom=SET.font==='1'?'':SET.font;}
+var THEME=effTheme();
 var GC=GCSETS[THEME];
 var GORDER=['Gram-positiv','Gram-negativ','Anaerobier','Atypisch','Mykobakterien','Pilze','Multiresistenz-Kategorien'];
 var RESERVE=['quinupristin','dalfopristin','colistin','tigecyclin','cefiderocol','aztreonam/avibactam','meropenem/vaborbactam','ceftazidim/avibactam','relebactam','chloramphenicol','minocyclin'];
@@ -231,7 +240,7 @@ function detail(e,syn){CSYN=syn||'PJI';LAST=function(){detail(e,CSYN);};pushRece
     qa='<div class="qa"><div class="qa-row"><span class="qa-k">1. WAHL</span><div class="qa-c">'+drugC+'</div></div>'
       +(durC?'<div class="qa-row"><span class="qa-k">DAUER</span><div class="qa-c">'+durC+'</div></div>':'')+'</div>';}
   h+='<div class="body">'+qa+piPanel(e,CSYN)+'<div class="cols">'+col(e.route||'ERSTLINIE I.V.','var(--teal)',e.f,'')+col('ALTERNATIVEN','var(--alt)',e.a,'')+col('ORAL / STEP-DOWN','var(--oral)',e.o,e.olabel)+'</div>';
-  if(anyRenal(e))h+='<div class="renal-note"><span class="tag tag-ren">Niere</span> Dosis/Intervall nach GFR anpassen (v.a. Vancomycin-Spiegel, Aminoglykoside, Carbapeneme, Azole).</div>';
+  if(anyRenal(e))h+='<div class="renal-note"><span class="tag tag-ren">Niere</span> Dosis/Intervall nach GFR anpassen (v.a. Vancomycin – '+(SET.vanco==='tal'?'Talspiegel 15–20 µg/ml':'AUC 400–600 mg·h/l')+', Aminoglykoside, Carbapeneme, Azole).</div>';
   if(e.dur){var db=bulletList(e.dur);
     h+='<div class="row r-dur"><span class="r-k">THERAPIEDAUER</span>'+(e.syn[CSYN]?'<span class="dur-cur">'+esc(e.syn[CSYN])+'</span>':'')
       +(db||'<span class="dur-txt">'+esc(e.dur)+'</span>')+'</div>';}
@@ -307,50 +316,62 @@ function browse(){LAST=browse;go('#/filter');
     else{FILT[dim]=(val===''?null:(FILT[dim]===val?null:val));}
     browse();});});
   v.querySelectorAll('.freset').forEach(function(rst){rst.addEventListener('click',function(){FILT={g:null,pji:null,dair:null,rif:false,pif:false,wu:false};browse();});});
-  v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],'PJI');});});
+  v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],SET.syn);});});
 }
 /*@TOOLS*/
+var SUB={{SUB}};var CLSCMP=[];
+function subOf(d){return SUB.s[d]||null;}
 function classes(){LAST=classes;setActiveTab('Klassen');go('#/klassen');
-  var ROLE={f:['Erstlinie i.v.','var(--teal)'],a:['Alternative','var(--alt)'],o:['Oral','var(--oral)']};
+  var ROLE={f:['Erstlinie','var(--teal)'],a:['Alternative','var(--alt)'],o:['Oral','var(--oral)']};
+  var isAf=CLSSEC==='af',arr=isAf?AFCLASSES:ABCLASSES,sel=isAf?AFSEL:ABSEL;
+  var groups=isAf?[['Antimykotika',AFCLASSES.map(function(c){return c[0];})]]:SUB.gruppen;
+  function idxOf(name){for(var i=0;i<arr.length;i++)if(arr[i][0]===name)return i;return -1;}
   function matchPanel(m){
     return '<div class="cls-match">'+m.map(function(x){var e=DB[x.i],r=ROLE[x.role];
-      return '<div class="cls-match-row" data-i="'+x.i+'"><span class="cls-match-role" style="background:'+r[1]+';color:var(--on-tx)">'+r[0]+'</span><span class="cls-match-n">'+esc(e.n)+'</span><span class="cls-match-d">'+esc(x.dose||'')+'</span></div>';
-    }).join('')+'</div>';
-  }
-  function drugRow(d){
-    var m=classMatches(d),n=m?m.length:0;
-    return '<div class="cls-drug'+(n?' hit':'')+'" data-drug="'+esc(d)+'">'+fmtName(d)+(n?'<span class="cls-drug-n">'+n+' Erreger</span>':'')+(n&&CLSEXP===d?matchPanel(m):'')+'</div>';
-  }
-  function clsBlock(title,arr,sel,grp,open){
-    return '<button class="cls-head'+(open?' open':'')+'" data-h="'+grp+'"><span class="cls-head-l"><span class="chev">▸</span>'+title+'</span><span class="cls-cur">'+esc(arr[sel][0])+'</span></button>'
-      +(open?'<div class="cls-chips">'+arr.map(function(c,i){return '<button class="clschip'+(i===sel?' on':'')+'" data-g="'+grp+'" data-i="'+i+'">'+esc(c[0])+'</button>';}).join('')+'</div>':'')
-      +'<div class="cls-list">'+arr[sel][1].map(drugRow).join('')+'</div>';
-  }
-  var isAf=CLSSEC==='af';
-  var arr=isAf?AFCLASSES:ABCLASSES,sel=isAf?AFSEL:ABSEL,open=isAf?AFOPEN:ABOPEN,grp=isAf?'af':'ab',title=isAf?'Antimykotika-Klasse':'Antibiotika-Klasse';
-  var body,q=CLSQ.trim();
-  if(q){
-    var results=[];
-    arr.forEach(function(c){c[1].forEach(function(d){if(norm(d).indexOf(norm(q))>-1)results.push({d:d,cls:c[0]});});});
-    body=results.length?('<div class="cls-results">'+results.map(function(r){
-        return '<div class="cls-result"><div class="cls-result-cls">'+esc(r.cls)+'</div>'+drugRow(r.d)+'</div>';
-      }).join('')+'</div>'):'<div class="cls-empty">Keine Substanz gefunden.</div>';
-  }else{
-    body='<div class="clsbrowser">'+clsBlock(title,arr,sel,grp,open)+'</div>';
-  }
-  document.getElementById('view').innerHTML='<div class="card"><div class="body"><div class="logic">'
-   +'<input class="cls-search" id="clsq" type="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Substanz oder Klasse suchen …" value="'+esc(CLSQ)+'">'
-   +body+'</div></div></div>';
+      return '<button class="cls-match-row" data-i="'+x.i+'"><span class="cls-match-role" style="background:'+r[1]+';color:var(--on-tx)">'+r[0]+'</span><span class="cls-match-n">'+esc(e.n)+'</span></button>';
+    }).join('')+'</div>';}
+  function row(k,v){return v&&v!=='–'?'<div class="kc-r"><span class="kc-k">'+k+'</span><span class="kc-v">'+esc(v)+'</span></div>':'';}
+  function card(d,cls){
+    var p=subOf(d),m=classMatches(d),n=m?m.length:0,res=RESERVE.some(function(r){return d.toLowerCase().indexOf(r)>-1;}),cmp=CLSCMP.indexOf(d)>-1;
+    var h='<div class="kc'+(cmp?' sel':'')+'"><div class="kc-h"><span class="kc-n">'+fmtName(d)+'</span>'
+      
+      +'<button class="kc-cmp" data-cmp="'+esc(d)+'" aria-pressed="'+cmp+'" aria-label="Zum Vergleich">'+(cmp?'✓ Vergleich':'+ Vergleich')+'</button></div>'
+      +(cls?'<div class="kc-cls">'+esc(cls)+'</div>':'');
+    if(p)h+=row('Spektrum',p.sp)+row('Lücken',p.lu)+row('Knochen',p.kn)+row('Oral',p.bv)+row('Dosis',p.do)+row('Cave',p.cv);
+    else h+='<div class="kc-r"><span class="kc-v" style="color:var(--tx2)">Noch kein Kurzprofil.</span></div>';
+    if(n)h+='<button class="kc-hits" data-drug="'+esc(d)+'">'+(CLSEXP===d?'▾':'▸')+' In der Datenbank bei '+n+' Erregern</button>'+(CLSEXP===d?matchPanel(m):'');
+    return h+'</div>';}
+  var side='<nav class="kl-side" aria-label="Klassen">'+groups.map(function(g){
+    return '<div class="kl-g">'+esc(g[0])+'</div>'+g[1].map(function(c){var i=idxOf(c);if(i<0)return '';
+      return '<button class="kl-c'+(i===sel&&!CLSQ.trim()?' on':'')+'" data-ci="'+i+'">'+esc(c)+'</button>';}).join('');}).join('')+'</nav>';
+  var q=CLSQ.trim(),main;
+  if(q){var results=[];
+    arr.forEach(function(c){var cm=norm(c[0]).indexOf(norm(q))>-1;c[1].forEach(function(d){if(cm||norm(d).indexOf(norm(q))>-1)results.push({d:d,cls:c[0]});});});
+    main='<div class="kl-t">Suche: '+esc(q)+'</div>'+(results.length?results.map(function(r){return card(r.d,r.cls);}).join(''):'<div class="cls-empty">Keine Substanz gefunden.</div>');}
+  else{main='<div class="kl-t">'+esc(arr[sel][0])+' <span>'+arr[sel][1].length+'</span></div>'+arr[sel][1].map(function(d){return card(d,'');}).join('');}
+  var bar=CLSCMP.length?'<div class="kl-bar"><span>'+CLSCMP.length+' im Vergleich</span><button class="kl-bar-x" id="cmpClr">Leeren</button><button class="fdone" id="cmpGo"'+(CLSCMP.length<2?' disabled':'')+'>Vergleichen</button></div>':'';
+  document.getElementById('view').innerHTML='<input class="cls-search" id="clsq" type="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Substanz oder Klasse suchen …" value="'+esc(CLSQ)+'">'
+    +'<div class="kl">'+side+'<div class="kl-main">'+main+'</div></div>'+bar;
   var inp=document.getElementById('clsq');
   inp.addEventListener('input',function(){CLSQ=inp.value;var pos=inp.selectionStart;classes();var el=document.getElementById('clsq');if(el){el.focus();el.selectionStart=el.selectionEnd=pos;}});
-  document.querySelectorAll('.cls-head').forEach(function(b){b.addEventListener('click',function(){
-    if(b.dataset.h==='ab')ABOPEN=!ABOPEN;else AFOPEN=!AFOPEN;CLSEXP=null;classes();});});
-  document.querySelectorAll('.clschip').forEach(function(b){b.addEventListener('click',function(){
-    if(b.dataset.g==='ab'){ABSEL=+b.dataset.i;ABOPEN=false;}else{AFSEL=+b.dataset.i;AFOPEN=false;}CLSEXP=null;classes();});});
-  document.querySelectorAll('.cls-drug.hit').forEach(function(b){b.addEventListener('click',function(ev){
-    if(ev.target.closest('.cls-match-row'))return;var d=b.dataset.drug;CLSEXP=CLSEXP===d?null:d;classes();});});
-  document.querySelectorAll('.cls-match-row').forEach(function(b){b.addEventListener('click',function(ev){
-    ev.stopPropagation();detail(DB[+b.dataset.i],'PJI');});});
+  document.querySelectorAll('.kl-c').forEach(function(b){b.addEventListener('click',function(){if(isAf)AFSEL=+b.dataset.ci;else ABSEL=+b.dataset.ci;CLSQ='';CLSEXP=null;classes();window.scrollTo(0,0);});});
+  document.querySelectorAll('.kc-hits').forEach(function(b){b.addEventListener('click',function(){var d=b.dataset.drug;CLSEXP=CLSEXP===d?null:d;classes();});});
+  document.querySelectorAll('.cls-match-row').forEach(function(b){b.addEventListener('click',function(){detail(DB[+b.dataset.i],SET.syn);});});
+  document.querySelectorAll('.kc-cmp').forEach(function(b){b.addEventListener('click',function(){var d=b.dataset.cmp,i=CLSCMP.indexOf(d);
+    if(i>-1)CLSCMP.splice(i,1);else{if(CLSCMP.length>=3)CLSCMP.shift();CLSCMP.push(d);}classes();});});
+  var cc=document.getElementById('cmpClr');if(cc)cc.addEventListener('click',function(){CLSCMP=[];classes();});
+  var cg=document.getElementById('cmpGo');if(cg)cg.addEventListener('click',compare);
+}
+function compare(){LAST=compare;go('#/klassen/vergleich');
+  var R=[['sp','Spektrum'],['lu','Lücken'],['kn','Knochen/Biofilm'],['bv','Oral'],['do','Dosis'],['cv','Cave']];
+  var h='<div class="navbar"><button class="backBtn" id="backBtn"><svg viewBox="0 0 12 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L2 10l8 8"/></svg>Klassen</button><span></span></div>'
+    +'<div class="pg-h"><div class="pg-t sm">Vergleich</div></div><div class="cmp">';
+  h+='<div class="cmp-row cmp-head" style="grid-template-columns:repeat('+CLSCMP.length+',minmax(0,1fr))">'+CLSCMP.map(function(d){return '<b>'+fmtName(d)+'</b>';}).join('')+'</div>';
+  R.forEach(function(r){h+='<div class="cmp-k">'+r[1]+'</div><div class="cmp-row" style="grid-template-columns:repeat('+CLSCMP.length+',minmax(0,1fr))">'
+    +CLSCMP.map(function(d){var p=subOf(d);return '<span>'+esc(p&&p[r[0]]||'–')+'</span>';}).join('')+'</div>';});
+  h+='</div>';
+  document.getElementById('view').innerHTML=h;window.scrollTo(0,0);
+  document.getElementById('backBtn').addEventListener('click',function(){if(NAVDEPTH>0)history.back();else classes();});
 }
 function shortName(n){var paren=(n.match(/\(([^)]{1,7})\)/)||[])[1];var base=n.replace(/\s*\(.*$/,'').replace(/\s*\/.*$/,'').trim();var parts=base.split(' ');if(parts.length>=2&&/^[A-Z][a-zäöü]+$/.test(parts[0]))base=parts[0][0]+'. '+parts.slice(1).join(' ');return base+(paren?' ('+paren+')':'');}
 function home(){LAST=home;setActiveTab('Suche');go('#/');var _q=document.getElementById('q');if(_q&&_q.value&&document.activeElement!==_q){_q.value='';var _c=document.getElementById('clr');if(_c)_c.hidden=true;var _a=document.getElementById('ac');if(_a){_a.className='';_a.innerHTML='';}}
@@ -363,21 +384,21 @@ function home(){LAST=home;setActiveTab('Suche');go('#/');var _q=document.getElem
   var fv=sect('Favoriten',favs);
   if(!favs.length)fv='<div class="recent"><div class="recent-h">Favoriten</div><div class="recent-chips"><div class="rchip rhint" style="white-space:normal;color:var(--tx2);font-size:15px;cursor:default">Mit dem Stern in einer Erregerkarte hier ablegen.</div></div></div>';
   document.getElementById('view').innerHTML='<div class="empty"><div class="big">Keim suchen.</div>Tippfehler, Kürzel und alte Namen sind egal — <b>mrsa</b>, <b>propionibacterium</b>, <b>pseudomonas</b> oder <b>staph epi</b> führen alle ans Ziel.</div>'+fv+rc+sect('Häufige PJI-Erreger',top);
-  document.querySelectorAll('.rchip').forEach(function(b){b.addEventListener('click',function(){detail(DB[+b.dataset.i],'PJI');});});}
+  document.querySelectorAll('.rchip').forEach(function(b){b.addEventListener('click',function(){detail(DB[+b.dataset.i],SET.syn);});});}
 var q=document.getElementById('q'),ac=document.getElementById('ac'),clr=document.getElementById('clr'),sel=-1,cur=[];
 function hl(name,term){var plain=esc(name);if(!term)return plain;try{return plain.replace(new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','i'),'<mark>$1</mark>');}catch(e){return plain;}}
 function renderAC(){if(!cur.length){ac.innerHTML=q.value.trim()?'<div class="ac-empty">Kein Treffer. Anderer Name oder Kürzel?</div>':'';ac.className=q.value.trim()?'on':'';return;}
   ac.innerHTML=cur.map(function(r,i){return '<div class="ac-i'+(i===sel?' sel':'')+'" data-i="'+r.e._i+'" role="option"><span><span class="ac-n">'+hl(r.e.n,q.value.trim())+'</span>'+(r.why&&r.why!=='Name'?' <span class="ac-why">'+esc(r.why)+'</span>':'')+'</span><span class="ac-g" style="color:'+(GC[r.e.g]||'var(--tx2)')+'">'+esc(r.e.g)+'</span></div>';}).join('');
   ac.className='on';ac.querySelectorAll('.ac-i').forEach(function(el){el.addEventListener('mousedown',function(ev){ev.preventDefault();pick(+el.dataset.i);});});}
-function pick(i){ac.className='';q.value=DB[i].n;sel=-1;detail(DB[i],'PJI');q.blur();}
+function pick(i){ac.className='';q.value=DB[i].n;sel=-1;detail(DB[i],SET.syn);q.blur();}
 q.addEventListener('input',function(){clr.hidden=!q.value;sel=-1;cur=search(q.value);renderAC();});
 q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();sel=Math.min(sel+1,cur.length-1);renderAC();}else if(e.key==='ArrowUp'){e.preventDefault();sel=Math.max(sel-1,-1);renderAC();}else if(e.key==='Enter'){if(cur.length)pick(cur[sel<0?0:sel].e._i);}else if(e.key==='Escape'){ac.className='';q.blur();}});
 q.addEventListener('focus',function(){if(cur.length)ac.className='on';});
 document.addEventListener('click',function(e){if(!ac.contains(e.target)&&e.target!==q)ac.className='';});
 clr.addEventListener('click',function(){q.value='';clr.hidden=true;cur=[];ac.className='';q.focus();home();});
-function setActiveTab(n){['Suche','Filter','Klassen','Tools','Info'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});
+function setActiveTab(n){['Suche','Filter','Klassen','Tools','Info','Einstellungen'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});
   var sb=document.querySelector('.searchbox'),ks=document.getElementById('ksec');
-  if(sb)sb.hidden=(n==='Klassen'||n==='Tools'||n==='Info');
+  if(sb)sb.hidden=(n==='Klassen'||n==='Tools'||n==='Info'||n==='Einstellungen');
   if(ks)ks.hidden=(n!=='Klassen');
 }
 document.querySelectorAll('#ksec .stab').forEach(function(b){b.addEventListener('click',function(){
@@ -390,16 +411,17 @@ document.getElementById('tabFilter').addEventListener('click',function(){if(LAST
 document.getElementById('tabKlassen').addEventListener('click',function(){classes();window.scrollTo(0,1);});
 document.getElementById('tabTools').addEventListener('click',function(){tools();window.scrollTo(0,1);});
 document.getElementById('tabInfo').addEventListener('click',function(){info();window.scrollTo(0,1);});
-function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;try{localStorage.setItem('ari_theme',t);}catch(e){}
+function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;
   document.querySelector('meta[name=theme-color]').setAttribute('content',t==='light'?'#F2F2F7':'#000000');LAST();}
-document.getElementById('themeBtn').addEventListener('click',function(){setTheme(THEME==='light'?'dark':'light');});
+document.getElementById('setBtn').addEventListener('click',function(){settings();window.scrollTo(0,1);});
+if(MQD&&MQD.addEventListener)MQD.addEventListener('change',function(){if(SET.theme==='auto')setTheme(effTheme());});
 window.addEventListener('scroll',function(){var hd=document.getElementById('hdr');if(hd)hd.classList.toggle('collapsed',(window.scrollY||window.pageYOffset||0)>34);},{passive:true});
 var dbIssues=validateDB(DB);if(dbIssues.length)showDataWarning(dbIssues);
 function route(){ROUTING=true;try{var p=(location.hash||'#/').slice(2).split('/');
     if(p[0]==='e'&&p[1]){var nm=decodeURIComponent(p[1]);var e=DB.filter(function(x){return x.n===nm;})[0];if(e){detail(e,p[2]||'PJI');window.scrollTo(0,0);}else home();}
-    else if(p[0]==='filter')browse();else if(p[0]==='klassen')classes();else if(p[0]==='tools'||p[0]==='logik'){if(p[1])tool(p[1]);else tools();}else if(p[0]==='info')info();else home();
+    else if(p[0]==='filter')browse();else if(p[0]==='klassen'){if(p[1]==='vergleich'&&CLSCMP.length>1)compare();else classes();}else if(p[0]==='tools'||p[0]==='logik'){if(p[1])tool(p[1]);else tools();}else if(p[0]==='info')info();else if(p[0]==='einstellungen')settings();else home();
   }finally{ROUTING=false;}}
 window.addEventListener('popstate',function(){if(NAVDEPTH>0)NAVDEPTH--;route();});
-ROUTING=true;setTheme(THEME);ROUTING=false;if(location.hash&&location.hash!=="#/")route();else home();
+applyFont();ROUTING=true;setTheme(THEME);ROUTING=false;if(location.hash&&location.hash!=="#/")route();else if(SET.start==='tools')tools();else home();
 setTimeout(function(){window.scrollTo(0,1);},0);
 })();

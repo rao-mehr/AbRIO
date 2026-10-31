@@ -338,6 +338,54 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
 .lok-kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin-top:8px;align-items:baseline}
 .lok-k{font:700 9.5px var(--mono);letter-spacing:.5px;text-transform:uppercase;color:var(--tx2)}
 .lok-v{font:400 13.5px var(--sans);line-height:1.4}
+/* ---------- EINSTELLUNGEN ---------- */
+.setl{padding:2px 0}
+.set-r{padding:12px 14px}
+.set-r+.set-r{border-top:.5px solid var(--bd2)}
+.set-t{font:600 14px var(--sans)}
+.set-h{font:400 12px var(--sans);color:var(--tx2);margin-top:2px}
+.set-seg{margin:8px 0 0}
+.set-btn{display:flex;justify-content:space-between;width:100%;background:none;border:0;padding:13px 16px;font:400 15px var(--sans);color:var(--teal);text-align:left;cursor:pointer;min-height:44px}
+.set-btn+.set-btn{border-top:.5px solid var(--bd2)}
+.set-btn span{color:var(--tx2)}
+.set-btn:focus-visible{outline:2px solid var(--teal);outline-offset:-2px}
+/* ---------- KLASSEN (neu) ---------- */
+.kl{display:grid;grid-template-columns:104px minmax(0,1fr);gap:10px;padding:0 12px 0 calc(10px + env(safe-area-inset-left))}
+.kl-side{position:sticky;top:calc(env(safe-area-inset-top) + 100px);align-self:start;max-height:calc(100vh - 200px);overflow-y:auto;padding-bottom:12px;-webkit-overflow-scrolling:touch}
+.kl-g{font:700 9.5px var(--mono);letter-spacing:.4px;text-transform:uppercase;color:var(--tx2);margin:12px 4px 4px}
+.kl-g:first-child{margin-top:2px}
+.kl-c{display:block;width:100%;overflow-wrap:anywhere;hyphens:auto;text-align:left;background:none;border:0;border-radius:8px;padding:7px 8px;font:500 12.5px var(--sans);color:var(--tx);line-height:1.2;cursor:pointer;min-height:34px}
+.kl-c.on{background:var(--teal);color:var(--on-tx);font-weight:600}
+.kl-c:not(.on):active{background:var(--fill)}
+.kl-c:focus-visible,.kc-cmp:focus-visible,.kc-hits:focus-visible{outline:2px solid var(--teal);outline-offset:1px}
+.kl-main{min-width:0;padding-bottom:70px}
+.kl-t{font:700 19px var(--sans);letter-spacing:-.3px;color:var(--head);margin:2px 2px 10px}
+.kl-t span{font:400 13px var(--sans);color:var(--tx2);margin-left:4px}
+.kc{background:var(--card);border-radius:12px;padding:11px 12px;margin-bottom:9px;border:1.5px solid transparent}
+.kc.sel{border-color:var(--teal)}
+.kc-h{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.kc-n{font:700 15px var(--sans);letter-spacing:-.2px;flex:1 1 auto;min-width:0}
+.kc-n .tag{margin-left:0}
+.kc-cls{font:400 11.5px var(--sans);color:var(--tx2);margin-top:1px}
+.kc-cmp{margin-left:auto;background:var(--fill);border:0;border-radius:99px;padding:4px 9px;font:600 11px var(--sans);color:var(--teal);cursor:pointer;white-space:nowrap}
+.kc.sel .kc-cmp{background:var(--teal);color:var(--on-tx)}
+.kc-r{display:grid;grid-template-columns:62px minmax(0,1fr);gap:8px;padding:6px 0 0;margin-top:6px;border-top:.5px solid var(--bd2)}
+.kc-k{font:700 9.5px var(--mono);letter-spacing:.3px;text-transform:uppercase;color:var(--tx2);padding-top:2px}
+.kc-v{font:400 13px var(--sans);line-height:1.4}
+.kc-hits{display:block;width:100%;text-align:left;background:none;border:0;border-top:.5px solid var(--bd2);margin-top:8px;padding:9px 0 2px;font:600 12.5px var(--sans);color:var(--teal);cursor:pointer}
+.kc .cls-match{border-top:0;margin-top:2px;padding-top:2px}
+.cls-match-row{width:100%;background:none;border:0;text-align:left;font:inherit;color:inherit}
+.kl-bar{position:fixed;left:12px;right:12px;bottom:calc(60px + env(safe-area-inset-bottom));z-index:65;max-width:456px;margin:0 auto;display:flex;align-items:center;gap:10px;background:var(--card);border-radius:14px;padding:8px 8px 8px 14px;box-shadow:0 6px 24px rgba(0,0,0,.18);font:400 14px var(--sans)}
+.kl-bar span{flex:1}
+.kl-bar-x{background:none;border:0;color:var(--tx2);font:400 14px var(--sans);cursor:pointer}
+.fdone[disabled]{opacity:.45}
+.cmp{margin:4px 16px 70px}
+.cmp-head{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;position:sticky;top:calc(env(safe-area-inset-top) + 100px);background:var(--bg);padding:6px 0;z-index:5}
+.cmp-head>span{display:none}
+.cmp-head b{font:700 14px var(--sans)}
+.cmp-k{font:700 9.5px var(--mono);letter-spacing:.4px;text-transform:uppercase;color:var(--teal);margin:12px 0 4px}
+.cmp-row{display:grid;gap:8px}
+.cmp-row>span{background:var(--card);border-radius:10px;padding:8px 9px;font:400 12.5px var(--sans);line-height:1.4}
 </style>
 </head>
 <body>
@@ -346,7 +394,7 @@ header.collapsed .hd{padding-top:4px;padding-bottom:0}
     <div class="hd">
       <div class="brand">AbRIO<small>Antibiotika Referenz Index · Orthopädie</small></div>
       <div class="hd-btns">
-        <button class="iconBtn themeBtn" id="themeBtn" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel"><svg class="ic ic-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="ic ic-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg></button>
+        <button class="iconBtn" id="setBtn" aria-label="Einstellungen" title="Einstellungen"><svg class="ic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
       </div>
     </div>
     <div class="searchbox">
@@ -385,7 +433,16 @@ catch(dbErr){
   return;
 }
 var GCSETS={"light": {"Gram-positiv": "#AF52DE", "Gram-negativ": "#0A84FF", "Anaerobier": "#8E8E93", "Atypisch": "#FF9500", "Mykobakterien": "#FF3B30", "Pilze": "#FF375F", "Multiresistenz-Kategorien": "#FF6B22"}, "dark": {"Gram-positiv": "#BF5AF2", "Gram-negativ": "#0A84FF", "Anaerobier": "#98989D", "Atypisch": "#FF9F0A", "Mykobakterien": "#FF453A", "Pilze": "#FF375F", "Multiresistenz-Kategorien": "#FF9F0A"}};
-var THEME='light';try{THEME=localStorage.getItem('ari_theme')||document.documentElement.dataset.theme||'light';}catch(e){THEME=document.documentElement.dataset.theme||'light';}
+/* ---------- Einstellungen (localStorage, pro Gerät) ---------- */
+var SETDEF={theme:'auto',font:'1',start:'suche',syn:'PJI',vanco:'auc',ebjis:'orig',unit:'mgdl'};
+var SET={};(function(){var s={};try{s=JSON.parse(localStorage.getItem('ari_settings')||'{}')||{};}catch(e){s={};}
+  try{var old=localStorage.getItem('ari_theme');if(old&&!s.theme)s.theme=old==='dark'?'dark':'light';}catch(e){}
+  for(var k in SETDEF)SET[k]=(s[k]!==undefined?s[k]:SETDEF[k]);})();
+function saveSet(){try{localStorage.setItem('ari_settings',JSON.stringify(SET));}catch(e){}}
+var MQD=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+function effTheme(){return SET.theme==='auto'?(MQD&&MQD.matches?'dark':'light'):SET.theme;}
+function applyFont(){document.documentElement.style.zoom=SET.font==='1'?'':SET.font;}
+var THEME=effTheme();
 var GC=GCSETS[THEME];
 var GORDER=['Gram-positiv','Gram-negativ','Anaerobier','Atypisch','Mykobakterien','Pilze','Multiresistenz-Kategorien'];
 var RESERVE=['quinupristin','dalfopristin','colistin','tigecyclin','cefiderocol','aztreonam/avibactam','meropenem/vaborbactam','ceftazidim/avibactam','relebactam','chloramphenicol','minocyclin'];
@@ -604,7 +661,7 @@ function detail(e,syn){CSYN=syn||'PJI';LAST=function(){detail(e,CSYN);};pushRece
     qa='<div class="qa"><div class="qa-row"><span class="qa-k">1. WAHL</span><div class="qa-c">'+drugC+'</div></div>'
       +(durC?'<div class="qa-row"><span class="qa-k">DAUER</span><div class="qa-c">'+durC+'</div></div>':'')+'</div>';}
   h+='<div class="body">'+qa+piPanel(e,CSYN)+'<div class="cols">'+col(e.route||'ERSTLINIE I.V.','var(--teal)',e.f,'')+col('ALTERNATIVEN','var(--alt)',e.a,'')+col('ORAL / STEP-DOWN','var(--oral)',e.o,e.olabel)+'</div>';
-  if(anyRenal(e))h+='<div class="renal-note"><span class="tag tag-ren">Niere</span> Dosis/Intervall nach GFR anpassen (v.a. Vancomycin-Spiegel, Aminoglykoside, Carbapeneme, Azole).</div>';
+  if(anyRenal(e))h+='<div class="renal-note"><span class="tag tag-ren">Niere</span> Dosis/Intervall nach GFR anpassen (v.a. Vancomycin – '+(SET.vanco==='tal'?'Talspiegel 15–20 µg/ml':'AUC 400–600 mg·h/l')+', Aminoglykoside, Carbapeneme, Azole).</div>';
   if(e.dur){var db=bulletList(e.dur);
     h+='<div class="row r-dur"><span class="r-k">THERAPIEDAUER</span>'+(e.syn[CSYN]?'<span class="dur-cur">'+esc(e.syn[CSYN])+'</span>':'')
       +(db||'<span class="dur-txt">'+esc(e.dur)+'</span>')+'</div>';}
@@ -680,7 +737,7 @@ function browse(){LAST=browse;go('#/filter');
     else{FILT[dim]=(val===''?null:(FILT[dim]===val?null:val));}
     browse();});});
   v.querySelectorAll('.freset').forEach(function(rst){rst.addEventListener('click',function(){FILT={g:null,pji:null,dair:null,rif:false,pif:false,wu:false};browse();});});
-  v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],'PJI');});});
+  v.querySelectorAll('.li').forEach(function(li){li.addEventListener('click',function(){detail(DB[+li.dataset.i],SET.syn);});});
 }
 /* ---------- Tools-Tab: Register, Übersicht, Werkzeugseiten, Info-Seite ---------- */
 /* Jedes Werkzeug: regTool({id, grp:'dx'|'med', t:Titel, s:Untertitel, ic:SVG-Pfad, c:Farbe,
@@ -725,7 +782,7 @@ function tool(id){var t=TOOLS.filter(function(x){return x.id===id;})[0];if(!t){t
   v.addEventListener('input',function(ev){var t=ev.target;if(!CURTOOL||!CURTOOL.oninput||!t.classList||!t.classList.contains('dxin'))return;CURTOOL.oninput(t);});
 })();
 function info(){LAST=info;CURTOOL=null;setActiveTab('Info');go('#/info');
-  var h='<div class="pg-h"><div class="pg-t">Info</div><div class="pg-s">Version 2026.10.30.8</div></div>'
+  var h='<div class="pg-h"><div class="pg-t">Info</div><div class="pg-s">Version 2026.10.31.1</div></div>'
    +'<div class="infocard"><div class="modal-logo">Antibiotika Referenz Index – Orthopädie (AbRIO)</div>'
    +'<p class="modal-copy">© 2026 Dr. Raouf Mehrabi — Alle Rechte vorbehalten.</p>'
    +'<p>Konzept, Idee, Aufbau und Inhalt dieser Anwendung sind geistiges Eigentum von Dr. Raouf Mehrabi. Die App und die ihr zugrunde liegende Idee dürfen ohne ausdrückliche schriftliche Genehmigung des Inhabers nicht kopiert, vervielfältigt, weitergegeben, veröffentlicht oder kommerziell genutzt werden.</p>'
@@ -878,7 +935,7 @@ var EBP=[
 var EBNAME={clin:'Klinik',crp:'CRP',wbc:'Synovia-Leukozyten',pmn:'Synovia-Granulozyten',ad:'Alpha-Defensin',cult:'Kultur',son:'Sonikation',his:'Histologie',nuc:'Nuklearmedizin'};
 function lvCls(lv){return lv===2?' lv-bad':lv===1?' lv-mid':' lv-ok';}
 function renderEbjis(){var el=document.getElementById('dxEb');if(!el)return;
-  var h='<div class="dxnote" style="margin:0 0 6px">Nur erhobene Befunde antippen; nicht Erhobenes leer lassen. Gilt für Hüfte und Knie.</div>';
+  var h='<div class="dxnote" style="margin:0 0 6px">Nur erhobene Befunde antippen; nicht Erhobenes leer lassen. Gilt für Hüfte und Knie. Bewertung: '+(SET.ebjis==='pif'?'PIF v11 (modifiziert)':'EBJIS 2021 (Original)')+' – umstellbar in den Einstellungen.</div>';
   EBP.forEach(function(p){var cur=EB[p.k];
     h+='<div class="dxp"><div class="dxp-n">'+p.n+'</div>'+(p.h?'<div class="dxp-h">'+p.h+'</div>':'')+'<div class="dxchips">'
       +p.o.map(function(o){var on=cur===o[0];return '<button class="clschip dxc'+(on?lvCls(o[0]):'')+'" data-k="eb" data-v="'+p.k+':'+o[0]+'" aria-pressed="'+on+'">'+o[1]+'</button>';}).join('')
@@ -896,8 +953,9 @@ function renderEbjis(){var el=document.getElementById('dxEb');if(!el)return;
   else{v='Infektion unwahrscheinlich';c='var(--ok)';txt='Alle erhobenen Befunde negativ. Kein Test schließt eine Infektion sicher aus – Aussagekraft hängt davon ab, was erhoben wurde ('+done.length+' von '+EBP.length+' Parametern).';}
   var dom=[EB.clin===1||EB.clin===2,EB.crp===1,EB.wbc>=1||EB.pmn>=1,EB.cult>=1||EB.son>=1,EB.his>=1].filter(Boolean).length;
   var pif=conf.length?'bestätigt':dom>=2?'wahrscheinlich':null;
+  if(SET.ebjis==='pif'&&!conf.length&&done.length){if(dom>=2){v='Infektion wahrscheinlich';c='var(--mid)';why=lik;txt='PIF v11 (modifizierte EBJIS-Kriterien): ≥2 Kriterien aus Klinik/CRP, Zellzahl, Mikrobiologie, Histologie. Mehrere verdächtige Befunde beweisen die Infektion nicht.';}}
   h+='<div class="dxres"><div class="dxverdict" style="background:'+c+'">'+v+'</div><div class="dxnote">'+txt+'</div>'
-    +(done.length&&!conf.length&&pif==='wahrscheinlich'&&v!=='Infektion wahrscheinlich'?'<div class="dxnote"><b>PIF v11 (modifizierte EBJIS-Kriterien):</b> wahrscheinlich – dort genügen ≥2 Kriterien aus Klinik/CRP, Zellzahl, Mikrobiologie, Histologie.</div>':'')
+    +(SET.ebjis==='orig'&&done.length&&!conf.length&&pif==='wahrscheinlich'&&v!=='Infektion wahrscheinlich'?'<div class="dxnote"><b>PIF v11 (modifizierte EBJIS-Kriterien):</b> wahrscheinlich – dort genügen ≥2 Kriterien aus Klinik/CRP, Zellzahl, Mikrobiologie, Histologie.</div>':'')
     +(why.length?'<ul class="dxwhy">'+why.map(function(k){return '<li>'+EBNAME[k]+': '+EBP.filter(function(p){return p.k===k;})[0].o.filter(function(o){return o[0]===EB[k];})[0][1]+'</li>';}).join('')+'</ul>':'')
     +'<div class="dxnote">Leukozyten >3000/µl und Granulozyten >80 % sind laut EBJIS-Tabelle jeweils für sich beweisend (der Fließtext formuliert „und“). Zellzahl nur bei klarem Punktat ohne Spülung, EDTA-Röhrchen, Analyse <1 h; bei blutigem Punktat korrigieren.</div>'
     +'<div class="dxnote">Synovia-Grenzwerte gelten nicht für die obere Extremität und sind früh postoperativ, bei Metallose, Kristallarthropathie, entzündlicher Grunderkrankung und periprothetischer Fraktur eingeschränkt verwertbar. Die Definition gibt keine Therapie vor.</div>'
@@ -1039,7 +1097,7 @@ var MON=[
   ['tmp','Cotrimoxazol',['Kalium und Kreatinin wöchentlich – Hyperkaliämie, v. a. mit ACE-Hemmer/Sartan/Spironolacton','Kreatinin-Anstieg durch gehemmte tubuläre Sekretion ohne echten GFR-Verlust möglich','Blutbild (Zytopenie, Folsäuremangel); Exanthem → sofort absetzen (SJS-Risiko)']],
   ['fq','Levofloxacin / Ciprofloxacin',['EKG (QTc) bei Risikofaktoren oder QT-verlängernder Komedikation','Sehnenbeschwerden (Risiko: >60 J., Kortikosteroide) → absetzen','Blutzucker-Entgleisung, Delir bei Älteren; Warnhinweis Aortenaneurysma']],
   ['dap','Daptomycin',['CK wöchentlich, häufiger mit Statin (Statin pausieren erwägen)','Eosinophile Pneumonie: neuer Husten/Fieber/Infiltrat']],
-  ['van','Vancomycin',['AUC-gesteuert (Ziel 400–600 mg·h/l) oder Talspiegel','Kreatinin 2–3× pro Woche; Nephrotoxizität v. a. mit Piperacillin/Tazobactam']],
+  ['van','Vancomycin',[function(){return SET.vanco==='tal'?'Talspiegel vor der nächsten Gabe mindestens 1×/Woche, Ziel 15–20 µg/ml (PIF v11)':'AUC-gesteuert, Ziel 400–600 mg·h/l (IDSA/ASHP 2020); alternativ Talspiegel 15–20 µg/ml (PIF)';},'Kreatinin 2–3× pro Woche; Nephrotoxizität v. a. mit Piperacillin/Tazobactam']],
   ['gen','Gentamicin',['Talspiegel vor der nächsten Gabe <1 mg/l (Einmaldosierung)','Kreatinin; bei längerer Gabe Gehör/Gleichgewicht']],
   ['flu','Flucloxacillin (hochdosiert)',['Leberwerte (cholestatische Hepatitis, auch verzögert)','Blutbild nach >2 Wochen (Neutropenie)','Mit Paracetamol: metabolische Azidose mit hoher Anionenlücke (Pyroglutaminsäure)']],
   ['fos','Fosfomycin i.v.',['Natrium (Hypernatriämie, hohe Natriumlast) und Kalium (Hypokaliämie)']],
@@ -1051,7 +1109,7 @@ function renderMon(){var el=document.getElementById('dxMo');if(!el)return;
     +MON.map(function(m){return dxChip('mo',m[0],m[1],!!MOS[m[0]]);}).join('')+'</div>';
   var sel=MON.filter(function(m){return MOS[m[0]];});
   h+='<div class="dxres"><div class="dxsec">Basis bei jeder Langzeittherapie</div><ul class="dxwhy"><li>PIF v11: Leukozyten, CRP, Kreatinin/eGFR, Leberenzyme (AST, ALT) 2× pro Woche; Elektrolyte je nach Substanz</li><li>Dosisanpassung nach Nierenfunktion und Körpergewicht (<40 kg / >100 kg)</li><li>Wunde, Klinik, Adhärenz; Nebenwirkungen aktiv abfragen</li></ul>';
-  sel.forEach(function(m){h+='<div class="dxsec">'+esc(m[1])+'</div><ul class="dxwhy">'+m[2].map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>';});
+  sel.forEach(function(m){h+='<div class="dxsec">'+esc(m[1])+'</div><ul class="dxwhy">'+m[2].map(function(t){return '<li>'+(typeof t==='function'?t():t)+'</li>';}).join('')+'</ul>';});
   if(!sel.length)h+='<div class="dxnote">Substanz antippen für die spezifischen Kontrollen.</div>';
   h+='<div class="dxnote">Übersicht für den Alltag, ersetzt nicht die Fachinformation. Dosisanpassung an die Nierenfunktion: Tool „Kreatinin-Clearance“.</div></div>';
   el.innerHTML=h;}
@@ -1063,48 +1121,93 @@ regTool({id:'rif-ia',grp:'med',t:'Rifampicin-Interaktionen',s:'Komedikation prü
 regTool({id:'monitor',grp:'med',t:'Monitoring',s:'Labor unter Langzeittherapie',c:'var(--pi)',dom:'dxMo',render:renderMon,
   src:'Fachinformationen · IDSA-OPAT-Leitlinie 2018 · Vancomycin-Konsensus ASHP/IDSA 2020 · PIF v11 (Linezolid max. 4 Wochen)',
   ic:'<path d="M3 12h4l3-7 4 14 3-7h4"/>'});
+/* ---------- Einstellungen-Seite ---------- */
+var SETOPT=[
+  {k:'theme',t:'Darstellung',o:[['auto','Automatisch'],['light','Hell'],['dark','Dunkel']],h:'Automatisch folgt der Einstellung des Geräts.'},
+  {k:'font',t:'Schriftgröße',o:[['1','Normal'],['1.1','Groß'],['1.2','Sehr groß']]},
+  {k:'start',t:'Startseite',o:[['suche','Suche'],['tools','Tools']]},
+  {k:'syn',t:'Standard-Syndrom beim Öffnen eines Erregers',o:[['PJI','PJI'],['FRI','FRI'],['SA','SA'],['SI','SI']]},
+  {k:'vanco',t:'Vancomycin-Monitoring',o:[['auc','AUC 400–600'],['tal','Talspiegel 15–20']],h:'AUC: IDSA/ASHP 2020. Talspiegel: so in den PRO-IMPLANT Pocket Guides.'},
+  {k:'ebjis',t:'PJI-Diagnose rechnen nach',o:[['orig','EBJIS 2021'],['pif','PIF v11 (modifiziert)']],h:'PIF v11: „wahrscheinlich“ schon ab 2 Kriterien, auch Klinik + CRP.'},
+  {k:'unit',t:'Kreatinin-Einheit',o:[['mgdl','mg/dl'],['umol','µmol/l']]}
+];
+function settings(){LAST=settings;CURTOOL=null;setActiveTab('Einstellungen');go('#/einstellungen');
+  var h='<div class="pg-h"><div class="pg-t">Einstellungen</div><div class="pg-s">Gespeichert auf diesem Gerät</div></div>';
+  h+='<div class="acc setl">'+SETOPT.map(function(x){
+    return '<div class="set-r"><div class="set-t">'+x.t+'</div>'+(x.h?'<div class="set-h">'+x.h+'</div>':'')
+      +'<div class="syn set-seg">'+x.o.map(function(o){var on=String(SET[x.k])===o[0];return '<button class="stab'+(on?' on':'')+'" data-set="'+x.k+'" data-v="'+o[0]+'" aria-pressed="'+on+'">'+o[1]+'</button>';}).join('')+'</div></div>';}).join('')+'</div>';
+  h+='<div class="recent-h tl-gh">Daten</div><div class="acc">'
+    +'<button class="set-btn" data-clr="fav">Favoriten löschen <span>'+FAV.length+'</span></button>'
+    +'<button class="set-btn" data-clr="rec">Verlauf löschen <span>'+RECENT.length+'</span></button>'
+    +'<button class="set-btn" data-clr="all">Alle Einstellungen zurücksetzen</button></div>'
+    +'<div class="tl-foot">Version 2026.10.31.1 · Copyright, Datengrundlage und Evidenz unter <button class="lnk" id="toInfo2">Info</button>.</div>';
+  var v=document.getElementById('view');v.innerHTML=h;window.scrollTo(0,0);
+  v.querySelectorAll('[data-set]').forEach(function(b){b.addEventListener('click',function(){
+    var k=b.dataset.set;SET[k]=b.dataset.v;saveSet();
+    if(k==='theme')setTheme(effTheme());if(k==='font')applyFont();if(k==='unit'){LG.ren.unit=SET.unit;LG.ren.scr='';}
+    settings();});});
+  v.querySelectorAll('[data-clr]').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.clr;
+    if(c==='fav'){FAV=[];try{localStorage.setItem('ari_fav','[]');}catch(e){}}
+    else if(c==='rec'){RECENT=[];try{localStorage.setItem('ari_recent','[]');}catch(e){}}
+    else{for(var k in SETDEF)SET[k]=SETDEF[k];saveSet();applyFont();setTheme(effTheme());LG.ren.unit=SET.unit;}
+    b.textContent='Erledigt';setTimeout(settings,600);});});
+  var ti=document.getElementById('toInfo2');if(ti)ti.addEventListener('click',info);
+}
+LG.ren.unit=SET.unit;
 
+var SUB={"_hinweis": "Kurzprofile für den Klassen-Tab. sp = Spektrum/Einsatz, lu = wichtige Lücken, kn = Knochen/Biofilm, bv = oral, do = übliche Erwachsenendosis (normale Nierenfunktion), cv = Cave. Quellen: Fachinformationen, PRO-IMPLANT Pocket Guide PJI v11, EUCAST Expected Resistant Phenotypes, Standardlehrbücher. Klinisch prüfen.", "gruppen": [["β-Laktame", ["Penicilline", "β-Laktam + Inhibitor", "Cephalosporine", "Carbapeneme", "Monobactame"]], ["Grampositiv-Spezialisten", ["Glykopeptide", "Lipoglykopeptide", "Lipopeptide", "Oxazolidinone", "Streptogramine"]], ["Oral-/Biofilm-Partner", ["Ansamycine (Rifamycine)", "Fluorchinolone", "Folatantagonisten", "Tetracycline", "Lincosamide", "Fusidane"]], ["Weitere", ["Aminoglykoside", "Makrolide", "Glycylcycline", "Nitroimidazole", "Polymyxine", "Fosfomycine", "Nitrofurane", "Phenicole", "Pleuromutiline"]], ["Tuberkulose", ["Antituberkulotika"]]], "s": {"Penicillin G": {"sp": "Streptokokken, Cutibacterium, grampositive Anaerobier, Actinomyces, Treponemen", "lu": "Staphylokokken (Penicillinase), Gramnegative", "kn": "gut im Knochen; kein Biofilmpartner", "bv": "nur i.v.", "do": "4 × 5 Mio. IE i.v. (PIF v11)", "cv": "Allergie; hohe Kaliumlast bei Kalium-Salz"}, "Penicillin V": {"sp": "Streptokokken (leichte Infektionen)", "lu": "Staphylokokken, Gramnegative", "kn": "für Knochen-/Implantatinfekte zu schwach", "bv": "~60 %", "do": "3 × 1–1,5 Mio. IE p.o.", "cv": "nicht für PJI-Oralphase"}, "Ampicillin": {"sp": "Enterokokken (E. faecalis), Streptokokken, Listerien", "lu": "Staphylokokken, viele Enterobacterales (β-Laktamasen)", "kn": "gut; kein Biofilmpartner", "bv": "nur i.v. (oral: Amoxicillin)", "do": "4 × 2 g i.v. (PIF v11, Enterokokken)", "cv": "Exanthem bei EBV"}, "Amoxicillin": {"sp": "Streptokokken, Enterokokken, grampositive Anaerobier – Standard der Oralphase", "lu": "Staphylokokken, β-Laktamase-Bildner", "kn": "ausreichend bei hoher Dosis", "bv": "~80 %", "do": "3 × 1 g p.o. (PIF v11)", "cv": "Allergie"}, "Flucloxacillin": {"sp": "MSSA, oxacillinsensible KNS", "lu": "MRSA, Enterokokken, Gramnegative", "kn": "gut; kein Biofilmpartner", "bv": "~50 % – oral nur eingeschränkt", "do": "4–6 × 2 g i.v. (FRI, SA)", "cv": "cholestatische Hepatitis (auch verzögert); mit Paracetamol Pyroglutamat-Azidose"}, "Oxacillin": {"sp": "MSSA, oxacillinsensible KNS", "lu": "MRSA, Enterokokken, Gramnegative", "kn": "gut", "bv": "nur i.v.", "do": "6 × 2 g i.v.", "cv": "in Österreich/Deutschland meist Flucloxacillin"}, "Piperacillin": {"sp": "Pseudomonas, Enterobacterales (nur mit Tazobactam sinnvoll)", "lu": "β-Laktamase-Bildner ohne Inhibitor", "kn": "gut", "bv": "nur i.v.", "do": "nur als Piperacillin/Tazobactam", "cv": "–"}, "Amoxicillin/Clavulansäure": {"sp": "Staphylokokken (MSSA), Streptokokken, Anaerobier, Haemophilus, viele Enterobacterales; Biss-Infektionen", "lu": "MRSA, Pseudomonas, ESBL", "kn": "gut", "bv": "~70 %", "do": "3 × 875/125 mg p.o.; i.v. 3 × 2,2 g", "cv": "Hepatotoxizität, Diarrhö; PIF: äquivalent zu Ampicillin/Sulbactam"}, "Ampicillin/Sulbactam": {"sp": "Empirische PJI-Therapie (PIF v11), Anaerobier, MSSA, Streptokokken, Acinetobacter (Sulbactam)", "lu": "MRSA, Pseudomonas, ESBL", "kn": "gut", "bv": "nur i.v.", "do": "3 × 3 g i.v. (PIF v11)", "cv": "–"}, "Piperacillin/Tazobactam": {"sp": "Pseudomonas, Enterobacterales (nicht ESBL-sicher), Anaerobier, Streptokokken", "lu": "MRSA, ESBL (Carbapenem bevorzugt), AmpC-Derepression", "kn": "gut", "bv": "nur i.v.", "do": "3–4 × 4,5 g i.v., verlängerte Infusion", "cv": "Nephrotoxizität mit Vancomycin"}, "Ceftazidim/Avibactam": {"sp": "KPC-, OXA-48-Bildner, DTR-Pseudomonas", "lu": "Metallo-β-Laktamasen (dann + Aztreonam), Grampositive, Anaerobier", "kn": "gut", "bv": "nur i.v.", "do": "3 × 2,5 g i.v. über 2 h", "cv": "Reserve – Infektiologie"}, "Ceftolozan/Tazobactam": {"sp": "DTR-Pseudomonas aeruginosa", "lu": "Carbapenemasen, Grampositive", "kn": "gut", "bv": "nur i.v.", "do": "3 × 1,5–3 g i.v.", "cv": "Reserve"}, "Meropenem/Vaborbactam": {"sp": "KPC-Bildner", "lu": "OXA-48, MBL", "kn": "gut", "bv": "nur i.v.", "do": "3 × 4 g i.v. über 3 h", "cv": "Reserve"}, "Imipenem/Relebactam": {"sp": "KPC-Bildner, DTR-Pseudomonas", "lu": "OXA-48, MBL", "kn": "gut", "bv": "nur i.v.", "do": "4 × 1,25 g i.v.", "cv": "Reserve; Krampfschwelle"}, "Aztreonam/Avibactam": {"sp": "Metallo-β-Laktamase-Bildner (NDM, VIM)", "lu": "Grampositive, Anaerobier", "kn": "gut", "bv": "nur i.v.", "do": "nach Fachinformation (Ladedosis + Erhaltung)", "cv": "Reserve"}, "Cefazolin (1. Gen)": {"sp": "MSSA, oxacillinsensible KNS, Streptokokken – PIF-Primärwahl bei Staph-PJI", "lu": "MRSA, Enterokokken, Anaerobier, viele Gramnegative", "kn": "gut", "bv": "nur i.v.", "do": "3 × 2 g i.v. (PIF v11)", "cv": "EUCAST v16: bei Cefoxitin-negativen Staph als „I“ – hoch dosieren; mit Rifampicin Gerinnung kontrollieren"}, "Cefalexin (1. Gen, oral)": {"sp": "MSSA, Streptokokken – Oral-Suppression", "lu": "MRSA, Enterokokken, Gramnegative", "kn": "mäßig", "bv": "~90 %", "do": "4 × 0,5–1 g p.o.", "cv": "Kreuzallergie mit Aminopenicillinen (gleiche Seitenkette)"}, "Cefuroxim (2. Gen)": {"sp": "MSSA, Streptokokken, einige Enterobacterales; perioperative Prophylaxe", "lu": "MRSA, Enterokokken, Pseudomonas, Anaerobier", "kn": "gut (i.v.)", "bv": "Axetil ~40 %", "do": "3 × 1,5 g i.v.", "cv": "oral für Knochen ungeeignet"}, "Ceftriaxon (3. Gen)": {"sp": "Streptokokken, Enterobacterales, Gonokokken, Borrelien; OPAT 1×/d", "lu": "Enterokokken, Pseudomonas, MRSA, Listerien, AmpC-Bildner", "kn": "gut", "bv": "nur i.v.", "do": "1 × 2 g i.v. (Streptokokken-PJI, PIF v11)", "cv": "Gallenschlamm; nicht mit Calcium i.v. bei Neugeborenen"}, "Cefotaxim (3. Gen)": {"sp": "Streptokokken, Enterobacterales, Gonokokken; Alternative zu Ceftriaxon", "lu": "Enterokokken, Pseudomonas, MRSA, Listerien, AmpC-Bildner", "kn": "gut", "bv": "nur i.v.", "do": "3 × 2 g i.v.", "cv": "–"}, "Ceftazidim (3. Gen, Pseudomonas)": {"sp": "Pseudomonas, Enterobacterales", "lu": "Grampositive (schwach), Anaerobier, ESBL", "kn": "gut", "bv": "nur i.v.", "do": "3 × 2 g i.v. (PIF v11, Nonfermenter)", "cv": "keine Staph-Wirkung"}, "Cefixim (3. Gen, oral)": {"sp": "Enterobacterales (HWI), Gonokokken", "lu": "Staphylokokken, Pseudomonas", "kn": "ungeeignet", "bv": "~50 %", "do": "1 × 400 mg p.o.", "cv": "nicht für Knochen"}, "Cefpodoxim (3. Gen, oral)": {"sp": "Enterobacterales, Streptokokken (Atemwege, HWI)", "lu": "Pseudomonas, Enterokokken", "kn": "ungeeignet", "bv": "~50 %", "do": "2 × 200 mg p.o.", "cv": "nicht für Knochen"}, "Cefepim (4. Gen)": {"sp": "Pseudomonas, AmpC-Bildner (Enterobacter, Serratia), MSSA", "lu": "MRSA, Enterokokken, Anaerobier", "kn": "gut", "bv": "nur i.v.", "do": "3 × 2 g i.v.", "cv": "Neurotoxizität bei Niereninsuffizienz"}, "Ceftarolin (5. Gen, MRSA)": {"sp": "MRSA, Streptokokken, Enterobacterales ohne ESBL", "lu": "Pseudomonas, Enterokokken (E. faecium), Anaerobier", "kn": "Daten begrenzt", "bv": "nur i.v.", "do": "3 × 600 mg i.v.", "cv": "Reserve"}, "Ceftobiprol (5. Gen, MRSA)": {"sp": "MRSA, Pseudomonas (teilweise), E. faecalis", "lu": "ESBL, E. faecium", "kn": "Daten begrenzt", "bv": "nur i.v.", "do": "3 × 500 mg i.v.", "cv": "Reserve"}, "Cefiderocol (Siderophor)": {"sp": "Carbapenem-resistente Gramnegative inkl. MBL, CRAB, S. maltophilia", "lu": "Grampositive, Anaerobier", "kn": "Daten begrenzt", "bv": "nur i.v.", "do": "3 × 2 g i.v. über 3 h", "cv": "Reserve – Infektiologie"}, "Meropenem": {"sp": "ESBL, AmpC, Pseudomonas, Anaerobier – breitestes β-Laktam", "lu": "MRSA, E. faecium, S. maltophilia, Carbapenemasen", "kn": "gut", "bv": "nur i.v.", "do": "3 × 1–2 g i.v. (Pseudomonas 3 × 2 g, verlängert)", "cv": "Valproat-Spiegel fällt stark"}, "Imipenem/Cilastatin": {"sp": "ESBL, AmpC, Pseudomonas, Anaerobier; etwas besser gegen E. faecalis als Meropenem", "lu": "MRSA, E. faecium, S. maltophilia, Carbapenemasen", "kn": "gut", "bv": "nur i.v.", "do": "4 × 500 mg–1 g i.v.", "cv": "Krampfschwelle"}, "Ertapenem": {"sp": "ESBL-Enterobacterales, Anaerobier; OPAT 1×/d", "lu": "Pseudomonas, Acinetobacter, Enterokokken", "kn": "gut", "bv": "nur i.v.", "do": "1 × 1 g i.v.", "cv": "keine Pseudomonas-Wirkung"}, "Doripenem": {"sp": "ESBL, AmpC, Pseudomonas, Anaerobier", "lu": "MRSA, E. faecium, Carbapenemasen", "kn": "–", "bv": "nur i.v.", "do": "in der EU nicht mehr vermarktet", "cv": "nicht mehr verfügbar"}, "Aztreonam": {"sp": "Gramnegative inkl. Pseudomonas; bei Penicillin-Anaphylaxie", "lu": "Grampositive, Anaerobier", "kn": "gut", "bv": "nur i.v.", "do": "3–4 × 2 g i.v.", "cv": "Kreuzallergie mit Ceftazidim (Seitenkette)"}, "Gentamicin": {"sp": "Gramnegative, Synergie bei Enterokokken/Streptokokken; lokal im Zement", "lu": "Anaerobier, Streptokokken allein, intrazellulär", "kn": "schlecht systemisch; lokal sehr gut", "bv": "nur i.v.", "do": "1 × 5–7 mg/kg i.v.; PIF: 1 × 240 mg (Pseudomonas), 1 × 120 mg (Enterokokken)", "cv": "Nephro-/Ototoxizität – Talspiegel <1 mg/l"}, "Tobramycin": {"sp": "Pseudomonas (stärker als Gentamicin)", "lu": "Anaerobier, Streptokokken allein, Burkholderia", "kn": "lokal im Zement", "bv": "nur i.v.", "do": "1 × 5–7 mg/kg i.v.; PIF: 1 × 300 mg", "cv": "Nephro-/Ototoxizität – Talspiegel <1 mg/l"}, "Amikacin": {"sp": "Gentamicin-resistente Gramnegative, Mykobakterien (NTM, MDR-TB), Nocardien", "lu": "Anaerobier", "kn": "schlecht systemisch", "bv": "nur i.v.", "do": "1 × 15–20 mg/kg i.v.", "cv": "Ototoxizität"}, "Streptomycin": {"sp": "Tuberkulose, Tularämie, Brucellose", "lu": "–", "kn": "–", "bv": "nur i.m./i.v.", "do": "1 × 15 mg/kg", "cv": "Ototoxizität"}, "Netilmicin": {"sp": "Gramnegative (Aminoglykosid)", "lu": "Anaerobier", "kn": "–", "bv": "nur i.v.", "do": "kaum noch verfügbar", "cv": "–"}, "Vancomycin": {"sp": "MRSA, MRSE, Enterokokken (nicht VRE), C. acnes, Corynebakterien; lokal im Zement", "lu": "Gramnegative, VRE, Leuconostoc/Pediococcus/Erysipelothrix (intrinsisch R)", "kn": "mäßig systemisch; lokal sehr gut", "bv": "oral nicht resorbiert (nur C. difficile)", "do": "2 × 1 g bzw. 15–20 mg/kg i.v., spiegelgesteuert", "cv": "Nephrotoxizität (v. a. mit Pip/Tazo); Red-Man-Syndrom"}, "Teicoplanin": {"sp": "MRSA, MRSE, Enterokokken (VanB oft S); 1×/d, OPAT", "lu": "VanA-VRE, Gramnegative", "kn": "gut", "bv": "nur i.v./i.m.", "do": "Ladedosis 12 mg/kg alle 12 h × 3–5, dann 1 × 12 mg/kg", "cv": "Spiegel bei Knocheninfekt (Tal ≥20 mg/l)"}, "Dalbavancin": {"sp": "MRSA, Streptokokken; Langzeit-i.v. mit 1–2 Gaben", "lu": "Gramnegative, VanA-VRE", "kn": "gute Knochenspiegel", "bv": "nur i.v.", "do": "1500 mg Tag 1 und Tag 8 (Osteomyelitis-Schema)", "cv": "DOTS 2025: nicht überlegen bei S.-aureus-Bakteriämie; bei PJI nur Beobachtungsdaten"}, "Oritavancin": {"sp": "MRSA, Streptokokken, VRE (teilweise)", "lu": "Gramnegative", "kn": "Daten begrenzt", "bv": "nur i.v.", "do": "1200 mg Einmalgabe (Haut)", "cv": "Gerinnungstests verfälscht"}, "Telavancin": {"sp": "MRSA", "lu": "Gramnegative", "kn": "–", "bv": "nur i.v.", "do": "in der EU nicht vermarktet", "cv": "Nephrotoxizität"}, "Daptomycin": {"sp": "MRSA, MRSE, Enterokokken inkl. VRE; biofilmaktiver als Vancomycin", "lu": "Gramnegative; NICHT bei Pneumonie (Surfactant)", "kn": "gut", "bv": "nur i.v.", "do": "1 × 8 mg/kg (Staph), 10 mg/kg (Enterokokken) i.v. (PIF v11)", "cv": "CK wöchentlich, Statin pausieren; eosinophile Pneumonie; EUCAST-Breakpoint nur für S. aureus"}, "Ciprofloxacin": {"sp": "Gramnegative inkl. Pseudomonas – DER orale Biofilmpartner bei Gramnegativen", "lu": "Streptokokken, Anaerobier, schwach gegen Staphylokokken", "kn": "sehr gut", "bv": "~70–80 %", "do": "2 × 750 mg p.o. (PIF v11)", "cv": "Sehnen, QT, Aortenaneurysma, Delir; nicht mit Calcium/Magnesium/Eisen einnehmen"}, "Levofloxacin": {"sp": "Staphylokokken (Rifampicin-Partner der Wahl), Streptokokken, Gramnegative", "lu": "Anaerobier, MRSA oft R, schwächer gegen Pseudomonas als Cipro", "kn": "sehr gut", "bv": "~99 %", "do": "2 × 500 mg p.o. (PIF v11)", "cv": "Sehnen (v. a. >60 J. und mit Steroiden), QT, Aortenaneurysma, Delir; nicht mit Calcium/Magnesium/Eisen einnehmen"}, "Moxifloxacin": {"sp": "Streptokokken, Staphylokokken, Anaerobier, atypische Erreger, Mykobakterien", "lu": "Pseudomonas", "kn": "sehr gut", "bv": "~90 %", "do": "1 × 400 mg p.o./i.v.", "cv": "QT, Hepatotoxizität; keine Nierenanpassung"}, "Ofloxacin": {"sp": "Gramnegative, Staphylokokken (Vorgänger von Levofloxacin)", "lu": "–", "kn": "gut", "bv": "~95 %", "do": "2 × 200–400 mg", "cv": "durch Levofloxacin ersetzt; Nebenwirkungen wie Fluorchinolone"}, "Delafloxacin": {"sp": "MRSA, Gramnegative inkl. Pseudomonas", "lu": "–", "kn": "Daten begrenzt", "bv": "~60 %", "do": "2 × 450 mg p.o.", "cv": "Reserve, wenig Knochendaten"}, "Azithromycin": {"sp": "Atypische, Bartonellen, Campylobacter, Chlamydien", "lu": "für Knocheninfekte ungeeignet; Staph-Resistenz häufig", "kn": "intrazellulär hoch, Knochen unzureichend", "bv": "~40 %", "do": "1 × 500 mg", "cv": "QT"}, "Clarithromycin": {"sp": "Atypische, NTM (M. avium, M. abscessus), H. pylori", "lu": "Knochen-/Implantatinfekte", "kn": "–", "bv": "~50 %", "do": "2 × 500 mg p.o.", "cv": "starker CYP3A4-Hemmer; mit Rifampicin nicht empfohlen"}, "Erythromycin": {"sp": "Streptokokken, Atypische (historisch)", "lu": "–", "kn": "–", "bv": "variabel", "do": "4 × 500 mg", "cv": "QT, GI-Nebenwirkungen"}, "Roxithromycin": {"sp": "Atemwege", "lu": "–", "kn": "–", "bv": "gut", "do": "2 × 150 mg", "cv": "–"}, "Clindamycin": {"sp": "MSSA, Streptokokken, grampositive Anaerobier; Toxinhemmung (nekrotisierende Fasziitis); im Zement mit Gentamicin", "lu": "Enterokokken, Gramnegative, induzierbare Resistenz (D-Test)", "kn": "sehr gut", "bv": "~90 %", "do": "3 × 600 mg p.o./i.v.", "cv": "C. difficile; Rifampicin senkt Spiegel stark"}, "Linezolid": {"sp": "MRSA, VRE, Nocardien, NTM", "lu": "Gramnegative", "kn": "gut", "bv": "~100 %", "do": "2 × 600 mg p.o. (max. 4 Wochen, PIF v11)", "cv": "Blutbild wöchentlich, Neuropathie, Serotonin-Syndrom; Rifampicin senkt Spiegel"}, "Tedizolid": {"sp": "MRSA, Streptokokken", "lu": "Gramnegative", "kn": "Daten begrenzt", "bv": "~90 %", "do": "1 × 200 mg", "cv": "weniger Myelotoxizität als Linezolid, wenig Knochendaten"}, "Doxycyclin": {"sp": "Staphylokokken (auch MRSA), Streptokokken, Atypische, Borrelien, Brucellen – Oral-/Suppressionspartner", "lu": "Pseudomonas, Proteus", "kn": "gut", "bv": "~95 %", "do": "2 × 100 mg p.o. (PIF v11)", "cv": "Photosensibilität; Rifampicin senkt Spiegel – Dosiserhöhung"}, "Minocyclin": {"sp": "MRSA, Acinetobacter, S. maltophilia, Nocardien", "lu": "Pseudomonas", "kn": "gut", "bv": "~95 %", "do": "2 × 100 mg p.o.", "cv": "Schwindel, Pigmentierung"}, "Tetracyclin": {"sp": "historisch", "lu": "–", "kn": "–", "bv": "~70 %", "do": "–", "cv": "durch Doxycyclin ersetzt"}, "Tigecyclin": {"sp": "MRSA, VRE, ESBL, CRAB – Reserve", "lu": "Pseudomonas, Proteus, Providencia", "kn": "Gewebe gut, Serum niedrig", "bv": "nur i.v.", "do": "100 mg, dann 2 × 50 mg i.v.", "cv": "erhöhte Mortalität in Studien; nicht bei Bakteriämie"}, "Eravacyclin": {"sp": "MRSA, VRE, ESBL, CRAB – komplizierte intraabdominelle Infektionen", "lu": "Pseudomonas", "kn": "Daten begrenzt", "bv": "nur i.v.", "do": "1 mg/kg alle 12 h", "cv": "Reserve"}, "Metronidazol": {"sp": "gramnegative Anaerobier (Bacteroides, Fusobacterium), C. difficile", "lu": "aerobe Erreger, Cutibacterium, Actinomyces", "kn": "sehr gut", "bv": "~100 %", "do": "3 × 400–500 mg p.o. (PIF v11)", "cv": "Neuropathie bei Langzeitgabe, Alkohol; hemmt PMMA-Polymerisation"}, "Tinidazol": {"sp": "gramnegative Anaerobier, Protozoen (Alternative zu Metronidazol)", "lu": "–", "kn": "–", "bv": "~100 %", "do": "–", "cv": "–"}, "Trimethoprim/Sulfamethoxazol (Cotrimoxazol)": {"sp": "Staphylokokken inkl. MRSA, Enterobacterales, S. maltophilia, Nocardien – Rifampicin-Partner", "lu": "Streptokokken (unsicher), Pseudomonas, Anaerobier, Enterokokken", "kn": "gut", "bv": "~95 %", "do": "3 × 960 mg p.o. (PIF v11)", "cv": "Hyperkaliämie, Kreatininanstieg, Zytopenie, SJS; EUCAST v16: Breakpoint S ≤0,5 mg/l"}, "Trimethoprim": {"sp": "unkomplizierter HWI", "lu": "–", "kn": "–", "bv": "gut", "do": "2 × 200 mg", "cv": "nicht für Knochen"}, "Sulfadiazin": {"sp": "Toxoplasmose, Nocardien", "lu": "–", "kn": "–", "bv": "gut", "do": "–", "cv": "Kristallurie"}, "Colistin (Polymyxin E)": {"sp": "Carbapenem-resistente Gramnegative (Reserve); lokal im Zement", "lu": "Proteus, Serratia, Providencia, Burkholderia (intrinsisch R), Grampositive", "kn": "schlecht systemisch", "bv": "nur i.v.", "do": "9 Mio. IE Ladedosis, dann 2 × 4,5 Mio. IE i.v.; PIF: 3 × 3 Mio. IE", "cv": "Nephro-/Neurotoxizität"}, "Polymyxin B": {"sp": "Carbapenem-resistente Gramnegative (Reserve)", "lu": "Proteus, Serratia, Providencia, Burkholderia, Grampositive", "kn": "–", "bv": "nur i.v.", "do": "in Europa kaum verfügbar", "cv": "–"}, "Rifampicin": {"sp": "Biofilmaktiv gegen Staphylokokken und Cutibacterium – NIE als Monotherapie", "lu": "Gramnegative (klinisch), Enterokokken, Streptokokken (kein belegter Nutzen)", "kn": "sehr gut, biofilmaktiv", "bv": "~95 %", "do": "2 × 450 mg p.o., >75 J. 2 × 300 mg (PIF v11)", "cv": "erst ab trockener Wunde; starker CYP-Induktor – Interaktions-Tool; hemmt PMMA-Polymerisation"}, "Rifabutin": {"sp": "Alternative bei Rifampicin-Interaktionen, MAC", "lu": "–", "kn": "biofilmaktiv (in vitro)", "bv": "~20 %", "do": "1 × 300 mg", "cv": "Uveitis; RCT RIFAMAB läuft"}, "Rifaximin": {"sp": "nur intestinal (nicht resorbiert)", "lu": "systemisch unwirksam", "kn": "–", "bv": "<1 %", "do": "–", "cv": "nicht für Knochen"}, "Rifapentin": {"sp": "Tuberkulose", "lu": "–", "kn": "–", "bv": "–", "do": "–", "cv": "in der EU nicht zugelassen"}, "Fosfomycin": {"sp": "i.v.: Staphylokokken, Enterokokken, Gramnegative – Kombinationspartner bei PJI (PIF v11); oral nur HWI", "lu": "nie Monotherapie i.v. (Resistenz)", "kn": "gut, biofilmaktiv in Kombination", "bv": "oral (Trometamol) nur Blase", "do": "3 × 5 g i.v. (PIF v11)", "cv": "Natriumlast, Hypokaliämie"}, "Nitrofurantoin": {"sp": "unkomplizierter HWI", "lu": "Proteus, Pseudomonas", "kn": "–", "bv": "nur Urin", "do": "2 × 100 mg ret.", "cv": "nicht für Knochen; Lungenfibrose bei Dauergabe"}, "Quinupristin/Dalfopristin": {"sp": "E. faecium (VRE), MRSA", "lu": "E. faecalis", "kn": "–", "bv": "nur ZVK", "do": "3 × 7,5 mg/kg", "cv": "praktisch nicht mehr verfügbar"}, "Chloramphenicol": {"sp": "Reserve (Meningitis, Rickettsien)", "lu": "–", "kn": "gut", "bv": "~80 %", "do": "4 × 0,5–1 g", "cv": "aplastische Anämie"}, "Fusidinsäure": {"sp": "Staphylokokken – Rifampicin-Partner (PIF v11)", "lu": "Streptokokken, Gramnegative; nie Monotherapie", "kn": "gut", "bv": "~90 %", "do": "3 × 500 mg p.o. (PIF v11)", "cv": "Hepatotoxizität; in Österreich eingeschränkt verfügbar"}, "Lefamulin": {"sp": "ambulante Pneumonie", "lu": "–", "kn": "keine Daten", "bv": "~25 %", "do": "–", "cv": "nicht für Knochen"}, "Isoniazid": {"sp": "M. tuberculosis", "lu": "NTM", "kn": "gut", "bv": "~90 %", "do": "1 × 5 mg/kg (max. 300 mg) + Vitamin B6", "cv": "Hepatotoxizität, Neuropathie"}, "Pyrazinamid": {"sp": "M. tuberculosis (nicht M. bovis)", "lu": "M. bovis, NTM", "kn": "gut", "bv": "~90 %", "do": "1 × 25 mg/kg", "cv": "Hepatotoxizität, Hyperurikämie"}, "Ethambutol": {"sp": "M. tuberculosis, MAC", "lu": "–", "kn": "mäßig", "bv": "~80 %", "do": "1 × 15–20 mg/kg", "cv": "Optikusneuritis – Visus-/Farbtest"}, "Bedaquilin": {"sp": "MDR-/XDR-TB (BPaLM)", "lu": "–", "kn": "–", "bv": "mit Mahlzeit", "do": "nach WHO-Schema", "cv": "QT"}, "Delamanid": {"sp": "MDR-TB", "lu": "–", "kn": "–", "bv": "–", "do": "nach WHO-Schema", "cv": "QT"}, "Clofazimin": {"sp": "MDR-TB, NTM (M. abscessus, MAC), Lepra", "lu": "–", "kn": "–", "bv": "variabel", "do": "1 × 100 mg", "cv": "Hautverfärbung, QT"}, "Cycloserin": {"sp": "MDR-TB", "lu": "–", "kn": "–", "bv": "gut", "do": "–", "cv": "psychiatrische Nebenwirkungen"}, "Pretomanid": {"sp": "MDR-TB (BPaLM)", "lu": "–", "kn": "–", "bv": "gut", "do": "nach WHO-Schema", "cv": "Hepatotoxizität, Neuropathie"}, "Fluconazol": {"sp": "Candida albicans, parapsilosis, tropicalis; Kryptokokken – Oral-/Suppressionsphase bei Candida-PJI", "lu": "C. krusei (intrinsisch R), C. glabrata (oft R), C. auris, Schimmelpilze", "kn": "gut", "bv": "~95 %", "do": "1 × 400 mg p.o. (PIF v11), Ladedosis 800 mg", "cv": "QT; mit Rifampicin nicht empfohlen"}, "Itraconazol": {"sp": "endemische Mykosen, Aspergillus (Reserve)", "lu": "Mucorales", "kn": "mäßig", "bv": "variabel (Kapsel mit Essen)", "do": "2 × 200 mg, TDM", "cv": "Herzinsuffizienz, CYP3A4"}, "Voriconazol": {"sp": "Aspergillus (Mittel der Wahl), Fusarium, Scedosporium, fluconazolresistente Candida", "lu": "Mucorales", "kn": "gut", "bv": "~96 %", "do": "2 × 4 mg/kg i.v. (Ladung 6 mg/kg) bzw. 2 × 200 mg p.o.; TDM", "cv": "Sehstörungen, Hepatotoxizität, Fluorose, Photosensibilität; Rifampicin kontraindiziert"}, "Posaconazol": {"sp": "Aspergillus, Mucorales, Prophylaxe", "lu": "–", "kn": "–", "bv": "Retardtablette gut", "do": "Tag 1: 2 × 300 mg, dann 1 × 300 mg; TDM", "cv": "QT, CYP3A4"}, "Isavuconazol": {"sp": "Aspergillus, Mucorales", "lu": "–", "kn": "–", "bv": "~98 %", "do": "3 × 200 mg × 2 Tage, dann 1 × 200 mg", "cv": "QT-Verkürzung"}, "Caspofungin": {"sp": "Candida inkl. glabrata/krusei – i.v.-Start bei Candida-PJI (PIF v11)", "lu": "Kryptokokken, Mucorales, C. parapsilosis (höhere MHK)", "kn": "mäßig", "bv": "nur i.v.", "do": "70 mg Tag 1, dann 50 mg (≥80 kg: 70 mg)", "cv": "Leberwerte"}, "Micafungin": {"sp": "Candida inkl. glabrata/krusei", "lu": "Kryptokokken, Mucorales; C. parapsilosis höhere MHK", "kn": "mäßig", "bv": "nur i.v.", "do": "1 × 100 mg", "cv": "–"}, "Anidulafungin": {"sp": "Candida inkl. glabrata/krusei; keine Leberanpassung", "lu": "Kryptokokken, Mucorales; C. parapsilosis höhere MHK", "kn": "mäßig", "bv": "nur i.v.", "do": "200 mg Tag 1, dann 1 × 100 mg (PIF v11)", "cv": "–"}, "Rezafungin": {"sp": "Candidämie, 1× pro Woche", "lu": "Kryptokokken, Mucorales; C. parapsilosis höhere MHK", "kn": "keine Daten", "bv": "nur i.v.", "do": "400 mg, dann 200 mg wöchentlich", "cv": "Reserve"}, "Amphotericin B liposomal": {"sp": "breit: Candida, Aspergillus, Mucorales, Kryptokokken; im Spacer (PIF: 0,2–0,4 g/40 g)", "lu": "Candida lusitaniae, Aspergillus terreus, Scedosporium", "kn": "mäßig", "bv": "nur i.v.", "do": "3–5 mg/kg i.v. (Mucor bis 10)", "cv": "Nephrotoxizität, Hypokaliämie"}, "Amphotericin B Deoxycholat": {"sp": "Candida, Aspergillus, Mucorales, Kryptokokken", "lu": "–", "kn": "–", "bv": "nur i.v.", "do": "0,7–1 mg/kg", "cv": "stark nephrotoxisch – liposomal bevorzugen"}, "Nystatin (topisch)": {"sp": "Schleimhaut-Candidose", "lu": "systemisch unwirksam", "kn": "–", "bv": "nicht resorbiert", "do": "–", "cv": "–"}, "Flucytosin (5-FC)": {"sp": "Kryptokokken-Meningitis (mit Ampho B)", "lu": "nie Monotherapie", "kn": "gut", "bv": "~90 %", "do": "4 × 25 mg/kg", "cv": "Myelotoxizität, TDM; im PMMA inaktiv"}, "Terbinafin": {"sp": "Dermatophyten, Sporothrix", "lu": "Candida (schwach)", "kn": "–", "bv": "~70 %", "do": "1 × 250 mg", "cv": "Hepatotoxizität"}, "Griseofulvin": {"sp": "Dermatophyten (Kinder)", "lu": "–", "kn": "–", "bv": "variabel", "do": "–", "cv": "–"}, "Imidazole topisch: Clotrimazol / Miconazol / Ketoconazol": {"sp": "Haut-/Schleimhautmykosen", "lu": "–", "kn": "–", "bv": "topisch", "do": "–", "cv": "Ketoconazol systemisch hepatotoxisch"}}};var CLSCMP=[];
+function subOf(d){return SUB.s[d]||null;}
 function classes(){LAST=classes;setActiveTab('Klassen');go('#/klassen');
-  var ROLE={f:['Erstlinie i.v.','var(--teal)'],a:['Alternative','var(--alt)'],o:['Oral','var(--oral)']};
+  var ROLE={f:['Erstlinie','var(--teal)'],a:['Alternative','var(--alt)'],o:['Oral','var(--oral)']};
+  var isAf=CLSSEC==='af',arr=isAf?AFCLASSES:ABCLASSES,sel=isAf?AFSEL:ABSEL;
+  var groups=isAf?[['Antimykotika',AFCLASSES.map(function(c){return c[0];})]]:SUB.gruppen;
+  function idxOf(name){for(var i=0;i<arr.length;i++)if(arr[i][0]===name)return i;return -1;}
   function matchPanel(m){
     return '<div class="cls-match">'+m.map(function(x){var e=DB[x.i],r=ROLE[x.role];
-      return '<div class="cls-match-row" data-i="'+x.i+'"><span class="cls-match-role" style="background:'+r[1]+';color:var(--on-tx)">'+r[0]+'</span><span class="cls-match-n">'+esc(e.n)+'</span><span class="cls-match-d">'+esc(x.dose||'')+'</span></div>';
-    }).join('')+'</div>';
-  }
-  function drugRow(d){
-    var m=classMatches(d),n=m?m.length:0;
-    return '<div class="cls-drug'+(n?' hit':'')+'" data-drug="'+esc(d)+'">'+fmtName(d)+(n?'<span class="cls-drug-n">'+n+' Erreger</span>':'')+(n&&CLSEXP===d?matchPanel(m):'')+'</div>';
-  }
-  function clsBlock(title,arr,sel,grp,open){
-    return '<button class="cls-head'+(open?' open':'')+'" data-h="'+grp+'"><span class="cls-head-l"><span class="chev">▸</span>'+title+'</span><span class="cls-cur">'+esc(arr[sel][0])+'</span></button>'
-      +(open?'<div class="cls-chips">'+arr.map(function(c,i){return '<button class="clschip'+(i===sel?' on':'')+'" data-g="'+grp+'" data-i="'+i+'">'+esc(c[0])+'</button>';}).join('')+'</div>':'')
-      +'<div class="cls-list">'+arr[sel][1].map(drugRow).join('')+'</div>';
-  }
-  var isAf=CLSSEC==='af';
-  var arr=isAf?AFCLASSES:ABCLASSES,sel=isAf?AFSEL:ABSEL,open=isAf?AFOPEN:ABOPEN,grp=isAf?'af':'ab',title=isAf?'Antimykotika-Klasse':'Antibiotika-Klasse';
-  var body,q=CLSQ.trim();
-  if(q){
-    var results=[];
-    arr.forEach(function(c){c[1].forEach(function(d){if(norm(d).indexOf(norm(q))>-1)results.push({d:d,cls:c[0]});});});
-    body=results.length?('<div class="cls-results">'+results.map(function(r){
-        return '<div class="cls-result"><div class="cls-result-cls">'+esc(r.cls)+'</div>'+drugRow(r.d)+'</div>';
-      }).join('')+'</div>'):'<div class="cls-empty">Keine Substanz gefunden.</div>';
-  }else{
-    body='<div class="clsbrowser">'+clsBlock(title,arr,sel,grp,open)+'</div>';
-  }
-  document.getElementById('view').innerHTML='<div class="card"><div class="body"><div class="logic">'
-   +'<input class="cls-search" id="clsq" type="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Substanz oder Klasse suchen …" value="'+esc(CLSQ)+'">'
-   +body+'</div></div></div>';
+      return '<button class="cls-match-row" data-i="'+x.i+'"><span class="cls-match-role" style="background:'+r[1]+';color:var(--on-tx)">'+r[0]+'</span><span class="cls-match-n">'+esc(e.n)+'</span></button>';
+    }).join('')+'</div>';}
+  function row(k,v){return v&&v!=='–'?'<div class="kc-r"><span class="kc-k">'+k+'</span><span class="kc-v">'+esc(v)+'</span></div>':'';}
+  function card(d,cls){
+    var p=subOf(d),m=classMatches(d),n=m?m.length:0,res=RESERVE.some(function(r){return d.toLowerCase().indexOf(r)>-1;}),cmp=CLSCMP.indexOf(d)>-1;
+    var h='<div class="kc'+(cmp?' sel':'')+'"><div class="kc-h"><span class="kc-n">'+fmtName(d)+'</span>'
+      
+      +'<button class="kc-cmp" data-cmp="'+esc(d)+'" aria-pressed="'+cmp+'" aria-label="Zum Vergleich">'+(cmp?'✓ Vergleich':'+ Vergleich')+'</button></div>'
+      +(cls?'<div class="kc-cls">'+esc(cls)+'</div>':'');
+    if(p)h+=row('Spektrum',p.sp)+row('Lücken',p.lu)+row('Knochen',p.kn)+row('Oral',p.bv)+row('Dosis',p.do)+row('Cave',p.cv);
+    else h+='<div class="kc-r"><span class="kc-v" style="color:var(--tx2)">Noch kein Kurzprofil.</span></div>';
+    if(n)h+='<button class="kc-hits" data-drug="'+esc(d)+'">'+(CLSEXP===d?'▾':'▸')+' In der Datenbank bei '+n+' Erregern</button>'+(CLSEXP===d?matchPanel(m):'');
+    return h+'</div>';}
+  var side='<nav class="kl-side" aria-label="Klassen">'+groups.map(function(g){
+    return '<div class="kl-g">'+esc(g[0])+'</div>'+g[1].map(function(c){var i=idxOf(c);if(i<0)return '';
+      return '<button class="kl-c'+(i===sel&&!CLSQ.trim()?' on':'')+'" data-ci="'+i+'">'+esc(c)+'</button>';}).join('');}).join('')+'</nav>';
+  var q=CLSQ.trim(),main;
+  if(q){var results=[];
+    arr.forEach(function(c){var cm=norm(c[0]).indexOf(norm(q))>-1;c[1].forEach(function(d){if(cm||norm(d).indexOf(norm(q))>-1)results.push({d:d,cls:c[0]});});});
+    main='<div class="kl-t">Suche: '+esc(q)+'</div>'+(results.length?results.map(function(r){return card(r.d,r.cls);}).join(''):'<div class="cls-empty">Keine Substanz gefunden.</div>');}
+  else{main='<div class="kl-t">'+esc(arr[sel][0])+' <span>'+arr[sel][1].length+'</span></div>'+arr[sel][1].map(function(d){return card(d,'');}).join('');}
+  var bar=CLSCMP.length?'<div class="kl-bar"><span>'+CLSCMP.length+' im Vergleich</span><button class="kl-bar-x" id="cmpClr">Leeren</button><button class="fdone" id="cmpGo"'+(CLSCMP.length<2?' disabled':'')+'>Vergleichen</button></div>':'';
+  document.getElementById('view').innerHTML='<input class="cls-search" id="clsq" type="search" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Substanz oder Klasse suchen …" value="'+esc(CLSQ)+'">'
+    +'<div class="kl">'+side+'<div class="kl-main">'+main+'</div></div>'+bar;
   var inp=document.getElementById('clsq');
   inp.addEventListener('input',function(){CLSQ=inp.value;var pos=inp.selectionStart;classes();var el=document.getElementById('clsq');if(el){el.focus();el.selectionStart=el.selectionEnd=pos;}});
-  document.querySelectorAll('.cls-head').forEach(function(b){b.addEventListener('click',function(){
-    if(b.dataset.h==='ab')ABOPEN=!ABOPEN;else AFOPEN=!AFOPEN;CLSEXP=null;classes();});});
-  document.querySelectorAll('.clschip').forEach(function(b){b.addEventListener('click',function(){
-    if(b.dataset.g==='ab'){ABSEL=+b.dataset.i;ABOPEN=false;}else{AFSEL=+b.dataset.i;AFOPEN=false;}CLSEXP=null;classes();});});
-  document.querySelectorAll('.cls-drug.hit').forEach(function(b){b.addEventListener('click',function(ev){
-    if(ev.target.closest('.cls-match-row'))return;var d=b.dataset.drug;CLSEXP=CLSEXP===d?null:d;classes();});});
-  document.querySelectorAll('.cls-match-row').forEach(function(b){b.addEventListener('click',function(ev){
-    ev.stopPropagation();detail(DB[+b.dataset.i],'PJI');});});
+  document.querySelectorAll('.kl-c').forEach(function(b){b.addEventListener('click',function(){if(isAf)AFSEL=+b.dataset.ci;else ABSEL=+b.dataset.ci;CLSQ='';CLSEXP=null;classes();window.scrollTo(0,0);});});
+  document.querySelectorAll('.kc-hits').forEach(function(b){b.addEventListener('click',function(){var d=b.dataset.drug;CLSEXP=CLSEXP===d?null:d;classes();});});
+  document.querySelectorAll('.cls-match-row').forEach(function(b){b.addEventListener('click',function(){detail(DB[+b.dataset.i],SET.syn);});});
+  document.querySelectorAll('.kc-cmp').forEach(function(b){b.addEventListener('click',function(){var d=b.dataset.cmp,i=CLSCMP.indexOf(d);
+    if(i>-1)CLSCMP.splice(i,1);else{if(CLSCMP.length>=3)CLSCMP.shift();CLSCMP.push(d);}classes();});});
+  var cc=document.getElementById('cmpClr');if(cc)cc.addEventListener('click',function(){CLSCMP=[];classes();});
+  var cg=document.getElementById('cmpGo');if(cg)cg.addEventListener('click',compare);
+}
+function compare(){LAST=compare;go('#/klassen/vergleich');
+  var R=[['sp','Spektrum'],['lu','Lücken'],['kn','Knochen/Biofilm'],['bv','Oral'],['do','Dosis'],['cv','Cave']];
+  var h='<div class="navbar"><button class="backBtn" id="backBtn"><svg viewBox="0 0 12 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L2 10l8 8"/></svg>Klassen</button><span></span></div>'
+    +'<div class="pg-h"><div class="pg-t sm">Vergleich</div></div><div class="cmp">';
+  h+='<div class="cmp-row cmp-head" style="grid-template-columns:repeat('+CLSCMP.length+',minmax(0,1fr))">'+CLSCMP.map(function(d){return '<b>'+fmtName(d)+'</b>';}).join('')+'</div>';
+  R.forEach(function(r){h+='<div class="cmp-k">'+r[1]+'</div><div class="cmp-row" style="grid-template-columns:repeat('+CLSCMP.length+',minmax(0,1fr))">'
+    +CLSCMP.map(function(d){var p=subOf(d);return '<span>'+esc(p&&p[r[0]]||'–')+'</span>';}).join('')+'</div>';});
+  h+='</div>';
+  document.getElementById('view').innerHTML=h;window.scrollTo(0,0);
+  document.getElementById('backBtn').addEventListener('click',function(){if(NAVDEPTH>0)history.back();else classes();});
 }
 function shortName(n){var paren=(n.match(/\(([^)]{1,7})\)/)||[])[1];var base=n.replace(/\s*\(.*$/,'').replace(/\s*\/.*$/,'').trim();var parts=base.split(' ');if(parts.length>=2&&/^[A-Z][a-zäöü]+$/.test(parts[0]))base=parts[0][0]+'. '+parts.slice(1).join(' ');return base+(paren?' ('+paren+')':'');}
 function home(){LAST=home;setActiveTab('Suche');go('#/');var _q=document.getElementById('q');if(_q&&_q.value&&document.activeElement!==_q){_q.value='';var _c=document.getElementById('clr');if(_c)_c.hidden=true;var _a=document.getElementById('ac');if(_a){_a.className='';_a.innerHTML='';}}
@@ -1117,21 +1220,21 @@ function home(){LAST=home;setActiveTab('Suche');go('#/');var _q=document.getElem
   var fv=sect('Favoriten',favs);
   if(!favs.length)fv='<div class="recent"><div class="recent-h">Favoriten</div><div class="recent-chips"><div class="rchip rhint" style="white-space:normal;color:var(--tx2);font-size:15px;cursor:default">Mit dem Stern in einer Erregerkarte hier ablegen.</div></div></div>';
   document.getElementById('view').innerHTML='<div class="empty"><div class="big">Keim suchen.</div>Tippfehler, Kürzel und alte Namen sind egal — <b>mrsa</b>, <b>propionibacterium</b>, <b>pseudomonas</b> oder <b>staph epi</b> führen alle ans Ziel.</div>'+fv+rc+sect('Häufige PJI-Erreger',top);
-  document.querySelectorAll('.rchip').forEach(function(b){b.addEventListener('click',function(){detail(DB[+b.dataset.i],'PJI');});});}
+  document.querySelectorAll('.rchip').forEach(function(b){b.addEventListener('click',function(){detail(DB[+b.dataset.i],SET.syn);});});}
 var q=document.getElementById('q'),ac=document.getElementById('ac'),clr=document.getElementById('clr'),sel=-1,cur=[];
 function hl(name,term){var plain=esc(name);if(!term)return plain;try{return plain.replace(new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','i'),'<mark>$1</mark>');}catch(e){return plain;}}
 function renderAC(){if(!cur.length){ac.innerHTML=q.value.trim()?'<div class="ac-empty">Kein Treffer. Anderer Name oder Kürzel?</div>':'';ac.className=q.value.trim()?'on':'';return;}
   ac.innerHTML=cur.map(function(r,i){return '<div class="ac-i'+(i===sel?' sel':'')+'" data-i="'+r.e._i+'" role="option"><span><span class="ac-n">'+hl(r.e.n,q.value.trim())+'</span>'+(r.why&&r.why!=='Name'?' <span class="ac-why">'+esc(r.why)+'</span>':'')+'</span><span class="ac-g" style="color:'+(GC[r.e.g]||'var(--tx2)')+'">'+esc(r.e.g)+'</span></div>';}).join('');
   ac.className='on';ac.querySelectorAll('.ac-i').forEach(function(el){el.addEventListener('mousedown',function(ev){ev.preventDefault();pick(+el.dataset.i);});});}
-function pick(i){ac.className='';q.value=DB[i].n;sel=-1;detail(DB[i],'PJI');q.blur();}
+function pick(i){ac.className='';q.value=DB[i].n;sel=-1;detail(DB[i],SET.syn);q.blur();}
 q.addEventListener('input',function(){clr.hidden=!q.value;sel=-1;cur=search(q.value);renderAC();});
 q.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();sel=Math.min(sel+1,cur.length-1);renderAC();}else if(e.key==='ArrowUp'){e.preventDefault();sel=Math.max(sel-1,-1);renderAC();}else if(e.key==='Enter'){if(cur.length)pick(cur[sel<0?0:sel].e._i);}else if(e.key==='Escape'){ac.className='';q.blur();}});
 q.addEventListener('focus',function(){if(cur.length)ac.className='on';});
 document.addEventListener('click',function(e){if(!ac.contains(e.target)&&e.target!==q)ac.className='';});
 clr.addEventListener('click',function(){q.value='';clr.hidden=true;cur=[];ac.className='';q.focus();home();});
-function setActiveTab(n){['Suche','Filter','Klassen','Tools','Info'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});
+function setActiveTab(n){['Suche','Filter','Klassen','Tools','Info','Einstellungen'].forEach(function(x){var t=document.getElementById('tab'+x);if(t)t.classList.toggle('on',x===n);});
   var sb=document.querySelector('.searchbox'),ks=document.getElementById('ksec');
-  if(sb)sb.hidden=(n==='Klassen'||n==='Tools'||n==='Info');
+  if(sb)sb.hidden=(n==='Klassen'||n==='Tools'||n==='Info'||n==='Einstellungen');
   if(ks)ks.hidden=(n!=='Klassen');
 }
 document.querySelectorAll('#ksec .stab').forEach(function(b){b.addEventListener('click',function(){
@@ -1144,17 +1247,18 @@ document.getElementById('tabFilter').addEventListener('click',function(){if(LAST
 document.getElementById('tabKlassen').addEventListener('click',function(){classes();window.scrollTo(0,1);});
 document.getElementById('tabTools').addEventListener('click',function(){tools();window.scrollTo(0,1);});
 document.getElementById('tabInfo').addEventListener('click',function(){info();window.scrollTo(0,1);});
-function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;try{localStorage.setItem('ari_theme',t);}catch(e){}
+function setTheme(t){THEME=t;GC=GCSETS[t];document.documentElement.dataset.theme=t;
   document.querySelector('meta[name=theme-color]').setAttribute('content',t==='light'?'#F2F2F7':'#000000');LAST();}
-document.getElementById('themeBtn').addEventListener('click',function(){setTheme(THEME==='light'?'dark':'light');});
+document.getElementById('setBtn').addEventListener('click',function(){settings();window.scrollTo(0,1);});
+if(MQD&&MQD.addEventListener)MQD.addEventListener('change',function(){if(SET.theme==='auto')setTheme(effTheme());});
 window.addEventListener('scroll',function(){var hd=document.getElementById('hdr');if(hd)hd.classList.toggle('collapsed',(window.scrollY||window.pageYOffset||0)>34);},{passive:true});
 var dbIssues=validateDB(DB);if(dbIssues.length)showDataWarning(dbIssues);
 function route(){ROUTING=true;try{var p=(location.hash||'#/').slice(2).split('/');
     if(p[0]==='e'&&p[1]){var nm=decodeURIComponent(p[1]);var e=DB.filter(function(x){return x.n===nm;})[0];if(e){detail(e,p[2]||'PJI');window.scrollTo(0,0);}else home();}
-    else if(p[0]==='filter')browse();else if(p[0]==='klassen')classes();else if(p[0]==='tools'||p[0]==='logik'){if(p[1])tool(p[1]);else tools();}else if(p[0]==='info')info();else home();
+    else if(p[0]==='filter')browse();else if(p[0]==='klassen'){if(p[1]==='vergleich'&&CLSCMP.length>1)compare();else classes();}else if(p[0]==='tools'||p[0]==='logik'){if(p[1])tool(p[1]);else tools();}else if(p[0]==='info')info();else if(p[0]==='einstellungen')settings();else home();
   }finally{ROUTING=false;}}
 window.addEventListener('popstate',function(){if(NAVDEPTH>0)NAVDEPTH--;route();});
-ROUTING=true;setTheme(THEME);ROUTING=false;if(location.hash&&location.hash!=="#/")route();else home();
+applyFont();ROUTING=true;setTheme(THEME);ROUTING=false;if(location.hash&&location.hash!=="#/")route();else if(SET.start==='tools')tools();else home();
 setTimeout(function(){window.scrollTo(0,1);},0);
 })();
 </script>
@@ -1168,7 +1272,7 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 <script>
-var APP_VERSION='2026.10.30.8';
+var APP_VERSION='2026.10.31.1';
 (function(){
   function checkUpdate(){
     if(!navigator.onLine||location.protocol==='file:')return;

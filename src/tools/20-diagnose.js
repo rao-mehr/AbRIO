@@ -17,7 +17,7 @@ var EBP=[
 var EBNAME={clin:'Klinik',crp:'CRP',wbc:'Synovia-Leukozyten',pmn:'Synovia-Granulozyten',ad:'Alpha-Defensin',cult:'Kultur',son:'Sonikation',his:'Histologie',nuc:'Nuklearmedizin'};
 function lvCls(lv){return lv===2?' lv-bad':lv===1?' lv-mid':' lv-ok';}
 function renderEbjis(){var el=document.getElementById('dxEb');if(!el)return;
-  var h='<div class="dxnote" style="margin:0 0 6px">Nur erhobene Befunde antippen; nicht Erhobenes leer lassen. Gilt für Hüfte und Knie.</div>';
+  var h='<div class="dxnote" style="margin:0 0 6px">Nur erhobene Befunde antippen; nicht Erhobenes leer lassen. Gilt für Hüfte und Knie. Bewertung: '+(SET.ebjis==='pif'?'PIF v11 (modifiziert)':'EBJIS 2021 (Original)')+' – umstellbar in den Einstellungen.</div>';
   EBP.forEach(function(p){var cur=EB[p.k];
     h+='<div class="dxp"><div class="dxp-n">'+p.n+'</div>'+(p.h?'<div class="dxp-h">'+p.h+'</div>':'')+'<div class="dxchips">'
       +p.o.map(function(o){var on=cur===o[0];return '<button class="clschip dxc'+(on?lvCls(o[0]):'')+'" data-k="eb" data-v="'+p.k+':'+o[0]+'" aria-pressed="'+on+'">'+o[1]+'</button>';}).join('')
@@ -35,8 +35,9 @@ function renderEbjis(){var el=document.getElementById('dxEb');if(!el)return;
   else{v='Infektion unwahrscheinlich';c='var(--ok)';txt='Alle erhobenen Befunde negativ. Kein Test schließt eine Infektion sicher aus – Aussagekraft hängt davon ab, was erhoben wurde ('+done.length+' von '+EBP.length+' Parametern).';}
   var dom=[EB.clin===1||EB.clin===2,EB.crp===1,EB.wbc>=1||EB.pmn>=1,EB.cult>=1||EB.son>=1,EB.his>=1].filter(Boolean).length;
   var pif=conf.length?'bestätigt':dom>=2?'wahrscheinlich':null;
+  if(SET.ebjis==='pif'&&!conf.length&&done.length){if(dom>=2){v='Infektion wahrscheinlich';c='var(--mid)';why=lik;txt='PIF v11 (modifizierte EBJIS-Kriterien): ≥2 Kriterien aus Klinik/CRP, Zellzahl, Mikrobiologie, Histologie. Mehrere verdächtige Befunde beweisen die Infektion nicht.';}}
   h+='<div class="dxres"><div class="dxverdict" style="background:'+c+'">'+v+'</div><div class="dxnote">'+txt+'</div>'
-    +(done.length&&!conf.length&&pif==='wahrscheinlich'&&v!=='Infektion wahrscheinlich'?'<div class="dxnote"><b>PIF v11 (modifizierte EBJIS-Kriterien):</b> wahrscheinlich – dort genügen ≥2 Kriterien aus Klinik/CRP, Zellzahl, Mikrobiologie, Histologie.</div>':'')
+    +(SET.ebjis==='orig'&&done.length&&!conf.length&&pif==='wahrscheinlich'&&v!=='Infektion wahrscheinlich'?'<div class="dxnote"><b>PIF v11 (modifizierte EBJIS-Kriterien):</b> wahrscheinlich – dort genügen ≥2 Kriterien aus Klinik/CRP, Zellzahl, Mikrobiologie, Histologie.</div>':'')
     +(why.length?'<ul class="dxwhy">'+why.map(function(k){return '<li>'+EBNAME[k]+': '+EBP.filter(function(p){return p.k===k;})[0].o.filter(function(o){return o[0]===EB[k];})[0][1]+'</li>';}).join('')+'</ul>':'')
     +'<div class="dxnote">Leukozyten >3000/µl und Granulozyten >80 % sind laut EBJIS-Tabelle jeweils für sich beweisend (der Fließtext formuliert „und“). Zellzahl nur bei klarem Punktat ohne Spülung, EDTA-Röhrchen, Analyse <1 h; bei blutigem Punktat korrigieren.</div>'
     +'<div class="dxnote">Synovia-Grenzwerte gelten nicht für die obere Extremität und sind früh postoperativ, bei Metallose, Kristallarthropathie, entzündlicher Grunderkrankung und periprothetischer Fraktur eingeschränkt verwertbar. Die Definition gibt keine Therapie vor.</div>'
