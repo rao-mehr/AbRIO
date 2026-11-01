@@ -159,12 +159,15 @@ function renderPrOut(){var o=document.getElementById('dxPrOut');if(!o)return;
   if(PR.all!=='schwer')re.push('Cefazolin erneut bei OP-Dauer > 2 Halbwertszeiten (≈ 4 h) oder Blutverlust > 1,5 l (AWMF S3, Empf. 124/125)');
   if(PR.all==='schwer'||PR.mrsa)re.push('Vancomycin: wegen langer Halbwertszeit in der Regel keine Nachdosierung; bei Blutverlust > 1,5 l erwägen (AWMF S3, Empf. 125)');
   var D={tep:'Einmalgabe (AWMF S3, Empf. 93/94)',rev:'Einmalgabe, höchstens 24 h',osy:'Einmalgabe',of12:'Präemptiv, höchstens 24 h (AWMF S3, Empf. 88)',
-    of3:'72 h präemptiv (AWMF S3, Empf. 89) bzw. ≤24 h nach Weichteildeckung (EAST) – länger bringt nichts',ak1:'Einmalgabe',sch:'Einmalgabe',ws:'Einmalgabe',reimp:'Siehe Wechselschema'};
+    of3:'72 h präemptiv (AWMF S3, Empf. 89) bzw. ≤24 h nach Weichteildeckung (EAST) – länger bringt nichts',ak1:'Einmalgabe',sch:'Einmalgabe',ws:'Einmalgabe',reimp:'Nach Wechselschema (PIF): 1 Woche i.v., dann oral biofilmaktiv bis zur Gesamtdauer'};
   du.push(D[PR.op]);
   if(PR.op==='of12'||PR.op==='of3')du.push('So früh wie möglich nach dem Trauma beginnen (AWMF S3, Empf. 87).');
   if(PR.op==='ak1')nt.push('Kreuzbandtransplantat zusätzlich in Vancomycinlösung einlegen (AWMF S3, Empf. 91).');
   if(PR.op==='rev')nt.push('Vor jeder Revision PJI ausschließen (Tool PJI-Diagnose). Gewebeproben intraoperativ immer entnehmen.');
-  if(PR.op==='reimp'){sub=['Keine reine Prophylaxe-Situation: erregergerichtete Therapie nach Wechselschema fortführen (Tool DAIR oder Wechsel?).','Zusätzliche Prophylaxe muss den bekannten Erreger abdecken (z. B. Vancomycin bei MRSA).'];add=PR.mrsa?add.filter(function(x){return x.indexOf('dekolon')>=0;}):[];}
+  if(PR.op==='reimp'){sub=['Erreger bekannt: Nach PIF laufen die Antibiotika bis zur Reimplantation weiter (kein antibiotikafreies Intervall). Am OP-Tag erregergerichtet i.v. fortführen, danach biofilmaktiv oral (Tool DAIR oder Wechsel?).',
+      'Erreger unbekannt oder keine laufende Therapie: Prophylaxe gegen methicillinresistente Staphylokokken und Pseudomonas, z. B. Glykopeptid + pseudomonaswirksames Beta-Laktam (Fall-Kontroll-Studie: aOR 0,24 für Reinfektion; niedrige Evidenz).'];
+    add=PR.mrsa?add.filter(function(x){return x.indexOf('dekolon')>=0;}):[];
+    nt.push('Nach Reimplantation senkten 3 Monate erregergerichtete orale Antibiotika die Reinfektion von 28,6 % auf 12,5 % (RCT, Yang et al., Bone Joint J 2020).','Eine Antibiotikapause vor der Reimplantation hat keinen belegten Vorteil (Scoping-Review, JBJS 2025).');}
   nt.push('Vancomycin routinemäßig zusätzlich zu Cefazolin (ohne MRSA) senkt Wundinfekte nicht, am Knie eher mehr, mehr Überempfindlichkeitsreaktionen (ASAP, NEJM 2023).');
   nt.push('Verlängerte Prophylaxe über das OP-Ende hinaus bringt keinen Vorteil – Ausnahme offene Frakturen (AWMF S3, Empf. 119).');
   o.innerHTML=thBlock('Substanz','var(--teal)',sub)+thBlock('Zusatz','var(--warn)',add)+thBlock('Zeitpunkt','var(--alt)',tm)
@@ -174,7 +177,7 @@ TOOLKEY.prall=function(v){PR.all=v;renderPr();};
 TOOLKEY.prmrsa=function(){PR.mrsa=!PR.mrsa;renderPr();};
 regTool({id:'prophylaxe',grp:'th',t:'Perioperative Prophylaxe',s:'Substanz, Dosis, Dauer',c:'var(--alt)',dom:'dxPr',render:renderPr,
   oninput:function(t){PR.kg=t.value;renderPrOut();},
-  src:'AWMF S3-Leitlinie Perioperative und periinterventionelle Antibiotikaprophylaxe 067-009 (2025) · Peel et al., NEJM 2023 (ASAP) · EAST Practice Management Guideline, J Trauma 2011',
+  src:'AWMF S3-Leitlinie Perioperative und periinterventionelle Antibiotikaprophylaxe 067-009 (2025) · Peel et al., NEJM 2023 (ASAP) · EAST Practice Management Guideline, J Trauma 2011 · Reimplantation: PIF PJI v11; Eur J Clin Microbiol Infect Dis 2024 (Fall-Kontroll, 12 Zentren); Yang et al., Bone Joint J 2020 (RCT)',
   ic:'<path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>'});
 
 /* ===== Resistenzlage ===== */
