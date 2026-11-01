@@ -7,7 +7,7 @@ function thChoice(key,q,opts,cur,col){return '<div class="dxp"><div class="dxp-n
   +opts.map(function(o){var on=cur===o[0];return '<button class="'+(col?'dxopt':'clschip dxc')+(on?' on':'')+'" data-k="'+key+'" data-v="'+o[0]+'" aria-pressed="'+on+'">'+o[1]+(o[2]?'<span>'+o[2]+'</span>':'')+'</button>';}).join('')+'</div></div>';}
 
 /* ===== Empirische Therapie ===== */
-var EM={sit:'',v:'',all:'kein',vanco:false};
+var EM={sit:'',v:'',all:'kein',vanco:false,f:{}};
 var EMSIT=[
   ['pji','Protheseninfekt (PJI)','alle Formen, Erreger noch unbekannt'],
   ['fri','Frakturassoziierte Infektion (FRI)',''],
@@ -75,21 +75,28 @@ function emPlan(){var s=EM.sit,v=EM.v,a=EM.all,P={f:[],alt:[],add:[],cn:[],dur:[
       P.cn=['Ampicillin/Sulbactam 3 g i.v. alle 8 h für 2 Wochen','dann Rifampicin 450 mg p.o. 2×/d + Levofloxacin 500 mg p.o. 2×/d'];
       P.dur=['Implantat entfernt: 6 Wochen','Implantat erhalten oder einzeitiger Wechsel: 12 Wochen (2 Wochen i.v., 10 Wochen biofilmaktiv oral)'];
     }
-  }else if(s==='dfo'){
-    P.pre=['Knochenprobe (intraoperativ oder perkutan) statt Abstrich, wenn Osteomyelitis vermutet wird.','Konventionelle Kultur als Erstdiagnostik (nicht molekular).'];
+  }else if(s==='dfo'){var F=EM.f;
+    P.pre=['Knochenprobe (intraoperativ oder perkutan) statt Abstrich, wenn Osteomyelitis vermutet wird (bedingt; moderat).','Gewebeprobe statt Wundabstrich; konventionelle Kultur als Erstdiagnostik.','Bei mittel/schwer: pAVK abklären (Doppler, Knöchel- und Zehendruck), WIfI-Klassifikation.'];
     if(v==='mild'){
-      P.f.push('Nur grampositive Aerobier abdecken (ohne kürzliche Antibiotika-Vortherapie, Westeuropa)','z. B. Cefalexin 1 g p.o. alle 6–8 h oder Flucloxacillin 1 g p.o. alle 6–8 h');
-      if(t1||nt1)P.note.push('Allergie: Alternative über das Tool Beta-Laktam-Allergie wählen.');
-      P.dur=['1–2 Wochen','Ausgedehnt, langsames Ansprechen oder schwere pAVK: 3–4 Wochen'];
+      if(t1||nt1)P.f.push('Beta-Laktam-Allergie: Clindamycin, Levofloxacin/Moxifloxacin, Cotrimoxazol oder Doxycyclin');
+      else if(F.ab)P.f.push('Kürzliche Antibiotika (grampositive + gramnegative Erreger): Amoxicillin/Clavulansäure bzw. Ampicillin/Sulbactam','oder Levofloxacin/Moxifloxacin bzw. Cotrimoxazol');
+      else P.f.push('Nur grampositive Erreger (Streptokokken, S. aureus): Flucloxacillin oder Cefalexin p.o.','Gilt ohne kürzliche Antibiotika-Vortherapie in Westeuropa/Nordamerika.');
+      if(F.mrsa)P.add.push('MRSA-Risiko hoch (frühere MRSA-Infektion/-Kolonisation): Linezolid, Cotrimoxazol, Clindamycin, Doxycyclin oder Levofloxacin');
+      P.dur=['1–2 Wochen oral','Nach chirurgischem Débridement: 10 Tage'];
       P.note.push('Keine topischen Antiinfektiva beim leichten Infekt.');
     }else{
-      P.f.push('Breiter: grampositive + gramnegative Erreger, bei Ischämie/Nekrose Anaerobier','z. B. Ampicillin/Sulbactam 3 g i.v. alle 8 h bzw. Amoxicillin/Clavulansäure');
-      P.add.push('Pseudomonas nur bei Nachweis am Ort in den letzten Wochen (in gemäßigtem Klima nicht routinemäßig)','MRSA nur bei Kolonisation oder hoher lokaler Prävalenz');
+      if(F.isch)P.f.push('Ischämie, Nekrose oder Gasbildung (+ Anaerobier): Ampicillin/Sulbactam bzw. Amoxicillin/Clavulansäure oder Piperacillin/Tazobactam','Alternativ Ertapenem bzw. Meropenem, oder Cefuroxim/Ceftriaxon + Clindamycin oder Metronidazol');
+      else if(F.ab)P.f.push('Kürzliche Antibiotika: Piperacillin/Tazobactam, Cefuroxim/Ceftriaxon oder Ertapenem (je nach Vortherapie)');
+      else P.f.push('Ohne Komplikationen: Ampicillin/Sulbactam bzw. Amoxicillin/Clavulansäure','oder Cefuroxim bzw. Ceftriaxon');
       if(t1||nt1)P.note.push('Allergie: Alternative über das Tool Beta-Laktam-Allergie wählen.');
-      if(v==='osteo'){P.dur=['Ohne Resektion/Amputation: 6 Wochen','Nach Minor-Amputation mit positivem Knochenrand: bis 3 Wochen','Remission erst ≥6 Monate nach Therapieende beurteilen'];
-        P.note.push('Konservativ möglich bei Vorfuß-Osteomyelitis ohne pAVK, ohne freiliegenden Knochen und ohne akute Drainage-Indikation.');
-        P.note.push('Früher oraler Switch auf gut bioverfügbare Substanz nach Antibiogramm (OVIVA-Prinzip).');}
-      else P.dur=['1–2 Wochen','Ausgedehnt, langsames Ansprechen oder schwere pAVK: 3–4 Wochen'];
+      if(F.pae)P.add.push('Mazeriertes Ulkus oder Pseudomonas-Nachweis am Ort in den letzten Wochen: Piperacillin/Tazobactam, Flucloxacillin + Ceftazidim bzw. Ciprofloxacin, oder Meropenem');
+      else P.add.push('Pseudomonas in gemäßigtem Klima nicht empirisch abdecken – nur bei Nachweis am Ort in den letzten Wochen');
+      if(F.mrsa)P.add.push('MRSA-Risiko: Vancomycin bzw. Teicoplanin, Linezolid oder Daptomycin ergänzen bzw. ersetzen');
+      if(F.esbl)P.add.push('Risiko resistenter Gramnegativer (ESBL): Carbapenem; Ciprofloxacin oder Amikacin nach Antibiogramm');
+      P.note.push('Schwerer Infekt: initial parenteral, oral erst als Switch.','Kein Tigecyclin (schlechter als Ertapenem).');
+      if(v==='osteo'){P.dur=['Ohne OP oder mit totem Knochen: 6 Wochen','Positiver Resektionsrand (Kultur/Histologie): 3 Wochen','Débridement, nur Weichteilinfekt verbleibend: 1–2 Wochen','Infizierter Knochen vollständig reseziert: 2–5 Tage','Remission frühestens 6 Monate nach Therapieende beurteilen'];
+        P.note.push('Bei Osteomyelitis im oberen Dosisbereich dosieren; oral mit hoher Bioverfügbarkeit möglich.','Konservativ (nur Antibiotika) möglich bei Vorfuß-Osteomyelitis ohne pAVK, ohne freiliegenden Knochen und ohne akute OP-Indikation; sonst Resektion erwägen.');}
+      else P.dur=['2–4 Wochen (initial i.v., dann oral)','Nach chirurgischem Débridement: 10 Tage'];
     }
   }
   return P;}
@@ -97,6 +104,8 @@ function renderEm(){var el=document.getElementById('dxEm');if(!el)return;
   var h=thChoice('emsit','Situation',EMSIT,EM.sit,true);
   if(EM.sit&&EMVAR[EM.sit])h+=thChoice('emv',EMVAR[EM.sit][0],EMVAR[EM.sit][1],EM.v,false);
   if(EM.sit)h+=thChoice('emall','Beta-Laktam-Allergie',[['kein','keine'],['nt1','nicht Typ 1 (z. B. Exanthem)'],['t1','Typ 1 / Cephalosporin-Allergie']],EM.all,false);
+  if(EM.sit==='dfo'&&EM.v){var DF=[['ab','Antibiotika in letzter Zeit']].concat(EM.v==='mild'?[['mrsa','Frühere MRSA-Infektion oder -Kolonisation']]:[['isch','Ischämie, Nekrose oder Gasbildung'],['pae','Mazeriertes Ulkus / Pseudomonas-Nachweis'],['mrsa','MRSA-Risikofaktoren (Hospitalisierung, Pflegeheim, Dialyse …)'],['esbl','Risiko für ESBL / resistente Gramnegative']]);
+    h+='<div class="dxq">Zusatzfaktoren</div><div class="dxchips dxcol">'+DF.map(function(x){var on=!!EM.f[x[0]];return '<button class="dxchk'+(on?' on':'')+'" data-k="emf" data-v="'+x[0]+'" aria-pressed="'+on+'"><span class="dxbox">'+(on?'✓':'')+'</span>'+x[1]+'</button>';}).join('')+'</div>';}
   if(EM.sit==='pji'||EM.sit==='fri')h+='<div class="dxchips dxcol"><button class="dxchk'+(EM.vanco?' on':'')+'" data-k="emvan" data-v="1" aria-pressed="'+EM.vanco+'"><span class="dxbox">'+(EM.vanco?'✓':'')+'</span>Septisch, MRSA-Träger, multiple Voroperationen oder V. a. Low-grade-Infekt</button></div>';
   var need=EM.sit&&EMVAR[EM.sit]&&!EM.v;
   h+='<div class="dxres">';
@@ -108,12 +117,13 @@ function renderEm(){var el=document.getElementById('dxEm');if(!el)return;
       +thBlock('Beachten','var(--mid)',P.note);
     h+='<div class="dxnote">Dosen für normale Nierenfunktion – Anpassung im Tool Dosierung. Standarddosen der Pocket Guides als Einzeldosen ausgeschrieben (z. B. 3 × 3 g = 3 g alle 8 h).</div>';}
   el.innerHTML=h+'</div>';}
-TOOLKEY.emsit=function(v){EM.sit=EM.sit===v?'':v;EM.v='';renderEm();};
+TOOLKEY.emsit=function(v){EM.sit=EM.sit===v?'':v;EM.v='';EM.f={};renderEm();};
 TOOLKEY.emv=function(v){EM.v=v;renderEm();};
 TOOLKEY.emall=function(v){EM.all=v;renderEm();};
+TOOLKEY.emf=function(v){EM.f[v]=!EM.f[v];renderEm();};
 TOOLKEY.emvan=function(){EM.vanco=!EM.vanco;renderEm();};
 regTool({id:'empirik',grp:'th',t:'Empirische Therapie',s:'Erreger noch unbekannt',c:'var(--teal)',dom:'dxEm',render:renderEm,
-  src:'PRO-IMPLANT Pocket Guides PJI v11, FRI v4, SA v2, SI v4 · IWGDF/IDSA 2023 (Diabetischer Fuß, CID 2023, doi 10.1093/cid/ciad527)',
+  src:'PRO-IMPLANT Pocket Guides PJI v11, FRI v4, SA v2, SI v4 · IWGDF/IDSA 2023 (Senneville et al., Diabetes Metab Res Rev 2024;40:e3687, Tab. 4 und 5)',
   ic:'<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/><path d="M11 8v6M8 11h6"/>'});
 
 /* ===== Perioperative Prophylaxe ===== */
