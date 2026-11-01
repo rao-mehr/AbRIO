@@ -116,6 +116,21 @@ def main():
             if t not in prof:
                 errors.append(f"substanzen.json: '{name}' ohne Feld '{t}'")
 
+    # Dosierung: Pflichtfelder und lückenlose CrCl-Bänder (0 bis 999)
+    dos = json.loads((ROOT / "data" / "dosierung.json").read_text(encoding="utf-8"))
+    for d in dos["s"]:
+        for t in ("n", "std", "r", "hd", "crrt", "adip", "q"):
+            if not d.get(t):
+                errors.append(f"dosierung.json: '{d.get('n', '?')}' ohne Feld '{t}'")
+        bands = sorted(d.get("r", []), key=lambda b: b[0])
+        if bands and (bands[0][0] != 0 or bands[-1][1] != 999 or any(bands[i + 1][0] != bands[i][1] + 1 for i in range(len(bands) - 1))):
+            errors.append(f"dosierung.json: '{d['n']}' CrCl-Bänder nicht lückenlos 0–999: {[(b[0], b[1]) for b in bands]}")
+    res = json.loads((ROOT / "data" / "resistenz.json").read_text(encoding="utf-8"))
+    for k in ("national", "lokal"):
+        for row in res[k]["rows"]:
+            if len(row) != 4:
+                errors.append(f"resistenz.json: Zeile in '{k}' braucht 4 Felder: {row}")
+
     for n, k in names.items():
         if k > 1:
             errors.append(f"Name doppelt: {n} ({k}x)")

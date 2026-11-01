@@ -4,7 +4,7 @@
    Klicks auf [data-k] innerhalb eines Werkzeugs gehen an TOOLKEY[k](wert, button). */
 var TOOLS=[],TOOLKEY={},CURTOOL=null;
 function regTool(o){TOOLS.push(o);}
-var TGROUPS=[['dx','Diagnose & Strategie'],['med','Medikation']];
+var TGROUPS=[['dx','Diagnose & Strategie'],['th','Therapie & Prophylaxe'],['med','Medikation']];
 var PRINZ=[
   ['Sensibler Erreger','Beta-Laktam der 1. Wahl.'],
   ['MRSA / MRSE','Vancomycin (AUC 400–600 mg·h/L) oder Daptomycin.'],

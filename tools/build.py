@@ -54,6 +54,9 @@ def build():
     parts["{{LOK}}"] = lok.replace("</", "<\\/")
     sub = json.dumps(json.loads(read("data/substanzen.json")), ensure_ascii=False, separators=(", ", ": "))
     parts["{{SUB}}"] = sub.replace("</", "<\\/")
+    # Dosierung (Niere/Dialyse/Adipositas) und Resistenzlage
+    for key, fn in (("{{DOS}}", "data/dosierung.json"), ("{{RES}}", "data/resistenz.json")):
+        parts[key] = json.dumps(json.loads(read(fn)), ensure_ascii=False, separators=(", ", ": ")).replace("</", "<\\/")
     # Platzhalter in einem Durchgang ersetzen (Inhalte werden nicht erneut gescannt)
     for key, val in parts.items():
         html = html.replace(key, val.replace("{{VERSION}}", version))

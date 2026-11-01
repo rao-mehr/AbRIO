@@ -1,0 +1,22 @@
+{
+ "national": {
+  "titel": "Österreich, invasive Isolate (Blutkultur)",
+  "jahr": "2024",
+  "quelle": "NRZ Antibiotikaresistenz – EARS-Net 2024 Österreich (vorläufige Daten), BMSGPK",
+  "rows": [
+   ["S. aureus", "MRSA", "5,4 %", "2015: 7,5 % – seit Jahren stabil"],
+   ["E. coli", "Fluorchinolone R", "15,5 %", "2020–2024 stabil (14–17 %)"],
+   ["E. coli", "Cephalosporine 3. Gen. R", "9,9 %", "Marker für ESBL"],
+   ["K. pneumoniae", "Carbapeneme R", "1,5 %", "2020–2024: 0,9–1,7 %"],
+   ["P. aeruginosa", "Carbapeneme R", "8,1 %", ""],
+   ["P. aeruginosa", "Piperacillin/Tazobactam R", "11,4 %", ""]
+  ],
+  "luecken": "Nicht berichtet: E. coli gegen Aminopenicilline und Ampicillin/Sulbactam, VRE-Anteil bei E. faecium. Gerade die Ampicillin/Sulbactam-Rate ist für die PIF-Empirik entscheidend – sie muss aus dem lokalen Antibiogramm kommen."
+ },
+ "lokal": {
+  "titel": "",
+  "jahr": "",
+  "quelle": "",
+  "rows": []
+ }
+}

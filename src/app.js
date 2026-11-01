@@ -201,7 +201,7 @@ function fmtName(n){return esc(n).replace(/\(([^)]*)\)/g,'<span class="par">($1)
 function col(label,color,arr,olab){var h='<div class="col-h">'+esc(label)+'</div><div class="col">';if(!arr||!arr.length)h+='<div class="drug"><span class="dd">—</span></div>';
   arr.forEach(function(d){h+='<div class="drug"><span class="dn" style="color:'+color+'">'+fmtName(d[0])+'</span>'+(d[1]?'<span class="dd">'+esc(d[1])+'</span>':'')+'</div>';});
   if(olab)h+='<div class="olab">⚠ '+esc(olab)+'</div>';return h+'</div>';}
-var LOK={{LOK}};
+var LOK={{LOK}};var DOS={{DOS}};var RES={{RES}};
 function lokalPanel(e){var c=e.lk&&LOK.kat[e.lk];if(!c)return '';
   var pm=c.pmma&&LOK.pmma[c.pmma];
   var h='<div class="col-h">LOKALE ANTIBIOTIKA</div><div class="col lok">';
