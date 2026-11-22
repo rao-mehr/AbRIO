@@ -111,6 +111,12 @@
    "pmma": "std",
    "stim": "nach Antibiogramm (Vancomycin, Gentamicin, Tobramycin)",
    "cer": "G oder V je nach Sensibilität"
+  },
+  "para": {
+   "pmma": null,
+   "stim": "nicht etabliert",
+   "cer": "nicht etabliert",
+   "pmma_n": "Kein etabliertes lokales Konzept bei Parasiten; Therapie = vollständige Resektion plus Albendazol systemisch."
   }
  },
  "quellen": "PRO-IMPLANT Pocket Guide PJI v11 (11/2023), Tabelle „Lokale Antibiotika im Knochenzement“ · STIMULAN-Mischanleitung (Biocomposites) · Kallala, Bone Joint Res 2018 · CERAMENT G US-IFU 2024 · FDA DEN210044 · Bezstarosti, CORR 2024 · McNally, Bone Joint J 2016/2022 · SOLARIO, NEJM 2026",

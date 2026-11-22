@@ -51,7 +51,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Haut/Weichteil 5-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage (unkomp.) - Endokarditis 4-6 Wo. - Osteomyelitis 4-6 Wo. - Spondylodiszitis 6-12 Wo. - PJI 12 Wo. (PIF v11)",
+  "dur": "Haut/Weichteil 5-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 14 Tage (unkomp.) - Endokarditis 4-6 Wo. - Osteomyelitis 4-6 Wo. - Spondylodiszitis 6 Wo. (nativ; länger bei Risikofaktoren) - PJI 12 Wo. (PIF v11)",
   "note": "",
   "pi": "DAIR / Wechsel-OP je nach Zeitfenster: | IV-Phase PJI (PIF-Pocket-Guide PJI v11): Cefazolin 2 g alle 8 h (PIF-Primärwahl für Prothesen!) | IV-Phase FRI/septische Arthritis (PIF v4/v2): Flucloxacillin 2 g alle 4-6 h (PIF-Primärwahl dort) | Beide gleichwertig wirksam, Wahl ist syndromspezifisch in den Original-Pocket-Guides | Rifampicin: ab Tag 2-7 (Wunde trocken!) 300-450 mg alle 12 h - nie früher! | Oral-Switch: Levofloxacin 500 mg 2x/d + Rifampicin 300-450 mg 2x/d | oder: Ciprofloxacin 750 mg 2x/d + Rifampicin 300-450 mg 2x/d | Dauer: Hüfte/Knie 3 Monate - Schulter/Ellbogen/Sprunggelenk 6 Monate | Unterdrückungstherapie: Cefalexin 500 mg 2x/d + Rifampicin (wenn OP nicht möglich)",
   "pig": {
@@ -86,8 +86,9 @@
   },
   "syn": {
    "PJI": "PJI 12 Wochen (PIF v11)",
-   "FRI": "Osteomyelitis 4-6 Wo.",
-   "SI": "Spondylodiszitis 6-12 Wo."
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)"
   },
   "syns": [
    "methicillin-sensibel",
@@ -203,7 +204,9 @@
   },
   "syn": {
    "PJI": "PJI 12 Wochen (PIF v11)",
-   "FRI": "Osteomyelitis 6 Wo."
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)"
   },
   "syns": [
    "methicillin-resistent",
@@ -313,7 +316,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s lugdunensis",
@@ -413,7 +419,10 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s epidermidis",
@@ -506,7 +515,10 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s haemolyticus",
@@ -595,7 +607,10 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s hominis",
@@ -683,7 +698,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s capitis",
@@ -769,7 +787,11 @@
     "Pro-Implant Foundation: Protokoll nicht spezifisch für S. saprophyticus"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "s saprophyticus",
    "s. saprophyticus",
@@ -862,7 +884,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s warneri",
@@ -952,7 +977,10 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s simulans",
@@ -1042,7 +1070,10 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s caprae",
@@ -1139,7 +1170,10 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "s schleiferi",
@@ -1242,7 +1276,9 @@
   },
   "syn": {
    "PJI": "PJI 12 Wochen (PIF v11)",
-   "FRI": "Osteomyelitis 4-6 Wo."
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)"
   },
   "syns": [
    "mrsp",
@@ -1350,7 +1386,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "coagulase negative",
@@ -1446,7 +1485,11 @@
     "Invasiv/toxisch (App-Ergänzung, nicht PIF): + Clindamycin 600-900 mg alle 8 h zur Toxinsuppression"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 1-2 Wochen (3-4 Wochen bei Komorbidität/langsamem Ansprechen; PIF SA v2)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "a-streptokokken",
    "gas",
@@ -1469,7 +1512,11 @@
   ],
   "wu": "Bei invasiver Infektion: nekrotisierende Fasziitis aktiv ausschließen (chirurgische Exploration!), Streptokokken-Toxic-Shock-Syndrom, Quellen-/Fokussuche.",
   "ev": "PIF",
-  "lk": "strep"
+  "lk": "strep",
+  "mp": {
+   "s": "bedingt",
+   "t": "Scharlach bzw. invasive bakterielle Erkrankung (Meningitis/Sepsis) · EpiG 1950 §1 Abs. 1 Z 2, 24 h"
+  }
  },
  {
   "n": "Streptococcus agalactiae (GBS / Gruppe B)",
@@ -1537,7 +1584,9 @@
    ]
   },
   "syn": {
-   "FRI": "Osteomyelitis 4 Wo."
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)",
+   "SA": "Septische Arthritis 1-2 Wochen (3-4 Wochen bei Komorbidität/langsamem Ansprechen; PIF SA v2)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)"
   },
   "syns": [
    "b-streptokokken",
@@ -1634,7 +1683,11 @@
    "cave": [],
    "extra": []
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 1-2 Wochen (3-4 Wochen bei Komorbidität/langsamem Ansprechen; PIF SA v2)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "ggs",
    "gruppe c",
@@ -1726,7 +1779,11 @@
    "cave": [],
    "extra": []
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 1-2 Wochen (3-4 Wochen bei Komorbidität/langsamem Ansprechen; PIF SA v2)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "s pneumoniae",
    "s. pneumoniae",
@@ -1743,7 +1800,11 @@
   ],
   "wu": "Bei invasiver Erkrankung: Asplenie? Immundefekt/Myelom (Serum-Elektrophorese)? Bei ZNS-Verdacht LP. Impfstatus prüfen.",
   "ev": "PIF",
-  "lk": "strep"
+  "lk": "strep",
+  "mp": {
+   "s": "bedingt",
+   "t": "Nur als invasive bakterielle Erkrankung (Meningitis/Sepsis) · EpiG 1950 §1 Abs. 1 Z 2, 24 h; Pneumokokken sind nicht namentlich gelistet"
+  }
  },
  {
   "n": "Streptococcus viridans-Gruppe (S. mitis, sanguis, oralis, mutans)",
@@ -1757,11 +1818,11 @@
   "f": [
    [
     "Penicillin G",
-    "4 Mio. IE i.v. alle 4 h (Endokarditis: 4 Wochen Nativklappe / 6 Wochen Klappenersatz)"
+    "4×5 Mio. IE i.v. (PJI, PIF v11) bzw. 4 Mio. IE alle 4 h (Endokarditis/Bakteriämie)"
    ],
    [
     "Ceftriaxon",
-    "2 g i.v. 1x/d x 4-6 Wochen (Endokarditis, vereinfacht)"
+    "2 g i.v. 1x/d (PJI: 2 Wochen i.v.; Endokarditis: 4-6 Wochen)"
    ]
   ],
   "a": [
@@ -1785,7 +1846,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Endokarditis 4 Wo. (Nativklappe, MHK <=0,12) - 6 Wo. (Klappenersatz, MHK >0,12) - Bakteriämie 14 Tage",
+  "dur": "PJI/Gelenk/Knochen 12 Wo. (PIF v11) - Bakteriämie 14 Tage - NUR bei Endokarditis: 4 Wo. (Nativklappe, MHK <=0,12) / 6 Wo. (Klappenersatz, MHK >0,12)",
   "note": "Häufigste Endokarditis-Erreger (Nativklappe). Zahnpflege-assoziiert. Penicillin-MHK bestimmt Strategie.",
   "pi": "Prothesen-/Klappen-Endokarditis (Viridans-Streptokokken): | IV: Penicillin G 4 Mio. IE alle 4 h x 4 Wochen (Nativklappe) / 6 Wochen (Klappenersatz) | oder Ceftriaxon 2 g 1x/d x 4-6 Wochen | Rifampicin: Nutzen unsicher – retrospektiv Assoziation mit Erfolg bei frühem Einsatz nach DAIR (Lora-Tamayo, CID 2017, n=462); kein Standard | Aminoglykosid-Synergismus (optional, 2 Wochen): Gentamicin 3 mg/kg/d | Oral-Switch: Amoxicillin 750 mg-1 g alle 8 h (nur nach sicherer Stabilisierung) | Dauer: 4 Wochen (Nativklappe) - 6 Wochen (Klappenersatz) | Zahnprophylaxe bei Risikopatienten obligat",
   "pig": {
@@ -1810,7 +1871,11 @@
     "Zahnprophylaxe bei Risikopatienten obligat"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 1-2 Wochen (3-4 Wochen bei Komorbidität/langsamem Ansprechen; PIF SA v2)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "mutans",
    "oralis",
@@ -1894,7 +1959,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Abszess 4-6 Wo. (+ chirurg. Drainage) - Hirnabszess 6-8 Wo. - Bakteriämie 14 Tage - Endokarditis 4-6 Wo.",
+  "dur": "PJI/Knochen 12 Wo. (PIF v11) - Abszess 4-6 Wo. (+ chirurg. Drainage) - Hirnabszess 6-8 Wo. - Bakteriämie 14 Tage - Endokarditis 4-6 Wo.",
   "note": "ABSZESSBILDNER! Hirn-, Leber-, Lungenabszess -> chirurgische Drainage immer obligat. Oft polymikrobiell. Hohe Virulenz trotz Streptokokken-Verwandtschaft.",
   "pi": "Implantat-assoziiert: Abszesse um Fremdmaterial, Knochen: | IV: Penicillin G 4 Mio. IE alle 4 h oder Ampicillin/Sulbactam | Chirurgische Drainage / Débridement OBLIGAT vor AB-Therapie! | Rifampicin: Nutzen unsicher – retrospektiv Assoziation mit Erfolg bei frühem Einsatz nach DAIR (Lora-Tamayo, CID 2017, n=462); kein Standard | Oral: Amoxicillin-Clavulanat 875/125 mg alle 8 h | Dauer: 3-6 Monate je nach Lokalisation und chirurgischer Sanierung",
   "pig": {
@@ -1917,7 +1982,11 @@
    "cave": [],
    "extra": []
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 1-2 Wochen (3-4 Wochen bei Komorbidität/langsamem Ansprechen; PIF SA v2)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "anginosus",
    "constellatus",
@@ -2002,7 +2071,7 @@
     "DAIR möglich bei früher hämatogener PJI + stabilem Implantat"
    ],
    "dur": [
-    "Dauer: 3 Monate (PJI) - 4-6 Wochen (Endokarditis)"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [],
    "extra": [
@@ -2072,7 +2141,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "HWI 5-7 Tage - Bakteriämie 7-14 Tage - Endokarditis 4-6 Wo. (Nativ) / 6 Wo. (Klappenersatz) - PJI 3 Mo.",
+  "dur": "HWI 5-7 Tage - Bakteriämie 7-14 Tage - Endokarditis 4-6 Wo. (Nativ) / 6 Wo. (Klappenersatz) - PJI 12 Wo. (PIF v11)",
   "note": "Cephalosporine als Monotherapie UNWIRKSAM (intrinsische Resistenz) - Ceftriaxon wirkt nur im Synergie-Doppel-Beta-Laktam. HLAR-Testung (High-Level-Gentamicin) vor Aminoglykosid-Kombination obligat.",
   "pi": "IV-Phase (PIF v11, ampicillinsensibel): Ampicillin 2 g 4x/d + Gentamicin 120 mg 1x/d (nur bei High-Level-Gentamicin-Sensibilität; Alternative bei E. faecalis: Ceftriaxon 2 g 2x/d) ± Fosfomycin 5 g 3x/d, 2-3 Wochen | Ampicillin-resistent: Vancomycin oder Daptomycin 10 mg/kg 1x/d ± Fosfomycin, 2-4 Wochen | Rifampicin: keine PIF-Empfehlung bei Enterokokken; kein belegter Nutzen (Maurille 2023) | Oral: Amoxicillin 1 g 3x/d oder Doxycyclin 100 mg 2x/d | Ampicillin-resistent: Linezolid 600 mg 2x/d (max. 4 Wochen) | DAIR möglich – Enterokokken sind in PIF v11 kein Problemerreger; populationsbasiert 72 % Heilung nach DAIR (Thompson 2019) | Dauer: 12 Wochen gesamt (PIF v11) | Cephalosporine als Monotherapie unwirksam",
   "pig": {
@@ -2100,7 +2169,10 @@
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "e faecalis",
@@ -2156,7 +2228,7 @@
    ]
   ],
   "olabel": "begrenzte orale Optionen",
-  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. (Klappenersatz) - PJI 3-6 Mo.",
+  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. (Klappenersatz) - PJI 12 Wo. (PIF v11; VRE: Entfernung oder Suppression)",
   "note": "VanA: Vancomycin- UND Teicoplanin-R - VanB: Teicoplanin oft noch sensibel prüfen! - Linezolid >2 Wochen: BB-Kontrollen (Myelosuppression)",
   "pi": "Meist ampicillinresistent | IV-Phase (PIF v11, ampicillinresistent): Vancomycin oder Daptomycin 10 mg/kg 1x/d ± Fosfomycin 5 g 3x/d, 2-4 Wochen | Rifampicin: keine PIF-Empfehlung bei Enterokokken | Oral: Linezolid 600 mg 2x/d (max. 4 Wochen) – wöchentlich Blutbild | VRE (PIF v11): individuell – Implantatentfernung oder lebenslange Suppression (z.B. Doxycyclin, falls sensibel) | Dauer: 12 Wochen gesamt (PIF v11)",
   "pig": {
@@ -2174,13 +2246,14 @@
     "VRE (PIF v11): individuell – Implantatentfernung oder lebenslange Suppression (z.B. Doxycyclin, falls sensibel)"
    ],
    "dur": [
-    "Dauer: 12 Wochen gesamt (PIF v11)"
+    "Dauer: 12 Wochen gesamt (PIF v11); VRE individuell – Implantatentfernung oder lebenslange Suppression (Lehrbuch Tab. 11.13)"
    ],
    "cave": [],
    "extra": []
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11); VRE: Entfernung oder Suppression",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)"
   },
   "syns": [
    "e faecium",
@@ -2351,7 +2424,11 @@
    "listeria monocytogenes"
   ],
   "wu": "ZNS-Beteiligung häufig (Rhombenzephalitis) → bei neurologischen Zeichen LP/MRT. Immunsuppression/Schwangerschaft abklären. Nahrungsquelle.",
-  "lk": "gpos"
+  "lk": "gpos",
+  "mp": {
+   "s": "bedingt",
+   "t": "Listeriose ist nicht namentlich gelistet; erfasst nur über „bakterielle Lebensmittelvergiftung“ (Z 1) bzw. invasive bakterielle Erkrankung (Z 2) – im Zweifel Hygiene/Gesundheitsamt fragen"
+  }
  },
  {
   "n": "Bacillus anthracis (Milzbrand)",
@@ -2425,7 +2502,11 @@
    "b anthracis",
    "b. anthracis",
    "bacillus anthracis"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Milzbrand · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Bacillus cereus",
@@ -2559,7 +2640,7 @@
   ],
   "olabel": "",
   "dur": "PJI (inkl. Schulter): 12 Wochen gesamt, davon 2 Wo. i.v. (PIF v11) - Endokarditis 4-6 Wo. - Spondylodiszitis 6 Wo.",
-  "note": "Kulturinkubation mind. 14 Tage! Metronidazol unwirksam (C. acnes regelhaft resistent). Rifampicin-Kombination laut PIF v11 empfohlen; klinische Evidenz schwach (Kusejko et al., CID 2021: kein signifikanter Vorteil).",
+  "note": "Kulturinkubation mind. 14 Tage! Metronidazol unwirksam (C. acnes regelhaft resistent). Rifampicin-Kombination laut PIF v11 empfohlen; klinische Evidenz schwach (Kusejko et al., CID 2021: kein signifikanter Vorteil). Fosfomycin ungeeignet (Isolate aus ZNS-Infektionen durchgehend resistent; Lehrbuch Tab. 11.13).",
   "pi": "Häufigster Erreger bei Schulterprothesen-Infektion: | IV-Phase: Penicillin G 5 Mio. IE alle 6 h oder Ceftriaxon 2 g 1x/d (bei fehlender Verfügbarkeit: Ampicillin/Sulbactam 3 g alle 8 h) | Rifampicin: PIF-v11-Empfehlung (ab Tag 2-7, Wunde trocken) – Evidenz schwach: Kohorte n=187 ohne signifikanten Vorteil (HR 0,5; p=0,07; Achermann, CID 2020) | Oral-Switch: Rifampicin 450 mg 2x/d + Levofloxacin 500 mg 2x/d (Erstlinie) | Alternative: Rifampicin + Amoxicillin 1 g alle 8 h | Alternative: Rifampicin + Doxycyclin 100 mg alle 12 h | Dauer: Schulter/Wirbelsäule 6 Monate | Kulturinkubation: mind. 14 Tage! (langsam wachsend) | DAIR: umstritten bei C. acnes - Pro-Implant: eher Wechsel",
   "pig": {
    "head": "Häufigster Erreger bei Schulterprothesen-Infektion",
@@ -2587,7 +2668,8 @@
   },
   "syn": {
    "PJI": "PJI 12 Wochen (PIF v11)",
-   "SI": "Spondylodiszitis 6 Wo."
+   "SI": "Spondylodiszitis 6 Wo.",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "akne",
@@ -3045,7 +3127,11 @@
    ],
    "extra": []
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "e coli",
    "e. coli",
@@ -3122,7 +3208,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "HWI 7-10 Tage - Pyelonephritis 10-14 Tage - Bakteriämie 7-14 Tage - PJI 3 Mo. - Cholangitis 7-14 Tage",
+  "dur": "HWI 7-10 Tage - Pyelonephritis 10-14 Tage - Bakteriämie 7-14 Tage - PJI 12 Wo. (PIF v11) - Cholangitis 7-14 Tage",
   "note": "Oral: Nitrofurantoin/Fosfomycin (nur E. coli)/Pivmecillinam nur für unkomplizierte Zystitis; TMP/SMX, Ciprofloxacin, Levofloxacin auch bei kompliziertem HWI, wenn sensibel. Außerhalb des Harntrakts Carbapenem (kritisch krank/Hypoalbuminämie: Meropenem/Imipenem statt Ertapenem); Piperacillin/Tazobactam nicht für invasive Infektionen.",
   "pi": "ESBL-PJI - eingeschränkte Oral-Optionen: | IV-Phase: Ertapenem 1 g 1x/d oder Meropenem | Oral-Switch: Ciprofloxacin/Levofloxacin nur wenn noch sensibel! | (ESBL-Stämme oft auch fluoroquinolon-resistent) | Fosfomycin oral: nur HWI-Prophylaxe, nicht PJI | Zwei-Stufen-Wechsel oft bevorzugt da oraler Switch schwierig | Pro-Implant: bei fehlendem oralem Switch -> IV-Langzeittherapie oder Suppression | Dauer: 3 Monate",
   "pig": {
@@ -3139,7 +3225,7 @@
     "Pro-Implant: bei fehlendem oralem Switch -> IV-Langzeittherapie oder Suppression"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [],
    "extra": [
@@ -3148,7 +3234,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 3 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "e coli",
@@ -3237,7 +3326,11 @@
    "cave": [],
    "extra": []
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "k pneumoniae",
    "k. pneumoniae",
@@ -3318,7 +3411,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI: Implantatentfernung dringend"
+   "PJI": "PJI: Implantatentfernung dringend",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "carbapenem-r",
@@ -3407,14 +3503,18 @@
     "DAIR möglich bei früher Infektion + sensibler Fluoroquinolon-Option"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [],
    "extra": [
     "Bei Ceftriaxon-Resistenz (ESBL/OXY-Hyperproduktion): Carbapenem -> Ciprofloxacin oral (wenn sensibel)"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "k oxytoca",
    "k. oxytoca",
@@ -3483,7 +3583,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "HWI 7-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 7-14 Tage - PJI 3 Mo. - Cefalosporine 3 immer meiden!",
+  "dur": "HWI 7-10 Tage - Pneumonie 7-14 Tage - Bakteriämie 7-14 Tage - PJI 12 Wo. (PIF v11) - Cefalosporine 3 immer meiden!",
   "note": "Chromosomale induzierbare AmpC -> Cefalosporine 1./2. Generation intrinsisch resistent; Cefalosporine 3. Generation bei invasiven Infektionen meiden (Derepression unter Therapie). Ausnahme: nicht schwere Infektion mit Fokuskontrolle und klinischer Besserung – Abschluss mit Ceftriaxon vertretbar. Cefepim und Carbapeneme AmpC-stabil.",
   "pi": "AmpC-Derepression: Cefalosporine 1-3 IMMER vermeiden: | IV-Phase: Meropenem 1-2 g alle 8 h oder Cefepim 2 g alle 8 h (AmpC-stabil) | Oral-Switch: Ciprofloxacin 750 mg alle 12 h (wenn sensibel) | oder Levofloxacin 500 mg alle 12 h | Cave: Resistenzentwicklung unter Therapie - engmaschige Kulturen | Zwei-Stufen-Wechsel bei Enterobacter-PJI bevorzugt (Resistenzrisiko) | Dauer: 3 Monate",
   "pig": {
@@ -3499,7 +3599,7 @@
     "Zwei-Stufen-Wechsel bei Enterobacter-PJI bevorzugt (Resistenzrisiko)"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [
     "Cave: Resistenzentwicklung unter Therapie - engmaschige Kulturen"
@@ -3510,7 +3610,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 3 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "e cloacae",
@@ -3596,7 +3699,7 @@
     "Zwei-Stufen-Wechsel bevorzugt bei Serratia-PJI"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [
     "Cave: Resistenzentwicklung unter Therapie möglich -> Follow-up-Kulturen"
@@ -3605,7 +3708,11 @@
     "oder Cefepim 2 g alle 8 h (AmpC-stabil)"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "s marcescens",
    "s. marcescens",
@@ -3694,7 +3801,7 @@
     "DAIR möglich bei früher Infektion"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [
     "Cave: Nitrofurantoin und Tetracycline intrinsisch unwirksam"
@@ -3703,7 +3810,11 @@
     "oder Levofloxacin 500 mg alle 12 h"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "p mirabilis",
    "p. mirabilis",
@@ -3784,12 +3895,16 @@
     "DAIR möglich bei früher Infektion + Fluoroquinolon-sensibel"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [],
    "extra": []
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "indol-positiver proteus",
    "p vulgaris",
@@ -3873,7 +3988,7 @@
    ],
    "surg": [],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [
     "Cave: Ampicillin, Cefazolin, Nitrofurantoin intrinsisch unwirksam"
@@ -3882,7 +3997,11 @@
     "oder Levofloxacin 500 mg alle 12 h"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "m morganii",
    "m. morganii",
@@ -3967,7 +4086,7 @@
    "oral": [],
    "surg": [],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [],
    "extra": [
@@ -3976,7 +4095,11 @@
     "-> Oral: Ciprofloxacin 750 mg alle 12 h"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "c spp.",
    "c. spp.",
@@ -4059,14 +4182,18 @@
     "Zwei-Stufen-Wechsel bei Resistenz"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [
     "Cave: Aminoglykoside (P. stuartii) intrinsisch unwirksam!"
    ],
    "extra": []
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
+  },
   "syns": [
    "alcalifaciens",
    "p spp.",
@@ -4107,6 +4234,10 @@
   ],
   "a": [
    [
+    "Cefuroxim",
+    "1,5 g i.v. alle 8 h (Lehrbuch 15.6: Cefuroxim oder Ciprofloxacin bei PJI)"
+   ],
+   [
     "TMP/SMX",
     "5 mg/kg (TMP) i.v. alle 8-12 h"
    ],
@@ -4127,7 +4258,7 @@
   ],
   "olabel": "",
   "dur": "GI: meist selbstlimitierend (keine AB) - Sepsis 7-14 Tage - Mesenteriale Lymphadenitis: selbstlimitierend",
-  "note": "GI meist selbstlimitierend - keine AB. AB nur bei Sepsis/Immunsuppression/Extraintestinal. Pseudoappendizitis-Bild (terminale Ileitis). Reaktive Arthritis nach Infektion häufig. Intrinsisch resistent gegen Penicillin, Ampicillin (β-Laktamase).",
+  "note": "GI meist selbstlimitierend - keine AB. AB nur bei Sepsis/Immunsuppression/Extraintestinal. Pseudoappendizitis-Bild (terminale Ileitis). Reaktive Arthritis nach Infektion häufig. Intrinsisch resistent gegen Penicillin, Ampicillin (β-Laktamase). Bei PJI Risikofaktoren: Hämarthros unter Antikoagulation, Diabetes mit Eisensubstitution; Explantation gelegentlich erforderlich (Lehrbuch 15.6). Rifampicin-Kombination nicht etabliert.",
   "pi": "",
   "pig": {
    "head": "",
@@ -4215,7 +4346,11 @@
    "styphi"
   ],
   "w": 1,
-  "det": []
+  "det": [],
+  "mp": {
+   "s": "ja",
+   "t": "Typhus/Paratyphus · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde; auch Ausscheider (§2 Abs. 2)"
+  }
  },
  {
   "n": "Salmonella non-typhoid",
@@ -4281,7 +4416,11 @@
    "s. non-typhoid",
    "salmonella non-typhoid"
   ],
-  "wu": "Bei Bakteriämie: endovaskulärer Fokus/mykotisches Aneurysma erwägen (>50 J, Atherosklerose) → CT-Angio. Rezidivierend → HIV-Test (AIDS-definierend)."
+  "wu": "Bei Bakteriämie: endovaskulärer Fokus/mykotisches Aneurysma erwägen (>50 J, Atherosklerose) → CT-Angio. Rezidivierend → HIV-Test (AIDS-definierend).",
+  "mp": {
+   "s": "bedingt",
+   "t": "Salmonellose ist nicht namentlich gelistet; erfasst als bakterielle Lebensmittelvergiftung (EpiG §1 Abs. 1 Z 1, 24 h) – Zuordnung prüfen"
+  }
  },
  {
   "n": "Shigella",
@@ -4341,7 +4480,11 @@
    "shigella"
   ],
   "w": 1,
-  "det": []
+  "det": [],
+  "mp": {
+   "s": "ja",
+   "t": "Übertragbare Ruhr · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde; auch Ausscheider (§2 Abs. 2)"
+  }
  },
  {
   "n": "Pseudomonas aeruginosa",
@@ -4434,7 +4577,9 @@
   },
   "syn": {
    "PJI": "PJI 12 Wochen (PIF v11)",
-   "FRI": "Osteomyelitis 6 Wo."
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)"
   },
   "syns": [
    "p aeruginosa",
@@ -4631,7 +4776,10 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "a baumannii",
@@ -4890,7 +5038,11 @@
    "h. influenzae",
    "haemophilus influenzae"
   ],
-  "lk": "gn"
+  "lk": "gn",
+  "mp": {
+   "s": "bedingt",
+   "t": "Nur als invasive bakterielle Erkrankung (Meningitis/Sepsis) · EpiG 1950 §1 Abs. 1 Z 2, 24 h; H. influenzae ist nicht namentlich gelistet"
+  }
  },
  {
   "n": "Haemophilus ducreyi (Ulcus molle / Chancroid)",
@@ -4957,7 +5109,11 @@
    "h ducreyi",
    "h. ducreyi",
    "haemophilus ducreyi"
-  ]
+  ],
+  "mp": {
+   "s": "bedingt",
+   "t": "Weicher Schanker · Geschlechtskrankheitengesetz §4: beschränkte Meldepflicht (nur wenn Ausbreitung zu befürchten bzw. Behandlung entzogen wird), keine Frist"
+  }
  },
  {
   "n": "HACEK-Gruppe (Endokarditis)",
@@ -5124,7 +5280,7 @@
   "n": "Kingella kingae (Kinder-Knochen-/Gelenkinfektionen)",
   "g": "Gram-negativ",
   "impl": {
-   "pji": "ja",
+   "pji": "selten",
    "dair": "möglich",
    "rif": "nein"
   },
@@ -5165,7 +5321,7 @@
   ],
   "olabel": "",
   "dur": "Septische Arthritis 3-4 Wochen - Osteomyelitis 3 Wochen - Spondylodiszitis 3-6 Wo. - Endokarditis 4 Wo.",
-  "note": "Kinder <5 Jahre! Septische Arthritis, Osteomyelitis, Spondylodiszitis, Endokarditis. Oropharyngeale Kolonisierung -> hämatogene Streuung nach HNO-Infektion. HACEK-Gruppe. Gute Prognose.",
+  "note": "KINDERKEIM (<5 Jahre) – bei Erwachsenen sind Gelenk-/Implantatinfektionen minimal. Erwachsenendosen NICHT auf Kinder übertragen (kg-basierte Pädiatrie-Dosierung, Rücksprache Pädiatrie/Infektiologie). Septische Arthritis, Osteomyelitis, Spondylodiszitis, Endokarditis; Oropharynx-Kolonisation → hämatogene Streuung nach Infekt der oberen Atemwege. Cave: K. kingae unterläuft die Kocher-Kriterien (Entzündungsparameter oft fast normal) – bei Verdacht PCR + großzügige Gelenkpunktion (Lehrbuch 25.3). HACEK-Gruppe, gute Prognose.",
   "pi": "Septische Arthritis/Osteomyelitis Kinder - PJI sehr selten: | IV: Ampicillin/Sulbactam 3 g alle 6 h oder Penicillin G | Rifampicin: kein belegter Nutzen, kein Standard | Oral: Amoxicillin-Clavulanat 875/125 mg alle 8 h | (Kinder: nach Gewicht dosieren) | Gute Prognose - DAIR möglich | Dauer: 3 Wochen (Osteomyelitis) - 3-4 Wochen (septische Arthritis)",
   "pig": {
    "head": "Septische Arthritis/Osteomyelitis Kinder - PJI sehr selten",
@@ -5274,7 +5430,11 @@
    "n. gonorrhoeae",
    "neisseria gonorrhoeae"
   ],
-  "wu": "STI-Komplettscreening (HIV, Syphilis, Chlamydien), Partnernotifikation. Disseminiert: Gelenk-/Hautbeteiligung, selten Endokarditis."
+  "wu": "STI-Komplettscreening (HIV, Syphilis, Chlamydien), Partnernotifikation. Disseminiert: Gelenk-/Hautbeteiligung, selten Endokarditis.",
+  "mp": {
+   "s": "bedingt",
+   "t": "Tripper · Geschlechtskrankheitengesetz §4: beschränkte Meldepflicht (nur wenn Ausbreitung zu befürchten bzw. Behandlung entzogen wird), keine Frist"
+  }
  },
  {
   "n": "Neisseria meningitidis",
@@ -5338,7 +5498,11 @@
    "n meningitidis",
    "n. meningitidis",
    "neisseria meningitidis"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Invasive bakterielle Erkrankung (Meningitis/Sepsis) · EpiG 1950 §1 Abs. 1 Z 2 (Erkrankungs- und Todesfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Moraxella catarrhalis",
@@ -5606,7 +5770,11 @@
    "b pertussis",
    "b. pertussis",
    "bordetella pertussis"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Keuchhusten · EpiG 1950 §1 Abs. 1 Z 2 (Erkrankungs- und Todesfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Aeromonas hydrophila / veronii",
@@ -5765,7 +5933,11 @@
    "v cholerae",
    "v. cholerae",
    "vibrio cholerae"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Cholera · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Vibrio vulnificus / parahaemolyticus",
@@ -5926,7 +6098,11 @@
   ],
   "wu": "TEE (Endokarditis — häufigste Todesursache), Wirbelsäulen-MRT (Spondylodiszitis/Sakroiliitis), Orchitis? Tierkontakt/Rohmilch-Anamnese.",
   "ev": "Leitlinie",
-  "lk": "gn"
+  "lk": "gn",
+  "mp": {
+   "s": "ja",
+   "t": "Brucellose („Bang’sche Krankheit“) · EpiG 1950 §1 Abs. 1 Z 2 (Erkrankungs- und Todesfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Francisella tularensis (Tularämie)",
@@ -6000,14 +6176,18 @@
    "f tularensis",
    "f. tularensis",
    "francisella tularensis"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Tularämie · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Pasteurella multocida (Tierbiss)",
   "g": "Gram-negativ",
   "impl": {
    "pji": "selten",
-   "dair": "erschwert (DTT)",
+   "dair": "möglich",
    "rif": "nein"
   },
   "route": "ERSTLINIE I.V.",
@@ -6051,7 +6231,7 @@
   ],
   "olabel": "",
   "dur": "Bisswunde unkompliziert 5-7 Tage - Bisswunde + Sehnen/Knochen 14-21 Tage - Osteomyelitis 4-6 Wo. - Bakteriämie 14 Tage",
-  "note": "Hunde- UND Katzenbiss (Katze häufigste Ursache)! Intrinsisch resistent gegen Clindamycin, Dicloxacillin, Cefalexin (1. Gen.), Erythromycin. Rasches Wachstum -> frühe Therapie. Profylaxe nach Biss mit Amoxicillin-Clavulanat.",
+  "note": "Hunde- UND Katzenbiss (Katze häufigste Ursache)! Intrinsisch resistent gegen Clindamycin, Dicloxacillin, Cefalexin (1. Gen.), Erythromycin. Rasches Wachstum -> frühe Therapie. Profylaxe nach Biss mit Amoxicillin-Clavulanat. PJI (meist akute Knie-PJI, Kasuistiken): DAIR bei früher Diagnose oft möglich; Amoxicillin/Clavulansäure oder Penicillin G (Lehrbuch 15.6).",
   "pi": "Tierbiss mit Knochenbeteiligung / Gelenkinfektion: | IV: Amoxicillin-Clavulanat 2,2 g alle 6-8 h | Oral: Amoxicillin-Clavulanat 875/125 mg alle 8 h | CAVE: Clindamycin, Cefalexin (1. Gen.), Dicloxacillin intrinsisch unwirksam! | Implantat nach Tierbiss kontaminiert: aggressive Débridement + Entfernung | Dauer: 3-6 Wochen (Knochen)",
   "pig": {
    "head": "Tierbiss mit Knochenbeteiligung / Gelenkinfektion",
@@ -6437,7 +6617,11 @@
    "c. difficile",
    "clostridioides difficile",
    "clostridium difficile"
-  ]
+  ],
+  "mp": {
+   "s": "bedingt",
+   "t": "Nur schwere C.-difficile-Erkrankungen · EpiG 1950 §1 Abs. 1 Z 2 (Erkrankungs- und Todesfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Clostridium perfringens / Gasbrand",
@@ -6641,7 +6825,11 @@
    "c botulinum",
    "c. botulinum",
    "clostridium botulinum"
-  ]
+  ],
+  "mp": {
+   "s": "bedingt",
+   "t": "Botulismus ist nicht namentlich gelistet; erfasst als bakterielle Lebensmittelvergiftung (EpiG §1 Abs. 1 Z 1, 24 h) – Zuordnung prüfen"
+  }
  },
  {
   "n": "Peptostreptococcus / Anaerobier (gram-pos.)",
@@ -7252,7 +7440,11 @@
    "l pneumophila",
    "l. pneumophila",
    "legionella pneumophila"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Legionärskrankheit · EpiG 1950 §1 Abs. 1 Z 2 (Erkrankungs- und Todesfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Mycoplasma pneumoniae",
@@ -7383,7 +7575,6 @@
    "PJI": "PJI: mind. 3 Monate (Fallberichte)"
   },
   "syns": [
-   "kulturnegativ",
    "m hominis",
    "m. hominis",
    "mhominis",
@@ -7533,7 +7724,11 @@
    "c. trachomatis",
    "chlamydia trachomatis"
   ],
-  "wu": "STI-Screening (HIV, Syphilis, Gonorrhoe) + Partnerbehandlung."
+  "wu": "STI-Screening (HIV, Syphilis, Gonorrhoe) + Partnerbehandlung.",
+  "mp": {
+   "s": "bedingt",
+   "t": "Nur Lymphogranuloma inguinale (LGV) · Geschlechtskrankheitengesetz §4: beschränkte Meldepflicht (nur wenn Ausbreitung zu befürchten bzw. Behandlung entzogen wird), keine Frist; sonstige Chlamydia-Infektionen nicht meldepflichtig"
+  }
  },
  {
   "n": "Chlamydophila psittaci (Psittakose/Ornithose)",
@@ -7604,7 +7799,11 @@
    "c psittaci",
    "c. psittaci",
    "chlamydophila psittaci"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Psittakose · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Treponema pallidum (Syphilis)",
@@ -7671,7 +7870,11 @@
    "t. pallidum",
    "treponema pallidum"
   ],
-  "wu": "Begleitende STI-Testung (HIV, Gonorrhoe, Chlamydien), Partnerbehandlung. Bei neurologischen/okulären Symptomen Liquor (Neurosyphilis) + augenärztliche Abklärung."
+  "wu": "Begleitende STI-Testung (HIV, Gonorrhoe, Chlamydien), Partnerbehandlung. Bei neurologischen/okulären Symptomen Liquor (Neurosyphilis) + augenärztliche Abklärung.",
+  "mp": {
+   "s": "bedingt",
+   "t": "Syphilis · Geschlechtskrankheitengesetz §4: beschränkte Meldepflicht (nur wenn Ausbreitung zu befürchten bzw. Behandlung entzogen wird), keine Frist"
+  }
  },
  {
   "n": "Borrelia burgdorferi (Lyme-Borreliose)",
@@ -7822,7 +8025,11 @@
    "l interrogans",
    "l. interrogans",
    "leptospira interrogans"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Leptospiren-Erkrankungen · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Rickettsia spp.",
@@ -7887,7 +8094,11 @@
    "r spp.",
    "r. spp.",
    "rickettsia spp."
-  ]
+  ],
+  "mp": {
+   "s": "bedingt",
+   "t": "Nur Fleckfieber (Rickettsia prowazekii) · EpiG 1950 §1 Abs. 1 Z 1, 24 h; übrige Rickettsiosen sind nicht gelistet"
+  }
  },
  {
   "n": "Coxiella burnetii (Q-Fieber)",
@@ -8021,8 +8232,8 @@
   "n": "Tropheryma whipplei (Morbus Whipple)",
   "g": "Atypisch",
   "impl": {
-   "pji": "nein",
-   "dair": "—",
+   "pji": "selten",
+   "dair": "möglich",
    "rif": "—"
   },
   "route": "ERSTLINIE I.V.",
@@ -8054,7 +8265,7 @@
   ],
   "olabel": "",
   "dur": "IV-Induktion (ZNS): Ceftriaxon 2 Wochen - Erhaltung: TMP/SMX oder Doxy + HCQ >=12 Monate (oft länger)",
-  "note": "Sehr seltene Systemerkrankung. PAS-positive Makrophagen in Dünndarmbiopsie/PCR. ZNS-Beteiligung: Ceftriaxon-Induktion OBLIGAT vor Erhaltungstherapie! Sehr lange Therapiedauer (1-2 Jahre). Doxycyclin ± Hydroxychloroquin als Alternative mit guter ZNS-Penetration.",
+  "note": "Sehr seltene Systemerkrankung. PAS-positive Makrophagen in Dünndarmbiopsie/PCR. ZNS-Beteiligung: Ceftriaxon-Induktion OBLIGAT vor Erhaltungstherapie! Sehr lange Therapiedauer (1-2 Jahre). Doxycyclin ± Hydroxychloroquin als Alternative mit guter ZNS-Penetration. Gelenk-/Prothesenbeteiligung beschrieben: PJI nach Whipple-Krankheit, Persistenz auch nach gastrointestinalem Therapieerfolg; Cotrimoxazol oder Pristinamycin, Suppression nach DAIR möglich (Lehrbuch 15.6, Kasuistiken).",
   "pi": "",
   "pig": {
    "head": "",
@@ -8081,7 +8292,8 @@
    "t whipplei",
    "t. whipplei",
    "tropheryma whipplei"
-  ]
+  ],
+  "lk": "gpos"
  },
  {
   "n": "Toxoplasma gondii",
@@ -8226,7 +8438,11 @@
    "mycobacterium tuberculosis",
    "tuberkulose"
   ],
-  "lk": "myko"
+  "lk": "myko",
+  "mp": {
+   "s": "ja",
+   "t": "Tuberkulose · Tuberkulosegesetz §3/§5 – Meldung innerhalb von 3 Tagen nach Diagnose an die Bezirksverwaltungsbehörde des Wohnsitzes"
+  }
  },
  {
   "n": "Mycobacterium avium complex (MAC)",
@@ -8773,7 +8989,11 @@
    "m leprae",
    "m. leprae",
    "mycobacterium leprae"
-  ]
+  ],
+  "mp": {
+   "s": "ja",
+   "t": "Lepra · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  }
  },
  {
   "n": "Candida albicans (invasiv / Candidämie)",
@@ -8842,7 +9062,8 @@
    "extra": []
   },
   "syn": {
-   "FRI": "Osteomyelitis 6-12 Mo."
+   "FRI": "Osteomyelitis 6-12 Mo.",
+   "SA": "Septische Arthritis 6 Wochen (PIF SA v2; ECMM/ISHAM/ASM 2025: 6-12 Monate)"
   },
   "syns": [
    "c albicans",
@@ -8910,8 +9131,8 @@
    ]
   ],
   "olabel": "oraler Switch speziesabhängig",
-  "dur": "Candidämie 14 Tage ab neg. Blutkultur - C. parapsilosis Endokarditis 6 Wo. - Augenuntersuchung obligat",
-  "note": "Spezies-Differenzierung entscheidend: C. krusei intrinsisch Fluconazol-resistent -> Echinocandin oder Voriconazol. C. glabrata dosisabhängige Azol-Resistenz -> Echinocandin bevorzugt (Fluconazol nur hochdosiert bei Sensibilität). C. tropicalis meist azolsensibel.",
+  "dur": "Candidämie 14 Tage ab neg. Blutkultur - Endokarditis 6 Wo. - Augenuntersuchung obligat",
+  "note": "Spezies-Differenzierung entscheidend: C. krusei intrinsisch Fluconazol-resistent -> Echinocandin oder Voriconazol. C. glabrata dosisabhängige Azol-Resistenz -> Echinocandin bevorzugt (Fluconazol nur hochdosiert bei Sensibilität). C. tropicalis meist azolsensibel. C. parapsilosis: eigener Eintrag (Fluconazol bevorzugt, Echinocandin-MHK höher).",
   "pi": "Non-albicans Candida auf Implantat: | Implantatentfernung DRINGEND - non-albicans biofilmresistenter | IV: Echinocandin (Erstlinie für alle non-albicans) | Oral Step-down: Voriconazol 200-300 mg alle 12 h (C. tropicalis/parapsilosis) | C. krusei: Fluconazol UNWIRKSAM - Voriconazol oder Isavuconazol | Dauer: >=14 Tage ab neg. Kultur | Suppressionstherapie selten möglich",
   "pig": {
    "head": "Non-albicans Candida auf Implantat",
@@ -8935,7 +9156,9 @@
     "Suppressionstherapie selten möglich"
    ]
   },
-  "syn": {},
+  "syn": {
+   "SA": "Septische Arthritis 6 Wochen (PIF SA v2; ECMM/ISHAM/ASM 2025: 6-12 Monate)"
+  },
   "syns": [
    "c non-albicans",
    "c. non-albicans",
@@ -8945,7 +9168,6 @@
    "cnon-albicans",
    "glabrata",
    "krusei",
-   "parapsilosis",
    "tropicalis"
   ],
   "w": 2,
@@ -8954,12 +9176,10 @@
    "c. glabrata",
    "c. krusei",
    "c. non-albicans",
-   "c. parapsilosis",
    "c. tropicalis",
    "candida glabrata",
    "candida krusei",
    "candida non-albicans",
-   "candida parapsilosis",
    "candida tropicalis"
   ],
   "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis, bis 15%!) in der 1. Woche, TEE (Endokarditis, v.a. bei Persistenz/Device), Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie.",
@@ -10200,7 +10420,7 @@
     "DAIR möglich wenn Cipro-sensibel + frühe Infektion"
    ],
    "dur": [
-    "Dauer: 3 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11)"
    ],
    "cave": [],
    "extra": [
@@ -10211,7 +10431,7 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 3 Mo. (mit Fluorchinolon-Switch)"
+   "PJI": "PJI 12 Wochen (PIF v11; Fluorchinolon-Switch)"
   },
   "syns": [
    "3 von 4 gruppen resistent",
@@ -10378,7 +10598,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. (Klappenersatz) - HWI 5-7 Tage - PJI 3-6 Mo. - Linezolid >2 Wo.: BB-Kontrollen!",
+  "dur": "Bakteriämie 7-14 Tage - Endokarditis 6 Wo. (Klappenersatz) - HWI 5-7 Tage - PJI 12 Wo. (PIF v11; VRE: Entfernung oder Suppression) - Linezolid >2 Wo.: BB-Kontrollen!",
   "note": "VanA: Vancomycin- UND Teicoplanin-R - VanB: Teicoplanin oft noch sensibel prüfen! - Linezolid >2 Wo.: BB-Kontrollen - Isolierung - Infektiologie obligat",
   "pi": "VRE auf Implantat: | Implantatentfernung DRINGEND empfohlen | IV: Linezolid 600 mg alle 12 h oder Daptomycin 8-10 mg/kg | VanB (Teicoplanin oft sensibel): Teicoplanin als Option prüfen! | Oral-Switch: Linezolid 600 mg alle 12 h (BV ~100 %) | Cave: Linezolid >2 Wochen -> Myelosuppression, Neuropathie -> BB-Kontrollen | Zwei-Stufen-Wechsel mit langem Intervall | Dauer: 3-6 Monate",
   "pig": {
@@ -10395,7 +10615,7 @@
     "Zwei-Stufen-Wechsel mit langem Intervall"
    ],
    "dur": [
-    "Dauer: 3-6 Monate"
+    "Dauer: 12 Wochen gesamt (PIF v11); VRE individuell – Implantatentfernung oder lebenslange Suppression (Lehrbuch Tab. 11.13)"
    ],
    "cave": [
     "Cave: Linezolid >2 Wochen -> Myelosuppression, Neuropathie -> BB-Kontrollen"
@@ -10405,7 +10625,8 @@
    ]
   },
   "syn": {
-   "PJI": "PJI 3-6 Mo."
+   "PJI": "PJI 12 Wochen (PIF v11); VRE: Entfernung oder Suppression",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)"
   },
   "syns": [
    "e. faecalis",
@@ -10628,7 +10849,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "PJI 3 Monate (analog Streptokokken-Schema) - Endokarditis 4-6 Wo.",
+  "dur": "PJI 12 Wo. (analog Streptokokken, PIF v11) - Endokarditis 4-6 Wo.",
   "note": "Orale Kommensalflora, zunehmend als PJI- und Endokarditis-Erreger erkannt (v.a. bei Immunsuppression/Neutropenie). Variable Penicillin-Sensibilität - Antibiogramm obligat vor Therapie.",
   "impl": {
    "pji": "selten",
@@ -10696,7 +10917,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Endokarditis 4-6 Wo. - PJI 3 Monate (analog Viridans-Streptokokken)",
+  "dur": "Endokarditis 4-6 Wo. - PJI 12 Wo. (analog Streptokokken, PIF v11)",
   "note": "Orale Flora, Streptokokken-verwandt, fastidiös (langsames Wachstum, verlängerte Kulturinkubation nötig). Hauptmanifestation Endokarditis - PJI nur vereinzelt beschrieben.",
   "impl": {
    "pji": "selten",
@@ -10763,7 +10984,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "HWI 7 Tage - Bakteriämie/Endokarditis 4-6 Wo. - PJI analog Streptokokken 3 Monate",
+  "dur": "HWI 7 Tage - Bakteriämie/Endokarditis 4-6 Wo. - PJI 12 Wo. (PIF v11)",
   "note": "Zunehmend erkannter Erreger v.a. bei älteren Männern mit Harnwegsanomalien - Ursprung meist urogenital mit hämatogener Streuung. Häufig fehldiagnostiziert als vergrünende Streptokokken (ähnliche Alpha-Hämolyse) - MALDI-TOF zur korrekten Identifikation.",
   "impl": {
    "pji": "selten",
@@ -11161,7 +11382,7 @@
    ]
   ],
   "olabel": "",
-  "dur": "Bakteriämie 14 Tage - PJI 3 Monate (analog Nonfermenter-Schema)",
+  "dur": "Bakteriämie 14 Tage - PJI 12 Wo. (analog Nonfermenter, PIF v11)",
   "note": "Nonfermenter, katheter- und CF-assoziiert, zunehmend bei Immunsupprimierten und Fremdmaterial. Intrinsisch oft Aminoglykosid-resistent. Zunehmend multiresistente Stämme beschrieben - Antibiogramm vor Therapie zwingend.",
   "impl": {
    "pji": "selten",
@@ -12410,7 +12631,11 @@
   },
   "pi": "",
   "w": 1,
-  "lk": "myko"
+  "lk": "myko",
+  "mp": {
+   "s": "bedingt",
+   "t": "M. bovis gehört zum M.-tuberculosis-Komplex · Tuberkulosegesetz §3/§5 – Meldung innerhalb von 3 Tagen nach Diagnose an die Bezirksverwaltungsbehörde des Wohnsitzes; BCG-Stamm nicht gesondert geprüft"
+  }
  },
  {
   "n": "Mycobacterium haemophilum",
@@ -12714,8 +12939,8 @@
   ],
   "a": [
    [
-    "Daptomycin",
-    "6-8 mg/kg 1x/d (Cave rasche Resistenz unter Therapie)"
+    "Dalbavancin",
+    "in einer PJI-Serie wirksam (off-label) – Dosierung nach Infektiologie"
    ],
    [
     "Linezolid",
@@ -12729,8 +12954,8 @@
    ]
   ],
   "olabel": "oraler Switch praktisch nur Linezolid (max. ca. 4 Wochen, dann Suppression/Infektiologie - Myelo-/Neurotoxizität)",
-  "dur": "PJI 3 Mo. (individuell) je nach OP-Strategie",
-  "note": "Zunehmend ECHTER multiresistenter Device-/PJI-Erreger (nicht nur Kontaminante!) - v.a. C. striatum. Meist multiresistent (nur Vancomycin/Linezolid zuverlässig). Cave: rasche Daptomycin-Resistenz unter Therapie. Wertung bei mehrfachem Nachweis aus tiefen Proben. Evidenz: zunehmende Fallserien.",
+  "dur": "PJI 12 Wo. (PIF v11, analog) – individuell je nach OP-Strategie",
+  "note": "Zunehmend ECHTER multiresistenter Device-/PJI-Erreger (nicht nur Kontaminante!) – v.a. C. striatum. Meist multiresistent: zuverlässig empfindlich nur Vancomycin und Linezolid (Dalbavancin ebenfalls wirksam); Ciprofloxacin, Tetracyclin und Doxycyclin durchgehend resistent. Daptomycin gilt als UNZUVERLÄSSIG: unter Therapie entwickelten 85,7 % der Isolate rasch eine hochgradige Resistenz – auch bei initial getesteter Empfindlichkeit nicht verwenden (Fallserie, Lehrbuch 11.14). Wertung bei mehrfachem Nachweis aus tiefen Proben.",
   "wu": "Bei mehrfachem Nachweis echte Infektion annehmen (nicht als Diphtheroid-Kontaminante abtun!). Fremdmaterial/Katheter prüfen.",
   "syns": [
    "c striatum",
@@ -13033,7 +13258,10 @@
   },
   "pi": "",
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "argenteus",
@@ -13129,7 +13357,10 @@
   },
   "pi": "",
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "pettenkoferi",
@@ -13941,7 +14172,10 @@
   },
   "pi": "",
   "syn": {
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)"
   },
   "syns": [
    "aerogenes",
@@ -14214,7 +14448,9 @@
   "pi": "",
   "syn": {
    "FRI": "FRI 12 Wochen (PIF)",
-   "PJI": "PJI 12 Wochen (PIF v11)"
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "SA": "Septische Arthritis 4 Wochen (PIF SA v2; Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)"
   },
   "syns": [
    "ornithinolytica",
@@ -14511,5 +14747,490 @@
   "pi": "",
   "w": 1,
   "lk": "aneg"
+ },
+ {
+  "n": "Kulturnegative Infektion (Erreger unbekannt)",
+  "g": "Kulturnegativ",
+  "impl": {
+   "pji": "ja",
+   "dair": "möglich",
+   "rif": "bedingt"
+  },
+  "route": "ERSTLINIE I.V. (EMPIRISCH)",
+  "f": [
+   [
+    "Ampicillin/Sulbactam",
+    "3 g i.v. alle 8 h (PIF v11 kulturnegativ)"
+   ],
+   [
+    "Vancomycin",
+    "15-20 mg/kg i.v. – AUC-gesteuert (PIF v11: ± Vancomycin)"
+   ]
+  ],
+  "a": [
+   [
+    "Piperacillin/Tazobactam",
+    "4,5 g i.v. alle 8 h (FRI nach drittgradig offener Fraktur, PIF FRI v4)"
+   ],
+   [
+    "Daptomycin",
+    "8 mg/kg i.v. 1x/d (Typ-I-Penicillinallergie, PIF SA v2; ± Fosfomycin)"
+   ]
+  ],
+  "o": [
+   [
+    "Rifampicin + Levofloxacin",
+    "450 mg 2x/d + 500 mg 2x/d (PIF v11, mit Implantat)"
+   ],
+   [
+    "Cotrimoxazol + Amoxicillin",
+    "natives Gelenk (SA): PIF SA v2 / Lehrbuch Tab. 16.8"
+   ],
+   [
+    "Levofloxacin + Clindamycin",
+    "natives Gelenk (SA): Alternative"
+   ]
+  ],
+  "olabel": "",
+  "dur": "PJI 12 Wo. (PIF v11) - FRI 12 Wo. (Erhalt/Wechsel) / 6 Wo. (Entfernung) - Septische Arthritis nativ 4 Wo. (Ampicillin/Sulbactam 2 Wo. i.v.) - Spondylodiszitis 6 Wo.",
+  "note": "Kulturnegativ ≠ erregerfrei. Vor Empirik Proben sichern (mehrere tiefe Gewebeproben, Sonikation, Bebrütung bis 14 Tage), Antibiotika-Vortherapie dokumentieren. Seltene Erreger gezielt suchen: Mykoplasmen/Ureaplasmen (Doxycyclin), Brucellen, Tropheryma, Mykobakterien, Pilze, Cutibacterium – PCR, Serologie, Histologie; zoonotische Erreger werden auf Standardmedien regelhaft übersehen, der Verdacht muss dem Labor mitgeteilt werden (Tierkontakt, Rohmilch, Reisen; Lehrbuch 15.6). Kein Ansprechen: Diagnostik und Infektiologie-Konsil statt Dauerempirik.",
+  "pi": "",
+  "pig": {
+   "head": "Kulturnegative Infektion – empirisches PIF-Schema",
+   "iv": [
+    "IV-Phase (PIF v11): Ampicillin/Sulbactam 3 g alle 8 h ± Vancomycin (AUC-TDM), 2 Wochen",
+    "FRI (PIF v4): nach drittgradig offener Fraktur Piperacillin/Tazobactam statt Ampicillin/Sulbactam"
+   ],
+   "bio": [
+    "Rifampicin: ab Wundtrockenheit 450 mg alle 12 h (>75 J.: 300 mg) – nur bei Implantat, nie als Monotherapie"
+   ],
+   "oral": [
+    "Oral-Switch (PIF v11): Rifampicin 450 mg 2x/d + Levofloxacin 500 mg 2x/d"
+   ],
+   "surg": [
+    "DAIR / Wechsel-OP je nach Zeitfenster (PIF-Algorithmus)"
+   ],
+   "dur": [
+    "Dauer: 12 Wochen gesamt, ca. 2 Wochen i.v. (PIF v11)"
+   ],
+   "cave": [
+    "Typ-I-Penicillinallergie: Vancomycin 2×15 mg/kg oder Daptomycin 8 mg/kg 1x/d, ± Fosfomycin (PIF SA v2)"
+   ],
+   "extra": [
+    "Natives Gelenk (SA v2): Ampicillin/Sulbactam 2 Wochen i.v., dann Cotrimoxazol + Amoxicillin oder Levofloxacin + Clindamycin, gesamt 4 Wochen"
+   ]
+  },
+  "syn": {
+   "PJI": "PJI 12 Wochen (PIF v11)",
+   "FRI": "FRI 12 Wochen bei Implantaterhalt/-wechsel, 6 Wochen nach Implantatentfernung (AO/EBJIS; PIF FRI v4, 2 Wo. i.v.)",
+   "SA": "Septische Arthritis 4 Wochen (Ampicillin/Sulbactam 2 Wo. i.v.; PIF SA v2 / Lehrbuch Tab. 16.8)",
+   "SI": "Spondylodiszitis 6 Wochen nativ (DTS/SPILF 2022), 12 Wochen bei Implantat; länger bei Risikofaktoren (undrainierter Abszess, terminale Niereninsuffizienz, MRSA)"
+  },
+  "syns": [
+   "culture negative",
+   "culture-negative",
+   "erreger unbekannt",
+   "keine kultur",
+   "kultur negativ",
+   "kulturnegativ",
+   "kulturnegative infektion",
+   "negative kultur",
+   "unbekannter erreger",
+   "empirie",
+   "empirisch"
+  ],
+  "w": 2,
+  "det": [
+   "culture negative",
+   "kultur negativ",
+   "kulturnegativ",
+   "kulturnegative infektion"
+  ],
+  "ev": "PIF",
+  "lk": "ab",
+  "wu": "Mehrere tiefe Gewebeproben (nicht nur Abstrich), Sonikation, Histologie, Bebrütung bis 14 Tage; bei Verdacht gezielte PCR/Serologie (Mykoplasmen, Brucellen, Coxiella, Tropheryma, Mykobakterien); Expositionsanamnese."
+ },
+ {
+  "n": "Candida parapsilosis",
+  "g": "Pilze",
+  "impl": {
+   "pji": "ja",
+   "dair": "Wechsel bevorz.",
+   "rif": "—"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Caspofungin",
+    "70 mg Loading -> 50 mg 1x/d (≥80 kg: 70 mg 1x/d) – PIF v11, 1-2 Wochen"
+   ],
+   [
+    "Anidulafungin",
+    "200 mg Loading -> 100 mg 1x/d – PIF v11, 1-2 Wochen"
+   ]
+  ],
+  "a": [
+   [
+    "Fluconazol",
+    "800 mg Loading, dann 400 mg i.v. 1x/d – bei nachgewiesener Sensibilität (bei C. parapsilosis klassischerweise gut wirksam)"
+   ],
+   [
+    "Amphotericin B liposomal",
+    "3-5 mg/kg/d i.v."
+   ]
+  ],
+  "o": [
+   [
+    "Fluconazol",
+    "400 mg p.o. 1x/d – nur bei nachgewiesener Sensibilität; Mittel der Wahl für Step-down und Suppression"
+   ]
+  ],
+  "olabel": "Antimykogramm vor Step-down obligat",
+  "dur": "Candidämie 14 Tage ab neg. Blutkultur - PJI: nach Prothesenwechsel mind. 3 Mo. Fluconazol, ohne Entfernung Suppression ≥12 Mo. (PIF v11; ECMM/ISHAM/ASM 2025: osteoartikulär 6-12 Mo.)",
+  "note": "Häufigster nicht-albicans-Erreger bei Gelenkprothesen (3/10 in einer Megaprothesen-Serie); starker Biofilmbildner auf Katheter und Fremdmaterial. Echinocandin-MHK bei C. parapsilosis physiologisch höher (Durchbruchinfektionen beschrieben) – bei Fluconazol-Sensibilität ist Fluconazol der bevorzugte Partner für Step-down und Suppression. Fluconazol-resistente Stämme (Ausbrüche, Katheter-assoziiert) nehmen zu → Antimykogramm. Candida ist Problemerreger (PIF v11): Wechsel/Entfernung bevorzugt.",
+  "pi": "",
+  "pig": {
+   "head": "Candida parapsilosis auf Implantat",
+   "iv": [
+    "IV-Phase (PIF v11): Caspofungin 70 mg Tag 1, dann 50 mg 1x/d (<80 kg) oder Anidulafungin 200 mg Tag 1, dann 100 mg 1x/d, 1-2 Wochen"
+   ],
+   "bio": [],
+   "oral": [
+    "Fluconazol-sensibel: Fluconazol 400 mg 1x/d, Suppression ≥1 Jahr (PIF v11)"
+   ],
+   "surg": [
+    "Wechsel/Entfernung bevorzugt – Candida ist Problemerreger (PIF v11)"
+   ],
+   "dur": [
+    "Nach Prothesenwechsel mindestens 3 Monate Fluconazol; ohne Entfernung dauerhafte Suppression (ECMM/ISHAM/ASM 2025)"
+   ],
+   "cave": [
+    "Echinocandin-MHK bei C. parapsilosis höher – Fluconazol-Sensibilität prüfen; Fluconazol-resistente Stämme zunehmend"
+   ],
+   "extra": []
+  },
+  "syn": {
+   "PJI": "PJI: Wechsel/Entfernung + Fluconazol mind. 3 Mo.; ohne Entfernung Suppression ≥12 Mo. (PIF v11)",
+   "SA": "Septische Arthritis 6 Wochen (PIF SA v2; ECMM/ISHAM/ASM 2025: 6-12 Monate)"
+  },
+  "syns": [
+   "c parapsilosis",
+   "c. parapsilosis",
+   "candi parapsilosis",
+   "candida parapsilosis",
+   "cparapsilosis",
+   "parapsilosis"
+  ],
+  "w": 2,
+  "det": [
+   "c parapsilosis",
+   "c. parapsilosis",
+   "candida parapsilosis"
+  ],
+  "ev": "Entwurf",
+  "lk": "fungi",
+  "wu": "Bei Candidämie OBLIGAT: augenärztliche Funduskopie (Endophthalmitis/Chorioretinitis) in der 1. Woche, TEE, Blutkulturen bis Negativierung, ZVK entfernen, Infektiologie."
+ },
+ {
+  "n": "Echinococcus spp. (Knochen-/Prothesen-Echinokokkose)",
+  "g": "Atypisch",
+  "impl": {
+   "pji": "selten",
+   "dair": "Wechsel bevorz.",
+   "rif": "—"
+  },
+  "route": "ERSTLINIE (OP + ANTIPARASITÄR)",
+  "f": [
+   [
+    "Albendazol",
+    "400 mg p.o. alle 12 h (ca. 10-15 mg/kg/d) mit fettreicher Mahlzeit – präoperativ beginnen (Lehrbuch 15.6)"
+   ]
+  ],
+  "a": [],
+  "o": [
+   [
+    "Albendazol",
+    "400 mg p.o. alle 12 h, postoperativ über Monate (Dauer nach Befund/Infektiologie); Leberwerte und Blutbild kontrollieren"
+   ]
+  ],
+  "olabel": "Chirurgie + Albendazol – kein rein medikamentöses Konzept",
+  "dur": "Albendazol präoperativ + Komplettresektion + lange postoperative Albendazol-Therapie (Monate, nach Verlauf)",
+  "note": "Endemiegebiete (Mittlerer Osten, Schafzuchtregionen), Zysten radiologisch sichtbar; Serologie + Bildgebung. E. granulosus (zystisch) vs. E. multilocularis (alveolär). Knochen-/Prothesenbefall extrem selten (Kasuistiken): Albendazol präoperativ, Komplettresektion ohne Zystenruptur (Aussaat-/Anaphylaxierisiko), Explantation meist nötig (Lehrbuch 15.6). Anzeigepflichtig (EpiG). Therapie in Zusammenarbeit mit Infektiologie/Tropenmedizin.",
+  "pi": "",
+  "pig": {
+   "head": "Echinokokkose an Knochen/Implantat",
+   "iv": [],
+   "bio": [],
+   "oral": [
+    "Albendazol präoperativ, danach lange postoperativ (Lehrbuch 15.6)"
+   ],
+   "surg": [
+    "Komplettresektion, Explantation meist nötig; Zystenruptur vermeiden"
+   ],
+   "dur": [],
+   "cave": [
+    "Kein rein antibiotisches Problem – Albendazol + Chirurgie; Erregernachweis über Serologie/Histologie/PCR"
+   ],
+   "extra": []
+  },
+  "syn": {},
+  "syns": [
+   "e granulosus",
+   "e. granulosus",
+   "e multilocularis",
+   "e. multilocularis",
+   "echinococcus",
+   "echinokokkose",
+   "echinokokkus",
+   "fuchsbandwurm",
+   "hundebandwurm",
+   "hydatidose",
+   "zystische echinokokkose"
+  ],
+  "w": 1,
+  "det": [
+   "echinococcus",
+   "echinokokkose",
+   "e. granulosus",
+   "e. multilocularis"
+  ],
+  "ev": "Fallbericht",
+  "lk": "para",
+  "mp": {
+   "s": "ja",
+   "t": "Echinococcus granulosus und multilocularis · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  },
+  "wu": "Serologie, Schnittbildgebung (CT/MRT) des gesamten Körpers (Leber/Lunge), Expositionsanamnese (Endemiegebiet, Hunde/Füchse)."
+ },
+ {
+  "n": "Burkholderia mallei (Rotz)",
+  "g": "Gram-negativ",
+  "impl": {
+   "pji": "nein",
+   "dair": "—",
+   "rif": "—"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Ceftazidim",
+    "2 g i.v. alle 6-8 h (Intensivphase)"
+   ],
+   [
+    "Meropenem",
+    "1 g i.v. alle 8 h (Intensivphase, schwer)"
+   ]
+  ],
+  "a": [
+   [
+    "Imipenem",
+    "1 g i.v. alle 6 h (Intensivphase, Alternative)"
+   ]
+  ],
+  "o": [
+   [
+    "TMP/SMX",
+    "320/1600 mg p.o. alle 12 h bei >60 kg – ERADIKATIONSPHASE"
+   ],
+   [
+    "Doxycyclin",
+    "100 mg p.o. alle 12 h (Eradikation, Alternative/Kombination)"
+   ]
+  ],
+  "olabel": "orale Eradikation Pflicht!",
+  "dur": "Intensivphase ≥2 Wochen i.v. + Eradikation 3-6 Monate oral (Therapie in Analogie zur Melioidose, kaum Evidenz)",
+  "note": "Rotz: obligat pathogene Zoonose der Einhufer (Pferd, Esel, Maultier), humane Fälle extrem selten (Tierkontakt, Laborinfektion); potenzieller Biowaffen-Erreger. Therapie mangels Studien in Analogie zu B. pseudomallei (zweiphasig). Knochen-/Gelenkbeteiligung nur als Streuherd. Anzeigepflichtig (EpiG, auch Verdacht): Gesundheitsbehörde und Labor (BSL-3) sofort informieren.",
+  "pi": "",
+  "pig": {
+   "head": "Rotz (B. mallei)",
+   "iv": [],
+   "bio": [],
+   "oral": [],
+   "surg": [],
+   "dur": [],
+   "cave": [
+    "Zweiphasig zwingend: i.v.-Intensivphase + monatelange orale Eradikation",
+    "Sofort Gesundheitsbehörde und Labor (BSL-3) informieren"
+   ],
+   "extra": []
+  },
+  "syn": {},
+  "syns": [
+   "b mallei",
+   "b. mallei",
+   "bmallei",
+   "burkholderia mallei",
+   "burkh mallei",
+   "glanders",
+   "rotz"
+  ],
+  "w": 1,
+  "det": [
+   "b mallei",
+   "b. mallei",
+   "burkholderia mallei",
+   "rotz"
+  ],
+  "ev": "Entwurf",
+  "mp": {
+   "s": "ja",
+   "t": "Rotz · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  },
+  "wu": "Tierkontakt (Einhufer) und Reiseanamnese; Infektiologie, Hygiene und Labor VOR Probenversand informieren (Laborrisiko)."
+ },
+ {
+  "n": "Yersinia pestis (Pest)",
+  "g": "Gram-negativ",
+  "impl": {
+   "pji": "nein",
+   "dair": "—",
+   "rif": "—"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Gentamicin",
+    "5 mg/kg i.v. 1x/d (spiegelgesteuert)"
+   ],
+   [
+    "Streptomycin",
+    "1 g i.m. alle 12 h (falls verfügbar)"
+   ]
+  ],
+  "a": [
+   [
+    "Doxycyclin",
+    "100 mg i.v./p.o. alle 12 h"
+   ],
+   [
+    "Ciprofloxacin",
+    "400 mg i.v. alle 8 h"
+   ]
+  ],
+  "o": [
+   [
+    "Doxycyclin",
+    "100 mg p.o. alle 12 h"
+   ],
+   [
+    "Ciprofloxacin",
+    "500-750 mg p.o. alle 12 h"
+   ]
+  ],
+  "olabel": "",
+  "dur": "10-14 Tage (bis mind. 3 Tage nach Entfieberung)",
+  "note": "Sehr seltene Zoonose (Nagetierflöhe), Lungenpest ist von Mensch zu Mensch übertragbar; potenzieller Biowaffen-Erreger. Sofort Isolierung (Tröpfchen/Kontakt), Infektiologie und Gesundheitsbehörde informieren; Labor (BSL-3) vorwarnen. Knochen-/Gelenkbeteiligung nur als Kasuistik. Anzeigepflichtig (EpiG, auch Verdacht): praktisch sofortige telefonische Meldung.",
+  "pi": "",
+  "pig": {
+   "head": "Pest (Y. pestis)",
+   "iv": [],
+   "bio": [],
+   "oral": [],
+   "surg": [],
+   "dur": [],
+   "cave": [
+    "Isolierung, Meldung und Laborwarnung sofort – nicht auf Bestätigung warten"
+   ],
+   "extra": []
+  },
+  "syn": {},
+  "syns": [
+   "pest",
+   "plague",
+   "y pestis",
+   "y. pestis",
+   "yersinia pestis",
+   "ypestis",
+   "beulenpest",
+   "lungenpest"
+  ],
+  "w": 1,
+  "det": [
+   "pest",
+   "y. pestis",
+   "yersinia pestis"
+  ],
+  "ev": "Entwurf",
+  "mp": {
+   "s": "ja",
+   "t": "Pest · EpiG 1950 §1 Abs. 1 Z 1 (auch Verdachtsfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  },
+  "wu": "Expositionsanamnese (Endemiegebiet, Nagetiere/Flöhe); Isolierung; Infektiologie, Hygiene und Labor vor Probenversand informieren."
+ },
+ {
+  "n": "Corynebacterium diphtheriae",
+  "g": "Gram-positiv",
+  "impl": {
+   "pji": "selten",
+   "dair": "—",
+   "rif": "—"
+  },
+  "route": "ERSTLINIE I.V.",
+  "f": [
+   [
+    "Penicillin G",
+    "4 Mio. IE i.v. alle 4-6 h (nach Antibiogramm)"
+   ]
+  ],
+  "a": [
+   [
+    "Clarithromycin",
+    "500 mg p.o./i.v. alle 12 h"
+   ],
+   [
+    "Linezolid",
+    "600 mg i.v. alle 12 h (nach Antibiogramm)"
+   ]
+  ],
+  "o": [
+   [
+    "Amoxicillin",
+    "1 g p.o. alle 8 h (nach Antibiogramm)"
+   ],
+   [
+    "Clarithromycin",
+    "500 mg p.o. alle 12 h"
+   ]
+  ],
+  "olabel": "",
+  "dur": "Toxigene Diphtherie 14 Tage - invasive nicht-toxigene Infektion (Endokarditis/Osteomyelitis/Fremdmaterial): individuell, analog grampositiver Fremdmaterialinfektion (PJI 12 Wo.)",
+  "note": "Toxigene Stämme: Diphtherie-Antitoxin (frühzeitig, bei klinischem Verdacht nicht auf Bestätigung warten), Isolierung, Kontaktprophylaxe. Als „Diphtheroid“ fehlgedeutet; nicht-toxigene Stämme verursachen selten invasive Infektionen (Endokarditis, Osteomyelitis, septische Arthritis, Fremdmaterial). Toxinnachweis (PCR/Elek) am Referenzlabor. Anzeigepflichtig (EpiG): Erkrankungs- und Todesfälle.",
+  "pi": "",
+  "pig": {
+   "head": "Corynebacterium diphtheriae",
+   "iv": [],
+   "bio": [],
+   "oral": [],
+   "surg": [],
+   "dur": [],
+   "cave": [
+    "Toxigen? Toxin-PCR/Elek-Test am Referenzlabor – bei Verdacht Antitoxin nicht verzögern",
+    "Impfstatus erfragen, Kontaktpersonen"
+   ],
+   "extra": []
+  },
+  "syn": {},
+  "syns": [
+   "c diphtheriae",
+   "c. diphtheriae",
+   "cdiphtheriae",
+   "corynebacterium diphtheriae",
+   "corynebakterium diphtheriae",
+   "diphtherie",
+   "diphtheria"
+  ],
+  "w": 1,
+  "det": [
+   "c. diphtheriae",
+   "corynebacterium diphtheriae",
+   "diphtherie"
+  ],
+  "ev": "Entwurf",
+  "lk": "gpos",
+  "mp": {
+   "s": "ja",
+   "t": "Diphtherie · EpiG 1950 §1 Abs. 1 Z 2 (Erkrankungs- und Todesfälle) – Meldung binnen 24 h an die Bezirksverwaltungsbehörde"
+  },
+  "wu": "Toxinnachweis (PCR/Elek), Impfstatus, Kontaktpersonen; bei Endokarditisverdacht TEE."
  }
 ]
