@@ -28,3 +28,9 @@ Ausgeliefert werden nur `index.html` und `sw.js` im Root. **Beide werden gebaut 
 4. Commit inkl. gebauter `index.html`/`sw.js`.
 
 Benötigt nur Python 3 (Standardbibliothek). Die GitHub Action „Prüfen“ schlägt fehl, wenn die Daten ungültig sind oder `index.html` nicht zu den Quellen passt.
+
+## Felder mit Sonderbedeutung
+
+- `ev`: Evidenz-Label (PIF, Leitlinie, Fallserien, Fallbericht, Entwurf = nicht am Original geprüft).
+- `mp`: Meldepflicht in Österreich, `{s: ja|bedingt, t: Rechtsgrundlage/Frist}` (Quelle und Abweichungen: `docs/meldepflicht-syndrome-2026-11.md`).
+- `syn`: Therapiedauer je Syndrom (`PJI`, `FRI`, `SA`, `SI`); steuert Zeitbalken und „Dauer“ im Kopf der Erregerkarte.

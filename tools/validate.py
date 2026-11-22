@@ -17,18 +17,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "erreger.json"
 
-OPTIONAL = ["ev", "wu", "lk"]
+OPTIONAL = ["ev", "wu", "lk", "mp"]
 REQUIRED = ["n", "g", "impl", "route", "f", "a", "o", "olabel", "dur", "note",
             "pi", "pig", "syn", "syns", "w", "det"]
 PIG_KEYS = {"head", "iv", "bio", "oral", "surg", "dur", "cave", "extra"}
 GROUPS = {"Gram-positiv", "Gram-negativ", "Anaerobier", "Atypisch",
-          "Mykobakterien", "Pilze", "Multiresistenz-Kategorien"}
+          "Mykobakterien", "Pilze", "Multiresistenz-Kategorien", "Kulturnegativ"}
 IMPL = {
     "pji": {"ja", "selten", "nein"},
     "dair": {"möglich", "erschwert (DTT)", "Wechsel bevorz.", "—"},
     "rif": {"ja", "bedingt", "nein", "—"},
 }
 EV = {None, "PIF", "Leitlinie", "Fallserien", "Fallbericht", "Entwurf"}
+MP_STATUS = {"ja", "bedingt"}  # Meldepflicht (Oesterreich): ja = gelistet, bedingt = nur unter Bedingung/Zuordnung pruefen
 
 
 def all_texts(e):
@@ -69,6 +70,10 @@ def main():
                 warnings.append(f"{tag}: impl.{k}='{v}' (erlaubt: {sorted(allowed)})")
         if e.get("ev") not in EV:
             errors.append(f"{tag}: unbekanntes Evidenz-Label '{e.get('ev')}'")
+        mp = e.get("mp")
+        if mp is not None:
+            if not (isinstance(mp, dict) and set(mp) == {"s", "t"} and mp["s"] in MP_STATUS and isinstance(mp["t"], str) and mp["t"].strip()):
+                errors.append(f"{tag}: 'mp' braucht {{s: ja|bedingt, t: Rechtsgrundlage/Frist}}: {mp!r}")
         if set(e.get("pig", {}).keys()) != PIG_KEYS:
             errors.append(f"{tag}: pig-Schluessel weichen ab: {sorted(e.get('pig', {}).keys())}")
         for key in ("f", "a", "o"):
